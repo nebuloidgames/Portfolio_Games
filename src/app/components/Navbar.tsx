@@ -21,9 +21,7 @@ const Navbar = () => {
     fetch("/api/auth/me")
       .then((res) => res.json())
       .then((data) => {
-        if (data.success && data.user) {
-          setUser(data.user);
-        }
+        if (data.success && data.user) setUser(data.user);
       })
       .catch(() => {});
   }, []);
@@ -41,55 +39,49 @@ const Navbar = () => {
   }
 
   return (
-    <header className="w-full bg-[#F4F0E7]">
-      <nav
-        className="w-full mx-auto bg-[#F4F0E7] border border-[#000000] flex items-center justify-between px-5 py-2 shadow-[0px_4px_50.2px_-12px_rgba(0,0,0,0.25)] box-border"
-        style={{
-          boxShadow: "0px 4px 50.2px -12px rgba(0, 0, 0, 0.25)",
-        }}
-      >
-        {/* Left: Logo */}
+    <header className="h-[82px] w-full shrink-0 bg-[#F4F0E7]">
+      <nav className="flex h-full w-full items-center justify-between border-b border-black/15 px-[74px] sm:px-[76px]">
         <Link
           href="/"
-          className="flex items-center h-full select-none focus:outline-none transition-opacity hover:opacity-90"
+          className="flex h-full items-center select-none hover:opacity-90"
         >
           <Image
             src="/nebuloid-logo.png"
             alt="Nebuloid Gaming Logo"
-            width={72}
-            height={72}
+            width={60}
+            height={60}
             priority
-            className="h-[72px] w-auto object-contain"
+            className="h-[56px] w-auto object-contain"
           />
         </Link>
 
-        {/* Right: Auth Buttons */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center">
           {user ? (
             <>
               {user.role === "ADMIN" && (
                 <Link
                   href="/admin/dashboard"
-                  className="px-5 py-2 h-[40px] flex items-center justify-center bg-[#22201D] hover:bg-[#333333] text-[#FEF6E4] border border-[#22201D] rounded-[14px] font-serif text-[14px] font-semibold tracking-[0.08em] uppercase transition-all duration-200 hover:shadow-sm active:scale-95 cursor-pointer select-none"
+                  className="mr-2 flex h-[28px] min-w-[82px] items-center justify-center rounded-[2px] border border-black bg-[#FFD43D] px-3 font-serif text-[11px] font-bold uppercase tracking-[0.04em] text-black shadow-[2px_2px_0_#000]"
                 >
-                  Admin
+                  ADMIN ›
                 </Link>
               )}
+
               <button
                 type="button"
                 onClick={handleLogout}
                 disabled={loggingOut}
-                className="px-8 py-2.5 min-w-[120px] h-[40px] flex items-center justify-center bg-[#FFF6E3] hover:bg-[#FAEDD0] text-[#000000] border border-[#E6DCC3] rounded-[14px] font-serif text-[18px] font-semibold tracking-[0.08em] uppercase transition-all duration-200 hover:shadow-sm active:scale-95 cursor-pointer select-none disabled:opacity-50"
+                className="flex h-[28px] min-w-[74px] items-center justify-center rounded-[2px] border border-black bg-[#FFD43D] px-3 font-serif text-[11px] font-bold uppercase tracking-[0.04em] text-black shadow-[2px_2px_0_#000] disabled:opacity-60"
               >
-                {loggingOut ? "..." : "Logout"}
+                {loggingOut ? "..." : "LOGOUT ›"}
               </button>
             </>
           ) : (
             <Link
               href="/login"
-              className="px-8 py-2.5 min-w-[120px] h-[40px] flex items-center justify-center bg-[#FFF6E3] hover:bg-[#FAEDD0] text-[#000000] border border-[#E6DCC3] rounded-[14px] font-serif text-[18px] font-semibold tracking-[0.08em] uppercase transition-all duration-200 hover:shadow-sm active:scale-95 cursor-pointer select-none"
+              className="flex h-[50px] min-w-[145px] items-center justify-center rounded-[7px] border-2 border-black bg-[#FFD43D] px-6 font-serif text-[18px] font-bold uppercase tracking-[0.05em] text-black shadow-[4px_4px_0_#111] transition-transform duration-150 hover:bg-[#FFC928] hover:-translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0_#111]"
             >
-              Login
+              LOGIN ›
             </Link>
           )}
         </div>

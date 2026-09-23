@@ -109,7 +109,7 @@ function Brand({ home = false }) {
   if (home) {
     return (
       <div className="brand home-brand">
-        <img src="/logo.png" alt="Nebuloid Tech" />
+        <img alt="Nebuloid Tech" src="./logo.png"></img>
       </div>
     );
   }
@@ -1136,7 +1136,7 @@ function App() {
         </div>
 
         <div className="race-brand-top">
-          <img src="/logo.png" alt="Nebuloid Tech" />
+         <img alt="Nebuloid Tech" src="./logo.png"></img>
         </div>
 
         <section className="race-hero">
@@ -1257,7 +1257,7 @@ function App() {
         </div>
 
         <div className="player-brand">
-          <img src="/logo.png" alt="Nebuloid Tech" />
+          <img src="./logo.png" alt="Nebuloid Tech" />
         </div>
 
         <div className="player-content">
@@ -1322,7 +1322,7 @@ function App() {
           <div className="target-zero z3">0</div><div className="target-zero z4">0</div>
         </div>
 
-        <div className="target-brand"><img src="/logo.png" alt="Nebuloid Tech" /></div>
+        <div className="target-brand"><img src="./logo.png" alt="Nebuloid Tech" /></div>
 
         <section className="target-hero">
           <h1 className="target-race-title">2048 <span className="red">RACE</span></h1>
@@ -1362,7 +1362,7 @@ function App() {
           <div className="mode-line l1"/><div className="mode-line l2"/><div className="mode-line l3"/><div className="mode-line l4"/>
         </div>
 
-        <div className="mode-brand"><img src="/logo.png" alt="Nebuloid Tech" /></div>
+        <div className="mode-brand"><img src="./logo.png" alt="Nebuloid Tech" /></div>
 
         <section className="mode-hero">
           <h1 className="mode-title">2048 <span className="red">RACE</span></h1>
@@ -1405,7 +1405,7 @@ function App() {
           <div className="confirm-zero cz1">0</div><div className="confirm-zero cz2">0</div><div className="confirm-zero cz3">0</div>
           <div className="confirm-line cl1"/><div className="confirm-line cl2"/><div className="confirm-line cl3"/>
         </div>
-        <div className="confirm-brand"><img src="/logo.png" alt="Nebuloid Tech" /></div>
+        <div className="confirm-brand"><img src="./logo.png" alt="Nebuloid Tech" /></div>
         <section className="confirm-hero">
           <div className="confirm-final"><i/><span>F I N A L &nbsp; C H E C K</span><i/></div>
           <h1><span>RACE</span> <b>CONFIRMATION</b></h1>
@@ -1433,7 +1433,7 @@ function App() {
         {[['256','pink','5%','8%','-16deg'],['8','orange','86%','8%','-14deg'],['32','blue','0%','32%','-20deg'],['128','purple','91%','38%','-18deg'],['4','orange small','1%','70%','16deg'],['64','green','79%','65%','-10deg'],['2','white','12%','50%','18deg']].map(([value,cls,left,top,rot],i)=><div key={i} className={`game-float ${cls}`} style={{left,top,transform:`rotate(${rot})`}}>{value}</div>)}
         <div className="game-zero z1">0</div><div className="game-zero z2">0</div><div className="game-zero z3">0</div><div className="game-zero z4">0</div>
         <div className="game-line l1"/><div className="game-line l2"/><div className="game-line l3"/><div className="game-line l4"/>
-        <div className="game-logo"><img src="/logo.png" alt="Nebuloid Tech" /></div>
+        <div className="game-logo"><img src="./logo.png" alt="Nebuloid Tech" /></div>
         <div className="game-top">
           <button className="small-btn" data-label={paused?"RESUME":"PAUSE"} onClick={()=>setPaused(p=>!p)}>{paused?"RESUME":"PAUSE"}</button>
           <div><span className="stat-label">TARGET</span><strong>{target}</strong></div>
@@ -1451,7 +1451,7 @@ function App() {
       {page === "result" && result && <main className="screen result-screen">
         <CornerDecor/>
         <div className="result-card">
-          <div className="result-brand"><img src="/logo.png" alt="Nebuloid Tech" /></div>
+          <div className="result-brand"><img src="./logo.png" alt="Nebuloid Tech" /></div>
           
           <div className="result-status">{result.won ? "TARGET REACHED!" : "RACE OVER"}</div>
           <div className="result-subtitle">{result.won ? "W E L L  P L A Y E D" : "T R Y  A G A I N"}</div>

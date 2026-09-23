@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:games": "node scripts/build-games.cjs",
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",

@@ -1,0 +1,619 @@
+/* ==========================================================================
+   StartScreen.css - Word Puzzle Start Screen
+   Pixel-perfect design matching user reference image:
+   - Oceanic Island & Pirate Ship background (bg-img.png)
+   - Rounded, transparent & attractive Nebuloid Tech logo at top
+   - Glassmorphic center card with "WELCOME TO" & "WORD PUZZLE"
+   - Circular "START" button (start.png) with interactive glow
+   - Bottom pill action buttons ("Certificates", "How To Play", "Quit To Home")
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Screen Wrapper & Background
+   -------------------------------------------------------------------------- */
+.start-screen-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Top Bar: Rounded & Transparent Nebuloid Logo + Controls
+   -------------------------------------------------------------------------- */
+.start-top-header {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 40;
+  padding: 0 28px;
+  pointer-events: none;
+}
+
+/* Floating Rounded & Transparent Logo Pill Badge */
+.top-logo-badge {
+  pointer-events: auto;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.nebuloid-logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.08));
+}
+
+/* Sound Control Button */
+.top-sound-btn {
+  pointer-events: auto;
+  position: absolute;
+  right: 28px;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.38);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #0b2b68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 20, 50, 0.15);
+  transition: all 0.22s ease;
+}
+
+.top-sound-btn:hover {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.6);
+  color: #04193f;
+  box-shadow: 0 8px 24px rgba(0, 20, 50, 0.25);
+}
+
+.top-sound-btn:active {
+  transform: scale(0.94);
+}
+
+/* --------------------------------------------------------------------------
+   Main Frosted Glass Center Card (Modal)
+   Matches the exact proportions, blue frosted glass and layout in the image
+   -------------------------------------------------------------------------- */
+.start-modal-card {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 36px 36px 32px;
+  box-sizing: border-box;
+  animation: cardFadeScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cardFadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.94) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Card Header: "WELCOME TO" & "WORD PUZZLE"
+   -------------------------------------------------------------------------- */
+.card-header-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-subtext {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 2px 0;
+  text-shadow: 0 2px 6px rgba(0, 24, 70, 0.3);
+}
+
+.word-puzzle-title {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: clamp(38px, 5.2vw, 62px);
+  color: #ffffff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 4px 16px rgba(3, 20, 60, 0.38);
+}
+
+/* --------------------------------------------------------------------------
+   Card Center: Circular START Button (start.png)
+   -------------------------------------------------------------------------- */
+.card-start-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.start-circle-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.28s ease;
+}
+
+.start-btn-img {
+  width: clamp(200px, 24vw, 270px);
+  height: clamp(200px, 24vw, 270px);
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(0, 24, 70, 0.4));
+  pointer-events: none;
+}
+
+/* Pulsing aura glow behind circular start button */
+.start-btn-glow-ring {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.55);
+  animation: startGlowPulse 2.8s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes startGlowPulse {
+  0%, 100% {
+    transform: scale(0.98);
+    opacity: 0.6;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.45);
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.95;
+    box-shadow: 0 0 50px rgba(56, 189, 248, 0.85);
+  }
+}
+
+.start-circle-btn:hover {
+  transform: scale(1.06);
+}
+
+.start-circle-btn:hover .start-btn-img {
+  filter: drop-shadow(0 12px 32px rgba(0, 40, 110, 0.65));
+}
+
+.start-circle-btn:active {
+  transform: scale(0.96);
+}
+
+/* --------------------------------------------------------------------------
+   Card Bottom: Pill Action Buttons
+   -------------------------------------------------------------------------- */
+.card-bottom-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.pill-action-btn {
+  background: linear-gradient(180deg, #103b8c 0%, #072666 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 10px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  box-shadow: 
+    0 6px 16px rgba(2, 14, 42, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.pill-action-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  background: linear-gradient(180deg, #184db4 0%, #0c3384 100%);
+  border-color: rgba(255, 255, 255, 0.38);
+  box-shadow: 
+    0 10px 24px rgba(2, 14, 42, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.pill-action-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.pill-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.pill-btn-label {
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Popups / Modals (How To Play & Certificates)
+   -------------------------------------------------------------------------- */
+.popup-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 14, 38, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+  animation: modalOverlayFade 0.25s ease-out;
+}
+
+@keyframes modalOverlayFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-modal-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 20, 60, 0.35);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: modalBoxPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalBoxPop {
+  from {
+    transform: scale(0.9) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-header-bar {
+  background: linear-gradient(135deg, #0d3886 0%, #1752b5 100%);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.modal-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.08);
+}
+
+.modal-body-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* Steps in How to play */
+.guide-step-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #f4f7fc;
+}
+
+.step-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #0d3886;
+  color: #ffffff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.step-detail h4 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  color: #0d285c;
+  font-weight: 700;
+}
+
+.step-detail p {
+  margin: 0;
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.45;
+}
+
+/* Stats in Certificates */
+.stats-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.stat-card {
+  background: #f0f5ff;
+  border: 1px solid #d6e4ff;
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0b327b;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.certificate-display-card {
+  background: linear-gradient(135deg, #fffcf0 0%, #fff6d9 100%);
+  border: 2px dashed #f59e0b;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.cert-ribbon {
+  display: inline-block;
+  background: #f59e0b;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.cert-recipient-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #78350f;
+  margin: 4px 0 8px;
+}
+
+.cert-desc {
+  font-size: 13px;
+  color: #92400e;
+  line-height: 1.4;
+  margin: 0 0 14px;
+}
+
+.cert-footer-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(245, 158, 11, 0.3);
+  padding-top: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #b45309;
+}
+
+.modal-footer-bar {
+  padding: 16px 24px;
+  background: #f8fafc;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.modal-primary-btn {
+  background: linear-gradient(180deg, #103b8c 0%, #072666 100%);
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-primary-btn:hover {
+  background: linear-gradient(180deg, #184db4 0%, #0c3384 100%);
+  transform: translateY(-1px);
+}
+
+.modal-secondary-btn {
+  background: #e2e8f0;
+  color: #334155;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal-secondary-btn:hover {
+  background: #cbd5e1;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .start-modal-card {
+    width: 94%;
+    height: auto;
+    min-height: auto;
+    padding: 28px 20px 24px;
+    margin-top: 40px;
+  }
+
+  .welcome-subtext {
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+
+  .word-puzzle-title {
+    font-size: 34px;
+    letter-spacing: 2px;
+  }
+
+  .start-btn-img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .card-bottom-actions {
+    gap: 10px;
+  }
+
+  .pill-action-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .top-logo-badge {
+    padding: 6px 16px;
+  }
+
+  .nebuloid-logo-img {
+    height: 26px;
+  }
+
+  .top-sound-btn {
+    right: 16px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-height: 640px) {
+  .start-modal-card {
+    height: auto;
+    padding: 20px;
+  }
+
+  .start-btn-img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .start-top-header {
+    top: 10px;
+  }
+}

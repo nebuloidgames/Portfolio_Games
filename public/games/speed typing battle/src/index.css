@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { background: #f5f7fb; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f5f7fb;
+}
+button, input, textarea { font: inherit; }
+::selection { background: #ddd6fe; color: #312e81; }
+
+.grid-bg {
+  background-color: #f5f7fb;
+  background-image:
+    linear-gradient(rgba(99, 102, 241, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, .055) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.glow { box-shadow: 0 20px 60px rgba(99, 102, 241, .14); }
+
+.bg-\[\#080a10\]\/90 { background: rgba(255, 255, 255, .92) !important; }
+.border-white\/10 { border-color: #e3e7ef !important; }
+.border-white\/15 { border-color: #d9deea !important; }
+.border-violet-400\/20 { border-color: #ddd6fe !important; }
+.border-violet-400\/30 { border-color: #c4b5fd !important; }
+
+.text-slate-100 { color: #172033 !important; }
+.text-slate-300 { color: #475569 !important; }
+.text-slate-400 { color: #64748b !important; }
+.text-slate-500 { color: #7a879a !important; }
+.text-slate-600 { color: #94a3b8 !important; }
+.text-white { color: #172033 !important; }
+.text-violet-300,
+.text-violet-400 { color: #6d28d9 !important; }
+.text-amber-300 { color: #b45309 !important; }
+.text-rose-300,
+.text-rose-400 { color: #e11d48 !important; }
+.text-emerald-400 { color: #059669 !important; }
+
+.bg-white\/\[\.03\] { background: #f8fafc !important; }
+.bg-white\/\[\.025\] { background: #ffffff !important; }
+.bg-white\/\[\.02\] { background: #ffffff !important; }
+.bg-black\/20 { background: #f1f5f9 !important; }
+.bg-\[\#0d1019\] { background: #ffffff !important; }
+.bg-\[\#080a10\] { background: #f5f7fb !important; }
+.bg-violet-500\/10 { background: #f3e8ff !important; }
+.bg-amber-300\/10 { background: #fffbeb !important; }
+
+.bg-violet-600 { background: #7c3aed !important; color: #ffffff !important; }
+.bg-violet-600:hover { background: #6d28d9 !important; }
+.shadow-violet-900\/30 { --tw-shadow-color: rgba(124, 58, 237, .18) !important; }
+
+.caret {
+  border-right: 2px solid #7c3aed;
+  animation: blink 1s step-end infinite;
+}
+
+.bg-\[\#0d1019\] .text-slate-500 { color: #94a3b8 !important; }
+
+/* Remove the unwanted decorative horizontal divider/line. */
+main hr,
+main [class*="border-t"],
+main [class*="border-b"] {
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes pop {
+  0% { transform: scale(.96); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pop { animation: pop .25s ease-out; }
+
+
+/* Remove the horizontal separator underneath the top Sound / logo / Levels / How to Play bar. */
+header {
+  border-bottom: 0 !important;
+  border-bottom-width: 0 !important;
+  box-shadow: none !important;
+}
+
+
+/* Light-theme readability fixes */
+.text-white {
+  color: #172033 !important;
+}
+
+.bg-violet-600.text-white,
+.bg-violet-600 .text-white,
+button.bg-violet-600 {
+  color: #ffffff !important;
+}
+
+.text-slate-500 { color: #64748b !important; }
+.text-slate-600 { color: #64748b !important; }
+
+button {
+  color: #172033;
+}
+
+button.bg-violet-600 {
+  color: #ffffff !important;
+}
+
+.opacity-50 { opacity: .62; }
+.opacity-60 { opacity: .70; }
+
+/* Keep the top header separator removed. */
+header {
+  border-bottom: 0 !important;
+  border-bottom-width: 0 !important;
+  box-shadow: none !important;
+}

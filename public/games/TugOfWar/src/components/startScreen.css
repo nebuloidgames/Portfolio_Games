@@ -1,0 +1,1044 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,700;1,6..96,800;1,6..96,900&family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;1,900&display=swap");
+
+/* Root Application Container */
+.tow-start-app {
+  min-height: 100vh;
+  width: 100vw;
+  flex: 1;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #030712;
+  font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  color: #f8fafc;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+.tow-screen {
+  min-height: 100vh;
+  width: 100%;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   GAME ARENA WELCOME SCREEN
+   ========================================================================== */
+.arena-welcome-screen {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(circle at 50% 50%, rgba(15, 23, 44, 0.3) 0%, rgba(6, 9, 20, 0.65) 100%), url("../assets/new-Tug-img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 52px 32px 32px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Background Ambient Glow Behind Button */
+.arena-bg-glow {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.28) 0%, rgba(59, 130, 246, 0.12) 42%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(50px);
+}
+
+/* ==========================================================================
+   SIDE CHEVRON WINGS (Vector Decor)
+   ========================================================================== */
+.arena-chevron-side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: clamp(160px, 23vw, 360px);
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.arena-chevron-left {
+  left: 0;
+}
+
+.arena-chevron-right {
+  right: 0;
+}
+
+.arena-chevron-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.9));
+}
+
+/* ==========================================================================
+   TOP HEADER SECTION
+   ========================================================================== */
+.arena-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.arena-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(13px, 1.1vw, 16px);
+  font-weight: 800;
+  letter-spacing: 0.58em;
+  text-indent: 0.58em;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  opacity: 0.95;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.arena-title {
+  font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: clamp(48px, 5.8vw, 84px);
+  line-height: 1.05;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.32em;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.9));
+}
+
+.title-game {
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95), 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.title-arena {
+  letter-spacing: 0.06em;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  filter: drop-shadow(0 2px 8px black);
+}
+
+/* ==========================================================================
+   CENTER START BUTTON & ORBITAL RINGS
+   ========================================================================== */
+.arena-center-stage {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.arena-start-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glowing Halo behind Start Unit */
+.arena-button-halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.45) 0%, rgba(79, 70, 229, 0.22) 48%, transparent 72%);
+  pointer-events: none;
+  filter: blur(20px);
+  z-index: 1;
+}
+
+/* Outer Tech Rings & Glowing Arcs */
+.arena-orbit-rings {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  animation: arenaRingPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes arenaRingPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.94;
+  }
+  100% {
+    transform: scale(1.025);
+    opacity: 1;
+  }
+}
+
+/* The Main START Circular Button */
+.arena-start-btn {
+  position: relative;
+  z-index: 5;
+  width: 244px;
+  height: 244px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: radial-gradient(circle at 50% 50%, #5846f6 0%, #3e2dc9 44%, #2817a0 76%, #1d0f7d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 0 30px rgba(79, 70, 229, 0.65),
+    0 14px 40px rgba(0, 0, 0, 0.8),
+    inset 0 0 30px rgba(129, 140, 248, 0.4);
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, filter 0.22s ease;
+  padding: 0;
+}
+
+.arena-start-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 45px rgba(99, 102, 241, 0.85),
+    0 18px 50px rgba(0, 0, 0, 0.85),
+    inset 0 0 40px rgba(129, 140, 248, 0.6);
+  filter: brightness(1.07);
+}
+
+.arena-start-btn:active {
+  transform: scale(0.97);
+  box-shadow: 
+    0 0 22px rgba(99, 102, 241, 0.6),
+    0 8px 24px rgba(0, 0, 0, 0.9),
+    inset 0 0 20px rgba(129, 140, 248, 0.4);
+}
+
+/* Inner concentric white ring inside button */
+.arena-btn-inner-ring {
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 2px solid rgba(225, 238, 255, 0.9);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), inset 0 0 8px rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+/* START text */
+.arena-start-text {
+  font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-indent: 0.12em;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 18px rgba(255, 255, 255, 0.45);
+  position: relative;
+  z-index: 6;
+}
+
+/* ==========================================================================
+   CHOOSE DIFFICULTY SCREEN (Game Arena Fullscreen)
+   ========================================================================== */
+.arena-difficulty-screen {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(circle at 50% 50%, rgba(15, 23, 44, 0.35) 0%, rgba(6, 9, 20, 0.72) 100%), url("../assets/new-Tug-img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 48px 32px 32px;
+  box-sizing: border-box;
+  overflow: hidden;
+  user-select: none;
+}
+
+.arena-diff-cards-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 1.6vw, 22px);
+  width: min(1280px, 94vw);
+  margin: auto 0;
+  padding: 10px 0;
+}
+
+.arena-diff-card {
+  position: relative;
+  width: clamp(165px, 16vw, 215px);
+  height: clamp(340px, 46vh, 390px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 34px 14px 24px;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.26s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.25s ease;
+}
+
+.arena-diff-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.arena-diff-card:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+.arena-card-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+  transition: filter 0.25s ease;
+}
+
+.arena-diff-card:hover .arena-card-svg {
+  filter: brightness(1.2) drop-shadow(0 0 16px var(--card-glow, rgba(56, 189, 248, 0.6)));
+}
+
+.arena-diff-card-content {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.arena-diff-icon-wrap {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.arena-diff-card:hover .arena-diff-icon-wrap {
+  transform: scale(1.1);
+}
+
+.arena-diff-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px var(--card-glow, rgba(56, 189, 248, 0.5)));
+}
+
+.arena-diff-title {
+  font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: clamp(17px, 1.4vw, 21px);
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 16px rgba(255, 255, 255, 0.2);
+}
+
+.arena-diff-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(11.5px, 0.95vw, 13px);
+  line-height: 1.5;
+  color: rgba(230, 240, 255, 0.88);
+  margin: 0;
+  padding: 0 6px;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   MODE & TEAM SETUP SCREEN (Dark Gaming Arena Style)
+   ========================================================================== */
+.arena-modal-panel {
+  position: relative;
+  z-index: 10;
+  width: min(620px, 92vw);
+  background: rgba(8, 14, 28, 0.94);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: 24px;
+  padding: 40px 36px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 30px rgba(56, 189, 248, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.arena-mode-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.arena-mode-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 20px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #ffffff;
+}
+
+.arena-mode-card:hover {
+  background: rgba(22, 36, 68, 0.9);
+  border-color: rgba(56, 189, 248, 0.7);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+  transform: translateY(-3px);
+}
+
+.arena-mode-card.selected {
+  border-color: #38bdf8;
+  background: rgba(30, 48, 88, 0.95);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+}
+
+.arena-mode-icon {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.arena-mode-title {
+  font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.arena-mode-desc {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.arena-input-group {
+  margin-bottom: 18px;
+}
+
+.arena-solo-opponent-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px dashed rgba(56, 189, 248, 0.35);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.arena-solo-opponent-avatar {
+  font-size: 32px;
+  background: rgba(56, 189, 248, 0.12);
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.arena-solo-opponent-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.arena-solo-opponent-meta {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+.arena-input-label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #38bdf8;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.arena-input {
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1.5px solid rgba(56, 189, 248, 0.25);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.arena-input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.arena-btn-primary {
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+  border: none;
+  border-radius: 9999px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.arena-btn-primary:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.8);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   BOTTOM CONTROLS BAR (Pill Buttons)
+   ========================================================================== */
+.arena-bottom-bar {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 48px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.arena-pill-btn {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 24px;
+  background: rgba(6, 10, 22, 0.88);
+  border: 1.4px solid rgba(56, 189, 248, 0.42);
+  border-radius: 9999px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(56, 189, 248, 0.08);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.arena-pill-btn:hover {
+  background: rgba(10, 18, 38, 0.96);
+  border-color: rgba(56, 189, 248, 0.85);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.45), 0 4px 24px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.arena-pill-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.arena-btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #e0f2fe;
+}
+
+.arena-btn-back {
+  padding: 9px 28px;
+}
+
+.arena-btn-back .arena-btn-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* ==========================================================================
+   HOW TO PLAY SUBPAGE (Dark Sci-Fi Theme to match)
+   ========================================================================== */
+.tow-subpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at 50% 50%, rgba(15, 23, 44, 0.35) 0%, rgba(6, 9, 20, 0.75) 100%), url("../assets/new-Tug-img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.tow-panel {
+  width: min(800px, 100%);
+  background: rgba(10, 16, 32, 0.92);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 20px;
+  padding: 40px 48px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.1);
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #ffffff;
+}
+
+.tow-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #38bdf8;
+  text-transform: uppercase;
+}
+
+.tow-panel h1 {
+  font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 38px;
+  margin: 6px 0 24px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.tow-steps {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.tow-steps > div {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  column-gap: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(17, 26, 50, 0.5);
+  border-radius: 12px;
+  padding: 18px 20px;
+  align-items: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.tow-steps > div:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(22, 34, 65, 0.7);
+}
+
+.tow-steps b {
+  grid-row: span 2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #38bdf8;
+}
+
+.tow-steps strong {
+  font-size: 16px;
+  color: #f8fafc;
+}
+
+.tow-steps p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 4px 0 0 0;
+  line-height: 1.4;
+}
+
+.tow-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 900px) {
+  .arena-chevron-side {
+    width: 140px;
+    opacity: 0.7;
+  }
+
+  .arena-bottom-bar {
+    padding: 0 24px;
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .arena-welcome-screen {
+    padding: 32px 16px 24px;
+  }
+
+  .arena-chevron-side {
+    width: 90px;
+    opacity: 0.5;
+  }
+
+  .arena-subtitle {
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-indent: 0.35em;
+    margin-bottom: 8px;
+  }
+
+  .arena-title {
+    font-size: 40px;
+  }
+
+  .arena-start-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .arena-button-halo {
+    width: 290px;
+    height: 290px;
+  }
+
+  .arena-start-btn {
+    width: 190px;
+    height: 190px;
+  }
+
+  .arena-start-text {
+    font-size: 32px;
+  }
+
+  .arena-bottom-bar {
+    padding: 0 16px;
+    bottom: 20px;
+  }
+
+  .arena-pill-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .tow-panel {
+    padding: 24px 20px;
+  }
+
+  .tow-panel h1 {
+    font-size: 30px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TOP NEBULOID BRANDING BANNER
+   ═══════════════════════════════════════════════════════════ */
+.nebuloid-top-banner {
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.nebuloid-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.nebuloid-top-logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+  display: block;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   COMPACT / SMALL FLOATING KEYBOARD
+   ═══════════════════════════════════════════════════════════ */
+.fkb-container {
+  position: fixed;
+  z-index: 9999;
+  width: min(92vw, 360px);
+  background: rgba(10, 18, 36, 0.96);
+  border: 1.5px solid rgba(56, 189, 248, 0.55);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 30px rgba(56, 189, 248, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  animation: fkb-scale-in 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fkb-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.fkb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px 8px;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+  margin-bottom: 8px;
+  cursor: grab;
+}
+
+.fkb-header:active {
+  cursor: grabbing;
+}
+
+.fkb-header-drag-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fkb-drag-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.75;
+}
+
+.fkb-close-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.fkb-close-btn:hover {
+  background: rgba(239, 68, 68, 0.8);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.fkb-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fkb-row {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.fkb-key {
+  height: 30px;
+  min-width: 26px;
+  flex: 1;
+  border-radius: 6px;
+  background: rgba(30, 48, 80, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f1f5f9;
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+  padding: 0 4px;
+}
+
+.fkb-key:hover {
+  background: rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.fkb-key:active {
+  transform: translateY(1px) scale(0.96);
+  background: rgba(56, 189, 248, 0.45);
+}
+
+.fkb-key-num {
+  background: rgba(20, 35, 62, 0.9);
+  color: #7dd3fc;
+}
+
+.fkb-key-action {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.fkb-key-backspace {
+  flex: 1.4;
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+}
+
+.fkb-key-backspace:hover {
+  background: rgba(239, 68, 68, 0.35);
+  border-color: rgba(239, 68, 68, 0.7);
+  color: #ffffff;
+}
+
+.fkb-key-clear {
+  flex: 1.1;
+  background: rgba(148, 163, 184, 0.15);
+  border-color: rgba(148, 163, 184, 0.3);
+  color: #cbd5e1;
+}
+
+.fkb-key-space {
+  flex: 3;
+}
+
+.fkb-key-done {
+  flex: 1.6;
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  border-color: rgba(56, 189, 248, 0.6);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+}
+
+.fkb-key-done:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
+}
+
+.arena-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.arena-input-wrap .arena-input {
+  padding-right: 46px;
+}
+
+.arena-input-kb-btn {
+  position: absolute;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(15, 23, 42, 0.8);
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.arena-input-kb-btn:hover {
+  background: rgba(56, 189, 248, 0.25);
+  border-color: #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}

@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; margin: 0; }
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  user-select: none;
+}
+button, input { font: inherit; }
+@keyframes targetPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.06); }
+}
+@keyframes targetSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes popIn {
+  0% { transform: translate(-50%, -50%) scale(.65); opacity: .2; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.target-pulse { animation: targetPulse 700ms ease-in-out infinite; }
+.target-spin { animation: targetSpin 1.8s linear infinite; }
+.target-pop { animation: popIn 160ms ease-out; }
+.float-badge { animation: floatBadge 1.8s ease-in-out infinite; }

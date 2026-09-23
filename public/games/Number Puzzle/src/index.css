@@ -1,0 +1,302 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-outfit: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-chakra: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-inter: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-title: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-outfit,
+.font-chakra,
+.font-inter,
+.font-title-serif {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-style: normal;
+}
+
+/* Glassmorphism Start Card */
+.glass-start-card {
+  background: radial-gradient(
+    circle at 50% 35%,
+    rgba(34, 114, 46, 0.18) 0%,
+    rgba(20, 80, 32, 0.28) 60%,
+    rgba(10, 48, 18, 0.38) 100%
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 24px 60px -10px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Bottom Green Pill Buttons */
+.btn-pill-green {
+  background: linear-gradient(180deg, rgba(34, 120, 44, 0.92) 0%, rgba(22, 90, 30, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-green:hover {
+  background: linear-gradient(180deg, rgba(42, 142, 54, 0.95) 0%, rgba(28, 108, 38, 0.98) 100%);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.4),
+    0 0 16px rgba(52, 211, 153, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-pill-green:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 3D Embossed White Puzzle Tile */
+.tile-3d-white {
+  background: linear-gradient(145deg, #ffffff 0%, #f7f8fa 70%, #eceff4 100%);
+  box-shadow:
+    0 8px 16px -4px rgba(15, 23, 42, 0.12),
+    0 3px 6px -2px rgba(15, 23, 42, 0.08),
+    inset 0 2px 1px rgba(255, 255, 255, 0.9),
+    inset 0 -2px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  transition: all 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tile-3d-white:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 20px -4px rgba(15, 23, 42, 0.16),
+    0 4px 8px -2px rgba(15, 23, 42, 0.1),
+    inset 0 2px 1px rgba(255, 255, 255, 1);
+}
+
+.tile-3d-white:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 3px 6px -2px rgba(15, 23, 42, 0.15),
+    inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 3D Embossed Red Blank / Accent Tile */
+.tile-3d-red {
+  background: linear-gradient(145deg, #f87171 0%, #ef4444 45%, #dc2626 100%);
+  box-shadow:
+    0 8px 20px -2px rgba(239, 68, 68, 0.45),
+    0 4px 8px -2px rgba(185, 28, 28, 0.35),
+    inset 0 2px 2px rgba(255, 255, 255, 0.45),
+    inset 0 -2px 3px rgba(153, 27, 27, 0.5);
+  border: 1px solid rgba(248, 113, 113, 0.8);
+}
+
+/* Sunken Grey Blank Tile Slot */
+.tile-3d-empty {
+  background: linear-gradient(145deg, #c7cbd3 0%, #d8dce2 100%);
+  box-shadow:
+    inset 0 3px 6px rgba(0, 0, 0, 0.16),
+    inset 0 1px 2px rgba(0, 0, 0, 0.22),
+    0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(180, 186, 196, 0.6);
+}
+
+/* Glowing Red Aura for Play Now button */
+.play-now-glow {
+  box-shadow:
+    0 0 28px 2px rgba(239, 68, 68, 0.5),
+    0 10px 24px -4px rgba(239, 68, 68, 0.35),
+    0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease-in-out;
+}
+
+.play-now-glow:hover {
+  box-shadow:
+    0 0 36px 6px rgba(239, 68, 68, 0.7),
+    0 12px 28px -2px rgba(239, 68, 68, 0.45),
+    0 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.play-now-glow:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 0 20px 1px rgba(239, 68, 68, 0.5),
+    0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle pulse animation for glowing items */
+@keyframes softPulse {
+  0%, 100% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.4));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 22px rgba(239, 68, 68, 0.75));
+  }
+}
+
+.pulse-glow {
+  animation: softPulse 2.8s ease-in-out infinite;
+}
+
+/* Tech Reticle Rotate Animation */
+@keyframes reticleRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slow {
+  animation: reticleRotate 60s linear infinite;
+}
+
+.rotate-slow-reverse {
+  animation: reticleRotate 80s linear infinite reverse;
+}
+
+/* ==========================================================================
+   GAME BOARD THEME (Emerald & Cream Adventure Style matching design reference)
+   ========================================================================== */
+
+/* Outer Game Glass Card Frame */
+.glass-game-frame {
+  background: radial-gradient(
+    circle at 50% 30%,
+    rgba(22, 101, 52, 0.16) 0%,
+    rgba(16, 75, 39, 0.24) 60%,
+    rgba(10, 48, 25, 0.32) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.38);
+  box-shadow:
+    0 24px 60px -10px rgba(0, 0, 0, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Vibrant Green Header Pills with Crisp White Border */
+.pill-green-border {
+  background: #00b047;
+  background: linear-gradient(180deg, #00b84c 0%, #009d3e 100%);
+  border: 2.2px solid #ffffff;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+/* Green Frame for Board and Action Bar */
+.puzzle-frame-green {
+  border: 3.5px solid #00b84c;
+  background-color: #ffffff;
+  box-shadow:
+    0 8px 24px -4px rgba(0, 0, 0, 0.22),
+    0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cream 3D Number Tiles */
+.tile-cream-3d {
+  background: #fdf8f0;
+  border-radius: 14px;
+  border: 1px solid #ebe2d3;
+  border-bottom: 4px solid #ded1bf;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  color: #050505;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.tile-cream-3d:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.12),
+    inset 0 1px 1px rgba(255, 255, 255, 1);
+  background-color: #ffffff;
+}
+
+.tile-cream-3d:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0 2px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Taupe / Inset Empty Tile Slot */
+.tile-taupe-empty {
+  background-color: #c4b7a6;
+  border-radius: 14px;
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.22),
+    inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  border: 1px solid #b3a593;
+}
+
+/* Action Bar Buttons */
+.action-btn-cream {
+  background-color: #fdf8f0;
+  border-radius: 10px;
+  border: 1px solid #ebd9c2;
+  border-bottom: 3px solid #d8c8b1;
+  color: #111827;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: all 0.15s ease;
+}
+
+.action-btn-cream:hover:not(:disabled) {
+  background-color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn-cream:active:not(:disabled) {
+  transform: translateY(1px);
+  border-bottom-width: 1px;
+}
+
+.action-btn-taupe {
+  background-color: #baa998;
+  border-radius: 10px;
+  border: 1px solid #a89786;
+  color: #27272a;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.14);
+}
+
+/* Hint Target Pulse Indicator */
+@keyframes hintPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 0 rgba(0, 184, 76, 0.7),
+      0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow:
+      0 0 0 8px rgba(0, 184, 76, 0.5),
+      0 8px 18px rgba(0, 184, 76, 0.35);
+    transform: scale(1.04);
+  }
+}
+
+.hint-highlight {
+  animation: hintPulse 1.2s infinite ease-in-out;
+  border-color: #00b84c !important;
+}

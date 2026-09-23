@@ -1,0 +1,689 @@
+/* ==========================================================================
+   Game.css - Word Hunt Game Arena
+   Pixel-perfect design matching user reference image:
+   - Oceanic island background (bg-img.png)
+   - Top Royal Blue Navigation Pills (LEVEL, MENU/TIMER/SCORE, STREAK)
+   - Parchment paper style cards with stitched border accents
+   - Board A (Yellow banner) & Board B (Green banner) with 6x6 grid
+   - Center "FIND ALL WORDS" parchment scroll with magnifying glass
+   - Supports Self Mode (1 board), Team vs Team (2 boards), and vs Robot
+   ========================================================================== */
+
+.game-arena-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 620px;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  user-select: none;
+  font-family:
+    "Outfit",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  box-sizing: border-box;
+  padding: 16px 20px 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Toast Banner
+   -------------------------------------------------------------------------- */
+.game-toast-banner {
+  position: fixed;
+  top: 76px;
+  background: #111827;
+  color: #f7b418;
+  border: 1.5px solid #f7b418;
+  border-radius: 9999px;
+  padding: 8px 24px;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  animation: toastSlideDown 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes toastSlideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Top Navigation Bar (Pixel-perfect matching reference image)
+   -------------------------------------------------------------------------- */
+.game-top-navbar {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  z-index: 30;
+}
+
+.game-top-pill {
+  background: linear-gradient(180deg, #103b8c 0%, #072666 100%);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 9999px;
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  box-shadow: 0 6px 18px rgba(2, 14, 42, 0.45);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.top-pill-level {
+  padding: 10px 24px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.top-pill-center {
+  flex: 1;
+  max-width: 620px;
+  padding: 8px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-nav-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.menu-nav-btn:hover {
+  color: #f7b418;
+  transform: translateX(-3px);
+}
+
+.timer-nav-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.timer-icon {
+  font-size: 16px;
+}
+
+.score-nav-display {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.top-pill-streak {
+  padding: 10px 24px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   Main Boards Container
+   -------------------------------------------------------------------------- */
+.game-boards-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 22px;
+  width: 100%;
+  max-width: 1140px;
+  margin: auto 0;
+  animation: arenaFadeIn 0.5s ease-out;
+}
+
+@keyframes arenaFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Self Mode Layout: centered with balanced width */
+.mode-self-layout {
+  max-width: 720px;
+  gap: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Parchment Board Card (Sketched Treasure Map style)
+   -------------------------------------------------------------------------- */
+.parchment-board-card {
+  background: #fbf3d5;
+  border: 2.5px solid #231f1b;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(0, 18, 48, 0.35);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: clamp(310px, 34vw, 390px);
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.shake-board {
+  animation: boardShake 0.4s ease;
+}
+
+@keyframes boardShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+}
+
+/* Corner Stitches for Hand-Drawn Map effect */
+.stitch-corner {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.stitch-tl {
+  top: 4px;
+  left: 4px;
+  border-top: 2px dashed #231f1b;
+  border-left: 2px dashed #231f1b;
+}
+
+.stitch-tr {
+  top: 4px;
+  right: 4px;
+  border-top: 2px dashed #231f1b;
+  border-right: 2px dashed #231f1b;
+}
+
+.stitch-bl {
+  bottom: 4px;
+  left: 4px;
+  border-bottom: 2px dashed #231f1b;
+  border-left: 2px dashed #231f1b;
+}
+
+.stitch-br {
+  bottom: 4px;
+  right: 4px;
+  border-bottom: 2px dashed #231f1b;
+  border-right: 2px dashed #231f1b;
+}
+
+/* Board Header Banners */
+.parchment-board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 2.5px solid #231f1b;
+}
+
+.header-yellow {
+  background: #f7b418;
+}
+
+.header-green {
+  background: #10b981;
+}
+
+.board-title-text {
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #111827;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.words-left-pill {
+  background: #ffffff;
+  border: 1.5px solid #231f1b;
+  border-radius: 9999px;
+  padding: 2px 10px;
+  font-weight: 800;
+  font-size: 11px;
+  color: #111827;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Letter Grid */
+.parchment-letter-grid {
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.grid-row {
+  display: flex;
+  gap: 6px;
+}
+
+.grid-letter-tile {
+  width: clamp(38px, 4.3vw, 46px);
+  height: clamp(38px, 4.3vw, 46px);
+  background: #fdfaf2;
+  border: 1.5px solid #d5c8a4;
+  border-radius: 9px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: #1f2937;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  outline: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.grid-letter-tile:hover {
+  background: #fff8e1;
+  border-color: #f7b418;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Selected Tile: Team A / Self (Warm Amber/Gold) */
+.tile-selected-a {
+  background: #fed7aa !important;
+  border-color: #f59e0b !important;
+  color: #7c2d12 !important;
+  transform: scale(1.06);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.55);
+}
+
+/* Permanently Found Tile: Team A (Gold) */
+.tile-found-a {
+  background: #fef08a !important;
+  border-color: #eab308 !important;
+  color: #854d0e !important;
+  font-weight: 900 !important;
+}
+
+/* Selected Tile: Team B (Emerald) */
+.tile-selected-b {
+  background: #a7f3d0 !important;
+  border-color: #10b981 !important;
+  color: #064e3b !important;
+  transform: scale(1.06);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.55);
+}
+
+/* Permanently Found Tile: Team B (Green) */
+.tile-found-b {
+  background: #6ee7b7 !important;
+  border-color: #059669 !important;
+  color: #064e3b !important;
+  font-weight: 900 !important;
+}
+
+/* Robot Active Animated Tile */
+.tile-robot-hunting {
+  animation: robotHuntingGlow 0.4s ease infinite alternate;
+  background: #c084fc !important;
+  border-color: #9333ea !important;
+  color: #ffffff !important;
+  transform: scale(1.08);
+}
+
+@keyframes robotHuntingGlow {
+  from {
+    box-shadow: 0 0 6px rgba(168, 85, 247, 0.6);
+  }
+  to {
+    box-shadow: 0 0 16px rgba(168, 85, 247, 0.95);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Center "FIND ALL WORDS" Parchment Scroll
+   -------------------------------------------------------------------------- */
+.parchment-scroll-card {
+  background: #fbf3d5;
+  border: 2.5px solid #231f1b;
+  border-radius: 18px;
+  width: clamp(180px, 18vw, 220px);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 14px 34px rgba(0, 18, 48, 0.35);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.magnifier-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fef08a;
+  border: 2px solid #231f1b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  margin-bottom: 6px;
+}
+
+.scroll-title-wrap {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.scroll-title-text {
+  font-family: "Outfit", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #111827;
+  margin: 0;
+}
+
+.scroll-brush-underline {
+  width: 65px;
+  height: 3.5px;
+  background: #f7b418;
+  border-radius: 9999px;
+  margin: 4px auto 0;
+}
+
+/* Words List */
+.scroll-words-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
+  flex: 1;
+}
+
+.scroll-word-item {
+  width: 90%;
+  background: #ffffff;
+  border: 1.5px solid #231f1b;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #1f2937;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.word-text-label {
+  flex: 1;
+  text-align: center;
+}
+
+.word-check-icon {
+  color: #10b981;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.word-found-complete {
+  background: #dcfce7;
+  border-color: #10b981;
+  color: #15803d;
+  text-decoration: line-through;
+  opacity: 0.85;
+}
+
+.scroll-bottom-meta {
+  font-size: 10px;
+  font-weight: 800;
+  color: #854d0e;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   Victory / Game Over Modal
+   -------------------------------------------------------------------------- */
+.game-over-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 14, 38, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.game-over-modal-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 20, 60, 0.4);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 24px;
+  text-align: center;
+  animation: modalPopUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalPopUp {
+  from {
+    transform: scale(0.9) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.game-over-ribbon {
+  display: inline-block;
+  background: #f7b418;
+  color: #111827;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  padding: 4px 16px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.winner-trophy-icon {
+  font-size: 56px;
+  margin-bottom: 8px;
+}
+
+.winner-announcement-title {
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  color: #0b327b;
+  margin: 0 0 8px;
+}
+
+.winner-details-text {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 20px;
+  max-width: 380px;
+}
+
+.game-over-stats-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.modal-stat-pill {
+  flex: 1;
+  background: #f0f5ff;
+  border: 1px solid #d6e4ff;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-stat-pill .stat-label {
+  font-size: 10px;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.modal-stat-pill .stat-val {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0b327b;
+  margin-top: 2px;
+}
+
+.game-over-buttons-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.modal-action-btn {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: 9999px;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-replay {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.btn-replay:hover {
+  background: #cbd5e1;
+}
+
+.btn-next {
+  background: linear-gradient(180deg, #103b8c 0%, #072666 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(2, 14, 42, 0.35);
+}
+
+.btn-next:hover {
+  background: linear-gradient(180deg, #184db4 0%, #0c3384 100%);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .game-boards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .parchment-board-card {
+    width: 94%;
+    max-width: 380px;
+  }
+
+  .parchment-scroll-card {
+    width: 94%;
+    max-width: 380px;
+  }
+
+  .game-top-navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .top-pill-center {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+  }
+}

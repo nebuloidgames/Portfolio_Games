@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background: #08090d;
+}
+
+/* =========================================================
+   STACK MASTER — TEXT BESIDE START BUTTON
+   ========================================================= */
+
+.stack-start-wrap {
+  isolation: isolate;
+}
+
+/* LEFT: stacking action */
+.stack-start-wrap::before {
+  content: "ALIGN\A DROP\A STACK";
+  white-space: pre;
+  position: absolute;
+  z-index: 30;
+  left: clamp(-330px, -22vw, -175px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 190px;
+  text-align: right;
+  font-family: Arial Black, Impact, sans-serif;
+  font-size: clamp(20px, 2vw, 30px);
+  line-height: 1.28;
+  letter-spacing: 0.13em;
+  font-weight: 900;
+  color: #ffe15a;
+  text-shadow: 0 3px 0 #0b4ea8, 0 6px 14px rgba(0,34,112,.35);
+  pointer-events: none;
+}
+
+/* RIGHT: timing / objective */
+.stack-start-wrap::after {
+  content: "TIME\A BALANCE\A MASTER";
+  white-space: pre;
+  position: absolute;
+  z-index: 30;
+  right: clamp(-330px, -22vw, -175px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 190px;
+  text-align: left;
+  font-family: Arial Black, Impact, sans-serif;
+  font-size: clamp(20px, 2vw, 30px);
+  line-height: 1.28;
+  letter-spacing: 0.13em;
+  font-weight: 900;
+  color: #66f0e6;
+  text-shadow: 0 3px 0 #0758a8, 0 6px 14px rgba(0,34,112,.35);
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .stack-start-wrap::before {
+    left: clamp(-210px, -18vw, -105px);
+    width: 115px;
+    font-size: 16px;
+    letter-spacing: .08em;
+  }
+
+  .stack-start-wrap::after {
+    right: clamp(-210px, -18vw, -105px);
+    width: 115px;
+    font-size: 16px;
+    letter-spacing: .08em;
+  }
+}
+
+@media (max-width: 640px) {
+  .stack-start-wrap::before {
+    left: -92px;
+    width: 82px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .stack-start-wrap::after {
+    right: -92px;
+    width: 82px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+}
