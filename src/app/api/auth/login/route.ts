@@ -27,6 +27,7 @@ export async function POST(request: Request) {
         username: true,
         passwordHash: true,
         status: true,
+        role: true,
       },
     });
 
@@ -44,7 +45,10 @@ export async function POST(request: Request) {
       );
     }
 
-    const isValidPassword = await verifyPassword(password, user.passwordHash);
+    const isValidPassword = await verifyPassword(
+      password,
+      user.passwordHash,
+    );
 
     if (!isValidPassword) {
       return NextResponse.json(
@@ -68,12 +72,17 @@ export async function POST(request: Request) {
         fullName: user.fullName,
         username: user.username,
         email: user.email,
+        role: user.role,
       },
     });
   } catch (error) {
     console.error("Login error:", error);
+
     return NextResponse.json(
-      { success: false, message: "An error occurred. Please try again." },
+      {
+        success: false,
+        message: "An error occurred. Please try again.",
+      },
       { status: 500 },
     );
   }
