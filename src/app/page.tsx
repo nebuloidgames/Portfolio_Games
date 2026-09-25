@@ -37,11 +37,11 @@ export default function Home() {
         inset-x-0
         top-[76px]
         bottom-0
-        z-0
+        z-10
         w-full
         overflow-hidden
         overscroll-none
-        bg-[#F4F0E7]
+        bg-bg
       "
     >
       <Hero />

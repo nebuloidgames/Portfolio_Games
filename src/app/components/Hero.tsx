@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import Background from "./background";
 
 interface GameItem {
   id: string;
@@ -78,8 +79,10 @@ const Hero = () => {
   const [user, setUser] = useState<User | null>(null);
   const [paused, setPaused] = useState(false);
 
-  // HOME PAGE ONLY: completely disable browser/document scrolling.
-  // The carousel itself is CSS-animated, so this does not affect its movement.
+  /*
+   * HOME PAGE:
+   * Keep the page fixed/non-scrollable.
+   */
   useEffect(() => {
     const html = document.documentElement;
     const body = document.body;
@@ -107,7 +110,6 @@ const Hero = () => {
       event.preventDefault();
     };
 
-    // Prevent the browser from changing the document scroll position.
     window.addEventListener("wheel", stopPageWheel, {
       passive: false,
       capture: true,
@@ -129,6 +131,9 @@ const Hero = () => {
     };
   }, []);
 
+  /*
+   * Load games + current user.
+   */
   useEffect(() => {
     let mounted = true;
 
@@ -142,12 +147,17 @@ const Hero = () => {
         if (gamesData?.success && Array.isArray(gamesData.games)) {
           setGames((currentGames) => {
             const apiGames = gamesData.games as GameItem[];
-            const bySlug = new Map(apiGames.map((game) => [game.slug, game]));
+
+            const bySlug = new Map(
+              apiGames.map((game) => [game.slug, game]),
+            );
 
             return currentGames.map((fallbackGame) => {
               const apiGame = bySlug.get(fallbackGame.slug);
 
-              if (!apiGame) return fallbackGame;
+              if (!apiGame) {
+                return fallbackGame;
+              }
 
               return {
                 ...fallbackGame,
@@ -156,7 +166,8 @@ const Hero = () => {
                   GAME_IMAGES[fallbackGame.slug] ||
                   apiGame.thumbnailUrl ||
                   fallbackGame.thumbnailUrl,
-                gameUrl: apiGame.gameUrl || fallbackGame.gameUrl,
+                gameUrl:
+                  apiGame.gameUrl || fallbackGame.gameUrl,
               };
             });
           });
@@ -167,7 +178,7 @@ const Hero = () => {
         }
       })
       .catch(() => {
-        // Keep fallback games visible if the API is unavailable.
+        // Keep fallback games visible.
       });
 
     return () => {
@@ -176,7 +187,10 @@ const Hero = () => {
   }, []);
 
   const orderedGames = useMemo(() => {
-    const bySlug = new Map(games.map((game) => [game.slug, game]));
+    const bySlug = new Map(
+      games.map((game) => [game.slug, game]),
+    );
+
     const ordered = GAME_ORDER.map((slug) => bySlug.get(slug)).filter(
       Boolean,
     ) as GameItem[];
@@ -188,60 +202,147 @@ const Hero = () => {
     return [...ordered, ...remaining];
   }, [games]);
 
-  // Two copies = seamless continuous carousel.
-  const carouselGames = [...orderedGames, ...orderedGames];
+  const N = orderedGames.length;
 
   return (
-    <section className="fixed inset-x-0 bottom-0 top-[76px] z-0 box-border min-h-0 w-full overflow-hidden overscroll-none bg-[#F4F0E7] border-x border-b border-black">
-      {/* Figma-style diagonal yellow background */}
+    <section
+      className="
+        fixed
+        inset-x-0
+        bottom-0
+        top-[76px]
+        z-0
+        box-border
+        min-h-0
+        w-full
+        overflow-x-clip
+        overflow-y-visible
+        overscroll-none
+        bg-bg
+      "
+    >
+      <Background/>
+      {/* Diagonal yellow background */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-[39%] top-[-18%] h-[140%] w-[43%] rotate-[17deg] bg-[#FFE5A4]"
+        className="
+          pointer-events-none
+          absolute
+          left-[39%]
+          top-[-18%]
+          h-[140%]
+          w-[43%]
+          rotate-[17deg]
+          bg-bg
+        "
       />
 
-      {/* Header */}
-      <div className="relative z-10 flex flex-col items-center px-5 pt-[clamp(2.2rem,5vh,4rem)] text-center">
-        <h1 className="font-serif text-[clamp(2.4rem,5vw,4.8rem)] font-black uppercase leading-none tracking-[-0.045em] text-[#111111]">
+      {/* HEADER */}
+      <div
+        className="
+          relative
+          z-20
+          flex
+          flex-col
+          items-center
+          px-5
+          pt-[clamp(2.2rem,5vh,4rem)]
+          text-center
+        "
+      >
+        <h1
+          className="
+            font-serif
+            text-[clamp(2.8rem,5.5vw,5.4rem)]
+            font-black
+            uppercase
+            leading-none
+            tracking-[-0.045em]
+            text-[#111111]
+          "
+        >
           NEBULOID GAMES
         </h1>
 
-        <h2 className="mt-2 font-serif text-[clamp(1.3rem,2.5vw,2.25rem)] font-bold leading-tight text-[#4D4A46]">
+        <h2
+          className="
+            mt-3
+            font-serif
+            text-[clamp(1.6rem,3vw,2.7rem)]
+            font-bold
+            leading-tight
+            text-[#4D4A46]
+          "
+        >
           Play. Think. Challenge Yourself.
         </h2>
       </div>
 
-      {/* Continuous carousel */}
+      {/* 3D CAROUSEL */}
       <div
-        className="absolute left-0 right-0 top-[clamp(13.5rem,29vh,17.5rem)] z-10 overflow-hidden py-4"
+        className="
+          nebuloid-scene
+          absolute
+          left-0
+          right-0
+          top-[clamp(13.5rem,29vh,17.5rem)]
+          z-10
+          h-[clamp(24rem,51vh,33rem)]
+          bg-black
+        "
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
         <div
-          className="flex w-max items-stretch gap-4 sm:gap-5 lg:gap-6"
-          style={{
-            animation: `nebuloid-carousel ${Math.max(
-              orderedGames.length * 2.6,
-              30,
-            )}s linear infinite`,
-            animationPlayState: paused ? "paused" : "running",
-          }}
+          className="nebuloid-ring"
+          style={
+            {
+              "--n": N,
+              animationDuration: `${Math.max(N * 2.6, 30)}s`,
+              animationPlayState: paused ? "paused" : "running",
+            } as CSSProperties
+          }
         >
-          {carouselGames.map((game, index) => {
+          {orderedGames.map((game, i) => {
             const unlocked =
               user !== null ||
               game.slug === "catch-the-brand" ||
               game.slug === "target-shooter";
 
-            const image = GAME_IMAGES[game.slug] || game.thumbnailUrl || "/hero-img.png";
+            const image =
+              GAME_IMAGES[game.slug] ||
+              game.thumbnailUrl ||
+              "/hero-img.png";
+
+            const cardStyle = {
+              "--i": i,
+            } as CSSProperties;
 
             const card = (
               <div
-                className={`group relative h-[clamp(205px,28vh,280px)] w-[clamp(165px,17vw,230px)] shrink-0 overflow-hidden rounded-[10px] border-2 border-black bg-white shadow-[5px_5px_0_#111] ${
-                  unlocked ? "cursor-pointer" : "cursor-pointer opacity-80"
-                }`}
+                className={`
+                  relative
+                  h-full
+                  w-full
+                  overflow-hidden
+                  rounded-[10px]
+                  border-2
+                  border-black
+                  bg-white
+                  shadow-[5px_5px_0_#111]
+                  ${unlocked ? "" : "opacity-80"}
+                `}
               >
-                {/* Image stays completely visible for locked games */}
-                <div className="absolute inset-0 bottom-[52px] overflow-hidden bg-white">
+                {/* IMAGE */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    bottom-[52px]
+                    overflow-hidden
+                    bg-white
+                  "
+                >
                   <img
                     src={image}
                     alt={game.title}
@@ -250,9 +351,34 @@ const Hero = () => {
                   />
                 </div>
 
-                {/* Bottom title strip */}
-                <div className="absolute inset-x-0 bottom-0 flex h-[52px] items-center gap-2 bg-[#0B0A10] px-3">
-                  <p className="min-w-0 flex-1 truncate font-sans text-[12px] font-extrabold uppercase tracking-[0.04em] text-white sm:text-[13px]">
+                {/* TITLE */}
+                <div
+                  className="
+                    absolute
+                    inset-x-0
+                    bottom-0
+                    flex
+                    h-[52px]
+                    items-center
+                    gap-2
+                    bg-[#0B0A10]
+                    px-3
+                  "
+                >
+                  <p
+                    className="
+                      min-w-0
+                      flex-1
+                      truncate
+                      font-sans
+                      text-[15px]
+                      font-extrabold
+                      uppercase
+                      tracking-[0.04em]
+                      text-white
+                      sm:text-[16px]
+                    "
+                  >
                     {game.title}
                   </p>
 
@@ -260,7 +386,21 @@ const Hero = () => {
                     <span
                       title="Login to unlock"
                       aria-label="Locked — login to unlock"
-                      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-[4px] border border-black bg-[#FFD83D] text-[12px] leading-none shadow-[1px_1px_0_#000]"
+                      className="
+                        flex
+                        h-7
+                        w-7
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-[4px]
+                        border
+                        border-black
+                        bg-[#FFD83D]
+                        text-[14px]
+                        leading-none
+                        shadow-[1px_1px_0_#000]
+                      "
                     >
                       🔒
                     </span>
@@ -271,21 +411,23 @@ const Hero = () => {
 
             return unlocked ? (
               <a
-                key={`${game.id}-${index}`}
+                key={game.id}
                 href={game.gameUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Play ${game.title}`}
-                className="block"
+                className="nebuloid-card"
+                style={cardStyle}
               >
                 {card}
               </a>
             ) : (
               <Link
-                key={`${game.id}-${index}`}
+                key={game.id}
                 href="/login"
                 aria-label={`Login to unlock ${game.title}`}
-                className="block"
+                className="nebuloid-card"
+                style={cardStyle}
               >
                 {card}
               </Link>
@@ -294,40 +436,156 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Description + Explore button — separated from carousel so nothing overlaps */}
-      <div className="absolute left-1/2 top-[clamp(34rem,66vh,40rem)] z-10 w-[min(94%,950px)] -translate-x-1/2 text-center">
-        <p className="mx-auto max-w-[850px] text-[clamp(1rem,1.5vw,1.35rem)] font-medium leading-[1.55] text-[#3F3D39]">
-          A collection of interactive games designed and crafted by Nebuloid to
-          challenge your logic, speed, memory, and creativity.
+      {/* DESCRIPTION + EXPLORE */}
+      <div
+        className="
+          absolute
+          left-1/2
+          top-[clamp(34rem,66vh,40rem)]
+          z-20
+          w-[min(94%,950px)]
+          -translate-x-1/2
+          text-center
+        "
+      >
+        <p
+          className="
+            mx-auto
+            max-w-[850px]
+            text-[clamp(1.15rem,1.7vw,1.55rem)]
+            font-medium
+            leading-[1.55]
+            text-[#3F3D39]
+          "
+        >
+          A collection of interactive games designed and crafted by Nebuloid
+          to challenge your logic, speed, memory, and creativity.
         </p>
 
         <Link
-          href="/our-games"
-          className="mx-auto mt-7 inline-flex min-h-[72px] items-center justify-center border-2 border-black bg-[#FFD83D] px-14 py-5 font-serif text-[clamp(1.1rem,1.4vw,1.3rem)] font-bold uppercase tracking-[0.08em] text-black shadow-[5px_5px_0_#111] transition-transform duration-200 hover:-translate-y-1 active:translate-x-1 active:translate-y-1 active:shadow-none"
+          href="/login"
+          className="
+            mx-auto
+            mt-7
+            inline-flex
+            min-h-[72px]
+            items-center
+            justify-center
+            border-2
+            border-black
+            bg-[#FFD83D]
+            px-14
+            py-5
+            font-serif
+            text-[clamp(1.25rem,1.6vw,1.5rem)]
+            font-bold
+            uppercase
+            tracking-[0.08em]
+            text-black
+            shadow-[5px_5px_0_#111]
+            transition-transform
+            duration-200
+            hover:-translate-y-1
+            active:translate-x-1
+            active:translate-y-1
+            active:shadow-none
+          "
         >
           EXPLORE NOW <span className="ml-2">→</span>
         </Link>
       </div>
 
-      {/* Fixed footer */}
-      <div className="absolute bottom-4 left-0 right-0 z-10 flex items-center justify-between px-6 text-[9px] uppercase tracking-[0.08em] text-[#3F3D39] sm:px-10 lg:px-14">
-        <span>A collection of fast, fun, interactive games</span>
-        <span className="hidden sm:block">Test your skills. Beat your score.</span>
+      {/* FOOTER */}
+      <div
+        className="
+          absolute
+          bottom-4
+          left-0
+          right-0
+          z-20
+          flex
+          items-center
+          justify-between
+          px-6
+          text-[18px]
+          font-semibold
+          uppercase
+          tracking-[0.08em]
+          text-[#3F3D39]
+          sm:px-10
+          sm:text-[19px]
+          lg:px-14
+        "
+      >
+        <span>
+          A collection of fast, fun, interactive games
+        </span>
+
+        <span className="hidden sm:block">
+          Test your skills. Beat your score.
+        </span>
       </div>
 
-           <style>{`
-        @keyframes nebuloid-carousel {
-          from {
-            transform: translateX(0);
-          }
+      <style>{`
+        .nebuloid-scene,
+        .nebuloid-ring {
+          display: grid;
+        }
+
+        /*
+         * CAROUSEL EDGE:
+         * No mask.
+         * No fade.
+         * No visible boundary.
+         */
+        .nebuloid-scene {
+          overflow: visible;
+          perspective: 1000px;
+          --w: clamp(170px, 17vw, 230px);
+
+          -webkit-mask: none;
+          mask: none;
+        }
+
+        .nebuloid-ring {
+          place-self: center;
+          transform-style: preserve-3d;
+          animation: nebuloid-ry 40s linear infinite;
+        }
+
+        @keyframes nebuloid-ry {
           to {
-            transform: translateX(-50%);
+            transform: rotateY(1turn);
           }
         }
 
+        .nebuloid-card {
+          --ba: calc(1turn / var(--n));
+
+          grid-area: 1 / 1;
+          display: block;
+          width: var(--w);
+          aspect-ratio: 4 / 5;
+
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+
+          cursor: pointer;
+
+          transform:
+            rotateY(calc(var(--i) * var(--ba)))
+            translateZ(
+              calc(
+                -1 *
+                (0.5 * var(--w) + 10px) /
+                tan(0.5 * var(--ba))
+              )
+            );
+        }
+
         @media (prefers-reduced-motion: reduce) {
-          .nebuloid-carousel-track {
-            animation: none !important;
+          .nebuloid-ring {
+            animation-duration: 160s !important;
           }
         }
       `}</style>
