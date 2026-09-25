@@ -76,10 +76,10 @@ const Navbar = () => {
       className="
         relative
         z-[100]
-        h-[82px]
+        h-[110px]
         w-full
         shrink-0
-        bg-[#F4F0E7]
+        bg-bg
       "
     >
       <nav
@@ -109,16 +109,16 @@ const Navbar = () => {
             h-full
             items-center
             select-none
-            hover:opacity-90
+            hover:opacity-100
           "
         >
           <Image
-            src="/nebuloid-logo.png"
+            src="/logo3.png"
             alt="Nebuloid Gaming Logo"
-            width={60}
-            height={60}
+            width={140}
+            height={140}
             priority
-            className="h-[56px] w-auto object-contain"
+            className="h-[110px] w-auto object-contain"
           />
         </Link>
 
