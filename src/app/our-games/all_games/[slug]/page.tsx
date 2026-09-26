@@ -840,13 +840,13 @@ export default function GameDetailPage({
 
     if (!currentGame || !content) {
         return (
-            <main className="min-h-screen bg-white px-6 py-20 text-black">
+            <main className="min-h-screen px-6 py-20 text-white">
                 <div className="mx-auto max-w-6xl">
                     <h1 className="text-4xl font-black uppercase">
                         Game Not Found
                     </h1>
 
-                    <p className="mt-4 text-gray-600">
+                    <p className="mt-4 text-white/70">
                         The game you are looking for does not exist.
                     </p>
 
@@ -862,17 +862,17 @@ export default function GameDetailPage({
     }
 
     return (
-        <main className="min-h-screen overflow-x-hidden bg-white text-black">
+        <main className="min-h-screen overflow-x-hidden text-white">
 
             {/* HERO */}
-            <section className="relative overflow-hidden border-b border-black/10">
+            <section className="relative overflow-hidden border-b border-white/10">
 
                 <div className="mx-auto grid min-h-[520px] max-w-[1180px] items-center gap-10 px-6 py-12 sm:py-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 lg:px-10 lg:py-16">
 
                     {/* LEFT */}
                     <div>
 
-                        <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-cyan-500 sm:text-xs">
+                        <p className="mb-4 text-[10px] font-black uppercase tracking-[0.24em] text-cyan-300 sm:text-xs">
                             {content.eyebrow}
                         </p>
 
@@ -886,7 +886,7 @@ export default function GameDetailPage({
                             </span>
                         </div>
 
-                        <p className="mt-5 max-w-[500px] text-[13px] leading-[1.7] text-gray-600 sm:text-[14px]">
+                        <p className="mt-5 max-w-[500px] text-[13px] leading-[1.7] text-white/70 sm:text-[14px]">
                             {content.description}
                         </p>
 
@@ -895,7 +895,7 @@ export default function GameDetailPage({
                                 playableGameUrl ||
                                 "/our-games"
                             }
-                            className="mt-7 inline-flex min-w-[140px] items-center justify-center rounded-full bg-yellow-400 px-7 py-3.5 text-xs font-black uppercase tracking-wider text-black shadow-[0_5px_0_rgba(0,0,0,0.12)] transition-all duration-200 hover:-translate-y-1 hover:bg-yellow-300"
+                            className="mt-7 inline-flex min-w-[140px] items-center justify-center rounded-full bg-yellow-400 px-7 py-3.5 text-xs font-black uppercase tracking-wider text-white shadow-[0_5px_0_rgba(0,0,0,0.12)] transition-all duration-200 hover:-translate-y-1 hover:bg-yellow-300"
                         >
                             PLAY NOW
                         </a>
@@ -935,7 +935,7 @@ export default function GameDetailPage({
                     {/* ABOUT TITLE */}
                     <div>
 
-                        <p className="text-[10px] font-black uppercase tracking-[0.25em] text-cyan-500 sm:text-xs">
+                        <p className="text-[10px] font-black uppercase tracking-[0.25em] text-cyan-300 sm:text-xs">
                             ABOUT THE GAME
                         </p>
 
@@ -952,7 +952,7 @@ export default function GameDetailPage({
                     {/* ABOUT CONTENT */}
                     <div>
 
-                        <p className="max-w-3xl text-[13px] leading-[1.75] text-gray-600 sm:text-[14px]">
+                        <p className="max-w-3xl text-[13px] leading-[1.75] text-white/70 sm:text-[14px]">
                             {currentGame.description ||
                                 content.description}
                         </p>
@@ -974,7 +974,7 @@ export default function GameDetailPage({
                                             {feature.title}
                                         </h3>
 
-                                        <p className="mt-3 text-sm leading-6 text-gray-500">
+                                        <p className="mt-3 text-sm leading-6 text-white/65">
                                             {feature.description}
                                         </p>
 
@@ -991,7 +991,7 @@ export default function GameDetailPage({
             </section>
 
             {/* MORE GAMES */}
-            <section className="border-t border-black/10 bg-[#f7f7f7]">
+            <section className="border-t border-white/10 bg-[#05030f]/70 backdrop-blur-sm">
 
                 <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
 
@@ -999,7 +999,7 @@ export default function GameDetailPage({
 
                         <div>
 
-                            <p className="text-sm font-black uppercase tracking-[0.25em] text-cyan-500">
+                            <p className="text-sm font-black uppercase tracking-[0.25em] text-cyan-300">
                                 KEEP PLAYING
                             </p>
 
@@ -1037,7 +1037,7 @@ export default function GameDetailPage({
                                         game.slug
                                     }
                                     href={`/our-games/all_games/${game.slug}`}
-                                    className="group overflow-hidden rounded-[22px] border border-black/10 bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                                    className="group overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.07] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
                                 >
 
                                     {/* IMAGE */}
@@ -1049,7 +1049,7 @@ export default function GameDetailPage({
                                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                                         />
 
-                                        <div className="absolute right-4 top-4 rounded-full bg-yellow-400 px-3 py-1.5 text-[10px] font-black uppercase text-black">
+                                        <div className="absolute right-4 top-4 rounded-full bg-yellow-400 px-3 py-1.5 text-[10px] font-black uppercase text-white">
                                             PLAY
                                         </div>
 
@@ -1062,7 +1062,7 @@ export default function GameDetailPage({
                                             {game.title}
                                         </h3>
 
-                                        <p className="mt-2 line-clamp-2 text-sm leading-6 text-gray-500">
+                                        <p className="mt-2 line-clamp-2 text-sm leading-6 text-white/65">
                                             {game.description ||
                                                 "Explore this exciting Nebuloid game."}
                                         </p>
@@ -1092,7 +1092,7 @@ export default function GameDetailPage({
             </section>
 
             {/* FOOTER CTA */}
-            <section className="bg-black px-6 py-20 text-white lg:px-10">
+            <section className="bg-[#05030f]/80 px-6 py-20 text-white backdrop-blur-sm lg:px-10">
 
                 <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 md:flex-row md:items-center">
 
@@ -1110,7 +1110,7 @@ export default function GameDetailPage({
 
                     <Link
                         href="/our-games"
-                        className="rounded-full bg-yellow-400 px-8 py-4 text-sm font-black uppercase tracking-wider text-black transition hover:bg-yellow-300"
+                        className="rounded-full bg-yellow-400 px-8 py-4 text-sm font-black uppercase tracking-wider text-white transition hover:bg-yellow-300"
                     >
                         EXPLORE ALL GAMES
                     </Link>

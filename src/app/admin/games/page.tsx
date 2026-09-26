@@ -200,11 +200,11 @@ export default function GameDetailPage({
   );
 
   return (
-    <main className="min-h-screen bg-[#F4F0E7] text-[#111111]">
+    <main className="min-h-screen bg-transparent text-white">
       <section className="mx-auto w-full max-w-[1320px] px-6 pb-16 pt-12 sm:px-10 lg:px-14">
         <div className="grid items-center gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-14">
           <div>
-            <span className="inline-flex border-2 border-black bg-[#FFD83D] px-3 py-1 font-sans text-[8px] font-black uppercase tracking-[0.08em] shadow-[2px_2px_0_#111]">
+            <span className="inline-flex border-2 border-white/20 bg-violet-600 text-white hover:bg-violet-500 px-3 py-1 font-sans text-[8px] font-black uppercase tracking-[0.08em] shadow-none">
               {content.eyebrow}
             </span>
 
@@ -212,13 +212,13 @@ export default function GameDetailPage({
               {content.headline}
             </h1>
 
-            <div className="mt-5 inline-block border-2 border-black bg-black px-4 py-2">
+            <div className="mt-5 inline-block border-2 border-white/20 bg-black px-4 py-2">
               <span className="font-sans text-[24px] font-black uppercase leading-none text-[#22F0FF] sm:text-[28px]">
                 {title}
               </span>
             </div>
 
-            <p className="mt-5 max-w-[480px] text-[12px] leading-[1.6] text-[#4B4945] sm:text-[13px]">
+            <p className="mt-5 max-w-[480px] text-[12px] leading-[1.6] text-white/70 sm:text-[13px]">
               {description}
             </p>
 
@@ -226,13 +226,13 @@ export default function GameDetailPage({
               href={gameUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex border-2 border-black bg-[#FFD83D] px-5 py-2.5 font-sans text-[10px] font-black uppercase tracking-[0.06em] shadow-[3px_3px_0_#111] transition hover:-translate-y-0.5 active:translate-x-1 active:translate-y-1 active:shadow-none"
+              className="mt-6 inline-flex border-2 border-white/20 bg-violet-600 text-white hover:bg-violet-500 px-5 py-2.5 font-sans text-[10px] font-black uppercase tracking-[0.06em] shadow-none transition hover:-translate-y-0.5 active:translate-x-1 active:translate-y-1 active:shadow-none"
             >
               Get Access
             </a>
           </div>
 
-          <div className="relative aspect-[16/9] overflow-hidden border-2 border-black bg-[#111] shadow-[5px_5px_0_#111]">
+          <div className="relative aspect-[16/9] overflow-hidden border-2 border-white/20 bg-[#111] shadow-none">
             <Image
               src={image}
               alt={title}
@@ -247,11 +247,11 @@ export default function GameDetailPage({
 
         <section className="mt-16 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
-            <p className="font-sans text-[8px] font-black uppercase tracking-[0.12em] text-[#7B6D2B]">
+            <p className="font-sans text-[8px] font-black uppercase tracking-[0.12em] text-[#FFD9A8]">
               — ABOUT THE GAME —
             </p>
-            <h2 className="mt-3 font-serif text-2xl font-black">{title}</h2>
-            <p className="mt-3 max-w-[560px] text-[11px] leading-[1.7] text-[#5B5751]">
+            <h2 className="mt-3 font-[family-name:var(--font-russo)] text-2xl font-black">{title}</h2>
+            <p className="mt-3 max-w-[560px] text-[11px] leading-[1.7] text-white/70">
               {description} The game is designed to reward focus, quick
               decisions and consistent improvement while keeping every round
               easy to understand and fun to replay.
@@ -261,13 +261,13 @@ export default function GameDetailPage({
           <div className="grid grid-cols-3 gap-5">
             {content.features.map((feature, index) => (
               <div key={feature}>
-                <div className="font-sans text-[45px] font-light leading-none text-black/15 sm:text-[58px]">
+                <div className="font-sans text-[45px] font-light leading-none text-white/15 sm:text-[58px]">
                   0{index + 1}
                 </div>
                 <h3 className="mt-2 font-sans text-[8px] font-black uppercase">
                   {feature}
                 </h3>
-                <p className="mt-2 text-[9px] leading-[1.45] text-[#66615B]">
+                <p className="mt-2 text-[9px] leading-[1.45] text-white/70">
                   {featureText[index]}
                 </p>
               </div>
@@ -280,7 +280,7 @@ export default function GameDetailPage({
             <h2 className="font-sans text-2xl font-black uppercase tracking-[-0.04em] sm:text-3xl">
               Game Mechanics
             </h2>
-            <p className="mx-auto mt-2 max-w-[560px] text-[9px] text-[#6A665F]">
+            <p className="mx-auto mt-2 max-w-[560px] text-[9px] text-white/70">
               Sharp focus, quick decisions, and precise timing are the keys to a high score.
             </p>
           </div>
@@ -289,7 +289,7 @@ export default function GameDetailPage({
             {content.mechanics.map((mechanic, index) => (
               <article
                 key={mechanic}
-                className="flex min-h-[155px] flex-col border-2 border-black bg-white shadow-[3px_3px_0_#111]"
+                className="flex min-h-[155px] flex-col border-2 border-white/20 bg-white/[0.07] shadow-none"
               >
                 <div className="flex h-[76px] items-center justify-center bg-[#080711]">
                   <div className="flex h-8 w-8 items-center justify-center border border-[#22F0FF] text-sm text-[#22F0FF]">
@@ -298,7 +298,7 @@ export default function GameDetailPage({
                 </div>
 
                 <div className="flex flex-1 flex-col p-3">
-                  <p className="text-[7px] font-black uppercase tracking-[0.1em] text-[#77716A]">
+                  <p className="text-[7px] font-black uppercase tracking-[0.1em] text-white/70">
                     {index === 0 ? "FIRST THE BASICS" : index === 1 ? "THEN THE SKILL" : index === 2 ? "BUILD YOUR EDGE" : "BEAT THE TIMER"}
                   </p>
                   <h3 className="mt-1 font-sans text-[10px] font-black uppercase">
@@ -307,7 +307,7 @@ export default function GameDetailPage({
                   <button
                     type="button"
                     onClick={() => window.open(gameUrl, "_blank", "noopener,noreferrer")}
-                    className="mt-auto self-start border border-black bg-[#FFD83D] px-4 py-1.5 text-[8px] font-black uppercase shadow-[1px_1px_0_#111]"
+                    className="mt-auto self-start border border-white/20 bg-violet-600 text-white hover:bg-violet-500 px-4 py-1.5 text-[8px] font-black uppercase shadow-none"
                   >
                     {index === 0 ? "Get Started" : index === 1 ? "Get Ready" : index === 2 ? "Test Skills" : "Play Now"}
                   </button>

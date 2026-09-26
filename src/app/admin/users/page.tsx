@@ -129,7 +129,7 @@ export default function UsersPage() {
     const styles: Record<string, string> = {
       ADMIN:
         "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-      USER: "bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-300",
+      USER: "bg-white/[0.06] text-white dark:bg-zinc-800 dark:text-zinc-300",
     };
     return (
       <span
@@ -172,7 +172,7 @@ export default function UsersPage() {
   function getActions(user: User) {
     if (user.id === currentUserId) {
       return (
-        <span className="text-xs text-zinc-400 dark:text-zinc-500">
+        <span className="text-xs text-white/55 dark:text-zinc-500">
           Current user
         </span>
       );
@@ -241,22 +241,22 @@ export default function UsersPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">
+      <h1 className="text-2xl font-bold text-white dark:text-zinc-100">
         Users
       </h1>
-      <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+      <p className="mt-1 text-sm text-white/60 dark:text-zinc-400">
         Manage platform users
       </p>
 
       <div className="mt-6 flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
-          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+          <label className="text-sm font-medium text-white/70 dark:text-zinc-300">
             Status:
           </label>
           <select
             value={statusFilter}
             onChange={(e) => updateFilter("status", e.target.value)}
-            className="rounded-md border border-zinc-300 bg-white px-3 py-1.5 text-sm text-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
+            className="rounded-md border border-white/15 bg-white/[0.07] px-3 py-1.5 text-sm text-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
           >
             <option value="">All</option>
             <option value="ACTIVE">Active</option>
@@ -265,13 +265,13 @@ export default function UsersPage() {
           </select>
         </div>
         <div className="flex items-center gap-2">
-          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+          <label className="text-sm font-medium text-white/70 dark:text-zinc-300">
             Role:
           </label>
           <select
             value={roleFilter}
             onChange={(e) => updateFilter("role", e.target.value)}
-            className="rounded-md border border-zinc-300 bg-white px-3 py-1.5 text-sm text-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
+            className="rounded-md border border-white/15 bg-white/[0.07] px-3 py-1.5 text-sm text-white dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"
           >
             <option value="">All</option>
             <option value="USER">User</option>
@@ -281,7 +281,7 @@ export default function UsersPage() {
       </div>
 
       {error && (
-        <div className="mt-4 rounded-md border border-red-200 bg-red-50 p-4 text-sm text-red-700 dark:border-red-800 dark:bg-red-950 dark:text-red-400">
+        <div className="mt-4 rounded-md border border-red-200 bg-red-500/15 p-4 text-sm text-red-300 dark:border-red-800 dark:bg-red-950 dark:text-red-400">
           {error}
           <button
             onClick={() => setError(null)}
@@ -293,7 +293,7 @@ export default function UsersPage() {
       )}
 
       {successMessage && (
-        <div className="mt-4 rounded-md border border-green-200 bg-green-50 p-4 text-sm text-green-700 dark:border-green-800 dark:bg-green-950 dark:text-green-400">
+        <div className="mt-4 rounded-md border border-green-200 bg-green-500/15 p-4 text-sm text-green-300 dark:border-green-800 dark:bg-green-950 dark:text-green-400">
           {successMessage}
           <button
             onClick={() => setSuccessMessage(null)}
@@ -309,51 +309,51 @@ export default function UsersPage() {
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
-              className="h-16 animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800"
+              className="h-16 animate-pulse rounded-lg bg-white/[0.1] dark:bg-zinc-800"
             />
           ))}
         </div>
       ) : users.length === 0 ? (
-        <div className="mt-8 rounded-lg border border-zinc-200 bg-white p-12 text-center dark:border-zinc-800 dark:bg-zinc-900">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <div className="mt-8 rounded-lg border border-white/15 bg-white/[0.07] p-12 text-center dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-sm text-white/60 dark:text-zinc-400">
             No users found.
           </p>
         </div>
       ) : (
-        <div className="mt-6 overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="mt-6 overflow-hidden rounded-lg border border-white/15 bg-white/[0.07] dark:border-zinc-800 dark:bg-zinc-900">
           <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-zinc-200 dark:divide-zinc-800">
-              <thead className="bg-zinc-50 dark:bg-zinc-800/50">
+            <table className="min-w-full divide-y divide-white/10 dark:divide-zinc-800">
+              <thead className="bg-white/[0.06] dark:bg-zinc-800/50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-white/60 dark:text-zinc-400">
                     User
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-white/60 dark:text-zinc-400">
                     Role
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-white/60 dark:text-zinc-400">
                     Status
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-white/60 dark:text-zinc-400">
                     Last Login
                   </th>
-                  <th className="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  <th className="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider text-white/60 dark:text-zinc-400">
                     Actions
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-zinc-200 dark:divide-zinc-800">
+              <tbody className="divide-y divide-white/10 dark:divide-zinc-800">
                 {users.map((user) => (
                   <tr key={user.id}>
                     <td className="whitespace-nowrap px-6 py-4">
                       <div>
-                        <div className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                        <div className="text-sm font-medium text-white dark:text-zinc-100">
                           {user.fullName}
                         </div>
-                        <div className="text-xs text-zinc-500 dark:text-zinc-400">
+                        <div className="text-xs text-white/60 dark:text-zinc-400">
                           {user.email}
                         </div>
-                        <div className="text-xs text-zinc-400 dark:text-zinc-500">
+                        <div className="text-xs text-white/55 dark:text-zinc-500">
                           @{user.username}
                         </div>
                       </div>
@@ -364,7 +364,7 @@ export default function UsersPage() {
                     <td className="whitespace-nowrap px-6 py-4">
                       {getStatusBadge(user.status)}
                     </td>
-                    <td className="whitespace-nowrap px-6 py-4 text-sm text-zinc-500 dark:text-zinc-400">
+                    <td className="whitespace-nowrap px-6 py-4 text-sm text-white/60 dark:text-zinc-400">
                       {user.lastLoginAt
                         ? new Date(user.lastLoginAt).toLocaleDateString()
                         : "Never"}
@@ -382,7 +382,7 @@ export default function UsersPage() {
 
       {pagination && pagination.totalPages > 1 && (
         <div className="mt-6 flex items-center justify-between">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          <p className="text-sm text-white/60 dark:text-zinc-400">
             Page {pagination.page} of {pagination.totalPages} ({pagination.total}{" "}
             total)
           </p>
@@ -394,7 +394,7 @@ export default function UsersPage() {
                 router.push(`/admin/users?${params.toString()}`);
               }}
               disabled={page <= 1}
-              className="rounded-md border border-zinc-300 px-3 py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50 disabled:opacity-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+              className="rounded-md border border-white/15 px-3 py-1.5 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 disabled:opacity-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
             >
               Previous
             </button>
@@ -405,7 +405,7 @@ export default function UsersPage() {
                 router.push(`/admin/users?${params.toString()}`);
               }}
               disabled={page >= pagination.totalPages}
-              className="rounded-md border border-zinc-300 px-3 py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50 disabled:opacity-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+              className="rounded-md border border-white/15 px-3 py-1.5 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 disabled:opacity-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
             >
               Next
             </button>

@@ -1,164 +1,264 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-
-const TRIANGLE_BASE = 48;
-
+/**
+ * Dark space background, drawn entirely in code: a near-black violet sky
+ * with a painterly nebula (violet, magenta, red, coral) glowing in the
+ * bottom-left corner, diagonal wisps, teal star dust, and pure black on the
+ * right.
+ *
+ * Self-positioning (absolute, inset-0): it fills whatever section renders it
+ * and never takes part in that section's layout.
+ */
 export default function Background() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const glowRef = useRef<HTMLDivElement>(null);
-
-  // Build / rebuild the triangle grid on mount and on resize
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const createTriangleSet = (row: number) => {
-      const el = document.createElement("div");
-      el.classList.add("triangle-set");
-      if (row % 2 === 0) el.classList.add("triangle-set--offset");
-      container.appendChild(el);
-    };
-
-    const instantiateGrid = () => {
-      container.innerHTML = "";
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-
-      const columns = Math.ceil(width / (TRIANGLE_BASE * 2)) + 1;
-      const rows = Math.ceil((height / TRIANGLE_BASE) * 1.733) + 1;
-      container.style.setProperty("--columns", String(columns));
-
-      for (let y = 0; y < rows; y++) {
-        for (let x = 0; x < columns; x++) {
-          createTriangleSet(y);
-        }
-      }
-    };
-
-    instantiateGrid();
-    window.addEventListener("resize", instantiateGrid);
-    return () => window.removeEventListener("resize", instantiateGrid);
-  }, []);
-
-  // Move the glow with the cursor
-  useEffect(() => {
-    const glow = glowRef.current;
-    if (!glow) return;
-
-    const handleMouseMove = (event: MouseEvent) => {
-      glow.style.top = `${event.pageY}px`;
-      glow.style.left = `${event.pageX}px`;
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
   return (
-    <div aria-hidden="true" className="bg-hero">
-      <div id="bg-glow" ref={glowRef} />
-      <div className="bg-triangle-container" ref={containerRef} />
+    <div aria-hidden="true" className="nbg">
+      {/* SVG filter that roughens the nebula edges so it reads as paint/gas */}
+      <svg width="0" height="0" className="nbg-defs">
+        <filter id="nbgPaint" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.011 0.016" numOctaves="4" seed="8" result="n" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="55" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
+
+      <div className="nbg-par">
+      <div className="nbg-drift">
+        <div className="nbg-neb">
+          {/* colour body, concentrated bottom-left */}
+          <Blob left="-12%" top="44%" w="62%" h="72%" c="rgba(75,42,205,.78)" />
+          <Blob left="-8%" top="62%" w="48%" h="54%" c="rgba(205,40,180,.95)" />
+          <Blob left="8%" top="80%" w="42%" h="40%" c="rgba(240,50,85,.92)" />
+          <Blob left="19%" top="91%" w="28%" h="24%" c="rgba(255,100,70,.88)" />
+          <Blob left="28%" top="60%" w="38%" h="36%" c="rgba(130,40,165,.36)" />
+          <Blob left="50%" top="84%" w="28%" h="28%" c="rgba(200,40,75,.34)" />
+
+        </div>
+
+        {/* diagonal wisps rising up and to the right */}
+        <span className="nbg-wisp" style={wisp("30%", "76%", "42%", "2.2%", -32, "linear-gradient(90deg, transparent, rgba(150,205,205,.38) 45%, rgba(215,120,150,.34) 75%, transparent)")} />
+        <span className="nbg-wisp" style={wisp("12%", "68%", "36%", "5.5%", -30, "linear-gradient(90deg, transparent, rgba(225,60,150,.42) 50%, transparent)")} />
+        <span className="nbg-wisp" style={wisp("-2%", "60%", "32%", "3%", -35, "linear-gradient(90deg, transparent, rgba(125,145,225,.4) 55%, transparent)")} />
+      </div>
+      </div>
+
+      {/* teal star dust, thickest in the nebula corner */}
+      <div className="nbg-dust" />
+      {/* faint sky stars */}
+      <div className="nbg-stars nbg-tw1" />
+      <div className="nbg-stars nbg-stars-2 nbg-tw2" />
+      <Flare className="nbg-tw1" left="14%" top="26%" size={52} glow="rgba(150,120,255,.5)" delay="-1s" />
+      <Flare className="nbg-tw2 nbg-flare-wide" left="88%" top="16%" size={64} glow="rgba(255,79,216,.4)" />
+
+      {/* keeps the top very dark and the right edge pure black */}
+      <div className="nbg-shade" />
 
       <style>{`
-        @property --glow-color {
-          syntax: "<color>";
-          inherits: false;
-          initial-value: #ADF5FF;
-        }
-
-        .bg-hero {
-          --gap: 0.125rem;
-          --triangle-base: 3rem;
-          --triangle-base-height: calc(1.733 * var(--triangle-base));
-          --triangle-width: calc(var(--triangle-base) - var(--gap));
-          --triangle-height: calc(var(--triangle-base-height) - var(--gap));
-
-          /* Self-positioning: fixed + inset-0 means this never takes
-             up space in whatever layout it's dropped into (no flow,
-             no grid-row, no flex-item sizing) and always covers the
-             viewport, regardless of the parent's own position value.
-             So you never need to add "fixed"/"relative" to the file
-             that renders <Background />. */
-          position: fixed;
+        .nbg {
+          position: absolute;
           inset: 0;
-          z-index: 0;
-          pointer-events: none;
-
-          background: radial-gradient(#2C666E, #0e111f);
-          background-size: 400% 400%;
-          background-position: 100% 100%;
-          width: 100%;
-          height: 100%;
-          box-sizing: border-box;
           overflow: hidden;
-          animation: bg-animation 20s alternate infinite;
+          pointer-events: none;
+          background: linear-gradient(180deg, #06030e 0%, #0a0517 50%, #12082b 100%);
         }
+        .nbg-defs { position: absolute; }
 
-        @keyframes bg-animation {
-          from { background-position: 0% 0%; }
-          to { background-position: 400% 400%; }
-        }
-
-        #bg-glow {
+        /* --mx / --my (-1..1) come from SpaceFx; nearer layers move more */
+        .nbg-par {
           position: absolute;
-          width: 50vw;
-          height: 100vw;
-          background: radial-gradient(circle closest-side, var(--glow-color), transparent);
-          animation: glow-animation 5.2s ease infinite alternate;
-          transform: translate(-50%, -50%);
+          inset: 0;
+          transform: translate3d(calc(var(--mx, 0) * -14px), calc(var(--my, 0) * -9px), 0);
         }
-
-        @keyframes glow-animation {
-          from {
-            --glow-color: #ADF5FF;
-            transform: translate(-50%, -50%) scale(0.5);
-          }
-          to {
-            --glow-color: #FF6978;
-            transform: translate(-50%, -50%) scale(1) rotate(90deg);
-          }
-        }
-
-        .bg-triangle-container {
-          display: grid;
-          grid-template-columns: repeat(var(--columns), calc(var(--triangle-base) * 2 + var(--gap)));
-          width: 100%;
-          height: 100%;
-        }
-
-        .triangle-set {
-          display: inline-block;
-          position: relative;
-          width: calc(var(--triangle-base) * 2 + var(--gap));
-          height: var(--triangle-base-height);
-        }
-
-        .triangle-set--offset {
-          transform: translateX(calc(-1 * var(--triangle-base) - 0.5 * var(--gap)));
-        }
-
-        .triangle-set::before,
-        .triangle-set::after {
-          content: "";
+        .nbg-drift {
           position: absolute;
-          width: 0;
-          height: 0;
-          top: var(--gap);
-          border-right: var(--triangle-width) solid transparent;
-          border-left: var(--triangle-width) solid transparent;
+          inset: -3%;
+          transform-origin: 15% 100%;
+          will-change: transform;
+          animation: nbgDrift 60s ease-in-out infinite;
+        }
+        .nbg-neb {
+          position: absolute;
+          inset: 0;
+          filter: url(#nbgPaint);
+        }
+        .nbg-blob {
+          position: absolute;
+          background: radial-gradient(closest-side, var(--c), transparent);
+        }
+        .nbg-wisp {
+          position: absolute;
+          display: block;
+          filter: blur(3px);
+          transform-origin: 0 50%;
+          -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 70%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 20%, #000 70%, transparent);
         }
 
-        .triangle-set::before {
-          left: calc(-1 * var(--triangle-base));
-          border-bottom: var(--triangle-height) solid #070711;
+        .nbg-dust {
+          position: absolute;
+          inset: 0;
+          background-image:
+            radial-gradient(1.6px 1.6px at 6% 12%, #9fe8e0, transparent),
+            radial-gradient(1px 1px at 18% 30%, #9fe8e0, transparent),
+            radial-gradient(1.3px 1.3px at 31% 8%, #b7f0ea, transparent),
+            radial-gradient(1px 1px at 44% 26%, #9fe8e0, transparent),
+            radial-gradient(1.5px 1.5px at 57% 15%, #b7f0ea, transparent),
+            radial-gradient(1px 1px at 70% 34%, #9fe8e0, transparent),
+            radial-gradient(1.2px 1.2px at 83% 9%, #9fe8e0, transparent),
+            radial-gradient(1px 1px at 94% 28%, #b7f0ea, transparent),
+            radial-gradient(1.4px 1.4px at 12% 52%, #9fe8e0, transparent),
+            radial-gradient(1px 1px at 26% 66%, #b7f0ea, transparent),
+            radial-gradient(1.2px 1.2px at 39% 48%, #9fe8e0, transparent),
+            radial-gradient(1px 1px at 52% 72%, #9fe8e0, transparent),
+            radial-gradient(1.5px 1.5px at 66% 58%, #b7f0ea, transparent),
+            radial-gradient(1px 1px at 79% 76%, #9fe8e0, transparent),
+            radial-gradient(1.2px 1.2px at 90% 54%, #9fe8e0, transparent),
+            radial-gradient(1px 1px at 8% 86%, #b7f0ea, transparent),
+            radial-gradient(1.4px 1.4px at 22% 92%, #9fe8e0, transparent),
+            radial-gradient(1px 1px at 47% 88%, #9fe8e0, transparent);
+          background-size: 340px 300px;
+          opacity: .85;
+          -webkit-mask-image: radial-gradient(ellipse 75% 65% at 18% 100%, #000 15%, transparent 75%);
+          mask-image: radial-gradient(ellipse 75% 65% at 18% 100%, #000 15%, transparent 75%);
         }
 
-        .triangle-set::after {
-          right: calc(var(--gap) * 2.5);
-          border-top: var(--triangle-height) solid #070711;
+        .nbg-stars {
+          position: absolute;
+          inset: -40px;
+          transform: translate3d(calc(var(--mx, 0) * -26px), calc(var(--my, 0) * -16px), 0);
+          background-image:
+            radial-gradient(1px 1px at 19% 46%, #fff, transparent),
+            radial-gradient(1.4px 1.4px at 33% 21%, #fff, transparent),
+            radial-gradient(1px 1px at 52% 9%, #fff, transparent),
+            radial-gradient(1px 1px at 68% 38%, #fff, transparent),
+            radial-gradient(1.4px 1.4px at 84% 17%, #fff, transparent),
+            radial-gradient(1px 1px at 41% 71%, #fff, transparent);
+          background-size: 520px 480px;
+          opacity: .6;
+        }
+        .nbg-stars-2 {
+          background-image:
+            radial-gradient(1px 1px at 12% 30%, #cfe4ff, transparent),
+            radial-gradient(1px 1px at 61% 24%, #cfe4ff, transparent),
+            radial-gradient(1px 1px at 79% 66%, #ffe9cf, transparent),
+            radial-gradient(0.8px 0.8px at 27% 88%, #fff, transparent);
+          background-size: 330px 300px;
+        }
+        .nbg-flare {
+          position: absolute;
+          transform: translate3d(calc(var(--mx, 0) * -42px), calc(var(--my, 0) * -26px), 0);
+        }
+        .nbg-flare i { position: absolute; display: block; }
+        .nbg-tw1 { animation: nbgTwinkle 4s ease-in-out infinite; }
+        .nbg-tw2 { animation: nbgTwinkle 6.5s ease-in-out infinite reverse; }
+
+        .nbg-shade {
+          position: absolute;
+          inset: 0;
+          background:
+            linear-gradient(180deg, rgba(2,1,8,.55) 0%, transparent 45%),
+            linear-gradient(90deg, transparent 48%, rgba(0,0,0,.82) 100%);
+        }
+
+        @keyframes nbgDrift {
+          0%, 100% { transform: scale(1) translate(0, 0); }
+          50% { transform: scale(1.06) translate(12px, -8px); }
+        }
+        @keyframes nbgTwinkle { 0%, 100% { opacity: .3; } 50% { opacity: 1; } }
+
+        /* phones: skip the displacement filter and the drift so it stays smooth */
+        @media (max-width: 767px) {
+          .nbg-flare-wide { display: none; }
+          .nbg-neb { filter: none; }
+          .nbg-drift { animation: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .nbg-drift, .nbg-tw1, .nbg-tw2 { animation: none; }
         }
       `}</style>
+    </div>
+  );
+}
+
+function Blob({
+  left,
+  top,
+  w,
+  h,
+  c,
+}: {
+  left: string;
+  top: string;
+  w: string;
+  h: string;
+  c: string;
+}) {
+  return (
+    <div
+      className="nbg-blob"
+      style={{ left, top, width: w, height: h, ["--c" as string]: c }}
+    />
+  );
+}
+
+function wisp(
+  left: string,
+  top: string,
+  width: string,
+  height: string,
+  deg: number,
+  background: string,
+) {
+  return { left, top, width, height, background, transform: `rotate(${deg}deg)` };
+}
+
+function Flare({
+  className,
+  left,
+  top,
+  size,
+  glow,
+  delay,
+}: {
+  className: string;
+  left: string;
+  top: string;
+  size: number;
+  glow: string;
+  delay?: string;
+}) {
+  const mid = size / 2;
+  const core = Math.round(size / 5);
+  return (
+    <div
+      className={`nbg-flare ${className}`}
+      style={{ left, top, width: size, height: size, animationDelay: delay }}
+    >
+      <i
+        style={{
+          left: mid - 1,
+          top: 0,
+          width: 2,
+          height: size,
+          background: "linear-gradient(transparent, #fff, transparent)",
+        }}
+      />
+      <i
+        style={{
+          top: mid - 1,
+          left: 0,
+          height: 2,
+          width: size,
+          background: "linear-gradient(90deg, transparent, #fff, transparent)",
+        }}
+      />
+      <i
+        style={{
+          left: mid - core / 2,
+          top: mid - core / 2,
+          width: core,
+          height: core,
+          borderRadius: "50%",
+          background: "#fff",
+          boxShadow: `0 0 16px 6px ${glow}`,
+        }}
+      />
     </div>
   );
 }

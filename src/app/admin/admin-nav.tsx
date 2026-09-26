@@ -43,7 +43,7 @@ export function AdminNav({
   const hasPendingRequests = pendingCount > 0;
 
   return (
-    <nav className="border-b border-black/10 bg-[#F4F0E7]">
+    <nav className="border-b border-white/10 bg-transparent">
       <div className="mx-auto flex h-[62px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
         {/* =========================
@@ -56,7 +56,7 @@ export function AdminNav({
               text-xl
               font-bold
               tracking-tight
-              text-black
+              text-white
               transition-opacity
               hover:opacity-75
             "
@@ -88,7 +88,7 @@ export function AdminNav({
                     ${
                       isActive
                         ? "bg-black text-white"
-                        : "text-zinc-700 hover:bg-black/5 hover:text-black"
+                        : "text-white/70 hover:bg-white/10 hover:text-white"
                     }
                   `}
                 >
@@ -109,7 +109,7 @@ export function AdminNav({
                         rounded-full
                         bg-red-500
                         ring-2
-                        ring-[#F4F0E7]
+                        ring-[#020108]
                       "
                     />
                   )}
@@ -124,7 +124,7 @@ export function AdminNav({
             NO DUPLICATE LOGOUT
         ========================== */}
         <div className="flex items-center">
-          <span className="hidden text-sm font-semibold text-zinc-600 sm:inline">
+          <span className="hidden text-sm font-semibold text-white/70 sm:inline">
             {user.username}
           </span>
         </div>
@@ -133,7 +133,7 @@ export function AdminNav({
       {/* =========================
           MOBILE NAVIGATION
       ========================== */}
-      <div className="border-t border-black/10 px-4 sm:hidden">
+      <div className="border-t border-white/10 px-4 sm:hidden">
         <div className="flex gap-1 overflow-x-auto py-2">
           {links.map((link) => {
             const isActive = pathname === link.href;
@@ -158,7 +158,7 @@ export function AdminNav({
                   ${
                     isActive
                       ? "bg-black text-white"
-                      : "text-zinc-700 hover:bg-black/5 hover:text-black"
+                      : "text-white/70 hover:bg-white/10 hover:text-white"
                   }
                 `}
               >
@@ -178,7 +178,7 @@ export function AdminNav({
                       rounded-full
                       bg-red-500
                       ring-2
-                      ring-[#F4F0E7]
+                      ring-[#020108]
                     "
                   />
                 )}

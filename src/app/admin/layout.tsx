@@ -29,7 +29,7 @@ export default async function AdminLayout({
   const pendingCount = await getPendingCount();
 
   return (
-    <div className="min-h-screen bg-[#F4F0E7] text-black">
+    <div className="min-h-screen bg-transparent text-white">
       <AdminNav
         user={user}
         pendingCount={pendingCount}

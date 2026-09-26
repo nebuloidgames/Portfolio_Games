@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Russo_One, Exo_2, Orbitron } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Background from "./components/background";
+import SiteBackdrop from "./components/SiteBackdrop";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const russoOne = Russo_One({
+  variable: "--font-russo",
   subsets: ["latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
   subsets: ["latin"],
+  weight: ["500", "700", "900"],
+});
+
+const exo2 = Exo_2({
+  variable: "--font-exo",
+  subsets: ["latin"],
+  weight: ["500", "700", "800"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -23,11 +32,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${russoOne.variable} ${exo2.variable} ${orbitron.variable} h-full antialiased`}
     >
-      <body className="relative min-h-dvh flex flex-col bg-[#F4F0E7]">
-        {/* Global background effect */}
-        
+      <body className="relative flex min-h-dvh flex-col bg-[#020108] font-[family-name:var(--font-exo)] text-[#ece8ff]">
+        {/* Site-wide nebula, behind every page */}
+        <SiteBackdrop />
 
         {/* Website content */}
         <div className="relative z-30 flex min-h-dvh flex-col">
