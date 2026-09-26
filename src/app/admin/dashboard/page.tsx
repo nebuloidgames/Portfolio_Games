@@ -52,8 +52,8 @@ function StatCard({
         min-h-[145px]
         rounded-xl
         border
-        border-zinc-200
-        bg-white
+        border-white/15
+        bg-white/[0.07]
         p-7
         shadow-[0_2px_8px_rgba(0,0,0,0.05)]
         transition-all
@@ -61,11 +61,11 @@ function StatCard({
         hover:shadow-[0_5px_15px_rgba(0,0,0,0.08)]
       "
     >
-      <p className="text-base font-semibold text-zinc-600">
+      <p className="text-base font-semibold text-white/70">
         {label}
       </p>
 
-      <p className="mt-4 text-4xl font-bold leading-none text-black">
+      <p className="mt-4 text-4xl font-bold leading-none text-white">
         {value}
       </p>
     </div>
@@ -105,7 +105,7 @@ export default async function DashboardPage() {
           flex-col
           gap-5
           border-b
-          border-black/10
+          border-white/10
           pb-8
           sm:flex-row
           sm:items-end
@@ -119,7 +119,7 @@ export default async function DashboardPage() {
               font-bold
               uppercase
               tracking-[0.28em]
-              text-zinc-500
+              text-white/60
             "
           >
             Nebuloid Admin
@@ -128,18 +128,18 @@ export default async function DashboardPage() {
           <h1
             className="
               mt-3
-              font-serif
+              font-[family-name:var(--font-russo)]
               text-4xl
               font-bold
               leading-none
-              text-black
+              text-white
               sm:text-5xl
             "
           >
             Dashboard
           </h1>
 
-          <p className="mt-4 text-base font-medium text-zinc-600">
+          <p className="mt-4 text-base font-medium text-white/70">
             Overview of your platform
           </p>
         </div>
@@ -150,13 +150,13 @@ export default async function DashboardPage() {
             w-fit
             rounded-md
             border
-            border-zinc-200
-            bg-white
+            border-white/15
+            bg-white/[0.07]
             px-5
             py-3
             text-sm
             font-semibold
-            text-zinc-700
+            text-white/70
           "
         >
           Admin Overview
@@ -172,7 +172,7 @@ export default async function DashboardPage() {
             className="
               text-xl
               font-bold
-              text-black
+              text-white
               sm:text-2xl
             "
           >
@@ -184,7 +184,7 @@ export default async function DashboardPage() {
             className="
               rounded-md
               border-2
-              border-black
+              border-white/20
               bg-yellow-400
               px-5
               py-3
@@ -192,8 +192,8 @@ export default async function DashboardPage() {
               font-bold
               uppercase
               tracking-wide
-              text-black
-              shadow-[3px_3px_0_#000]
+              text-white
+              shadow-none
               transition-all
               hover:-translate-y-0.5
               hover:bg-yellow-300
@@ -213,8 +213,8 @@ export default async function DashboardPage() {
             min-h-[150px]
             rounded-xl
             border
-            border-zinc-200
-            bg-white
+            border-white/15
+            bg-white/[0.07]
             p-7
             shadow-[0_2px_8px_rgba(0,0,0,0.05)]
             transition-all
@@ -223,15 +223,15 @@ export default async function DashboardPage() {
             hover:shadow-[0_5px_15px_rgba(0,0,0,0.08)]
           "
         >
-          <p className="text-base font-semibold text-zinc-600">
+          <p className="text-base font-semibold text-white/70">
             Pending Requests
           </p>
 
-          <p className="mt-4 text-4xl font-bold leading-none text-black">
+          <p className="mt-4 text-4xl font-bold leading-none text-white">
             {stats.pendingAccessRequests}
           </p>
 
-          <p className="mt-4 text-sm font-medium text-zinc-500">
+          <p className="mt-4 text-sm font-medium text-white/60">
             Requests waiting for admin approval
           </p>
         </Link>
@@ -246,7 +246,7 @@ export default async function DashboardPage() {
             className="
               text-xl
               font-bold
-              text-black
+              text-white
               sm:text-2xl
             "
           >
@@ -297,7 +297,7 @@ export default async function DashboardPage() {
             className="
               text-xl
               font-bold
-              text-black
+              text-white
               sm:text-2xl
             "
           >
@@ -309,7 +309,7 @@ export default async function DashboardPage() {
             className="
               rounded-md
               border-2
-              border-black
+              border-white/20
               bg-yellow-400
               px-5
               py-3
@@ -317,8 +317,8 @@ export default async function DashboardPage() {
               font-bold
               uppercase
               tracking-wide
-              text-black
-              shadow-[3px_3px_0_#000]
+              text-white
+              shadow-none
               transition-all
               hover:-translate-y-0.5
               hover:bg-yellow-300
@@ -336,13 +336,13 @@ export default async function DashboardPage() {
             min-h-[155px]
             rounded-xl
             border
-            border-zinc-200
-            bg-white
+            border-white/15
+            bg-white/[0.07]
             p-7
             shadow-[0_2px_8px_rgba(0,0,0,0.05)]
           "
         >
-          <p className="text-base font-semibold text-zinc-600">
+          <p className="text-base font-semibold text-white/70">
             Your game collection is available on the Our Games page.
           </p>
 

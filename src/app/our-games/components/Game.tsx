@@ -212,24 +212,24 @@ export default function Game() {
   }, [games]);
 
   return (
-    <main className="min-h-screen w-full overflow-x-hidden bg-[#F4F0E7] text-[#111111]">
+    <main className="min-h-screen w-full overflow-x-hidden bg-transparent text-white">
       <section className="mx-auto w-full max-w-[1650px] px-3 pb-20 pt-10 sm:px-4 lg:px-5">
         {/* HEADER */}
         <div className="mx-auto max-w-[1050px] text-center">
-          <p className="font-serif text-[12px] font-bold uppercase tracking-[0.28em] text-[#3F3D39] sm:text-[14px]">
+          <p className="font-[family-name:var(--font-russo)] text-[12px] font-bold uppercase tracking-[0.28em] text-white/70 sm:text-[14px]">
             Choose Your Game
           </p>
 
-          <h1 className="mt-2 font-serif text-[48px] font-black uppercase leading-none tracking-[-0.045em] text-[#111111] sm:text-[58px] lg:text-[64px]">
+          <h1 className="mt-2 font-[family-name:var(--font-russo)] text-[48px] font-black uppercase leading-none tracking-[-0.045em] text-white sm:text-[58px] lg:text-[64px]">
             Our Games
           </h1>
 
-          <p className="mx-auto mt-4 max-w-[850px] text-[14px] leading-6 text-[#4B4945] sm:text-[16px]">
+          <p className="mx-auto mt-4 max-w-[850px] text-[14px] leading-6 text-white/70 sm:text-[16px]">
             Each game is uniquely crafted to test your logic, speed, memory
             and strategy.
           </p>
 
-          <div className="mx-auto mt-5 inline-flex border-2 border-black bg-[#080711] px-7 py-3 font-sans text-[12px] font-extrabold uppercase tracking-[0.08em] text-white shadow-[4px_4px_0_#111]">
+          <div className="mx-auto mt-5 inline-flex border-2 border-white/20 bg-[#080711] px-7 py-3 font-sans text-[12px] font-extrabold uppercase tracking-[0.08em] text-white shadow-[0_0_24px_rgba(124,77,255,0.4)]">
             Play · Learn · Have Fun
           </div>
         </div>
@@ -250,10 +250,10 @@ export default function Game() {
             return (
               <article
                 key={game.id}
-                className="group flex flex-col overflow-hidden rounded-[6px] border-2 border-black bg-[#FFFDF8] shadow-[5px_5px_0_#111] transition-all duration-200 hover:-translate-y-1"
+                className="group flex flex-col overflow-hidden rounded-[6px] border-2 border-white/20 bg-[#0c0820]/80 backdrop-blur-md shadow-[0_0_24px_rgba(124,77,255,0.4)] transition-all duration-200 hover:-translate-y-1"
               >
                 {/* IMAGE */}
-                <div className="relative aspect-[16/10] overflow-hidden border-b-2 border-black bg-[#222]">
+                <div className="relative aspect-[16/10] overflow-hidden border-b-2 border-white/20 bg-[#222]">
                   <Image
                     src={image}
                     alt={game.title}
@@ -265,11 +265,11 @@ export default function Game() {
 
                 {/* CONTENT */}
                 <div className="flex min-h-[166px] flex-col px-4 pb-4 pt-4">
-                  <h2 className="font-sans text-[18px] font-extrabold leading-tight text-[#111827]">
+                  <h2 className="font-sans text-[18px] font-extrabold leading-tight text-white">
                     {game.title}
                   </h2>
 
-                  <p className="mt-2.5 line-clamp-2 min-h-[40px] text-[12px] leading-[1.55] text-[#4B4B4B]">
+                  <p className="mt-2.5 line-clamp-2 min-h-[40px] text-[12px] leading-[1.55] text-white/70">
                     {description}
                   </p>
 
@@ -277,14 +277,14 @@ export default function Game() {
                   <div className="mt-auto grid grid-cols-2 gap-3 pt-5">
                     <Link
                       href="/login"
-                      className="flex h-[42px] items-center justify-center border-2 border-black bg-white px-2 text-center font-sans text-[10px] font-black uppercase tracking-[0.04em] text-black shadow-[2px_2px_0_#111] transition hover:bg-[#F2EEE5] sm:text-[11px]"
+                      className="flex h-[42px] items-center justify-center border-2 border-white/20 bg-white/[0.07] px-2 text-center font-sans text-[10px] font-black uppercase tracking-[0.04em] text-white shadow-[0_0_24px_rgba(124,77,255,0.4)] transition hover:bg-white/15 sm:text-[11px]"
                     >
                       Get Access
                     </Link>
 
                     <Link
                       href={`/our-games/all_games/${game.slug}`}
-                      className="flex h-[42px] items-center justify-center border-2 border-black bg-[#FFD83D] px-2 text-center font-sans text-[10px] font-black uppercase tracking-[0.04em] text-black shadow-[2px_2px_0_#111] transition hover:-translate-y-0.5 hover:bg-[#FFE36A]"
+                      className="flex h-[42px] items-center justify-center border-2 border-white/20 bg-gradient-to-r from-[#7C4DFF] to-[#FF4FD8] text-white px-2 text-center font-sans text-[10px] font-black uppercase tracking-[0.04em] text-white shadow-[0_0_24px_rgba(124,77,255,0.4)] transition hover:-translate-y-0.5 hover:brightness-110"
                     >
                       Details
                     </Link>
@@ -296,19 +296,19 @@ export default function Game() {
         </div>
 
         {/* FOOTER */}
-        <footer className="mt-16 border-t-2 border-black pt-6">
+        <footer className="mt-16 border-t-2 border-white/20 pt-6">
           <div className="flex flex-col items-center justify-between gap-2 sm:flex-row">
             <div>
               <p className="font-sans text-sm font-extrabold uppercase tracking-[0.08em]">
                 Nebuloid Tech
               </p>
 
-              <p className="mt-1 text-[10px] text-[#55514B]">
+              <p className="mt-1 text-[10px] text-white/70">
                 Play • Learn • Grow
               </p>
             </div>
 
-            <p className="text-[10px] text-[#55514B]">
+            <p className="text-[10px] text-white/70">
               Games for a Smarter &amp; Brighter Tomorrow
             </p>
           </div>

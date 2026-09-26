@@ -115,14 +115,14 @@ export default function AccessRequestsPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">
+      <h1 className="text-2xl font-bold text-white dark:text-zinc-100">
         Access Requests
       </h1>
-      <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+      <p className="mt-1 text-sm text-white/60 dark:text-zinc-400">
         Manage user access requests
       </p>
 
-      <div className="mt-6 flex gap-1 rounded-lg border border-zinc-200 bg-white p-1 dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="mt-6 flex gap-1 rounded-lg border border-white/15 bg-white/[0.07] p-1 dark:border-zinc-800 dark:bg-zinc-900">
         {tabs.map((tab) => (
           <button
             key={tab}
@@ -130,7 +130,7 @@ export default function AccessRequestsPage() {
             className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
               statusFilter === tab
                 ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
-                : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                : "text-white/70 hover:text-white dark:text-zinc-400 dark:hover:text-zinc-100"
             }`}
           >
             {tab.charAt(0) + tab.slice(1).toLowerCase()}
@@ -139,7 +139,7 @@ export default function AccessRequestsPage() {
       </div>
 
       {error && (
-        <div className="mt-4 rounded-md border border-red-200 bg-red-50 p-4 text-sm text-red-700 dark:border-red-800 dark:bg-red-950 dark:text-red-400">
+        <div className="mt-4 rounded-md border border-red-200 bg-red-500/15 p-4 text-sm text-red-300 dark:border-red-800 dark:bg-red-950 dark:text-red-400">
           {error}
           <button
             onClick={() => setError(null)}
@@ -155,47 +155,47 @@ export default function AccessRequestsPage() {
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
-              className="h-16 animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800"
+              className="h-16 animate-pulse rounded-lg bg-white/[0.1] dark:bg-zinc-800"
             />
           ))}
         </div>
       ) : requests.length === 0 ? (
-        <div className="mt-8 rounded-lg border border-zinc-200 bg-white p-12 text-center dark:border-zinc-800 dark:bg-zinc-900">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <div className="mt-8 rounded-lg border border-white/15 bg-white/[0.07] p-12 text-center dark:border-zinc-800 dark:bg-zinc-900">
+          <p className="text-sm text-white/60 dark:text-zinc-400">
             No {statusFilter.toLowerCase()} access requests found.
           </p>
         </div>
       ) : (
-        <div className="mt-6 overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
-          <table className="min-w-full divide-y divide-zinc-200 dark:divide-zinc-800">
-            <thead className="bg-zinc-50 dark:bg-zinc-800/50">
+        <div className="mt-6 overflow-hidden rounded-lg border border-white/15 bg-white/[0.07] dark:border-zinc-800 dark:bg-zinc-900">
+          <table className="min-w-full divide-y divide-white/10 dark:divide-zinc-800">
+            <thead className="bg-white/[0.06] dark:bg-zinc-800/50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-white/60 dark:text-zinc-400">
                   Name
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-white/60 dark:text-zinc-400">
                   Email
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-white/60 dark:text-zinc-400">
                   Requested
                 </th>
                 {statusFilter === "PENDING" && (
-                  <th className="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+                  <th className="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider text-white/60 dark:text-zinc-400">
                     Actions
                   </th>
                 )}
               </tr>
             </thead>
-            <tbody className="divide-y divide-zinc-200 dark:divide-zinc-800">
+            <tbody className="divide-y divide-white/10 dark:divide-zinc-800">
               {requests.map((req) => (
                 <tr key={req.id}>
-                  <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                  <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-white dark:text-zinc-100">
                     {req.fullName}
                   </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-sm text-zinc-500 dark:text-zinc-400">
+                  <td className="whitespace-nowrap px-6 py-4 text-sm text-white/60 dark:text-zinc-400">
                     {req.email}
                   </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-sm text-zinc-500 dark:text-zinc-400">
+                  <td className="whitespace-nowrap px-6 py-4 text-sm text-white/60 dark:text-zinc-400">
                     {new Date(req.createdAt).toLocaleDateString()}
                   </td>
                   {statusFilter === "PENDING" && (
@@ -233,7 +233,7 @@ export default function AccessRequestsPage() {
 
       {pagination && pagination.totalPages > 1 && (
         <div className="mt-6 flex items-center justify-between">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          <p className="text-sm text-white/60 dark:text-zinc-400">
             Page {pagination.page} of {pagination.totalPages} ({pagination.total}{" "}
             total)
           </p>
@@ -245,7 +245,7 @@ export default function AccessRequestsPage() {
                 router.push(`/admin/access-requests?${params.toString()}`);
               }}
               disabled={page <= 1}
-              className="rounded-md border border-zinc-300 px-3 py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50 disabled:opacity-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+              className="rounded-md border border-white/15 px-3 py-1.5 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 disabled:opacity-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
             >
               Previous
             </button>
@@ -256,7 +256,7 @@ export default function AccessRequestsPage() {
                 router.push(`/admin/access-requests?${params.toString()}`);
               }}
               disabled={page >= pagination.totalPages}
-              className="rounded-md border border-zinc-300 px-3 py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50 disabled:opacity-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+              className="rounded-md border border-white/15 px-3 py-1.5 text-sm font-medium text-white/70 transition-colors hover:bg-white/10 disabled:opacity-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
             >
               Next
             </button>
