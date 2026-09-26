@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { loginSchema } from "@/lib/validation";
 import { verifyPassword } from "@/lib/credentials";
+import { sendLoginNotification } from "@/lib/email";
 import { createSession, setSessionCookie } from "@/lib/auth";
 
 export async function POST(request: Request) {
@@ -64,6 +65,14 @@ export async function POST(request: Request) {
       where: { id: user.id },
       data: { lastLoginAt: new Date() },
     });
+
+    // Alert the admins; never let an email problem block the login.
+    await sendLoginNotification({
+      fullName: user.fullName,
+      username: user.username,
+      email: user.email,
+      role: user.role,
+    }).catch(() => undefined);
 
     return NextResponse.json({
       success: true,

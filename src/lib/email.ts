@@ -4,6 +4,22 @@ const resend = process.env.RESEND_API_KEY
   ? new Resend(process.env.RESEND_API_KEY)
   : null;
 
+/** ADMIN_EMAIL may hold several addresses separated by commas. */
+function getAdminRecipients(): string[] {
+  return (process.env.ADMIN_EMAIL ?? "")
+    .split(",")
+    .map((address) => address.trim())
+    .filter(Boolean);
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 interface SendAccountCredentialsParams {
   to: string;
   fullName: string;
@@ -164,9 +180,9 @@ export async function sendAccessRequestNotification({
     };
   }
 
-  const adminEmail = process.env.ADMIN_EMAIL;
+  const adminEmail = getAdminRecipients();
 
-  if (!adminEmail) {
+  if (adminEmail.length === 0) {
     console.error("ADMIN_EMAIL is not configured.");
 
     return {
@@ -406,5 +422,75 @@ export async function sendResendCredentials({
       success: false,
       error: "Failed to send email",
     };
+  }
+}
+
+/* =========================================================
+   ADMIN LOGIN ALERT EMAIL
+   ========================================================= */
+
+interface SendLoginNotificationParams {
+  fullName: string;
+  username: string;
+  email: string;
+  role: string;
+}
+
+export async function sendLoginNotification({
+  fullName,
+  username,
+  email,
+  role,
+}: SendLoginNotificationParams): Promise<{
+  success: boolean;
+  error?: string;
+}> {
+  const recipients = getAdminRecipients();
+
+  if (!resend || recipients.length === 0) {
+    return { success: false, error: "Email service not configured" };
+  }
+
+  const when = new Date().toLocaleString("en-IN", {
+    timeZone: "Asia/Kolkata",
+    dateStyle: "medium",
+    timeStyle: "short",
+  });
+
+  const html = `
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+  <h2 style="margin-top: 0;">New login on Nebuloid Games</h2>
+  <div style="background: #f9f9f9; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
+    <p><strong>Name:</strong> ${escapeHtml(fullName)}</p>
+    <p><strong>Username:</strong> ${escapeHtml(username)}</p>
+    <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+    <p><strong>Role:</strong> ${escapeHtml(role)}</p>
+    <p><strong>Time (IST):</strong> ${escapeHtml(when)}</p>
+  </div>
+</body>
+</html>
+`;
+
+  try {
+    const { error } = await resend.emails.send({
+      from:
+        process.env.EMAIL_FROM ||
+        "Nebuloid Games <games@nebuloidevents.in>",
+      to: recipients,
+      subject: `Login: ${username} (${fullName})`,
+      html,
+    });
+
+    if (error) {
+      console.error("Failed to send login alert:", error);
+      return { success: false, error: "Failed to send login alert" };
+    }
+
+    return { success: true };
+  } catch (error) {
+    console.error("Login alert email error:", error);
+    return { success: false, error: "Failed to send login alert" };
   }
 }
