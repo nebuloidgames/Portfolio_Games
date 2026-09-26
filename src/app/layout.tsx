@@ -27,7 +27,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="relative min-h-dvh flex flex-col bg-[#F4F0E7]">
         {/* Global background effect */}
-        <Background />
+        
 
         {/* Website content */}
         <div className="relative z-30 flex min-h-dvh flex-col">

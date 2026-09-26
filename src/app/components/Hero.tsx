@@ -392,11 +392,16 @@ const Hero = () => {
           nebuloid-scene
           relative
           z-10
+<<<<<<< Updated upstream
           flex
           min-h-0
           w-full
           items-center
           justify-center
+=======
+          h-[clamp(24rem,51vh,33rem)]
+          
+>>>>>>> Stashed changes
         "
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
