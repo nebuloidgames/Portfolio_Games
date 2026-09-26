@@ -18,8 +18,8 @@ export async function POST(request: Request) {
 
     const { username, password } = result.data;
 
-    const user = await prisma.user.findUnique({
-      where: { username },
+    const user = await prisma.user.findFirst({
+      where: { username: { equals: username, mode: "insensitive" } },
       select: {
         id: true,
         fullName: true,

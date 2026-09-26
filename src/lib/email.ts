@@ -110,7 +110,7 @@ export async function sendAccountCredentials({
     const { error } = await resend.emails.send({
       from:
         process.env.EMAIL_FROM ||
-        "Nebuloid Games <noreply@games.nebuloidevents.in>",
+        "Nebuloid Games <games@nebuloidevents.in>",
       to,
       subject: "Your Nebuloid Games Access",
       html,
@@ -245,7 +245,7 @@ export async function sendAccessRequestNotification({
     const { error } = await resend.emails.send({
       from:
         process.env.EMAIL_FROM ||
-        "Nebuloid Games <noreply@games.nebuloidevents.in>",
+        "Nebuloid Games <games@nebuloidevents.in>",
       to: adminEmail,
       subject: "New Nebuloid Games Access Request",
       html,
@@ -381,7 +381,7 @@ export async function sendResendCredentials({
     const { error } = await resend.emails.send({
       from:
         process.env.EMAIL_FROM ||
-        "Nebuloid Games <noreply@games.nebuloidevents.in>",
+        "Nebuloid Games <games@nebuloidevents.in>",
       to,
       subject: "Your Nebuloid Games Account Credentials",
       html,
