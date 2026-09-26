@@ -315,18 +315,7 @@ const Hero = () => {
 
   return (
     <section
-      className="
-        nebuloid-page
-        fixed
-        inset-x-0
-        bottom-0
-        top-[76px]
-        z-0
-        grid
-        w-full
-        overflow-hidden
-        bg-bg
-      "
+      className="nebuloid-page fixed inset-x-0 bottom-0 top-[76px] z-0 grid w-full overflow-hidden bg-bg"
     >
       <Background />
       {/* Diagonal yellow background */}

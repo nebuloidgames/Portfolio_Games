@@ -121,7 +121,7 @@ export async function sendAccountCredentials({
 
       return {
         success: false,
-        error: "Failed to send email",
+        error: `Failed to send email (${error.message})`,
       };
     }
 
@@ -392,7 +392,7 @@ export async function sendResendCredentials({
 
       return {
         success: false,
-        error: "Failed to send email",
+        error: `Failed to send email (${error.message})`,
       };
     }
 
