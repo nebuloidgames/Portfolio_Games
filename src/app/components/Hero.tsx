@@ -10,6 +10,8 @@ import {
   useRef,
   useState,
   type CSSProperties,
+  type KeyboardEvent as ReactKeyboardEvent,
+  type PointerEvent as ReactPointerEvent,
 } from "react";
 
 interface GameItem {
@@ -105,6 +107,8 @@ const SPACING = 235;
 const SIDE_GAP = 60;
 const CASE_HALF_W = 120;
 const AUTOPLAY_MS = 3800;
+/** Horizontal drag needed to move the coverflow by one game. */
+const SWIPE_STEP_PX = 60;
 /** Hovering the coverflow speeds it up instead of pausing it. */
 const HOVER_AUTOPLAY_MS = 1400;
 /** Cases are drawn 28.7% larger than the fitted stage (10%, then another 17%). */
@@ -127,6 +131,9 @@ const Hero = () => {
   const [active, setActive] = useState(0);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
+  const [dragging, setDragging] = useState(false);
+  const drag = useRef({ id: -1, startX: 0, startY: 0, lastX: 0, active: false, moved: false });
+  const suppressClick = useRef(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [layout, setLayout] = useState<Layout>({ range: 3, scale: 1 });
   const sceneRef = useRef<HTMLDivElement | null>(null);
@@ -296,17 +303,92 @@ const Hero = () => {
   );
 
   /*
-   * Auto-advance every 3.8s; faster while the pointer is over the coverflow,
-   * and paused while a keyboard user has focus inside it.
+   * Swipe / drag (touch, pen and mouse). Dragging left brings the next game
+   * in, right the previous one, one game per SWIPE_STEP_PX. A drag never
+   * counts as a click, so it can't open a game by accident.
+   */
+  const onPointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    drag.current = {
+      id: e.pointerId,
+      startX: e.clientX,
+      startY: e.clientY,
+      lastX: e.clientX,
+      active: true,
+      moved: false,
+    };
+  };
+
+  const onPointerMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    const d = drag.current;
+    if (!d.active || e.pointerId !== d.id) return;
+
+    if (!d.moved) {
+      const totalX = Math.abs(e.clientX - d.startX);
+      const totalY = Math.abs(e.clientY - d.startY);
+      if (totalX < 10 || totalX < totalY) return; // not a horizontal drag yet
+      d.moved = true;
+      setDragging(true);
+      try {
+        e.currentTarget.setPointerCapture(e.pointerId);
+      } catch {
+        // pointer already gone; the drag just ends
+      }
+    }
+
+    const travelled = e.clientX - d.lastX;
+    const steps = Math.trunc(travelled / SWIPE_STEP_PX);
+    if (steps !== 0) {
+      go(-steps);
+      d.lastX += steps * SWIPE_STEP_PX;
+    }
+  };
+
+  const endDrag = (e: ReactPointerEvent<HTMLDivElement>) => {
+    const d = drag.current;
+    if (!d.active || e.pointerId !== d.id) return;
+    d.active = false;
+    if (d.moved) {
+      d.moved = false;
+      setDragging(false);
+      suppressClick.current = true;
+      // the click that follows a drag is swallowed; clear the flag either way
+      setTimeout(() => {
+        suppressClick.current = false;
+      }, 60);
+    }
+  };
+
+  const onClickCapture = (e: React.MouseEvent) => {
+    if (suppressClick.current) {
+      e.preventDefault();
+      e.stopPropagation();
+      suppressClick.current = false;
+    }
+  };
+
+  const onKeyDown = (e: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      go(-1);
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      go(1);
+    }
+  };
+
+  /*
+   * Auto-advance every 3.8s; faster while a mouse is over the coverflow,
+   * and paused while a keyboard user has focus inside it or a swipe is live.
    */
   useEffect(() => {
-    if (focused || reducedMotion || N === 0) return;
+    if (focused || dragging || reducedMotion || N === 0) return;
     const timer = setInterval(
       () => go(1),
       hovered ? HOVER_AUTOPLAY_MS : AUTOPLAY_MS,
     );
     return () => clearInterval(timer);
-  }, [hovered, focused, reducedMotion, N, go]);
+  }, [hovered, focused, dragging, reducedMotion, N, go]);
 
   const isUnlocked = (game: GameItem) =>
     user !== null ||
@@ -340,8 +422,15 @@ const Hero = () => {
         ref={sceneRef}
         className="nbh-scene"
         data-hovered={hovered}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        data-dragging={dragging}
+        onPointerEnter={(e) => e.pointerType === "mouse" && setHovered(true)}
+        onPointerLeave={(e) => e.pointerType === "mouse" && setHovered(false)}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={endDrag}
+        onPointerCancel={endDrag}
+        onClickCapture={onClickCapture}
+        onKeyDown={onKeyDown}
         onFocus={(e) => setFocused(e.target.matches(":focus-visible"))}
         onBlur={() => setFocused(false)}
       >
@@ -639,18 +728,32 @@ const Hero = () => {
           min-height: 0;
           width: 100%;
           overflow: visible;
+          touch-action: pan-y;
+          user-select: none;
+          -webkit-user-select: none;
         }
+        .nbh-scene[data-dragging="true"],
+        .nbh-scene[data-dragging="true"] .nbh-case { cursor: grabbing; }
+        /*
+         * The stage and the 3D container are invisible layout boxes. Left
+         * hit-testable, the 3D container acts as a solid plane at depth 0 and
+         * swallows every click meant for the side cases (which sit behind it),
+         * so only the centre case could be tapped. Only the cases take pointer
+         * events; empty space falls through to .nbh-scene for swiping.
+         */
         .nbh-stage {
           position: absolute;
           left: 50%;
           top: 50%;
           transform-origin: center center;
+          pointer-events: none;
         }
         .nbh-3d {
           position: absolute;
           inset: 0;
           perspective: 1800px;
           transform-style: preserve-3d;
+          pointer-events: none;
         }
         .nbh-case {
           position: absolute;
@@ -675,10 +778,12 @@ const Hero = () => {
           -webkit-backface-visibility: hidden;
         }
         /* quicker slide while hovering */
-        .nbh-scene[data-hovered="true"] .nbh-case {
+        .nbh-scene[data-hovered="true"] .nbh-case,
+        .nbh-scene[data-dragging="true"] .nbh-case {
           transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .3s, visibility .3s;
         }
-        .nbh-scene[data-hovered="true"] .nbh-disc-wrap { transition-duration: .5s; }
+        .nbh-scene[data-hovered="true"] .nbh-disc-wrap,
+        .nbh-scene[data-dragging="true"] .nbh-disc-wrap { transition-duration: .5s; }
         .nbh-case:focus-visible,
         .nbh-round:focus-visible,
         .nbh-dot:focus-visible,
