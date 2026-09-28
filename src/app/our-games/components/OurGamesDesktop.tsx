@@ -292,7 +292,7 @@ const OurGamesDesktop = ({ games, user, onReady }: OurGamesDesktopProps) => {
                       src={game.thumbnailUrl || "/hero-img.png"}
                       alt=""
                       fill
-                      sizes="182px"
+                      sizes="196px"
                       quality={60}
                       loading={Math.abs(i - active) <= 4 ? "eager" : "lazy"}
                       className="og-tile-img"
@@ -373,7 +373,7 @@ const OurGamesDesktop = ({ games, user, onReady }: OurGamesDesktopProps) => {
           -webkit-tap-highlight-color: transparent;
           /* tile sizes — shrunk on short screens below */
           --tile: 96px;
-          --tile-on: 182px;
+          --tile-on: 196px;
           --row-pad: 14px;
         }
 
@@ -420,7 +420,7 @@ const OurGamesDesktop = ({ games, user, onReady }: OurGamesDesktopProps) => {
           /* at least one screen tall; if a short screen can't fit everything
            * the page scrolls instead of cutting the Play button off */
           min-height: 100%;
-          padding: clamp(16px, 2vh, 26px) clamp(24px, 4.5vw, 64px) clamp(20px, 3vh, 36px);
+          padding: clamp(16px, 2vh, 26px) clamp(24px, 4.5vw, 64px) clamp(28px, 5vh, 56px);
           box-sizing: border-box;
         }
 
@@ -529,15 +529,15 @@ const OurGamesDesktop = ({ games, user, onReady }: OurGamesDesktopProps) => {
          * selected game's text, so switching games never moves anything. */
         .og-stage {
           flex: 1 1 0;
-          min-height: 340px;
+          min-height: 0;
           margin-top: clamp(16px, 3vh, 32px);
           display: grid;
           grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
           gap: clamp(24px, 4vw, 64px);
         }
-        /* title + Play sit right under the tiles */
+        /* title + Play sit at the bottom-left */
         .og-details {
-          align-self: start;
+          align-self: end;
           display: flex; flex-direction: column; gap: 16px;
           max-width: 640px;
         }
@@ -549,7 +549,7 @@ const OurGamesDesktop = ({ games, user, onReady }: OurGamesDesktopProps) => {
         .og-title {
           margin: 0; font-family: var(--font-russo), sans-serif; font-weight: 400;
           /* scales with the screen's height too, so a short screen still fits */
-          font-size: clamp(2rem, min(4.6vw, 8.5vh), 4.75rem); line-height: 1; color: #fff;
+          font-size: clamp(2rem, min(4.6vw, 7vh), 4.75rem); line-height: 1; color: #fff;
           text-shadow: 0 4px 30px rgba(0,0,0,.5);
           /* always two lines tall (long names wrap, short ones leave the
            * space), so the description and Play never shift */
@@ -586,15 +586,16 @@ const OurGamesDesktop = ({ games, user, onReady }: OurGamesDesktopProps) => {
 
         /* PS5/Xbox-style "about this game" panel, low on the right */
         .og-about {
-          /* fills its slot, so the box's edges stay put whatever the text */
-          align-self: stretch;
+          align-self: end;
+          /* fixed height, so its edges stay put whatever the text */
+          height: min(100%, 380px);
           justify-self: end;
           width: 100%; max-width: 620px;
           overflow-y: auto;
-          scrollbar-width: thin;
+          scrollbar-width: none;
           box-sizing: border-box;
           /* at least as wide as the edge fade below, so text stays crisp */
-          padding: 40px;
+          padding: 48px;
           border-radius: 28px;
           background: rgba(4, 2, 14, 0.4);
           backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
@@ -609,6 +610,7 @@ const OurGamesDesktop = ({ games, user, onReady }: OurGamesDesktopProps) => {
             linear-gradient(to bottom, transparent, #000 40px, #000 calc(100% - 40px), transparent);
           mask-composite: intersect;
         }
+        .og-about::-webkit-scrollbar { display: none; }
         .og-about-eyebrow {
           margin: 0; font-weight: 800; font-size: 12px; letter-spacing: .24em;
           text-transform: uppercase; color: #6ee7ff;
