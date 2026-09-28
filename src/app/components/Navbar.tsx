@@ -113,6 +113,13 @@ const Navbar = () => {
   const isHomePage = pathname === "/";
   const isLoginPage = pathname === "/login";
   const isAdminPage = pathname.startsWith("/admin");
+  /* The games dashboard is its own full-screen app with its own compact
+   * top bar (logo, tabs, logout) — the site-wide navbar would just double up. */
+  const isOurGamesDashboard = pathname === "/our-games";
+
+  if (isOurGamesDashboard) {
+    return null;
+  }
 
   /* Admin: a plain, compact bar. No glow, no oversized logo. */
   if (isAdminPage) {

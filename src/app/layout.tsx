@@ -3,6 +3,7 @@ import { Russo_One, Exo_2, Orbitron } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import SiteBackdrop from "./components/SiteBackdrop";
+import SmoothScroll from "./components/SmoothScroll";
 
 const russoOne = Russo_One({
   variable: "--font-russo",
@@ -43,9 +44,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Navbar />
 
           <main className="flex-1 flex flex-col">
-            {children}
+            <SmoothScroll>{children}</SmoothScroll>
           </main>
-        </div>
+        </div>  
       </body>
     </html>
   );

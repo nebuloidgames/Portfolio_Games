@@ -7,14 +7,15 @@ import SpaceFx from "./SpaceFx";
 /** Admin pages stay flat and light: no nebula, no effects. */
 const isAdminRoute = (pathname: string) => pathname.startsWith("/admin");
 
-/** Full in-game screens keep their own look and stay free of distractions. */
-const isGameRoute = (pathname: string) =>
-  pathname.startsWith("/our-games/all_games");
+/** The games dashboard is fully opaque and draws its own full-screen art —
+ * the nebula behind it would never be seen, just wasted rendering. */
+const isOurGamesDashboard = (pathname: string) => pathname === "/our-games";
 
 /**
  * The site-wide nebula for the pages visitors see: one fixed backdrop behind
- * the page, plus the interactive cursor layer above the content (not on game
- * screens, and never in the admin area).
+ * the page, plus the interactive cursor layer above the content on every
+ * visitor page (never in the admin area). The games themselves are static
+ * files under /games and never render this layout.
  */
 export default function SiteBackdrop() {
   const pathname = usePathname();
@@ -30,21 +31,26 @@ export default function SiteBackdrop() {
 
   return (
     <>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-0 overflow-hidden bg-[#020108]"
-      >
-        <Background />
-      </div>
-
-      {!isGameRoute(pathname) && (
+      {isOurGamesDashboard(pathname) ? (
         <div
           aria-hidden="true"
-          className="pointer-events-none fixed inset-0 z-[60] overflow-hidden"
+          className="pointer-events-none fixed inset-0 z-0 bg-[#04020e]"
+        />
+      ) : (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none fixed inset-0 z-0 overflow-hidden bg-[#020108]"
         >
-          <SpaceFx />
+          <Background />
         </div>
       )}
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-[60] overflow-hidden"
+      >
+        <SpaceFx />
+      </div>
     </>
   );
 }

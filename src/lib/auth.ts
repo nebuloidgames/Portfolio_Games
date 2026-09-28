@@ -2,7 +2,7 @@ import crypto from "node:crypto";
 import { cookies } from "next/headers";
 import { prisma } from "./prisma";
 
-const SESSION_COOKIE_NAME = "session-token";
+export const SESSION_COOKIE_NAME = "session-token";
 const SESSION_MAX_AGE = 30 * 24 * 60 * 60; // 30 days in seconds
 
 export async function createSession(
@@ -43,6 +43,18 @@ export async function getCurrentUser() {
     return null;
   }
 
+  return getUserBySessionToken(token);
+}
+
+/**
+ * The active user a session token belongs to, or null if the token is
+ * unknown, expired, or its user isn't ACTIVE. `touch` records the session
+ * as used — skip it for high-volume checks like every game asset request.
+ */
+export async function getUserBySessionToken(
+  token: string,
+  { touch = true }: { touch?: boolean } = {},
+) {
   const tokenHash = crypto.createHash("sha256").update(token).digest("hex");
 
   const session = await prisma.session.findUnique({
@@ -77,10 +89,12 @@ export async function getCurrentUser() {
     return null;
   }
 
-  await prisma.session.update({
-    where: { id: session.id },
-    data: { lastUsedAt: new Date() },
-  });
+  if (touch) {
+    await prisma.session.update({
+      where: { id: session.id },
+      data: { lastUsedAt: new Date() },
+    });
+  }
 
   return session.user;
 }
