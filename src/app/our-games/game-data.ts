@@ -1,5 +1,7 @@
 import {
   isUnlocked as checkUnlocked,
+  GAME_ORDER,
+  GAME_URLS,
   type GameItem,
   type User,
 } from "../components/hero-data";
@@ -7,30 +9,17 @@ import {
 export interface GameCard extends GameItem {
   category: string;
   color: string;
-  /** The existing info/story page for this game (the round "..." button). */
-  detailUrl: string;
+  /** The longer "about this game" copy shown in the info panel. */
+  about: GameAbout;
 }
 
-const GAME_ORDER = [
-  "math-tug-of-war",
-  "reaction-rush",
-  "memory-match",
-  "speed-typing-battle",
-  "color-clash",
-  "catch-the-brand",
-  "emoji-puzzle",
-  "logo-quiz",
-  "2048-race",
-  "bomb-defusal",
-  "memory-sequence",
-  "target-shooter",
-  "number-puzzle",
-  "water-color-sort",
-  "flappy-bird",
-  "math-minesweeper",
-  "word-hunt",
-  "stack-master",
-];
+export interface GameAbout {
+  eyebrow: string;
+  headline: string;
+  description: string;
+  features: { title: string; description: string }[];
+}
+
 
 const TITLES: Record<string, string> = {
   "math-tug-of-war": "Math Tug of War",
@@ -140,26 +129,390 @@ const GAME_IMAGES: Record<string, string> = {
   "stack-master": "/stack%20master.jpeg",
 };
 
-/** The real, directly-playable static game — what the Play button opens. */
-const GAME_URLS: Record<string, string> = {
-  "math-tug-of-war": "/games/TugOfWar/index.html",
-  "reaction-rush": "/games/Reaction%20Rush/index.html",
-  "memory-match": "/games/MemoryMatch/index.html",
-  "speed-typing-battle": "/games/speed%20typing%20battle/index.html",
-  "color-clash": "/games/Color%20Clash/index.html",
-  "catch-the-brand": "/games/catch%20the%20brand/index.html",
-  "emoji-puzzle": "/games/Emoji%20Puzzle/index.html",
-  "logo-quiz": "/games/Logo%20Quiz/index.html",
-  "2048-race": "/games/2048-Race/index.html",
-  "bomb-defusal": "/games/bomb%20defusal/index.html",
-  "memory-sequence": "/games/Memory%20Sequence/index.html",
-  "target-shooter": "/games/target%20shooter/index.html",
-  "number-puzzle": "/games/Number%20Puzzle/index.html",
-  "water-color-sort": "/games/water%20color%20sort/index.html",
-  "flappy-bird": "/games/flappy%20bird/index.html",
-  "math-minesweeper": "/games/MathMinesweeper/index.html",
-  "word-hunt": "/games/Word%20Hunt/index.html",
-  "stack-master": "/games/Stack%20Master/index.html",
+const ABOUT: Record<string, GameAbout> = {
+  "2048-race": {
+    eyebrow: "PUZZLE GAME",
+    headline: "Race to 2048",
+    description:
+      "Combine numbers, make smart moves and reach the 2048 tile before the board fills up.",
+    features: [
+      {
+        title: "THINK FAST",
+        description:
+          "Plan your next move while keeping the board under control.",
+      },
+      {
+        title: "COMBINE",
+        description:
+          "Merge matching numbers to create larger and more powerful tiles.",
+      },
+      {
+        title: "REACH 2048",
+        description:
+          "Keep combining tiles until you reach the ultimate target.",
+      },
+    ],
+  },
+
+  "bomb-defusal": {
+    eyebrow: "CHALLENGE GAME",
+    headline: "Defuse Before Time Runs Out",
+    description:
+      "Stay calm, inspect the challenge and make the right decisions before the countdown reaches zero.",
+    features: [
+      {
+        title: "OBSERVE",
+        description: "Look carefully at every part of the challenge.",
+      },
+      {
+        title: "DECIDE",
+        description: "Choose the correct action before the timer runs out.",
+      },
+      {
+        title: "DEFUSE",
+        description:
+          "Complete the challenge successfully and move to the next level.",
+      },
+    ],
+  },
+
+  "catch-the-brand": {
+    eyebrow: "REFLEX GAME",
+    headline: "Catch The Brand",
+    description:
+      "Test your reaction speed by catching the correct brand while avoiding distractions.",
+    features: [
+      {
+        title: "FOCUS",
+        description: "Keep your attention on the target appearing on screen.",
+      },
+      {
+        title: "REACT",
+        description: "React quickly when the correct brand appears.",
+      },
+      {
+        title: "SCORE",
+        description:
+          "Build your score and progress through increasingly difficult levels.",
+      },
+    ],
+  },
+
+  "color-clash": {
+    eyebrow: "COLOR GAME",
+    headline: "Master The Color Clash",
+    description:
+      "Match colors and react quickly as the challenge becomes harder with every level.",
+    features: [
+      {
+        title: "MATCH",
+        description: "Identify the correct color combination.",
+      },
+      {
+        title: "REACT",
+        description: "Make quick decisions before the timer runs out.",
+      },
+      {
+        title: "MASTER",
+        description: "Complete every level with speed and accuracy.",
+      },
+    ],
+  },
+
+  "emoji-puzzle": {
+    eyebrow: "PUZZLE GAME",
+    headline: "Solve The Emoji Puzzle",
+    description:
+      "Use your observation and reasoning skills to solve clever emoji-based challenges.",
+    features: [
+      {
+        title: "OBSERVE",
+        description: "Look carefully at every emoji combination.",
+      },
+      {
+        title: "THINK",
+        description: "Connect the clues and discover the hidden answer.",
+      },
+      {
+        title: "SOLVE",
+        description: "Complete the puzzle and unlock the next challenge.",
+      },
+    ],
+  },
+
+  "flappy-bird": {
+    eyebrow: "ARCADE GAME",
+    headline: "Fly Through The Challenge",
+    description:
+      "Control your bird, avoid obstacles and see how far you can go.",
+    features: [
+      {
+        title: "CONTROL",
+        description: "Keep your character flying at the right height.",
+      },
+      {
+        title: "DODGE",
+        description: "Avoid every obstacle standing in your way.",
+      },
+      {
+        title: "SURVIVE",
+        description: "Stay alive as long as possible and beat your score.",
+      },
+    ],
+  },
+
+  "logo-quiz": {
+    eyebrow: "QUIZ GAME",
+    headline: "Can You Recognize The Logo?",
+    description: "Test your knowledge by identifying brands from their logos.",
+    features: [
+      {
+        title: "LOOK",
+        description: "Study the logo shown on the screen.",
+      },
+      {
+        title: "GUESS",
+        description: "Use your brand knowledge to find the correct answer.",
+      },
+      {
+        title: "COMPLETE",
+        description: "Answer correctly and progress through the quiz.",
+      },
+    ],
+  },
+
+  "math-minesweeper": {
+    eyebrow: "MATH GAME",
+    headline: "Think. Calculate. Win.",
+    description:
+      "Combine mathematical thinking with classic puzzle-solving mechanics.",
+    features: [
+      {
+        title: "CALCULATE",
+        description: "Use your mathematical skills to solve each challenge.",
+      },
+      {
+        title: "PLAN",
+        description: "Choose your moves carefully before revealing the board.",
+      },
+      {
+        title: "WIN",
+        description: "Clear the challenge and progress to harder levels.",
+      },
+    ],
+  },
+
+  "memory-sequence": {
+    eyebrow: "MEMORY GAME",
+    headline: "Remember The Sequence",
+    description:
+      "Watch carefully, remember the sequence and reproduce it correctly.",
+    features: [
+      {
+        title: "WATCH",
+        description: "Pay close attention to the sequence shown to you.",
+      },
+      {
+        title: "REMEMBER",
+        description: "Store the sequence in your memory.",
+      },
+      {
+        title: "REPEAT",
+        description: "Reproduce the sequence accurately to continue.",
+      },
+    ],
+  },
+
+  "memory-match": {
+    eyebrow: "MEMORY GAME",
+    headline: "Match Your Memory",
+    description:
+      "Find matching pairs while improving your memory and concentration.",
+    features: [
+      {
+        title: "SEARCH",
+        description: "Explore the board to find hidden pairs.",
+      },
+      {
+        title: "REMEMBER",
+        description: "Remember where each item was placed.",
+      },
+      {
+        title: "MATCH",
+        description: "Match every pair to complete the level.",
+      },
+    ],
+  },
+
+  "number-puzzle": {
+    eyebrow: "PUZZLE GAME",
+    headline: "Crack The Number Puzzle",
+    description:
+      "Use logic and number skills to solve increasingly challenging puzzles.",
+    features: [
+      {
+        title: "ANALYZE",
+        description: "Understand the number pattern before making a move.",
+      },
+      {
+        title: "SOLVE",
+        description: "Use logic to find the correct solution.",
+      },
+      {
+        title: "PROGRESS",
+        description: "Complete every challenge and move to the next level.",
+      },
+    ],
+  },
+
+  "reaction-rush": {
+    eyebrow: "REACTION GAME",
+    headline: "How Fast Can You React?",
+    description:
+      "Challenge your reaction time with fast and unpredictable targets.",
+    features: [
+      {
+        title: "WATCH",
+        description: "Keep your eyes on the screen at all times.",
+      },
+      {
+        title: "REACT",
+        description: "Respond immediately when the target appears.",
+      },
+      {
+        title: "RUSH",
+        description: "Improve your reaction time through every level.",
+      },
+    ],
+  },
+
+  "speed-typing-battle": {
+    eyebrow: "TYPING GAME",
+    headline: "Type Faster. Win Faster.",
+    description:
+      "Challenge your typing speed and accuracy through an exciting battle.",
+    features: [
+      {
+        title: "TYPE",
+        description: "Type the displayed text as quickly as possible.",
+      },
+      {
+        title: "ACCURACY",
+        description: "Avoid mistakes while maintaining your speed.",
+      },
+      {
+        title: "BATTLE",
+        description: "Improve your typing performance and beat every level.",
+      },
+    ],
+  },
+
+  "stack-master": {
+    eyebrow: "ARCADE GAME",
+    headline: "Build The Perfect Stack",
+    description:
+      "Stack blocks with precision and build the highest tower possible.",
+    features: [
+      {
+        title: "AIM",
+        description: "Position each block carefully before dropping it.",
+      },
+      {
+        title: "STACK",
+        description: "Build your tower while keeping it balanced.",
+      },
+      {
+        title: "MASTER",
+        description: "Reach higher levels with perfect timing.",
+      },
+    ],
+  },
+
+  "target-shooter": {
+    eyebrow: "ACTION GAME",
+    headline: "Hit The Target",
+    description:
+      "Test your accuracy and reaction speed by hitting targets before time runs out.",
+    features: [
+      {
+        title: "AIM",
+        description: "Focus carefully on every target.",
+      },
+      {
+        title: "SHOOT",
+        description: "Hit the target with speed and precision.",
+      },
+      {
+        title: "SCORE",
+        description: "Keep improving your accuracy and reach higher scores.",
+      },
+    ],
+  },
+
+  "math-tug-of-war": {
+    eyebrow: "MATH CHALLENGE",
+    headline: "Win The Math Tug Of War",
+    description:
+      "Solve mathematical questions quickly and pull your way toward victory.",
+    features: [
+      {
+        title: "CALCULATE",
+        description:
+          "Solve each mathematical challenge as quickly as possible.",
+      },
+      {
+        title: "REACT",
+        description:
+          "Answer correctly before your opponent gains an advantage.",
+      },
+      {
+        title: "WIN",
+        description: "Use speed and accuracy to win the tug of war.",
+      },
+    ],
+  },
+
+  "water-color-sort": {
+    eyebrow: "PUZZLE GAME",
+    headline: "Sort Every Color",
+    description:
+      "Organize colorful liquids into the correct containers and solve every level.",
+    features: [
+      {
+        title: "OBSERVE",
+        description: "Study the colors and available containers.",
+      },
+      {
+        title: "SORT",
+        description: "Move colors strategically into the correct tubes.",
+      },
+      {
+        title: "COMPLETE",
+        description: "Sort every color to finish the level.",
+      },
+    ],
+  },
+
+  "word-hunt": {
+    eyebrow: "WORD GAME",
+    headline: "Find Every Hidden Word",
+    description:
+      "Search the board, discover hidden words and complete the challenge.",
+    features: [
+      {
+        title: "SEARCH",
+        description: "Scan the board carefully for hidden words.",
+      },
+      {
+        title: "FIND",
+        description: "Connect letters and discover the correct words.",
+      },
+      {
+        title: "COMPLETE",
+        description: "Find all required words and finish the level.",
+      },
+    ],
+  },
 };
 
 export const GAMES: GameCard[] = GAME_ORDER.map((slug) => ({
@@ -169,9 +522,16 @@ export const GAMES: GameCard[] = GAME_ORDER.map((slug) => ({
   description: DESCRIPTIONS[slug] ?? null,
   thumbnailUrl: GAME_IMAGES[slug] ?? null,
   gameUrl: GAME_URLS[slug] ?? "",
-  detailUrl: `/our-games/all_games/${slug}`,
   category: CATEGORIES[slug] ?? "Arcade",
   color: COLORS[slug] ?? "#7c4dff",
+  about: ABOUT[slug] ?? {
+    eyebrow: "NEBULOID GAME",
+    headline: TITLES[slug] ?? slug,
+    description:
+      DESCRIPTIONS[slug] ??
+      "A fun and challenging game from the Nebuloid Games collection.",
+    features: [],
+  },
 }));
 
 export const isUnlocked = (game: GameCard, user: User | null) =>

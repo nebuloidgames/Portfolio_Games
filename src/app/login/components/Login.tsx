@@ -279,9 +279,7 @@ const Login = () => {
                     </div>
 
                     {/* N Logo */}
-                    <div className="flex h-[48px] w-[48px] items-center justify-center rounded-full border-2 border-white/20 bg-gradient-to-r from-[#7C4DFF] to-[#FF4FD8] text-white text-[20px] font-black shadow-[0_0_24px_rgba(124,77,255,0.4)]">
-                      N
-                    </div>
+                    
                   </div>
                 </div>
 
@@ -291,7 +289,7 @@ const Login = () => {
                   <p className="mb-6 text-[20px] leading-6 text-white/70">
                   <b>  {isSignUp
                       ? "Request access to the Nebuloid Games platform."
-                      : "Log in to continue playing and exploring our games."}</b>
+                      : "Log in to play and explore our games."}</b>
                   </p>
 
                   <form

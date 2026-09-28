@@ -104,8 +104,7 @@ const Navbar = () => {
    * Every page: a transparent bar over the site-wide nebula (slimmer on the
    * home page, whose hero needs the room).
    *
-   * HOME PAGE:
-   * Always show LOGIN.
+   * Logged in: LOGOUT. Logged out: LOGIN.
    *
    * LOGIN PAGE:
    * Show nothing on the right side.
@@ -193,11 +192,7 @@ const Navbar = () => {
 
         {/* RIGHT SIDE */}
         <div className="relative z-[103] flex items-center">
-          {isHomePage ? (
-            <Link href="/login" className={buttonClass}>
-              Login <Arrow />
-            </Link>
-          ) : isLoginPage ? null : user ? (
+          {isLoginPage ? null : user ? (
             <button
               type="button"
               onClick={handleLogout}

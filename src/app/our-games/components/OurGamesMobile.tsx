@@ -5,15 +5,19 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   type PointerEvent as ReactPointerEvent,
+  useEffect,
   useRef,
   useState,
 } from "react";
 import type { User } from "../../components/hero-data";
 import { isUnlocked as checkUnlocked, type GameCard } from "../game-data";
+import { initialIndex } from "./OurGamesDesktop";
 
 interface OurGamesMobileProps {
   games: GameCard[];
   user: User | null;
+  /** Called once mounted, so the loading screen knows it can fade out. */
+  onReady?: () => void;
 }
 
 /** Only a swipe starting in the outer 5% of the screen on either edge
@@ -35,10 +39,13 @@ const rgba = (hex: string, a: number) => {
  * solid (non-blurred) info cards — everything the desktop version does more
  * heavily, done the cheap way here.
  */
-const OurGamesMobile = ({ games, user }: OurGamesMobileProps) => {
+const OurGamesMobile = ({ games, user, onReady }: OurGamesMobileProps) => {
   const router = useRouter();
-  const [active, setActive] = useState(0);
-  const [loggingOut, setLoggingOut] = useState(false);
+  const [active, setActive] = useState(() => initialIndex(games));
+
+  useEffect(() => {
+    onReady?.();
+  }, [onReady]);
   const tileRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const N = games.length;
@@ -97,17 +104,6 @@ const OurGamesMobile = ({ games, user }: OurGamesMobileProps) => {
     if (edgeDrag.current.id === e.pointerId) edgeDrag.current.active = false;
   };
 
-  async function handleLogout() {
-    setLoggingOut(true);
-    try {
-      await fetch("/api/auth/logout", { method: "POST" });
-      router.push("/");
-      router.refresh();
-    } catch {
-      setLoggingOut(false);
-    }
-  }
-
   return (
     <section
       className="ogm-page fixed inset-0 z-0 flex flex-col overflow-x-hidden overflow-y-auto"
@@ -144,22 +140,10 @@ const OurGamesMobile = ({ games, user }: OurGamesMobileProps) => {
                 className="h-[90px] w-auto object-contain sm:h-[110px]"
               />
             </Link>
-            <span className="ogm-brand-name">Games</span>
           </div>
-          {user ? (
-            <button
-              type="button"
-              onClick={handleLogout}
-              disabled={loggingOut}
-              className="ogm-logout"
-            >
-              {loggingOut ? "…" : "Logout"}
-            </button>
-          ) : (
-            <Link href="/login" className="ogm-logout">
-              Login
-            </Link>
-          )}
+          <Link href="/" className="ogm-home">
+            Home
+          </Link>
         </header>
 
         {/* TILE ROW — native scroll-snap */}
@@ -218,6 +202,7 @@ const OurGamesMobile = ({ games, user }: OurGamesMobileProps) => {
               target={unlocked ? "_blank" : undefined}
               rel={unlocked ? "noopener noreferrer" : undefined}
               className="ogm-play"
+              data-locked={!unlocked}
             >
               <svg
                 width="16"
@@ -230,25 +215,29 @@ const OurGamesMobile = ({ games, user }: OurGamesMobileProps) => {
               </svg>
               {unlocked ? "Play" : "Login to Play"}
             </a>
-            <Link
-              href={current.detailUrl}
-              aria-label={`More about ${current.title}`}
-              className="ogm-more"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <circle cx="5" cy="12" r="2" />
-                <circle cx="12" cy="12" r="2" />
-                <circle cx="19" cy="12" r="2" />
-              </svg>
-            </Link>
           </div>
         </div>
+
+        <section className="ogm-about" aria-label={`About ${current.title}`}>
+          <p className="ogm-about-eyebrow">{current.about.eyebrow}</p>
+          <h2 className="ogm-about-title">{current.about.headline}</h2>
+          <p className="ogm-about-desc">{current.about.description}</p>
+          {current.about.features.length > 0 && (
+            <ol className="ogm-about-steps">
+              {current.about.features.map((f, i) => (
+                <li key={f.title} className="ogm-about-step">
+                  <span className="ogm-about-num">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span>
+                    <span className="ogm-about-step-title">{f.title}</span>
+                    <span className="ogm-about-step-desc">{f.description}</span>
+                  </span>
+                </li>
+              ))}
+            </ol>
+          )}
+        </section>
       </div>
 
       <style>{`
@@ -264,9 +253,9 @@ const OurGamesMobile = ({ games, user }: OurGamesMobileProps) => {
         /* ---------- art zone ---------- */
         .ogm-art-zone {
           position: relative;
-          /* the artwork takes whatever height the details below don't need */
-          flex: 1 1 auto;
-          min-height: 300px;
+          /* artwork + details fill the first screen; the about panel is below */
+          flex: 0 0 auto;
+          height: clamp(300px, 56svh, 560px);
           display: flex;
           flex-direction: column;
         }
@@ -294,8 +283,7 @@ const OurGamesMobile = ({ games, user }: OurGamesMobileProps) => {
         }
         .ogm-brand { display: flex; align-items: center; gap: 12px; }
         .ogm-logo { display: flex; align-items: center; text-decoration: none; }
-        .ogm-brand-name { font-weight: 800; font-size: 17px; color: #fff; }
-        .ogm-logout {
+        .ogm-home {
           display: flex; align-items: center; height: 40px; padding: 0 16px;
           border-radius: 999px; border: 0;
           background: linear-gradient(90deg, #7c4dff, #ff4fd8);
@@ -303,7 +291,7 @@ const OurGamesMobile = ({ games, user }: OurGamesMobileProps) => {
           font-size: 12px; letter-spacing: 1.5px; cursor: pointer;
           font-family: inherit;
         }
-        .ogm-logo:focus-visible, .ogm-logout:focus-visible, .ogm-more:focus-visible {
+        .ogm-logo:focus-visible, .ogm-home:focus-visible {
           outline: 3px solid #fff; outline-offset: 3px;
         }
 
@@ -364,11 +352,49 @@ const OurGamesMobile = ({ games, user }: OurGamesMobileProps) => {
           font-weight: 800; font-size: 15px;
         }
         .ogm-play:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-        .ogm-more {
-          width: 50px; height: 50px; flex-shrink: 0; border-radius: 50%;
-          background: rgba(255,255,255,.14); color: #fff;
-          display: flex; align-items: center; justify-content: center;
-          text-decoration: none;
+        /* Locked game: same look as the site's Login button */
+        .ogm-play[data-locked="true"] {
+          background: linear-gradient(90deg, #7c4dff, #ff4fd8);
+          color: #fff;
+          font-family: var(--font-russo), sans-serif; font-weight: 400;
+          text-transform: uppercase; letter-spacing: .14em;
+          box-shadow: inset 0 0 0 1px rgba(255,255,255,.35), 0 8px 28px rgba(255,79,216,.5);
+        }
+        /* "about this game", below Play — the page scrolls down to it */
+        .ogm-about {
+          margin-top: 18px; padding: 16px;
+          border-radius: 16px; background: #120b2a;
+          border: 1px solid rgba(255,255,255,.1);
+        }
+        .ogm-about-eyebrow {
+          margin: 0; font-weight: 800; font-size: 11px; letter-spacing: .22em;
+          text-transform: uppercase; color: #6ee7ff;
+        }
+        .ogm-about-title {
+          margin: 6px 0 0; font-family: var(--font-russo), sans-serif; font-weight: 400;
+          font-size: 1.25rem; line-height: 1.15; color: #fff; text-transform: uppercase;
+        }
+        .ogm-about-desc {
+          margin: 10px 0 0; font-size: 14px; line-height: 1.5;
+          color: rgba(241,238,255,.85);
+        }
+        .ogm-about-steps {
+          list-style: none; margin: 14px 0 0; padding: 14px 0 0;
+          border-top: 1px solid rgba(255,255,255,.1);
+          display: flex; flex-direction: column; gap: 12px;
+        }
+        .ogm-about-step { display: flex; gap: 12px; align-items: flex-start; }
+        .ogm-about-num {
+          font-family: var(--font-russo), sans-serif; font-size: 20px; line-height: 1;
+          color: #36e0ff; flex-shrink: 0;
+        }
+        .ogm-about-step-title {
+          display: block; font-weight: 800; font-size: 12px; letter-spacing: .08em;
+          text-transform: uppercase; color: #fff;
+        }
+        .ogm-about-step-desc {
+          display: block; margin-top: 2px; font-size: 13px; line-height: 1.4;
+          color: rgba(241,238,255,.7);
         }
       `}</style>
     </section>

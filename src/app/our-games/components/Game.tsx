@@ -2,7 +2,8 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import type { User } from "../../components/hero-data";
+import GameLoader from "../../components/GameLoader";
+import { useCurrentUser } from "../../hooks/useCurrentUser";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { GAMES } from "../game-data";
 
@@ -25,37 +26,64 @@ const OurGamesMobile = dynamic(() => import("./OurGamesMobile"), {
  */
 const MOBILE_LAYOUT_QUERY = "(max-width: 767px) and (orientation: portrait)";
 
+/** Never hold the loading screen longer than this, even if an image stalls. */
+const MAX_WAIT_MS = 10000;
+
+/**
+ * Resolves once the fonts and every image meant for the first screen have
+ * finished (loaded or failed). Lazy images further along the row are left
+ * to load in the background.
+ */
+function firstScreenLoaded(): Promise<void> {
+  const images = Array.from(document.images).filter(
+    (img) => img.loading !== "lazy",
+  );
+  const imageDone = images.map((img) =>
+    img.complete
+      ? Promise.resolve()
+      : new Promise<void>((resolve) => {
+          img.addEventListener("load", () => resolve(), { once: true });
+          img.addEventListener("error", () => resolve(), { once: true });
+        }),
+  );
+  return Promise.all([document.fonts.ready, ...imageDone]).then(() => {});
+}
+
 export default function Game() {
   const isMobile = useIsMobile(MOBILE_LAYOUT_QUERY);
-  const [user, setUser] = useState<User | null>(null);
+  const { user, loading } = useCurrentUser();
+  // set by the dashboard once its (lazily loaded) code has mounted
+  const [mounted, setMounted] = useState(false);
+  const [assetsLoaded, setAssetsLoaded] = useState(false);
 
   useEffect(() => {
-    let mounted = true;
-
-    fetch("/api/auth/me")
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (!mounted) return;
-        if (data?.success && data.user) setUser(data.user);
-      })
-      .catch(() => {
-        // Stay signed-out; locked games still show, unlocked via login.
-      });
-
-    return () => {
-      mounted = false;
+    if (!mounted) return;
+    let cancelled = false;
+    const done = () => {
+      if (!cancelled) setAssetsLoaded(true);
     };
-  }, []);
+    const timer = setTimeout(done, MAX_WAIT_MS);
+    // one frame so the dashboard's <img> tags are in the DOM
+    requestAnimationFrame(() => firstScreenLoaded().then(done));
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [mounted]);
 
-  // Viewport not measured yet: render nothing rather than guess, so we never
-  // start fetching the wrong device's chunk.
-  if (isMobile === null) {
-    return <div className="fixed inset-0 z-0 bg-[#04020e]" />;
-  }
+  // The page renders underneath as soon as the device is known so its
+  // images start loading, but the loader stays on top until the login check
+  // is done and the first screen's fonts and images have all arrived.
+  const ready = isMobile !== null && !loading && mounted && assetsLoaded;
 
-  return isMobile ? (
-    <OurGamesMobile games={GAMES} user={user} />
-  ) : (
-    <OurGamesDesktop games={GAMES} user={user} />
+  const Dashboard = isMobile ? OurGamesMobile : OurGamesDesktop;
+
+  return (
+    <>
+      {isMobile !== null && (
+        <Dashboard games={GAMES} user={user} onReady={() => setMounted(true)} />
+      )}
+      <GameLoader done={ready} />
+    </>
   );
 }

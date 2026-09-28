@@ -105,7 +105,9 @@ const Hero = () => {
                   fallbackGame.thumbnailUrl ||
                   apiGame.thumbnailUrl ||
                   fallbackGame.thumbnailUrl,
-                gameUrl: apiGame.gameUrl || fallbackGame.gameUrl,
+                // Always the real game file: the database still stores the
+                // old detail-page URLs, which no longer exist.
+                gameUrl: fallbackGame.gameUrl,
               };
             });
           });

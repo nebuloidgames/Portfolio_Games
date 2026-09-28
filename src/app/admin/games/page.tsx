@@ -188,7 +188,7 @@ export default function GameDetailPage({
 
   const image = game?.thumbnailUrl || "/hero-img.png";
   const description = game?.description || defaultDescription;
-  const gameUrl = game?.gameUrl || `/our-games/all_games/${slug}`;
+  const gameUrl = game?.gameUrl || `/our-games?game=${slug}`;
 
   const featureText = useMemo(
     () => [

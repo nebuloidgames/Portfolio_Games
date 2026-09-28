@@ -16,7 +16,16 @@ import { isUnlocked as checkUnlocked, type GameCard } from "../game-data";
 interface OurGamesDesktopProps {
   games: GameCard[];
   user: User | null;
+  /** Called once mounted, so the loading screen knows it can fade out. */
+  onReady?: () => void;
 }
+
+/** Open on the game named in `?game=<slug>` (old detail-page links), else the first. */
+export const initialIndex = (games: GameCard[]) => {
+  const slug = new URLSearchParams(window.location.search).get("game");
+  const i = games.findIndex((g) => g.slug === slug);
+  return i >= 0 ? i : 0;
+};
 
 const rgba = (hex: string, a: number) => {
   const h = hex.replace("#", "");
@@ -29,15 +38,29 @@ const rgba = (hex: string, a: number) => {
 /**
  * PS5-style desktop dashboard: the selected game's screenshot fills the
  * screen (one layer per game, cross-faded via opacity), a tile row selects
- * the game, and its details + four info cards sit along the bottom. No
+ * the game; its title + Play sit under the tiles, an "about" panel on the right. No
  * autoplay, arrows or dots — selection only changes from hover/focus/click
  * on a tile or the Left/Right arrow keys on the tile row.
  */
-const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
+const OurGamesDesktop = ({ games, user, onReady }: OurGamesDesktopProps) => {
   const router = useRouter();
-  const [active, setActive] = useState(0);
-  const [loggingOut, setLoggingOut] = useState(false);
+  const [active, setActive] = useState(() => initialIndex(games));
+
+  useEffect(() => {
+    onReady?.();
+  }, [onReady]);
   const tileRefs = useRef<Array<HTMLButtonElement | null>>([]);
+
+  // Opened on a specific game (?game=…): bring its tile into view once.
+  // biome-ignore lint/correctness/useExhaustiveDependencies: first render only
+  useEffect(() => {
+    if (active > 0) {
+      tileRefs.current[active]?.scrollIntoView({
+        inline: "center",
+        block: "nearest",
+      });
+    }
+  }, []);
   const rowRef = useRef<HTMLDivElement | null>(null);
   const [canLeft, setCanLeft] = useState(false);
   const [canRight, setCanRight] = useState(false);
@@ -128,17 +151,6 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
     }
   };
 
-  async function handleLogout() {
-    setLoggingOut(true);
-    try {
-      await fetch("/api/auth/logout", { method: "POST" });
-      router.push("/");
-      router.refresh();
-    } catch {
-      setLoggingOut(false);
-    }
-  }
-
   return (
     <section className="og-page fixed inset-0 z-0 overflow-x-hidden overflow-y-auto">
       {/* SELECTED GAME ARTWORK — full-screen cross-fade stack */}
@@ -179,51 +191,22 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
               className="h-[90px] w-auto object-contain sm:h-[110px]"
             />
           </Link>
-          <nav className="og-tabs">
-            <span aria-current="page" className="og-tab og-tab-active">
-              Games
-            </span>
-          </nav>
-          {user ? (
-            <button
-              type="button"
-              onClick={handleLogout}
-              disabled={loggingOut}
-              className="og-logout"
+          <Link href="/" className="og-home">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
             >
-              {loggingOut ? "Logging out…" : "Logout"}
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </button>
-          ) : (
-            <Link href="/login" className="og-logout">
-              Login
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </Link>
-          )}
+              <path d="M3 11l9-8 9 8M5 10v10h14V10" />
+            </svg>
+            Home
+          </Link>
         </header>
 
         {/* TILE ROW */}
@@ -309,7 +292,7 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
                       src={game.thumbnailUrl || "/hero-img.png"}
                       alt=""
                       fill
-                      sizes="140px"
+                      sizes="182px"
                       quality={60}
                       loading={Math.abs(i - active) <= 4 ? "eager" : "lazy"}
                       className="og-tile-img"
@@ -327,8 +310,8 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
           </div>
         </div>
 
-        {/* DETAILS */}
-        <div className="og-details-row">
+        {/* DETAILS (left, right under the tiles) + ABOUT (right) */}
+        <div className="og-stage">
           <div className="og-details">
             <span
               className="og-chip"
@@ -344,6 +327,7 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
                 target={unlocked ? "_blank" : undefined}
                 rel={unlocked ? "noopener noreferrer" : undefined}
                 className="og-play"
+                data-locked={!unlocked}
               >
                 <svg
                   width="18"
@@ -356,37 +340,40 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
                 </svg>
                 {unlocked ? "Play" : "Login to Play"}
               </a>
-              <Link
-                href={current.detailUrl}
-                aria-label={`More about ${current.title}`}
-                className="og-more"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <circle cx="5" cy="12" r="2" />
-                  <circle cx="12" cy="12" r="2" />
-                  <circle cx="19" cy="12" r="2" />
-                </svg>
-              </Link>
             </div>
           </div>
+
+          <section className="og-about" aria-label={`About ${current.title}`}>
+            <p className="og-about-eyebrow">{current.about.eyebrow}</p>
+            <h2 className="og-about-title">{current.about.headline}</h2>
+            <p className="og-about-desc">{current.about.description}</p>
+            {current.about.features.length > 0 && (
+              <ol className="og-about-steps">
+                {current.about.features.map((f, i) => (
+                  <li key={f.title} className="og-about-step">
+                    <span className="og-about-num">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="og-about-step-title">{f.title}</span>
+                    <span className="og-about-step-desc">{f.description}</span>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </section>
         </div>
       </div>
 
       <style>{`
         .og-page {
-          background: #04020e;
+          /* see-through: the site nebula (SiteBackdrop) sits behind the page */
+          background: transparent;
           color: #f1eeff;
           font-family: var(--font-exo), system-ui, sans-serif;
           -webkit-tap-highlight-color: transparent;
           /* tile sizes — shrunk on short screens below */
           --tile: 96px;
-          --tile-on: 140px;
+          --tile-on: 182px;
           --row-pad: 14px;
         }
 
@@ -397,7 +384,15 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
           position: absolute; inset: 0;
           transition: opacity .5s ease;
         }
-        .og-bg img { object-fit: cover; }
+        .og-bg img {
+          object-fit: cover;
+          /* Softened so the tiles and text stand out. Scaled up slightly so
+           * the blur's soft edge doesn't show a dark rim at the screen edge.
+           * Slightly see-through so the site's nebula glows faintly behind. */
+          filter: blur(4px);
+          transform: scale(1.04);
+          opacity: .9;
+        }
         .og-shade-l {
           position: absolute; inset: 0;
           background: linear-gradient(90deg, rgba(4,2,14,.95) 0%, rgba(4,2,14,.7) 32%, rgba(4,2,14,.15) 62%, transparent 80%);
@@ -441,26 +436,17 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
           display: flex; align-items: center; flex-shrink: 0;
           text-decoration: none;
         }
-        .og-tabs { display: flex; gap: 30px; flex-grow: 1; }
-        .og-tab {
-          font-weight: 700; font-size: clamp(15px, 1.3vw, 20px);
-          color: rgba(241,238,255,.6);
-          padding-bottom: 4px; cursor: default;
-        }
-        .og-tab-active {
-          font-weight: 800; color: #fff;
-          border-bottom: 2px solid #fff;
-        }
-        .og-logout {
+        /* Home sits at the far right of the bar */
+        .og-home {
+          margin-left: auto;
           display: flex; align-items: center; gap: 8px;
           height: 44px; padding: 0 22px; border-radius: 999px;
           background: linear-gradient(90deg, #7c4dff, #ff4fd8);
-          color: #fff; text-decoration: none; border: 0;
+          color: #fff; text-decoration: none;
           font-weight: 800; font-size: 14px; letter-spacing: 2px;
-          cursor: pointer; flex-shrink: 0; font-family: inherit;
+          text-transform: uppercase; flex-shrink: 0;
         }
-        .og-logout:disabled { opacity: .7; cursor: default; }
-        .og-logo:focus-visible, .og-logout:focus-visible, .og-more:focus-visible {
+        .og-logo:focus-visible, .og-home:focus-visible {
           outline: 3px solid #fff; outline-offset: 4px;
         }
 
@@ -482,6 +468,10 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
           margin: calc(-1 * var(--row-pad)) -10px 0;
           /* keep a tile scrolled into view clear of the side arrows */
           scroll-padding-inline: 64px;
+          /* Always as tall as a selected tile. Mid-switch the old tile is
+           * shrinking while the new one grows, so the row would briefly get
+           * shorter and everything below it would bob up and down. */
+          height: calc(var(--tile-on) + var(--row-pad) + 16px);
         }
         .og-tiles::-webkit-scrollbar { display: none; }
         /* fade only the side(s) that have more to scroll */
@@ -534,12 +524,20 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
           color: rgba(241,238,255,.7);
         }
 
-        /* ---------- details ---------- */
-        .og-details-row {
-          flex: 1 1 auto; min-height: 0;
-          display: flex; flex-direction: column; justify-content: flex-end;
+        /* ---------- details + about ---------- */
+        /* Fixed slots: the area's size comes from the screen, never from the
+         * selected game's text, so switching games never moves anything. */
+        .og-stage {
+          flex: 1 1 0;
+          min-height: 340px;
+          margin-top: clamp(16px, 3vh, 32px);
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+          gap: clamp(24px, 4vw, 64px);
         }
+        /* title + Play sit right under the tiles */
         .og-details {
+          align-self: start;
           display: flex; flex-direction: column; gap: 16px;
           max-width: 640px;
         }
@@ -553,11 +551,19 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
           /* scales with the screen's height too, so a short screen still fits */
           font-size: clamp(2rem, min(4.6vw, 8.5vh), 4.75rem); line-height: 1; color: #fff;
           text-shadow: 0 4px 30px rgba(0,0,0,.5);
+          /* always two lines tall (long names wrap, short ones leave the
+           * space), so the description and Play never shift */
+          height: 2em;
+          display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+          overflow: hidden;
         }
         .og-desc {
           margin: 0; font-weight: 500; font-size: clamp(0.95rem, 1.1vw, 1.25rem);
           line-height: 1.45; color: rgba(241,238,255,.88);
           max-width: 560px;
+          height: 2.9em;
+          display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+          overflow: hidden;
         }
         .og-actions { display: flex; align-items: center; gap: 14px; margin-top: 10px; }
         .og-play {
@@ -568,36 +574,101 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
           transition: background .2s;
         }
         .og-play:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
-        .og-more {
-          width: 58px; height: 58px; border-radius: 50%; border: 0;
-          background: rgba(255,255,255,.12); color: #fff;
-          display: flex; align-items: center; justify-content: center;
-          cursor: pointer; transition: background .2s; text-decoration: none;
-          flex-shrink: 0;
+        /* Locked game: same look as the site's Login button */
+        .og-play[data-locked="true"] {
+          background: linear-gradient(90deg, #7c4dff, #ff4fd8);
+          color: #fff;
+          font-family: var(--font-russo), sans-serif; font-weight: 400;
+          text-transform: uppercase; letter-spacing: .14em;
+          box-shadow: inset 0 0 0 1px rgba(255,255,255,.35), 0 8px 28px rgba(255,79,216,.5);
+          transition: transform .2s, filter .2s;
+        }
+
+        /* PS5/Xbox-style "about this game" panel, low on the right */
+        .og-about {
+          /* fills its slot, so the box's edges stay put whatever the text */
+          align-self: stretch;
+          justify-self: end;
+          width: 100%; max-width: 620px;
+          overflow-y: auto;
+          scrollbar-width: thin;
+          box-sizing: border-box;
+          /* at least as wide as the edge fade below, so text stays crisp */
+          padding: 40px;
+          border-radius: 28px;
+          background: rgba(4, 2, 14, 0.4);
+          backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+          /* No border, no shadow, and the edges fade out to nothing, so the
+           * panel reads as a blurred patch of the background, not a box. */
+          -webkit-mask-image:
+            linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent),
+            linear-gradient(to bottom, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+          -webkit-mask-composite: source-in;
+          mask-image:
+            linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent),
+            linear-gradient(to bottom, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+          mask-composite: intersect;
+        }
+        .og-about-eyebrow {
+          margin: 0; font-weight: 800; font-size: 12px; letter-spacing: .24em;
+          text-transform: uppercase; color: #6ee7ff;
+        }
+        .og-about-title {
+          margin: 8px 0 0; font-family: var(--font-russo), sans-serif; font-weight: 400;
+          font-size: clamp(1.3rem, 1.9vw, 1.9rem); line-height: 1.1; color: #fff;
+          text-transform: uppercase;
+        }
+        .og-about-desc {
+          margin: 12px 0 0; font-weight: 500; font-size: clamp(.9rem, 1vw, 1.05rem);
+          line-height: 1.55; color: rgba(241,238,255,.85);
+        }
+        .og-about-steps {
+          list-style: none; margin: 18px 0 0; padding: 18px 0 0;
+          border-top: 1px solid rgba(255,255,255,.12);
+          display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;
+        }
+        .og-about-step { display: flex; flex-direction: column; gap: 4px; }
+        .og-about-num {
+          font-family: var(--font-russo), sans-serif; font-size: 22px; line-height: 1;
+          color: #36e0ff;
+        }
+        .og-about-step-title {
+          font-weight: 800; font-size: 13px; letter-spacing: .08em;
+          text-transform: uppercase; color: #fff;
+        }
+        .og-about-step-desc {
+          font-size: 12.5px; line-height: 1.45; color: rgba(241,238,255,.7);
+        }
+
+        /* not wide enough for two columns: stack the panel under the details */
+        @media (max-width: 1100px) {
+          .og-stage { grid-template-columns: minmax(0, 1fr); }
+          .og-about { justify-self: start; }
         }
 
         /* Hover styles only where there's a real pointer — on a touchscreen
          * they'd stay stuck on after a tap. */
         @media (hover: hover) and (pointer: fine) {
           .og-side:hover { background: rgba(124,77,255,.85); transform: translateY(-50%) scale(1.08); }
-          .og-play:hover { background: #e9e4ff; }
-          .og-more:hover { background: rgba(255,255,255,.2); }
+          .og-play[data-locked="false"]:hover { background: #e9e4ff; }
+          .og-play[data-locked="true"]:hover { transform: translateY(-2px); filter: brightness(1.1); }
         }
 
         /* ---------- short screens (landscape phones, small laptops) ---------- */
         @media (max-height: 700px) {
-          .og-page { --tile: 76px; --tile-on: 108px; --row-pad: 12px; }
+          .og-page { --tile: 76px; --tile-on: 140px; --row-pad: 12px; }
           .og-topbar { min-height: 80px; }
           .og-logo img { height: 72px !important; }
+          .og-home { height: 40px; padding: 0 18px; }
           .og-row-wrap { margin-top: 14px; }
           .og-tile-label { padding-top: 10px; }
           .og-tile-name { font-size: 18px; }
           .og-details { gap: 10px; }
-          .og-play, .og-more { height: 50px; }
-          .og-more { width: 50px; }
+          .og-play { height: 50px; }
+          .og-about-steps { display: none; }
         }
         @media (max-height: 480px) {
-          .og-page { --tile: 60px; --tile-on: 84px; --row-pad: 10px; }
+          .og-page { --tile: 60px; --tile-on: 109px; --row-pad: 10px; }
           .og-topbar { min-height: 60px; }
           .og-logo img { height: 54px !important; }
           .og-row-wrap { margin-top: 8px; }
@@ -606,8 +677,7 @@ const OurGamesDesktop = ({ games, user }: OurGamesDesktopProps) => {
           .og-tile-cat { font-size: 11px; margin-top: 2px; }
           .og-details { gap: 8px; }
           .og-actions { margin-top: 4px; }
-          .og-play, .og-more { height: 44px; }
-          .og-more { width: 44px; }
+          .og-play { height: 44px; }
           .og-side { width: 40px; height: 40px; }
         }
 
