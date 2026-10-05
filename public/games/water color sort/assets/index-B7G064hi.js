@@ -124,6 +124,7 @@ Error generating stack: `+a.message+`
 * See the LICENSE file in the root directory of this source tree.
 */const Qu=tn("VolumeX",[["path",{d:"M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",key:"uqj9uw"}],["line",{x1:"22",x2:"16",y1:"9",y2:"15",key:"1ewh16"}],["line",{x1:"16",x2:"22",y1:"9",y2:"15",key:"5ykzw1"}]]),Tn=["#ff6b6b","#4d96ff","#ffc857","#45c486","#9b72cf","#ff9f43","#38c9d9","#f36ba8"],Sr=[[[0,1,0,1],[1,0,1,0],[],[]],[[1,2,1,2],[2,1,2,1],[],[]],[[0,3,1,0],[1,0,3,1],[3,1,0,3],[],[]],[[2,1,3,2],[3,2,0,1],[1,0,2,3],[0,3,1,0],[],[]],[[0,4,1,2],[3,0,2,4],[1,3,4,0],[2,1,3,2],[4,2,0,3],[],[]],[[5,1,3,4],[2,5,7,1],[4,3,2,6],[6,7,1,5],[3,2,6,4],[7,6,5,3],[],[]],[[0,1,2,4],[3,5,6,7],[2,0,4,1],[7,3,5,6],[1,2,6,3],[5,7,0,4],[6,4,3,5],[],[]],[[1,5,7,3],[6,4,2,0],[3,1,0,5],[4,2,6,7],[5,3,7,1],[0,6,1,2],[2,7,5,4],[3,0,4,6],[],[]],[[0,3,1,2],[4,5,6,7],[1,0,2,3],[7,6,5,4],[2,1,7,0],[3,4,0,5],[6,2,3,1],[5,7,4,6],[1,3,5,2],[],[]],[[0,1,2,3],[4,5,6,7],[6,0,4,1],[3,2,7,5],[1,3,5,6],[2,7,0,4],[5,6,3,2],[7,4,1,0],[3,2,6,5],[4,7,5,1],[],[]]],Zn=h=>h.map(b=>[...b]),ff=(h,b)=>{if(!h.length||b.length===4)return 0;const d=h[h.length-1];if(b.length&&b[b.length-1]!==d)return 0;let s=0;for(let u=h.length-1;u>=0&&h[u]===d;u--)s++;return Math.min(s,4-b.length)},pf=(h,b,d)=>{wf();const s=Zn(h),u=ff(s[b],s[d]);return u?(s[d].push(...s[b].splice(s[b].length-u,u)),[s,u]):[h,0]},mf=h=>h.every(b=>!b.length||b.length===4&&b.every(d=>d===b[0]));function Fl({children:h,id:b}){return i.jsx("div",{className:"page",children:h},b)}function Hu(){return i.jsx("header",{className:"site-header",children:i.jsxs("button",{className:"brand",type:"button","aria-label":"Nebuloid Tech",children:[i.jsx("img",{src:"/logo.png",alt:"Nebuloid Tech",onError:h=>h.currentTarget.style.visibility="hidden"}),i.jsx("span",{children:"NEBULOID TECH"})]})})}function At({className:h="",colors:b=[1,0],tilt:d=0}){return i.jsxs("div",{className:`deco-bottle ${h}`,style:{"--tilt":`${d}deg`},children:[i.jsx("div",{className:"deco-neck"}),i.jsx("div",{className:"deco-mouth"}),i.jsxs("div",{className:"deco-body",children:[b.map((s,u)=>i.jsx("span",{style:{bottom:`${u*50}%`,background:`linear-gradient(100deg,${Tn[s]},${Tn[s]}dd 62%,${Tn[s]}aa)`}},u)),i.jsx("i",{})]})]})}function qu({name:h=!1}){return i.jsxs("div",{className:`decorative-scene ${h?"name-scene":""}`,"aria-hidden":"true",children:[i.jsx(At,{className:"deco-left-top",colors:[1,0],tilt:18}),i.jsx(At,{className:"deco-left-bottom",colors:[1,0,1],tilt:14}),i.jsx(At,{className:"deco-right-top",colors:[1,0],tilt:-18}),i.jsx(At,{className:"deco-right-bottom",colors:[2,1,0],tilt:-16}),i.jsx("span",{className:"scene-dot dot-blue-a"}),i.jsx("span",{className:"scene-dot dot-blue-b"}),i.jsx("span",{className:"scene-dot dot-pink"}),i.jsx("span",{className:"scene-dot dot-yellow"})]})}function hf({go:h}){const[b,d]=le.useState(window.__waterSortSoundEnabled!==!1),[s,u]=le.useState(!1),x=()=>{const $=!b;d($),window.__waterSortSoundEnabled=$};return i.jsx(Fl,{id:"start",children:i.jsxs("main",{className:"realistic-start",children:[i.jsxs("div",{className:"lake-sky","aria-hidden":"true",children:[i.jsx("div",{className:"sun-glow"}),i.jsx("div",{className:"sun-disc"}),i.jsx("div",{className:"cloud cloud-one"}),i.jsx("div",{className:"cloud cloud-two"}),i.jsx("div",{className:"mountain mountain-back left"}),i.jsx("div",{className:"mountain mountain-back right"}),i.jsx("div",{className:"mountain mountain-front left"}),i.jsx("div",{className:"mountain mountain-front right"}),i.jsx("div",{className:"forest forest-left"}),i.jsx("div",{className:"forest forest-right"}),i.jsx("div",{className:"lake-shimmer"}),i.jsx("div",{className:"lake-horizon"}),i.jsx("div",{className:"foreground-leaves leaves-left"}),i.jsx("div",{className:"foreground-leaves leaves-right"}),i.jsxs("div",{className:"dock",children:[i.jsx("div",{className:"dock-rail rail-left"}),i.jsx("div",{className:"dock-rail rail-right"}),i.jsx("div",{className:"dock-planks"})]})]}),i.jsxs("button",{className:"scene-corner scene-sound",type:"button",onClick:x,"aria-label":b?"Mute sound":"Turn sound on",children:[b?i.jsx(Wu,{size:31}):i.jsx(Qu,{size:31}),i.jsx("span",{children:b?"SOUND ON":"MUTED"})]}),i.jsxs("button",{className:"scene-home scene-how-to-play",type:"button",onClick:()=>u(!0),children:[i.jsx(Ml,{size:22}),i.jsx("span",{children:"HOW TO PLAY"})]}),i.jsxs("section",{className:"realistic-start-content",children:[i.jsxs("div",{className:"studio-brand",children:[i.jsx("img",{src:"/logo.png",alt:"Nebuloid Tech Studio"}),i.jsx("strong",{children:"NEBULOID TECH STUDIO LLP"}),i.jsx("span",{children:"IDEAS. WIRED TO REALITY."})]}),i.jsxs("div",{className:"welcome-line",children:[i.jsx("i",{})," WELCOME TO ",i.jsx("i",{})]}),i.jsxs("h1",{className:"water-logo","aria-label":"Water Color Sort",children:[i.jsx("b",{children:"WATER"}),i.jsxs("strong",{children:[i.jsx("em",{children:"C"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"L"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"R"})]}),i.jsx("span",{children:"SORT"})]}),i.jsxs("button",{onClick:h,className:"water-play","aria-label":"Start game",children:[i.jsx("span",{className:"play-ring ring-one"}),i.jsx("span",{className:"play-ring ring-two"}),i.jsx("span",{className:"play-core",children:i.jsx(sf,{size:54,fill:"currentColor"})})]}),i.jsxs("div",{className:"water-side-copy water-side-copy-left","aria-hidden":"true",children:[i.jsx("span",{children:"POUR"}),i.jsx("b",{children:"MATCH"}),i.jsx("span",{children:"SORT"}),i.jsxs("small",{children:["POUR THE RIGHT COLORS",i.jsx("br",{}),"MATCH EVERY TUBE",i.jsx("br",{}),"CLEAR THE PUZZLE"]})]}),i.jsxs("div",{className:"water-side-copy water-side-copy-right","aria-hidden":"true",children:[i.jsx("span",{children:"THINK"}),i.jsx("b",{children:"SOLVE"}),i.jsx("span",{children:"WIN"}),i.jsxs("small",{children:["PLAN EVERY MOVE",i.jsx("br",{}),"GROUP THE COLORS",i.jsx("br",{}),"BEAT ALL 10 LEVELS"]})]}),i.jsx("div",{className:"water-start-label",children:"START"})]}),s&&i.jsx("div",{className:"howto-overlay",role:"dialog","aria-modal":"true","aria-label":"How to play",children:i.jsxs("div",{className:"howto-panel",children:[i.jsx("button",{className:"howto-close",type:"button",onClick:()=>u(!1),"aria-label":"Close",children:"×"}),i.jsx("div",{className:"howto-icon",children:i.jsx(Al,{size:30})}),i.jsx("h2",{children:"HOW TO PLAY"}),i.jsx("p",{className:"howto-intro",children:"Sort every color into its own bottle."}),i.jsxs("div",{className:"howto-steps",children:[i.jsxs("div",{children:[i.jsx("b",{children:"1"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SELECT"})," a bottle with colored water."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"2"}),i.jsxs("span",{children:[i.jsx("strong",{children:"POUR"})," into an empty bottle or one with the same top color."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"3"}),i.jsxs("span",{children:[i.jsx("strong",{children:"MATCH"})," the same colors together."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"4"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SOLVE"})," the puzzle using as few moves as possible."]})]})]}),i.jsx("div",{className:"howto-rule",children:"Each bottle can hold up to 4 color units."}),i.jsx("button",{className:"howto-start",type:"button",onClick:()=>u(!1),children:"GOT IT — LET'S PLAY"})]})})]})})}function gf({value:h,onChange:b,onEnter:d,onClose:s}){const[u,x]=le.useState({x:null,y:null}),$=le.useRef(null),D=["1","2","3","4","5","6","7","8","9","0","Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M"],R=L=>{L.preventDefault();const ie=L.currentTarget.dataset.key;ie==="BACKSPACE"?b(h.slice(0,-1)):ie==="SPACE"?b((h+" ").slice(0,24)):ie==="ENTER"?d():b((h+ie).slice(0,24))},B=L=>{var ie,ne;if(L.button!==void 0&&L.button!==0)return;const K=L.currentTarget.parentElement.getBoundingClientRect();$.current={ox:L.clientX-K.left,oy:L.clientY-K.top},(ne=(ie=L.currentTarget).setPointerCapture)==null||ne.call(ie,L.pointerId)},q=L=>{if(!$.current)return;const ie=window.innerWidth,ne=window.innerHeight,K=L.currentTarget.parentElement.getBoundingClientRect();x({x:Math.max(8,Math.min(ie-K.width-8,L.clientX-$.current.ox)),y:Math.max(8,Math.min(ne-K.height-8,L.clientY-$.current.oy))})},V=()=>{$.current=null},W=u.x===null?{}:{left:u.x,top:u.y,right:"auto",bottom:"auto"};return i.jsxs("div",{className:"floating-keyboard",style:W,children:[i.jsxs("div",{className:"keyboard-head",onPointerDown:B,onPointerMove:q,onPointerUp:V,onPointerCancel:V,children:[i.jsxs("span",{children:[i.jsx("span",{className:"keyboard-grip"})," Floating Keyboard"]}),i.jsx("button",{type:"button",onPointerDown:L=>L.stopPropagation(),onClick:s,"aria-label":"Close keyboard",children:"×"})]}),i.jsxs("div",{className:"keyboard-keys",children:[D.map(L=>i.jsx("button",{type:"button","data-key":L,onPointerDown:R,children:L},L)),i.jsx("button",{type:"button",className:"key-wide","data-key":"SPACE",onPointerDown:R,children:"SPACE"}),i.jsx("button",{type:"button",className:"key-action","data-key":"BACKSPACE",onPointerDown:R,children:"⌫"}),i.jsx("button",{type:"button",className:"key-enter","data-key":"ENTER",onPointerDown:R,children:"ENTER ↵"})]})]})}function vf({onGo:h}){const[b,d]=le.useState(""),[s,u]=le.useState(!1),[x,$]=le.useState(window.__waterSortSoundEnabled!==!1),[D,R]=le.useState(!1),B=()=>{b.trim()&&h(b.trim())},q=()=>{const V=!x;$(V),window.__waterSortSoundEnabled=V};return i.jsx(Fl,{id:"name",children:i.jsxs("main",{className:"landing-page name-page",children:[i.jsx(Hu,{}),i.jsx("div",{className:"corner-blob blob-tl"}),i.jsx("div",{className:"corner-blob blob-tr"}),i.jsx("div",{className:"corner-blob blob-bl"}),i.jsx("div",{className:"corner-blob blob-br"}),i.jsx(qu,{name:!0}),i.jsx("div",{className:"name-haze haze-left"}),i.jsx("div",{className:"name-haze haze-right"}),i.jsxs("button",{className:"name-corner-control name-sound-control",type:"button",onClick:q,"aria-label":x?"Mute sound":"Turn sound on",children:[x?i.jsx(Wu,{size:30}):i.jsx(Qu,{size:30}),i.jsx("span",{children:x?"SOUND ON":"MUTED"})]}),i.jsxs("button",{className:"name-corner-control name-how-control",type:"button",onClick:()=>R(!0),children:[i.jsx(Ml,{size:22}),i.jsx("span",{children:"HOW TO PLAY"})]}),i.jsxs("div",{className:"name-side-copy name-side-copy-left","aria-hidden":"true",children:[i.jsx("span",{children:"POUR"}),i.jsx("b",{children:"MATCH"}),i.jsx("span",{children:"SORT"}),i.jsxs("small",{children:["POUR THE RIGHT COLORS",i.jsx("br",{}),"MATCH EVERY TUBE",i.jsx("br",{}),"CLEAR THE PUZZLE"]})]}),i.jsxs("div",{className:"name-side-copy name-side-copy-right","aria-hidden":"true",children:[i.jsx("span",{children:"THINK"}),i.jsx("b",{children:"SOLVE"}),i.jsx("span",{children:"WIN"}),i.jsxs("small",{children:["PLAN EVERY MOVE",i.jsx("br",{}),"GROUP THE COLORS",i.jsx("br",{}),"BEAT ALL 10 LEVELS"]})]}),i.jsxs("section",{className:"name-content",children:[i.jsxs("div",{className:"challenge-label",children:[i.jsx("span",{})," PUZZLE CHALLENGE ",i.jsx("span",{})]}),i.jsxs("h1",{className:"logo-title name-logo",children:[i.jsx("b",{children:"WATER"}),i.jsxs("strong",{children:[i.jsx("em",{children:"C"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"L"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"R"})]}),i.jsx("b",{children:"SORT"})]}),i.jsx("p",{className:"name-subtitle",children:"Sort the colors. Clear the tubes. Challenge your mind."}),i.jsx("div",{className:"player-icon",children:i.jsx(Vu,{size:31})}),i.jsx("p",{className:"registration-label",children:"PLAYER REGISTRATION"}),i.jsx("h2",{children:"Enter your name"}),i.jsx("p",{className:"registration-copy",children:"This name will be printed on every certificate."}),i.jsxs("form",{onSubmit:V=>{V.preventDefault(),B()},children:[i.jsxs("div",{className:"name-input-wrap",onClick:()=>u(!0),children:[i.jsx(Vu,{size:25}),i.jsx("input",{value:b,onFocus:()=>u(!0),onChange:V=>d(V.target.value.slice(0,24)),placeholder:"Your name"})]}),i.jsxs("button",{type:"submit",disabled:!b.trim(),className:"primary-cta name-cta",children:["START ",i.jsx(Uu,{size:29})]})]}),s&&i.jsx(gf,{value:b,onChange:d,onEnter:B,onClose:()=>u(!1)}),i.jsxs("div",{className:"bottom-motto",children:[i.jsx("span",{})," PLAY  •  THINK  •  ACHIEVE ",i.jsx("span",{})]})]}),D&&i.jsx("div",{className:"name-howto-overlay",role:"dialog","aria-modal":"true","aria-label":"How to play",children:i.jsxs("div",{className:"name-howto-panel",children:[i.jsx("button",{className:"name-howto-close",type:"button",onClick:()=>R(!1),"aria-label":"Close",children:"×"}),i.jsx("div",{className:"name-howto-icon",children:i.jsx(Al,{size:30})}),i.jsx("h2",{children:"HOW TO PLAY"}),i.jsx("p",{className:"name-howto-intro",children:"Sort every color into its own bottle."}),i.jsxs("div",{className:"name-howto-steps",children:[i.jsxs("div",{children:[i.jsx("b",{children:"1"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SELECT"})," a bottle with colored water."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"2"}),i.jsxs("span",{children:[i.jsx("strong",{children:"POUR"})," into an empty bottle or one with the same top color."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"3"}),i.jsxs("span",{children:[i.jsx("strong",{children:"MATCH"})," the same colors together."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"4"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SOLVE"})," the puzzle using as few moves as possible."]})]})]}),i.jsx("div",{className:"name-howto-rule",children:"Each bottle can hold up to 4 color units."}),i.jsx("button",{className:"name-howto-start",type:"button",onClick:()=>R(!1),children:"GOT IT — LET'S PLAY"})]})})]})})}function yf({tube:h,i:b,selected:d,pouringFrom:s,receiving:u,invalid:x,incomingColor:$,incomingAmount:D,pourAngle:R,onClick:B,refFn:q}){const V=h.length===4&&h.every(W=>W===h[0]);return i.jsxs("button",{ref:q,onClick:B,className:`bottle ${s?"pouring":""} ${x?"invalid":""}`,style:{"--pour-direction":R||"-27deg","--pour-shift":R==="27deg"?"34px":"-34px"},children:[i.jsx("div",{className:"bottle-neck"}),i.jsx("div",{className:"bottle-mouth"}),i.jsxs("div",{className:"bottle-body",children:[h.map((W,L)=>i.jsx("div",{className:"liquid",style:{bottom:`${L*25}%`,background:`linear-gradient(100deg,${Tn[W]},${Tn[W]}dd 62%,${Tn[W]}aa)`}},L)),$!==void 0&&D>0&&i.jsx("div",{className:"incoming-liquid",style:{height:`${D*25}%`,background:`linear-gradient(100deg,${$},${$}dd 62%,${$}aa)`},children:i.jsx("span",{className:"incoming-wave"})}),!h.length&&!D&&i.jsx("span",{className:"absolute inset-0 flex items-center justify-center text-[9px] font-extrabold tracking-[.16em] text-slate-300",children:"EMPTY"}),V&&i.jsx("span",{className:"absolute bottom-3 left-1/2 z-10 -translate-x-1/2 rounded-full bg-white/20 px-2 py-1 text-[8px] font-extrabold uppercase tracking-wider text-white",children:"Sorted"})]}),i.jsx("span",{className:`absolute -bottom-7 left-1/2 -translate-x-1/2 text-[10px] font-extrabold ${d?"text-sky-500":"text-slate-400"}`,children:b+1})]})}function bf({level:h,tubes:b,setTubes:d,moves:s,setMoves:u,onComplete:x,home:$}){var D,R;const[B,q]=le.useState(null),[V,W]=le.useState([]),[L,ie]=le.useState(null),[ne,K]=le.useState(null),Ge=le.useRef([]),Te=le.useRef(null),[pe,Se]=le.useState(null);le.useEffect(()=>{if(!L||!Te.current)return;let X=0;const Q=()=>{var Oe;const De=Ge.current[L.from],rn=Ge.current[L.to],be=(Oe=Te.current)==null?void 0:Oe.getBoundingClientRect();if(!De||!rn||!be){X=requestAnimationFrame(Q);return}const ze=De.querySelector(".bottle-mouth"),Be=rn.querySelector(".bottle-mouth");if(!ze||!Be){X=requestAnimationFrame(Q);return}const Ue=ze.getBoundingClientRect(),Ne=Be.getBoundingClientRect(),oe=Ue.left+Ue.width*.52-be.left,E=Ue.bottom-be.top+1,M=Ne.left+Ne.width*.5-be.left,C=Ne.top-be.top+8,m=M-oe,w=C-E,U=Math.hypot(m,w),H=Math.max(75,Math.min(150,U*.32)),G=m>=0?1:-1,Z=oe+m*.16,ae=E-H,te=M-m*.22,se=C-H*.72,Ie=`M ${oe} ${E} C ${Z} ${ae}, ${te} ${se}, ${M} ${C}`;Se({d:Ie,x1:oe,y1:E,x2:M,y2:C,color:L.color,side:G,dy:w}),X=requestAnimationFrame(Q)};return X=requestAnimationFrame(Q),()=>{cancelAnimationFrame(X)}},[L]);const Ze=X=>{if(L)return;if(B===null){b[X].length&&(K(null),q(X));return}if(B===X){q(null);return}const Q=B,[Oe,De]=pf(b,Q,X);if(!De){K(X),setTimeout(()=>K(null),380);return}const rn=Tn[b[Q][b[Q].length-1]];q(null),ie({from:Q,to:X,color:rn,amount:De}),setTimeout(()=>{W(be=>[...be,Zn(b)]),d(Oe),u(be=>be+1),setTimeout(()=>ie(null),170),mf(Oe)&&setTimeout(()=>x(s+1),470)},680)},Pe=()=>{d(Zn(Sr[h-1])),u(0),W([]),q(null),ie(null),K(null)};return i.jsx(Fl,{id:"game"+h,children:i.jsxs("main",{className:"game-page",children:[i.jsx(Hu,{}),i.jsx("div",{className:"game-page-art",children:i.jsx(qu,{})}),i.jsxs("div",{className:"game-corner-controls",children:[i.jsxs("button",{className:"game-sound-control",type:"button",onClick:()=>{const X=window.__waterSortSoundEnabled===!1;window.__waterSortSoundEnabled=X,window.dispatchEvent(new Event("water-sort-sound"))},"aria-label":"Toggle sound",children:[i.jsx("span",{className:"game-sound-icon",children:window.__waterSortSoundEnabled===!1?"🔇":"🔊"}),i.jsx("span",{children:window.__waterSortSoundEnabled===!1?"MUTED":"SOUND ON"})]}),i.jsxs("button",{className:"game-how-control",type:"button",onClick:()=>window.dispatchEvent(new Event("water-sort-howto")),children:[i.jsx(Ml,{size:21}),i.jsx("span",{children:"HOW TO PLAY"})]})]}),i.jsxs("div",{className:"game-side-copy game-side-copy-left","aria-hidden":"true",children:[i.jsx("span",{children:"POUR"}),i.jsx("b",{children:"MATCH"}),i.jsx("span",{children:"SORT"}),i.jsxs("small",{children:["POUR THE RIGHT COLORS",i.jsx("br",{}),"MATCH EVERY TUBE",i.jsx("br",{}),"CLEAR THE PUZZLE"]})]}),i.jsxs("div",{className:"game-side-copy game-side-copy-right","aria-hidden":"true",children:[i.jsx("span",{children:"THINK"}),i.jsx("b",{children:"SOLVE"}),i.jsx("span",{children:"WIN"}),i.jsxs("small",{children:["PLAN EVERY MOVE",i.jsx("br",{}),"GROUP THE COLORS",i.jsx("br",{}),"BEAT ALL 10 LEVELS"]})]}),i.jsxs("div",{className:"game-wrap",children:[i.jsxs("div",{className:"game-heading",children:[i.jsxs("div",{className:"game-title-block",children:[i.jsxs("div",{className:"game-kicker",children:[i.jsx("span",{})," PUZZLE CHALLENGE ",i.jsx("span",{})]}),i.jsxs("h1",{className:"game-logo-title",children:[i.jsx("b",{children:"WATER"}),i.jsxs("strong",{children:[i.jsx("em",{children:"C"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"L"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"R"})]}),i.jsx("span",{children:"SORT"})]}),i.jsx("p",{className:"game-instruction",children:L?"Pouring water...":B===null?"Select a bottle to pour.":"Choose an empty bottle or matching color."})]}),i.jsxs("div",{className:"game-controls",children:[i.jsxs("button",{disabled:!!L,onClick:$,className:"control-btn home-btn",children:[i.jsx(lf,{size:17}),"Home"]}),i.jsxs("div",{className:"stat-pill",children:[i.jsx("span",{children:"LEVEL"}),i.jsxs("b",{children:[h," / 10"]})]}),i.jsxs("div",{className:"stat-pill",children:[i.jsx("span",{children:"MOVES"}),i.jsx("b",{children:s})]}),i.jsxs("button",{disabled:!V.length||!!L,onClick:()=>{const X=V.at(-1);d(Zn(X)),W(Q=>Q.slice(0,-1)),u(Q=>Math.max(0,Q-1)),q(null)},className:"control-btn",children:[i.jsx(df,{size:17}),"Undo"]}),i.jsxs("button",{disabled:!!L,onClick:Pe,className:"control-btn dark",children:[i.jsx(uf,{size:17}),"Restart"]})]})]}),i.jsxs("section",{ref:Te,className:"game-board",children:[i.jsx("div",{className:"board-aura aura-one"}),i.jsx("div",{className:"board-aura aura-two"}),i.jsxs("div",{className:"board-topline",children:[i.jsx("span",{children:"Sort every bottle"}),i.jsxs("small",{children:[i.jsx(Ml,{size:14})," Match top color"]})]}),L&&pe&&i.jsxs("svg",{className:"pour-svg pour-svg-real",viewBox:`0 0 ${((D=Te.current)==null?void 0:D.clientWidth)||1e3} ${((R=Te.current)==null?void 0:R.clientHeight)||600}`,preserveAspectRatio:"none","aria-hidden":"true",children:[i.jsx("path",{className:"pour-shadow",d:pe.d}),i.jsx("path",{className:"pour-path",d:pe.d,style:{stroke:pe.color}}),i.jsx("path",{className:"pour-highlight",d:pe.d}),i.jsx("circle",{className:"pour-drop",cx:pe.x2,cy:pe.y2,r:"5",style:{fill:pe.color}}),i.jsx("circle",{className:"pour-splash",cx:pe.x2,cy:pe.y2,r:"2.5",style:{stroke:pe.color}})]}),i.jsx("div",{className:"game-bottles",children:b.map((X,Q)=>i.jsx("div",{className:"game-bottle-slot bottle-enter",style:{animationDelay:`${Q*35}ms`},children:i.jsx(yf,{refFn:Oe=>Ge.current[Q]=Oe,tube:X,i:Q,selected:B===Q,pouringFrom:(L==null?void 0:L.from)===Q,receiving:(L==null?void 0:L.to)===Q,invalid:ne===Q,pourAngle:(L==null?void 0:L.from)===Q&&L.to>Q?"27deg":"-27deg",incomingColor:(L==null?void 0:L.to)===Q?L.color:void 0,incomingAmount:(L==null?void 0:L.to)===Q?L.amount:0,onClick:()=>Ze(Q)})},Q))}),i.jsxs("div",{className:"board-help",children:[i.jsx(Al,{size:15}),i.jsx("span",{children:"Pour only onto an empty bottle or a bottle with the same top color."})]})]})]}),i.jsx(xf,{})]})})}function xf(){const[h,b]=le.useState(!1);return le.useEffect(()=>{const d=()=>b(!0);return window.addEventListener("water-sort-howto",d),()=>window.removeEventListener("water-sort-howto",d)},[]),h?i.jsx("div",{className:"game-howto-overlay",role:"dialog","aria-modal":"true","aria-label":"How to play",children:i.jsxs("div",{className:"game-howto-panel",children:[i.jsx("button",{className:"game-howto-close",type:"button",onClick:()=>b(!1),"aria-label":"Close",children:"×"}),i.jsx("div",{className:"game-howto-icon",children:i.jsx(Al,{size:30})}),i.jsx("h2",{children:"HOW TO PLAY"}),i.jsx("p",{children:"Sort every color into its own bottle."}),i.jsxs("div",{className:"game-howto-steps",children:[i.jsxs("div",{children:[i.jsx("b",{children:"1"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SELECT"})," a bottle containing color."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"2"}),i.jsxs("span",{children:[i.jsx("strong",{children:"POUR"})," into an empty bottle or onto the same top color."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"3"}),i.jsxs("span",{children:[i.jsx("strong",{children:"MATCH"})," identical colors together."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"4"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SOLVE"})," the level and move to the next challenge."]})]})]}),i.jsx("div",{className:"game-howto-rule",children:"A bottle can hold up to 4 color units."}),i.jsx("button",{className:"game-howto-start",type:"button",onClick:()=>b(!1),children:"GOT IT — LET'S PLAY"})]})}):null}function wf(){try{if(window.__waterSortSoundEnabled===!1)return;const h=window.AudioContext||window.webkitAudioContext;if(!h)return;const b=window.__waterSortAudioCtx||(window.__waterSortAudioCtx=new h);b.state==="suspended"&&b.resume();const d=b.currentTime,s=b.createGain(),u=b.createOscillator(),x=b.createBiquadFilter();x.type="lowpass",x.frequency.setValueAtTime(1250,d),x.frequency.exponentialRampToValueAtTime(520,d+.48),u.type="sine",u.frequency.setValueAtTime(520,d),u.frequency.exponentialRampToValueAtTime(190,d+.5),s.gain.setValueAtTime(1e-4,d),s.gain.exponentialRampToValueAtTime(.16,d+.035),s.gain.exponentialRampToValueAtTime(.055,d+.2),s.gain.exponentialRampToValueAtTime(1e-4,d+.56),u.connect(x),x.connect(s),s.connect(b.destination),u.start(d),u.stop(d+.58);const $=b.createBuffer(1,b.sampleRate*.42,b.sampleRate),D=$.getChannelData(0);for(let V=0;V<D.length;V++){const W=V/D.length;D[V]=(Math.random()*2-1)*Math.pow(1-W,2.2)}const R=b.createBufferSource(),B=b.createGain(),q=b.createBiquadFilter();q.type="bandpass",q.frequency.setValueAtTime(850,d),q.Q.value=.8,B.gain.setValueAtTime(1e-4,d),B.gain.exponentialRampToValueAtTime(.035,d+.04),B.gain.exponentialRampToValueAtTime(1e-4,d+.4),R.buffer=$,R.connect(q),q.connect(B),B.connect(b.destination),R.start(d)}catch{}}function kf({name:h,level:b,moves:d,final:s,next:u,replay:x}){const $=Array.from({length:24},(D,R)=>({left:(R*29+7)%100,top:8+R*17%28,delay:R%8*.07,rot:R*37%360,color:Tn[R%Tn.length]}));return i.jsx(Fl,{id:"cert"+b,children:i.jsxs("main",{className:"relative flex h-[100dvh] w-full items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_42%,#ffffff_0%,#eef9ff_48%,#d7efff_100%)] px-4 py-5 sm:px-8",children:[i.jsx("div",{className:"pointer-events-none absolute -left-24 -top-24 h-64 w-80 rounded-[45%] bg-[#9ed5ff]/45 blur-[1px] sm:h-80 sm:w-96"}),i.jsx("div",{className:"pointer-events-none absolute -right-28 -top-24 h-64 w-80 rounded-[45%] bg-[#b9e1ff]/50 blur-[1px] sm:h-80 sm:w-96"}),i.jsx("div",{className:"pointer-events-none absolute -bottom-28 -left-20 h-64 w-[430px] rotate-[13deg] rounded-[50%] bg-[#a8d9ff]/55"}),i.jsx("div",{className:"pointer-events-none absolute -bottom-28 -right-20 h-64 w-[430px] rotate-[-13deg] rounded-[50%] bg-[#a8d9ff]/55"}),$.map((D,R)=>i.jsx("span",{className:"pointer-events-none absolute h-3 w-6 rounded-[4px] shadow-sm animate-[confettiFloat_3.8s_ease-in-out_infinite]",style:{left:`${D.left}%`,top:`${D.top}%`,background:D.color,animationDelay:`${D.delay}s`,transform:`rotate(${D.rot}deg)`}},R)),i.jsx(At,{className:"deco-left-top !left-[2%] !top-[28%] !scale-[.9] sm:!scale-100",colors:[1,0,2],tilt:18}),i.jsx(At,{className:"deco-right-top !right-[2%] !left-auto !top-[30%] !scale-[.9] sm:!scale-100",colors:[4,3,5],tilt:-18}),i.jsx("div",{className:"absolute left-7 top-6 z-20 flex items-center sm:left-[10%] sm:top-7",children:i.jsx("img",{src:"/logo.png",alt:"Nebuloid Tech",className:"h-16 w-auto object-contain sm:h-20"})}),i.jsxs("nav",{className:"absolute right-7 top-8 z-20 hidden items-center gap-8 text-[15px] font-semibold text-[#122956] sm:flex sm:right-[9%]",children:[i.jsx("button",{type:"button",children:"How to Play"}),i.jsx("button",{type:"button",children:"About"}),i.jsx("button",{type:"button",children:"More Games"})]}),i.jsxs("section",{className:"relative z-10 flex h-full w-full max-w-[1000px] flex-col items-center justify-center text-center",children:[i.jsxs("div",{className:"relative mb-4 mt-10 sm:mb-3",children:[i.jsx("div",{className:"absolute -bottom-5 left-[18px] h-11 w-7 rotate-[15deg] bg-[#f0443e] shadow-sm"}),i.jsx("div",{className:"absolute -bottom-5 right-[18px] h-11 w-7 rotate-[-15deg] bg-[#e73531] shadow-sm"}),i.jsx("div",{className:"relative grid h-28 w-28 place-items-center rounded-full bg-[radial-gradient(circle_at_35%_30%,#fff2a3,#ffc928_55%,#ed9411)] shadow-[0_12px_30px_rgba(232,157,28,.28)] sm:h-32 sm:w-32",children:i.jsx("div",{className:"grid h-20 w-20 place-items-center rounded-full border-[5px] border-[#f2a91c] bg-[#ffc83d] sm:h-24 sm:w-24",children:i.jsx(af,{className:"h-12 w-12 text-white drop-shadow-[0_2px_2px_rgba(120,75,0,.2)] sm:h-14 sm:w-14"})})})]}),i.jsxs("div",{className:"flex items-center gap-5 text-[11px] font-black uppercase tracking-[.32em] text-[#2088e8] sm:text-[13px]",children:[i.jsx("span",{className:"h-[2px] w-12 bg-[#7c9abd] sm:w-14"}),i.jsx("span",{children:"Certificate of Achievement"}),i.jsx("span",{className:"h-[2px] w-12 bg-[#7c9abd] sm:w-14"})]}),i.jsxs("h1",{className:"mt-5 text-[48px] font-black leading-[.94] tracking-[-.045em] text-[#142b55] sm:text-[76px]",children:["Level ",i.jsx("span",{className:"text-[#167ee8]",children:b})]}),i.jsx("h2",{className:"mt-1 text-[45px] font-black leading-none tracking-[-.045em] text-[#157ee7] sm:text-[70px]",children:"Complete!"}),i.jsx("p",{className:"mt-5 text-[16px] font-medium text-[#647da1] sm:text-[20px]",children:"This achievement is proudly awarded to"}),i.jsx("div",{className:"mt-1 min-w-[280px] border-b-2 border-[#d8e5f2] px-5 pb-2 text-[29px] font-black text-[#152e59] sm:min-w-[430px] sm:text-[39px]",children:h||"Player"}),i.jsxs("p",{className:"mt-4 max-w-[520px] text-[12px] font-medium leading-5 text-[#667e9f] sm:text-[15px] sm:leading-6",children:["for successfully sorting every water color through",i.jsx("br",{className:"hidden sm:block"}),"logic, focus and precision."]}),i.jsxs("div",{className:"mt-5 grid w-full max-w-[545px] grid-cols-2 gap-3 sm:mt-6 sm:gap-5",children:[i.jsx("div",{className:"rounded-[20px] bg-[#e1f2ff]/90 px-6 py-3.5 shadow-[0_8px_20px_rgba(80,150,220,.08)] sm:py-4",children:i.jsxs("div",{className:"flex items-center justify-center gap-3",children:[i.jsx(of,{className:"h-8 w-8 text-[#1c9be9] sm:h-9 sm:w-9"}),i.jsxs("div",{className:"text-left",children:[i.jsx("div",{className:"text-[10px] font-bold uppercase tracking-wider text-[#6c83a4]",children:"Level"}),i.jsxs("div",{className:"text-[21px] font-black text-[#17325d]",children:[b," / 10"]})]})]})}),i.jsx("div",{className:"rounded-[20px] bg-[#ece9ff]/95 px-6 py-3.5 shadow-[0_8px_20px_rgba(120,100,220,.08)] sm:py-4",children:i.jsxs("div",{className:"flex items-center justify-center gap-3",children:[i.jsx(cf,{className:"h-8 w-8 text-[#7958e9] sm:h-9 sm:w-9"}),i.jsxs("div",{className:"text-left",children:[i.jsx("div",{className:"text-[10px] font-bold uppercase tracking-wider text-[#7d88a8]",children:"Moves"}),i.jsx("div",{className:"text-[21px] font-black text-[#17325d]",children:d})]})]})})]}),i.jsxs("button",{onClick:s?x:u,className:"group mt-5 flex min-w-[290px] items-center justify-center gap-5 rounded-full bg-gradient-to-r from-[#2698f3] to-[#087be6] px-9 py-3.5 text-[20px] font-black text-white shadow-[0_10px_22px_rgba(28,132,235,.25)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_14px_28px_rgba(28,132,235,.32)] sm:mt-6 sm:min-w-[355px] sm:py-4 sm:text-[24px]",children:[s?"Play Again":"Next Level",i.jsx(Uu,{className:"h-6 w-6 transition group-hover:translate-x-1 sm:h-7 sm:w-7"})]}),i.jsxs("div",{className:"mt-5 flex items-center gap-5 text-[10px] font-bold uppercase tracking-[.28em] text-[#7188a8] sm:mt-6 sm:text-[12px]",children:[i.jsx("span",{className:"h-[2px] w-12 bg-[#91b0d1]"}),i.jsx("span",{children:"Play • Think • Achieve"}),i.jsx("span",{className:"h-[2px] w-12 bg-[#91b0d1]"})]})]})]})})}function Sf(){const[h,b]=le.useState("start"),[d,s]=le.useState(""),[u,x]=le.useState(1),[$,D]=le.useState(Zn(Sr[0])),[R,B]=le.useState(0),[q,V]=le.useState(0),W=L=>{s(L),x(1),D(Zn(Sr[0])),B(0),b("game")};return h==="start"?i.jsx(hf,{go:()=>b("name")}):h==="name"?i.jsx(vf,{onGo:W}):h==="game"?i.jsx(bf,{level:u,tubes:$,setTubes:D,moves:R,setMoves:B,onComplete:L=>{V(L),b("certificate")},home:()=>b("start")}):i.jsx(kf,{name:d,level:u,moves:q,final:u===10,next:()=>{const L=u+1;x(L),D(Zn(Sr[L-1])),B(0),b("game")},replay:()=>{s(""),x(1),D(Zn(Sr[0])),B(0),b("start")}})}ef.createRoot(document.getElementById("root")).render(i.jsx(Sf,{}));
 /* === Nebuloid corner controls (welcome screen): logo top-left, sound top-right, back bottom-left, how-to-play bottom-right === */
+/* Every screen: Back to the previous screen (bottom-left); gameplay: Pause (bottom-right). */
 (function (CFG) {
   'use strict';
   if (window.__nbCornerControls) return;
@@ -166,6 +167,233 @@ Error generating stack: `+a.message+`
       gains.forEach(function (g) { g.gain.value = muted ? 0 : 1; });
       document.querySelectorAll('audio, video').forEach(function (el) { el.muted = muted; });
     };
+  }
+
+  /* ---------- Pause: freeze the game's clock, timers, frames, animations and sound ---------- */
+  var paused = false;
+  var pauseAt = 0;
+  var pausedTotal = 0;
+  var rNow = performance.now.bind(performance);
+  var rDateNow = Date.now;
+  var rRAF = window.requestAnimationFrame.bind(window);
+  var rCAF = window.cancelAnimationFrame.bind(window);
+  var rSetTimeout = window.setTimeout.bind(window);
+  var rSetInterval = window.setInterval.bind(window);
+  var heldFrames = [];
+  var heldTimeouts = [];
+  var cancelledFrames = {};
+  var contexts = [];
+  var suspended = [];
+  var stoppedMedia = [];
+  var liveMedia = [];
+
+  performance.now = function () { return (paused ? pauseAt : rNow()) - pausedTotal; };
+  Date.now = function () { return rDateNow() - pausedTotal - (paused ? rNow() - pauseAt : 0); };
+  window.requestAnimationFrame = function (cb) {
+    var id = rRAF(function (ts) {
+      if (cancelledFrames[id]) { delete cancelledFrames[id]; return; }
+      if (paused) { heldFrames.push(cb); return; }
+      cb(ts - pausedTotal);
+    });
+    return id;
+  };
+  window.cancelAnimationFrame = function (id) { cancelledFrames[id] = true; rCAF(id); };
+  window.setTimeout = function (cb) {
+    if (typeof cb !== 'function') return rSetTimeout.apply(window, arguments);
+    var args = Array.prototype.slice.call(arguments);
+    var extra = args.slice(2);
+    args[0] = function () {
+      if (paused) { heldTimeouts.push(function () { cb.apply(window, extra); }); return; }
+      cb.apply(window, extra);
+    };
+    return rSetTimeout.apply(window, args);
+  };
+  window.setInterval = function (cb) {
+    if (typeof cb !== 'function') return rSetInterval.apply(window, arguments);
+    var args = Array.prototype.slice.call(arguments);
+    var extra = args.slice(2);
+    args[0] = function () { if (!paused) cb.apply(window, extra); };
+    return rSetInterval.apply(window, args);
+  };
+
+  /* Keep track of every audio context and media element so pause can silence them. */
+  if (window.AudioNode && window.AudioDestinationNode) {
+    var trackConnect = AudioNode.prototype.connect;
+    AudioNode.prototype.connect = function (dest) {
+      if (dest && dest.context && contexts.indexOf(dest.context) < 0) contexts.push(dest.context);
+      return trackConnect.apply(this, arguments);
+    };
+  }
+  var trackPlay = HTMLMediaElement.prototype.play;
+  HTMLMediaElement.prototype.play = function () {
+    if (liveMedia.indexOf(this) < 0) liveMedia.push(this);
+    if (paused) return Promise.resolve();
+    return trackPlay.apply(this, arguments);
+  };
+
+  function pauseGame() {
+    if (paused) return;
+    paused = true;
+    pauseAt = rNow();
+    document.documentElement.classList.add('nb-paused');
+    suspended = contexts.filter(function (c) { return c.state === 'running'; });
+    suspended.forEach(function (c) { c.suspend(); });
+    stoppedMedia = liveMedia.concat(Array.prototype.slice.call(document.querySelectorAll('audio, video')))
+      .filter(function (m, i, all) { return all.indexOf(m) === i && !m.paused; });
+    stoppedMedia.forEach(function (m) { m.pause(); });
+    paintPause();
+  }
+
+  function resumeGame() {
+    if (!paused) return;
+    pausedTotal += rNow() - pauseAt;
+    paused = false;
+    document.documentElement.classList.remove('nb-paused');
+    suspended.forEach(function (c) { c.resume(); });
+    stoppedMedia.forEach(function (m) { trackPlay.call(m).catch(function () {}); });
+    suspended = [];
+    stoppedMedia = [];
+    var frames = heldFrames;
+    var timeouts = heldTimeouts;
+    heldFrames = [];
+    heldTimeouts = [];
+    frames.forEach(function (cb) { window.requestAnimationFrame(cb); });
+    timeouts.forEach(function (fn) { rSetTimeout(fn, 0); });
+    paintPause();
+  }
+
+  /* While paused, the game must not see key presses (Escape resumes). */
+  ['keydown', 'keyup', 'keypress'].forEach(function (type) {
+    window.addEventListener(type, function (e) {
+      if (!paused) return;
+      if (type === 'keydown' && e.key === 'Escape') resumeGame();
+      e.stopImmediatePropagation();
+      e.preventDefault();
+    }, true);
+  });
+
+  /* ---------- Screens: read the game's current screen from its React state ---------- */
+  var FIRST_SCREEN = /^(welcome|start|home|landing)$/;
+  var screenType = null;
+  var screenIndex = -1;
+  var firstKey = null;
+  var lastSig = null;
+  var lastNav = null;
+  var lastHooks = null;
+  var trail = [];
+  var backUntil = 0;
+
+  function rootFiber() {
+    var root = document.getElementById('root');
+    if (!root) return null;
+    var key = Object.keys(root).filter(function (k) { return k.indexOf('__reactContainer$') === 0; })[0];
+    return key && root[key] && root[key].stateNode && root[key].stateNode.current || null;
+  }
+
+  /* One pass over the top of the React tree: the component that owns the screen value, plus the
+     simple state (text, numbers, true/false) of the components under it, each with a stable path. */
+  function scan() {
+    var top = rootFiber();
+    if (!top) return null;
+    var queue = [[top, '']];
+    var app = null;
+    var inner = [];
+    for (var seen = 0; queue.length && seen < 450; seen++) {
+      var item = queue.shift();
+      var f = item[0];
+      var path = item[1];
+      if (typeof f.type === 'function' && f.memoizedState && typeof f.memoizedState === 'object' && 'next' in f.memoizedState) {
+        var isApp = false;
+        if (!app) {
+          if (screenType) isApp = f.type === screenType;
+          else {
+            var j = 0;
+            for (var hh = f.memoizedState; hh; hh = hh.next, j++) {
+              if (typeof hh.memoizedState === 'string' && hh.queue && hh.queue.dispatch && FIRST_SCREEN.test(hh.memoizedState)) {
+                screenType = f.type;
+                screenIndex = j;
+                isApp = true;
+                break;
+              }
+            }
+          }
+          if (isApp) app = f;
+        }
+        if (app && !isApp) {
+          var i = 0;
+          for (var h = f.memoizedState; h; h = h.next, i++) {
+            var v = h.memoizedState;
+            var simple = typeof v === 'number' || typeof v === 'boolean' || typeof v === 'string' && v.length <= 40;
+            if (simple && h.queue && h.queue.dispatch) inner.push({ path: path + '#' + i, q: h.queue, v: v });
+          }
+        }
+      }
+      var n = 0;
+      for (var c = f.child; c; c = c.sibling, n++) {
+        var name = typeof c.type === 'function' ? c.type.name || 'f' : typeof c.type === 'string' ? c.type : 't' + c.tag;
+        queue.push([c, path + '>' + name + n]);
+      }
+    }
+    if (!app) return null;
+    var all = [];
+    for (var a = app.memoizedState; a; a = a.next) all.push(a);
+    var picked = (CFG.screenHooks || [screenIndex]).map(function (k) { return all[k]; });
+    if (picked.some(function (p) { return !p || !p.queue || !p.queue.dispatch; })) return null;
+    var values = picked.map(function (p) { return p.memoizedState; });
+    return { hooks: picked, values: values, key: JSON.stringify(values), inner: inner };
+  }
+
+  var GAME_SCREENS = CFG.gameScreens || ['game', 'playing', 'play'];
+  function isGameValues(values) {
+    return CFG.isGame ? CFG.isGame(values) : GAME_SCREENS.indexOf(values[0]) >= 0;
+  }
+
+  /* A "page" is the screen value plus the visible headings, so steps inside one screen count too.
+     During gameplay only the screen value counts (headings change every question). */
+  function headings() {
+    return Array.prototype.slice.call(document.querySelectorAll('#root h1, #root h2'))
+      .filter(function (e) { return e.getBoundingClientRect().width > 0 && getComputedStyle(e).visibility !== 'hidden'; })
+      .slice(0, 3).map(function (e) { return e.textContent.replace(/\s+/g, ' ').trim().slice(0, 40); }).join('/');
+  }
+
+  /* Remember where the player came from; returning to an earlier page trims the trail. */
+  function trackScreen(nav) {
+    if (!nav) return;
+    if (firstKey === null) firstKey = nav.key;
+    var playing = isGameValues(nav.values) || !!CFG.gameSel && !!document.querySelector('#root ' + CFG.gameSel);
+    var sig = nav.key + (playing ? '' : '|' + headings());
+    if (lastSig !== null && sig !== lastSig) {
+      if (rNow() > backUntil) {
+        var at = -1;
+        trail.forEach(function (s, i) { if (s.sig === sig) at = i; });
+        if (at >= 0) trail.length = at;
+        else trail.push({ sig: lastSig, values: lastNav.values, inner: lastHooks });
+      }
+      if (paused) resumeGame();
+    }
+    lastSig = sig;
+    lastNav = nav;
+    lastHooks = nav.inner.map(function (h) { return { path: h.path, v: h.v }; });
+  }
+
+  /* Put a page back: first the screen value, then (once React has drawn it) the inner steps. */
+  function restore(nav, values, inner) {
+    backUntil = rNow() + 900;
+    nav.hooks.forEach(function (h, i) { if (h.memoizedState !== values[i]) h.queue.dispatch(values[i]); });
+    if (!inner) return;
+    rRAF(function () {
+      rRAF(function () {
+        var now = scan();
+        if (!now) return;
+        var byPath = {};
+        now.inner.forEach(function (h) { byPath[h.path] = h; });
+        inner.forEach(function (h) {
+          var cur = byPath[h.path];
+          if (cur && cur.v !== h.v) cur.q.dispatch(h.v);
+        });
+        backUntil = rNow() + 600;
+      });
+    });
   }
 
   function findButtonByText(re) {
@@ -241,8 +469,19 @@ Error generating stack: `+a.message+`
     html += '<button type="button" class="nb-back" aria-label="Back"><span aria-hidden="true">←</span><span>BACK</span></button>';
     if (CFG.sound === 'generic') html += '<button type="button" class="nb-sound" data-nb-sound></button>';
     if (CFG.help && CFG.help.steps) html += '<button type="button" class="nb-help" data-nb-help><b aria-hidden="true">?</b><span>HOW TO PLAY</span></button>';
+    html += '<button type="button" class="nb-pause" aria-label="Pause"><b aria-hidden="true">❚❚</b><span>PAUSE</span></button>';
+    html += '<div class="nb-pause-overlay" role="dialog" aria-modal="true" aria-label="Game paused"><div class="nb-pause-card">' +
+      '<h2>PAUSED</h2><button type="button" class="nb-resume">▶ RESUME</button>' +
+      '<button type="button" class="nb-pause-back">← BACK</button></div></div>';
     controls.innerHTML = html;
     document.body.appendChild(controls);
+    /* Our buttons are not the game's: keep their clicks away from game-wide click handlers. */
+    controls.addEventListener('click', function (e) { e.stopPropagation(); });
+
+    controls.querySelector('.nb-pause').addEventListener('click', pauseGame);
+    controls.querySelector('.nb-resume').addEventListener('click', resumeGame);
+    controls.querySelector('.nb-pause-back').addEventListener('click', goBack);
+    paintPause();
 
     var logo = controls.querySelector('.nb-logo');
     if (logo) logo.addEventListener('click', goBack);
@@ -271,9 +510,30 @@ Error generating stack: `+a.message+`
     b.title = muted ? 'Sound Off' : 'Sound On';
   }
 
+  /* Back = the previous page inside the game (never back into a finished round);
+     from the game's first screen, the page the player came from. */
   function goBack() {
+    if (paused) resumeGame();
+    var nav = scan();
+    while (nav && trail.length) {
+      var prev = trail.pop();
+      if (prev.sig === lastSig) continue;
+      if (isGameValues(prev.values) && !isGameValues(nav.values)) continue;
+      restore(nav, prev.values, prev.inner);
+      return;
+    }
+    if (nav && firstKey !== null && nav.key !== firstKey) {
+      restore(nav, JSON.parse(firstKey), null);
+      return;
+    }
     if (window.history.length > 1) window.history.back();
     else window.location.href = '/our-games';
+  }
+
+  function paintPause() {
+    if (!controls) return;
+    var overlay = controls.querySelector('.nb-pause-overlay');
+    if (overlay) overlay.style.display = paused ? 'flex' : 'none';
   }
 
   function openHelp() {
@@ -369,62 +629,197 @@ Error generating stack: `+a.message+`
     }
   }
 
+  /* The game's own Back buttons (any screen) give way to the standard one. */
+  function isOwnBack(el) {
+    if (el.closest('#' + ID)) return false;
+    var text = (el.textContent || '').replace(/[←‹<⟵⬅❮«\s]/g, '').toLowerCase();
+    var label = (el.getAttribute('aria-label') || '') + ' ' + (typeof el.className === 'string' ? el.className : '');
+    return text === 'back' || text === 'goback' || text === '' && /(^|[\s-])back\b/i.test(label);
+  }
+
+  /* The game's own Pause button gives way to the standard one during gameplay. */
+  function isOwnPause(el) {
+    if (el.closest('#' + ID)) return false;
+    return (el.textContent || '').replace(/[^a-z]/gi, '').toLowerCase() === 'pause';
+  }
+
+  /* If a game button sits in our corner, lift our button just above it. */
+  function avoidOverlap(btn) {
+    if (!btn || getComputedStyle(btn).display === 'none') return;
+    var lift = +(btn.dataset.lift || 0);
+    var r = btn.getBoundingClientRect();
+    var top = r.top + lift;
+    var bottom = r.bottom + lift;
+    var need = 0;
+    document.querySelectorAll('button, a, [role="button"]').forEach(function (el) {
+      if (el.closest('#' + ID) || el.dataset.nbHidden) return;
+      var cs = getComputedStyle(el);
+      if (cs.visibility === 'hidden' || cs.display === 'none' || +cs.opacity === 0) return;
+      var e = el.getBoundingClientRect();
+      if (!e.width || !e.height) return;
+      if (e.right > r.left && e.left < r.right && e.bottom > top && e.top < bottom) {
+        need = Math.max(need, Math.round(bottom - e.top + 10));
+      }
+    });
+    if (need !== lift) {
+      btn.dataset.lift = need;
+      btn.style.transform = need ? 'translateY(-' + need + 'px)' : '';
+    }
+  }
+
+  /* Frosted-glass panels on menu screens (not popups) lose the glass. */
+  function stripGlass() {
+    var all = document.querySelectorAll('#root *');
+    for (var i = 0; i < all.length && i < 4000; i++) {
+      var el = all[i];
+      if (el.dataset.nbGlass) continue;
+      var cls = typeof el.className === 'string' ? el.className : '';
+      var cs = getComputedStyle(el);
+      if (cs.backdropFilter === 'none' && !/glass/i.test(cls)) continue;
+      if (cs.position === 'fixed' || !/\S/.test(el.textContent || '') && !el.querySelector('button, img, input')) continue;
+      var r = el.getBoundingClientRect();
+      if (r.width < 260 || r.height < 140) continue;
+      var inPopup = false;
+      for (var p = el.parentElement; p && p.id !== 'root'; p = p.parentElement) {
+        if (getComputedStyle(p).position === 'fixed') { inPopup = true; break; }
+      }
+      if (inPopup) continue;
+      el.dataset.nbGlass = '1';
+      el.style.setProperty('backdrop-filter', 'none', 'important');
+      el.style.setProperty('-webkit-backdrop-filter', 'none', 'important');
+      if (hasDarkText(el)) {
+        /* Dark text needs its panel: keep it, but solid instead of see-through. */
+        var bg = /rgba?\(([^)]+)\)/.exec(cs.backgroundColor);
+        var rgb = bg ? bg[1].split(',').slice(0, 3).join(',') : '255,255,255';
+        el.style.setProperty('background-color', 'rgb(' + rgb + ')', 'important');
+      } else {
+        ['background', 'background-color', 'background-image', 'box-shadow'].forEach(function (prop) { el.style.setProperty(prop, 'none', 'important'); });
+        el.style.setProperty('border-color', 'transparent', 'important');
+      }
+    }
+    /* Full-screen blurred backgrounds behind menus lose the blur. */
+    document.querySelectorAll('#root [class*="blur"]').forEach(function (layer) {
+      if (layer.dataset.nbUnblur || !/blur/.test(getComputedStyle(layer).filter)) return;
+      var lr = layer.getBoundingClientRect();
+      if (lr.width < window.innerWidth * 0.6 || lr.height < window.innerHeight * 0.6) return;
+      layer.dataset.nbUnblur = '1';
+      layer.style.setProperty('filter', 'none', 'important');
+    });
+  }
+
+  function hasDarkText(panel) {
+    var nodes = panel.querySelectorAll('h1, h2, h3, p, label, span');
+    for (var k = 0; k < nodes.length && k < 40; k++) {
+      if (!/\S/.test(nodes[k].textContent)) continue;
+      var m = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(getComputedStyle(nodes[k]).color);
+      if (m) return (0.299 * m[1] + 0.587 * m[2] + 0.114 * m[3]) < 140;
+    }
+    return false;
+  }
+
+  /* A game popup is open when a fixed layer with a dimmed or blurred backdrop covers most of the screen. */
+  function popupOpen() {
+    var vw = window.innerWidth;
+    var vh = window.innerHeight;
+    var all = document.querySelectorAll('#root *, body > *:not(#root):not(#' + ID + ')');
+    for (var i = 0; i < all.length && i < 4000; i++) {
+      var el = all[i];
+      var cs = getComputedStyle(el);
+      if (cs.position !== 'fixed' || cs.display === 'none' || cs.visibility === 'hidden' || +cs.opacity === 0) continue;
+      var r = el.getBoundingClientRect();
+      if (r.width < vw * 0.85 || r.height < vh * 0.85) continue;
+      var a = /rgba\([^)]*,\s*([\d.]+)\)/.exec(cs.backgroundColor);
+      if (cs.backdropFilter !== 'none' || a && +a[1] >= 0.2 && +a[1] < 0.97) return true;
+    }
+    return false;
+  }
+
+  var slowAt = 0;
+  var slowState = { popup: false };
   function update() {
     ensureControls();
-    if (!isStartScreen()) {
-      if (controls.style.display !== 'none') controls.style.display = 'none';
-      unhideAll();
-      return;
-    }
-    var startEl = document.querySelector('#root ' + CFG.start);
-    startEl = startEl.closest('button') || startEl;
-    applyPlay(startEl);
-    applyLayout();
+    var nav = scan();
+    if (nav && lastNav && nav.key !== lastNav.key) { unhideAll(); slowAt = 0; }
+    trackScreen(nav);
+    var start = !!CFG.start && isStartScreen();
+    var welcome = start || !!nav && nav.key === firstKey;
+    var playing = !!nav && isGameValues(nav.values) || !!CFG.gameSel && !!document.querySelector('#root ' + CFG.gameSel);
+    if (!playing && paused) resumeGame();
 
-    /* Step aside while one of the game's own popups covers the START button:
-       the element on top of it belongs to a branch that fills most of the screen. */
-    var r = startEl.getBoundingClientRect();
-    var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
-    var covered = false;
-    if (hit && !startEl.contains(hit) && !controls.contains(hit)) {
-      var branch = hit;
-      while (branch.parentElement && !branch.parentElement.contains(startEl)) branch = branch.parentElement;
-      var br = branch.getBoundingClientRect();
-      covered = br.width * br.height >= 0.5 * window.innerWidth * window.innerHeight;
+    /* Heavier page scans run at most a few times a second. */
+    var now = rNow();
+    if (now - slowAt > 300) {
+      slowAt = now;
+      slowState.popup = popupOpen();
+      if (!playing) stripGlass();
+      document.querySelectorAll('button, [role="button"], a').forEach(function (el) { if (isOwnBack(el) || playing && isOwnPause(el)) hide(el); });
+      avoidOverlap(controls.querySelector('.nb-back'));
+      avoidOverlap(controls.querySelector('.nb-pause'));
     }
+
+    var covered = slowState.popup && !paused;
+    if (start) {
+      var startEl = document.querySelector('#root ' + CFG.start);
+      startEl = startEl.closest('button') || startEl;
+      applyPlay(startEl);
+      applyLayout();
+      /* On the welcome screen, a popup is anything covering most of the screen on top of START. */
+      var r = startEl.getBoundingClientRect();
+      var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+      if (hit && !startEl.contains(hit) && !controls.contains(hit)) {
+        var branch = hit;
+        while (branch.parentElement && !branch.parentElement.contains(startEl)) branch = branch.parentElement;
+        var br = branch.getBoundingClientRect();
+        covered = covered || br.width * br.height >= 0.5 * window.innerWidth * window.innerHeight;
+      }
+      (CFG.hideLogos || []).forEach(function (sel) {
+        document.querySelectorAll('#root ' + sel).forEach(hide);
+      });
+      if (CFG.hideClosest) {
+        document.querySelectorAll('#root ' + CFG.hideClosest[0]).forEach(function (el) {
+          hide(el.closest(CFG.hideClosest[1]) || el);
+        });
+      }
+    }
+    syncProxy('sound', start && CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
+    syncProxy('help', start && CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
+
+    var cls = (welcome ? 'nb-welcome ' : '') + (playing ? 'nb-playing ' : '') + (paused ? 'nb-is-paused' : '');
+    if (controls.className !== cls.trim()) controls.className = cls.trim();
     var display = covered ? 'none' : 'block';
     if (controls.style.display !== display) controls.style.display = display;
-    (CFG.hideLogos || []).forEach(function (sel) {
-      document.querySelectorAll('#root ' + sel).forEach(hide);
-    });
-    if (CFG.hideClosest) {
-      document.querySelectorAll('#root ' + CFG.hideClosest[0]).forEach(function (el) {
-        hide(el.closest(CFG.hideClosest[1]) || el);
-      });
-    }
-    syncProxy('sound', CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
-    syncProxy('help', CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
-    if (CFG.extra) CFG.extra();
   }
 
   var css = document.createElement('style');
   var t = CFG.theme;
   css.textContent =
-    '#' + ID + '{position:fixed;inset:0;z-index:45;pointer-events:none}' +
+    '#' + ID + '{position:fixed;inset:0;z-index:2147483000;pointer-events:none}' +
     '#' + ID + '>*{pointer-events:auto}' +
     '#' + ID + ' .nb-logo{position:fixed;top:20px;left:26px;width:' + (CFG.logoWidth || 96) + 'px;height:auto;max-height:90px;object-fit:contain;cursor:pointer;filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}' +
     '#' + ID + ' .nb-proxy{position:fixed!important;margin:0!important;transform:none!important;inset:auto!important;width:auto!important;z-index:1!important}' +
     '#' + ID + ' .nb-proxy.nb-p-sound{top:20px!important;right:26px!important}' +
     '#' + ID + ' .nb-proxy.nb-p-help{bottom:24px!important;right:26px!important}' +
-    '#' + ID + ' .nb-back,#' + ID + ' .nb-help,#' + ID + ' .nb-sound{position:fixed;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:999px;' +
+    '#' + ID + ' .nb-back,#' + ID + ' .nb-help,#' + ID + ' .nb-sound,#' + ID + ' .nb-pause{position:fixed;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:999px;' +
       'background:' + t.bg + ';color:' + t.fg + ';border:1.5px solid ' + t.border + ';box-shadow:0 8px 24px rgba(0,0,0,.18);' +
       '-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:900 13px/1 Inter,Arial,sans-serif;letter-spacing:.14em;transition:transform .18s ease,background .18s ease}' +
-    '#' + ID + ' .nb-back:hover,#' + ID + ' .nb-help:hover,#' + ID + ' .nb-sound:hover{transform:translateY(-2px);background:' + t.hover + '}' +
+    '#' + ID + ' .nb-back:hover,#' + ID + ' .nb-help:hover,#' + ID + ' .nb-sound:hover,#' + ID + ' .nb-pause:hover{transform:translateY(-2px);background:' + t.hover + '}' +
     '#' + ID + ' .nb-back{left:26px;bottom:24px;height:46px;padding:0 20px}' +
     '#' + ID + ' .nb-back span:first-child{font-size:17px;letter-spacing:0}' +
     '#' + ID + ' .nb-help{right:26px;bottom:24px;height:46px;padding:0 20px}' +
     '#' + ID + ' .nb-help b{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;font-size:11px;letter-spacing:0}' +
     '#' + ID + ' .nb-sound{top:20px;right:26px;width:48px;height:48px;padding:0;font-size:21px;letter-spacing:0}' +
+    '#' + ID + ':not(.nb-welcome) .nb-logo,#' + ID + ':not(.nb-welcome) [data-nb-sound],#' + ID + ':not(.nb-welcome) [data-nb-help]{display:none!important}' +
+    '#' + ID + ' .nb-pause{display:none;right:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + '.nb-playing .nb-pause{display:flex}' +
+    '#' + ID + ' .nb-pause b{font-size:11px;letter-spacing:-1px}' +
+    '#' + ID + ' .nb-pause-overlay{position:fixed;inset:0;z-index:5;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(5,10,20,.66)}' +
+    '#' + ID + ' .nb-pause-card{width:min(340px,100%);display:flex;flex-direction:column;gap:12px;padding:30px 26px;border-radius:24px;background:#fff;box-shadow:0 24px 60px rgba(0,0,0,.4);text-align:center;font-family:Inter,Arial,sans-serif}' +
+    '#' + ID + ' .nb-pause-card h2{margin:0 0 8px;font-size:26px;font-weight:900;letter-spacing:.18em;color:' + t.accent + '}' +
+    '#' + ID + ' .nb-pause-card button{height:50px;border-radius:999px;font:900 15px Inter,Arial,sans-serif;letter-spacing:.14em;cursor:pointer}' +
+    '#' + ID + ' .nb-resume{border:0;background:' + t.accent + ';color:#fff}' +
+    '#' + ID + ' .nb-pause-back{border:2px solid ' + t.accent + ';background:#fff;color:' + t.accent + '}' +
+    '#' + ID + '.nb-is-paused .nb-back,#' + ID + '.nb-is-paused .nb-pause{display:none!important}' +
+    'html.nb-paused #root *,html.nb-paused #root *::before,html.nb-paused #root *::after{animation-play-state:paused!important}' +
     '#nb-help-modal{position:fixed;inset:0;z-index:10050;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}' +
     '#nb-help-modal .nb-help-card{width:min(440px,100%);border-radius:24px;padding:28px 26px 24px;background:#fff;color:#1f2937;box-shadow:0 24px 60px rgba(0,0,0,.35);font-family:Inter,Arial,sans-serif}' +
     '#nb-help-modal h2{margin:0 0 14px;font-size:20px;font-weight:900;letter-spacing:.12em;color:' + t.accent + '}' +
@@ -436,7 +831,7 @@ Error generating stack: `+a.message+`
       '#' + ID + ' .nb-proxy.nb-p-sound,#' + ID + ' .nb-sound{top:14px!important;right:14px!important}' +
       '#' + ID + ' .nb-proxy.nb-p-help,#' + ID + ' .nb-help{bottom:16px!important;right:14px!important}' +
       '#' + ID + ' .nb-back{left:14px;bottom:16px;height:42px;padding:0 15px;font-size:12px}' +
-      '#' + ID + ' .nb-help{height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-help,#' + ID + ' .nb-pause{height:42px;padding:0 15px;font-size:12px;right:14px;bottom:16px}' +
       '#' + ID + ' .nb-sound{width:44px;height:44px;font-size:19px}' +
     '}' + playCss() + (CFG.css || '');
   document.head.appendChild(css);
@@ -467,8 +862,10 @@ Error generating stack: `+a.message+`
   function schedule() {
     if (queued) return;
     queued = true;
-    requestAnimationFrame(function () { queued = false; update(); });
+    rRAF(function () { queued = false; update(); });
   }
   new MutationObserver(schedule).observe(document.documentElement, { childList: true, subtree: true, attributes: true, characterData: true });
+  /* Some games add their own controls a moment later without further page changes; re-check now and then. */
+  rSetInterval(schedule, 700);
   schedule();
 })({key:'water-color-sort',start:'button.water-play',title:/WATER/i,logo:'/logo.png',logoWidth:140,hideLogos:['img[alt="Nebuloid Tech Studio"]'],sound:'.scene-sound',help:'.scene-how-to-play',ownStyle:true,theme:{bg:'rgba(255,255,255,.9)',fg:'#0b4f99',border:'rgba(255,255,255,.95)',hover:'#fff',accent:'#0b6bcb'},play:{mode:'text',labelSel:'.water-start-label',noRing:true}});

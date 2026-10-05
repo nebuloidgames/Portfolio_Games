@@ -414,6 +414,7 @@ Error generating stack: `+e.message+`
    @media(max-width:700px){.cert-frame-left,.cert-frame-right,.cert-cup,.cert-books,.cert-pen{display:none}.cert-paper{padding:20px 16px 18px}.cert-main{width:96vw}}
   `}),(0,A.jsx)(`div`,{className:`cert-scene`}),(0,A.jsx)(`div`,{className:`cert-wall-light`}),(0,A.jsx)(`div`,{className:`cert-frame-left`}),(0,A.jsx)(`div`,{className:`cert-frame-right`}),(0,A.jsx)(`div`,{className:`cert-cup`}),(0,A.jsxs)(`div`,{className:`cert-books`,children:[(0,A.jsx)(`div`,{className:`cert-book b1`,children:`TYPE`}),(0,A.jsx)(`div`,{className:`cert-book b2`,children:`LEARN`}),(0,A.jsx)(`div`,{className:`cert-book b3`,children:`IMPROVE`}),(0,A.jsx)(`div`,{className:`cert-book b4`,children:`REPEAT`})]}),(0,A.jsx)(`div`,{className:`cert-pen`}),(0,A.jsxs)(`div`,{className:`cert-main pop`,children:[(0,A.jsxs)(`div`,{className:`cert-paper`,children:[(0,A.jsx)(`img`,{src:`/logo.png`,alt:`Nebuloid Tech Studio`,className:`mx-auto h-[54px] w-auto max-w-[190px] object-contain`,onError:e=>{e.currentTarget.style.display=`none`}}),(0,A.jsx)(`div`,{className:`mt-1 text-[11px] font-black tracking-[.22em] text-[#252d35] sm:text-[13px]`,children:`NEBULOID TECH STUDIO LLP`}),(0,A.jsx)(`div`,{className:`mt-0.5 text-[8px] font-bold tracking-[.35em] text-[#766d65]`,children:`IDEAS. WIRED TO REALITY.`}),(0,A.jsxs)(`div`,{className:`mx-auto mt-4 flex max-w-[620px] items-center gap-4`,children:[(0,A.jsx)(`span`,{className:`cert-divider flex-1`}),(0,A.jsx)(`div`,{className:`cert-medal`,children:(0,A.jsx)(ue,{size:35,strokeWidth:1.8})}),(0,A.jsx)(`span`,{className:`cert-divider flex-1`})]}),(0,A.jsx)(`div`,{className:`mt-3 text-[11px] font-black tracking-[.38em] text-[#f06417]`,children:`CERTIFICATE OF MASTERY`}),(0,A.jsx)(`div`,{className:`mt-2 text-[11px] font-bold tracking-[.25em] text-[#756d66]`,children:`THIS CERTIFICATE IS PROUDLY PRESENTED TO`}),(0,A.jsx)(`div`,{className:`mt-1 text-[26px] font-black uppercase tracking-[.02em] text-[#252d35] sm:text-[34px]`,children:s}),(0,A.jsx)(`div`,{className:`mx-auto mt-3 h-px w-[min(420px,70%)] bg-gradient-to-r from-transparent via-[#f06417] to-transparent`}),(0,A.jsxs)(`div`,{className:`mt-3 flex items-baseline justify-center gap-3 text-[33px] font-black tracking-[-.04em] sm:text-[48px]`,children:[(0,A.jsxs)(`span`,{children:[`LEVEL `,e]}),(0,A.jsx)(`span`,{className:`text-[#f06417]`,children:`COMPLETE`})]}),(0,A.jsx)(`p`,{className:`mx-auto mt-2 max-w-[620px] text-[13px] leading-5 text-[#665f59] sm:text-[15px]`,children:`For successfully completing another level of the Nebuloid Speed Typing Battle with focus, accuracy and speed.`}),(0,A.jsx)(`div`,{className:`cert-metrics mx-auto mt-4 max-w-[650px]`,children:(0,A.jsxs)(`div`,{className:`grid grid-cols-3`,children:[(0,A.jsx)(we,{label:`SCORE`,value:t}),(0,A.jsx)(we,{label:`ACCURACY`,value:`${n}%`}),(0,A.jsx)(we,{label:`SPEED`,value:`${r} WPM`})]})}),(0,A.jsxs)(`div`,{className:`mt-4 flex items-end justify-between px-5 sm:px-12`,children:[(0,A.jsxs)(`div`,{className:`text-left`,children:[(0,A.jsx)(`div`,{className:`h-px w-32 bg-[#8f8175]`}),(0,A.jsx)(`div`,{className:`mt-1 text-[9px] font-bold tracking-[.18em] text-[#71675f]`,children:`PLAYER`})]}),(0,A.jsxs)(`div`,{className:`text-right`,children:[(0,A.jsx)(`div`,{className:`h-px w-32 bg-[#8f8175]`}),(0,A.jsx)(`div`,{className:`mt-1 text-[9px] font-bold tracking-[.18em] text-[#71675f]`,children:`NEBULOID TECH`})]})]})]}),(0,A.jsxs)(`div`,{className:`mt-3 flex flex-col items-center justify-center gap-3 sm:flex-row`,children:[(0,A.jsxs)(`button`,{onClick:i,className:`flex min-w-[230px] items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#ff5b23] to-[#ff3d12] px-7 py-3.5 text-[16px] font-bold text-white shadow-[0_9px_20px_rgba(236,75,18,.24)] transition hover:-translate-y-1`,children:[(0,A.jsx)(se,{size:19}),` Download Certificate`]}),(0,A.jsxs)(`button`,{onClick:o,className:`flex min-w-[210px] items-center justify-center gap-3 rounded-2xl bg-white/95 px-7 py-3.5 text-[16px] font-semibold text-[#222] shadow-[0_7px_18px_rgba(70,45,25,.12)] transition hover:-translate-y-1`,children:[(0,A.jsx)(le,{size:19,className:`text-[#f06417]`}),` Replay Level`]})]}),(0,A.jsxs)(`button`,{onClick:a,className:`mt-2 inline-flex h-[48px] min-w-[225px] items-center justify-center gap-2 rounded-2xl border border-[#f06417] bg-white px-7 text-[15px] font-extrabold text-[#252d35] shadow-[0_8px_20px_rgba(76,43,25,.12)] transition hover:-translate-y-0.5 hover:bg-[#fff7ef]`,children:[(0,A.jsx)(`span`,{children:e<10?`Continue to Level ${e+1}`:`View Final Results`}),(0,A.jsx)(T,{size:18,className:`text-[#f06417]`})]})]})]})}function we({label:e,value:t}){return(0,A.jsxs)(`div`,{className:`border-r border-[#f06417]/60 p-3 last:border-0 sm:p-4`,children:[(0,A.jsx)(`div`,{className:`text-[10px] font-bold tracking-[.28em] text-[#f06417]`,children:e}),(0,A.jsx)(`div`,{className:`mt-1 text-[29px] font-black text-[#252d35] sm:text-[34px]`,children:t})]})}function Te({best:e,onRestart:t}){return(0,A.jsxs)(`section`,{className:`pop mx-auto max-w-2xl py-10 text-center sm:py-20`,children:[(0,A.jsx)(`div`,{className:`mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-violet-500/10 text-violet-300 glow`,children:(0,A.jsx)(ae,{size:50})}),(0,A.jsx)(`p`,{className:`mt-8 text-xs font-bold tracking-[.35em] text-violet-300`,children:`BATTLE COMPLETE`}),(0,A.jsxs)(`h1`,{className:`mt-3 text-5xl font-black sm:text-7xl`,children:[`You mastered`,(0,A.jsx)(`br`,{}),(0,A.jsx)(`span`,{className:`text-violet-400`,children:`all 10 levels.`})]}),(0,A.jsxs)(`p`,{className:`mt-6 text-slate-400`,children:[`Every certificate is available to download after its level. Your best score this session was `,(0,A.jsx)(`b`,{className:`text-white`,children:e}),`.`]}),(0,A.jsx)(`button`,{onClick:t,className:`mt-9 rounded-2xl bg-violet-600 px-7 py-4 font-bold hover:bg-violet-500`,children:`Battle Again`})]})}(0,k.createRoot)(document.getElementById(`root`)).render((0,A.jsx)(ve,{}));
 /* === Nebuloid corner controls (welcome screen): logo top-left, sound top-right, back bottom-left, how-to-play bottom-right === */
+/* Every screen: Back to the previous screen (bottom-left); gameplay: Pause (bottom-right). */
 (function (CFG) {
   'use strict';
   if (window.__nbCornerControls) return;
@@ -456,6 +457,233 @@ Error generating stack: `+e.message+`
       gains.forEach(function (g) { g.gain.value = muted ? 0 : 1; });
       document.querySelectorAll('audio, video').forEach(function (el) { el.muted = muted; });
     };
+  }
+
+  /* ---------- Pause: freeze the game's clock, timers, frames, animations and sound ---------- */
+  var paused = false;
+  var pauseAt = 0;
+  var pausedTotal = 0;
+  var rNow = performance.now.bind(performance);
+  var rDateNow = Date.now;
+  var rRAF = window.requestAnimationFrame.bind(window);
+  var rCAF = window.cancelAnimationFrame.bind(window);
+  var rSetTimeout = window.setTimeout.bind(window);
+  var rSetInterval = window.setInterval.bind(window);
+  var heldFrames = [];
+  var heldTimeouts = [];
+  var cancelledFrames = {};
+  var contexts = [];
+  var suspended = [];
+  var stoppedMedia = [];
+  var liveMedia = [];
+
+  performance.now = function () { return (paused ? pauseAt : rNow()) - pausedTotal; };
+  Date.now = function () { return rDateNow() - pausedTotal - (paused ? rNow() - pauseAt : 0); };
+  window.requestAnimationFrame = function (cb) {
+    var id = rRAF(function (ts) {
+      if (cancelledFrames[id]) { delete cancelledFrames[id]; return; }
+      if (paused) { heldFrames.push(cb); return; }
+      cb(ts - pausedTotal);
+    });
+    return id;
+  };
+  window.cancelAnimationFrame = function (id) { cancelledFrames[id] = true; rCAF(id); };
+  window.setTimeout = function (cb) {
+    if (typeof cb !== 'function') return rSetTimeout.apply(window, arguments);
+    var args = Array.prototype.slice.call(arguments);
+    var extra = args.slice(2);
+    args[0] = function () {
+      if (paused) { heldTimeouts.push(function () { cb.apply(window, extra); }); return; }
+      cb.apply(window, extra);
+    };
+    return rSetTimeout.apply(window, args);
+  };
+  window.setInterval = function (cb) {
+    if (typeof cb !== 'function') return rSetInterval.apply(window, arguments);
+    var args = Array.prototype.slice.call(arguments);
+    var extra = args.slice(2);
+    args[0] = function () { if (!paused) cb.apply(window, extra); };
+    return rSetInterval.apply(window, args);
+  };
+
+  /* Keep track of every audio context and media element so pause can silence them. */
+  if (window.AudioNode && window.AudioDestinationNode) {
+    var trackConnect = AudioNode.prototype.connect;
+    AudioNode.prototype.connect = function (dest) {
+      if (dest && dest.context && contexts.indexOf(dest.context) < 0) contexts.push(dest.context);
+      return trackConnect.apply(this, arguments);
+    };
+  }
+  var trackPlay = HTMLMediaElement.prototype.play;
+  HTMLMediaElement.prototype.play = function () {
+    if (liveMedia.indexOf(this) < 0) liveMedia.push(this);
+    if (paused) return Promise.resolve();
+    return trackPlay.apply(this, arguments);
+  };
+
+  function pauseGame() {
+    if (paused) return;
+    paused = true;
+    pauseAt = rNow();
+    document.documentElement.classList.add('nb-paused');
+    suspended = contexts.filter(function (c) { return c.state === 'running'; });
+    suspended.forEach(function (c) { c.suspend(); });
+    stoppedMedia = liveMedia.concat(Array.prototype.slice.call(document.querySelectorAll('audio, video')))
+      .filter(function (m, i, all) { return all.indexOf(m) === i && !m.paused; });
+    stoppedMedia.forEach(function (m) { m.pause(); });
+    paintPause();
+  }
+
+  function resumeGame() {
+    if (!paused) return;
+    pausedTotal += rNow() - pauseAt;
+    paused = false;
+    document.documentElement.classList.remove('nb-paused');
+    suspended.forEach(function (c) { c.resume(); });
+    stoppedMedia.forEach(function (m) { trackPlay.call(m).catch(function () {}); });
+    suspended = [];
+    stoppedMedia = [];
+    var frames = heldFrames;
+    var timeouts = heldTimeouts;
+    heldFrames = [];
+    heldTimeouts = [];
+    frames.forEach(function (cb) { window.requestAnimationFrame(cb); });
+    timeouts.forEach(function (fn) { rSetTimeout(fn, 0); });
+    paintPause();
+  }
+
+  /* While paused, the game must not see key presses (Escape resumes). */
+  ['keydown', 'keyup', 'keypress'].forEach(function (type) {
+    window.addEventListener(type, function (e) {
+      if (!paused) return;
+      if (type === 'keydown' && e.key === 'Escape') resumeGame();
+      e.stopImmediatePropagation();
+      e.preventDefault();
+    }, true);
+  });
+
+  /* ---------- Screens: read the game's current screen from its React state ---------- */
+  var FIRST_SCREEN = /^(welcome|start|home|landing)$/;
+  var screenType = null;
+  var screenIndex = -1;
+  var firstKey = null;
+  var lastSig = null;
+  var lastNav = null;
+  var lastHooks = null;
+  var trail = [];
+  var backUntil = 0;
+
+  function rootFiber() {
+    var root = document.getElementById('root');
+    if (!root) return null;
+    var key = Object.keys(root).filter(function (k) { return k.indexOf('__reactContainer$') === 0; })[0];
+    return key && root[key] && root[key].stateNode && root[key].stateNode.current || null;
+  }
+
+  /* One pass over the top of the React tree: the component that owns the screen value, plus the
+     simple state (text, numbers, true/false) of the components under it, each with a stable path. */
+  function scan() {
+    var top = rootFiber();
+    if (!top) return null;
+    var queue = [[top, '']];
+    var app = null;
+    var inner = [];
+    for (var seen = 0; queue.length && seen < 450; seen++) {
+      var item = queue.shift();
+      var f = item[0];
+      var path = item[1];
+      if (typeof f.type === 'function' && f.memoizedState && typeof f.memoizedState === 'object' && 'next' in f.memoizedState) {
+        var isApp = false;
+        if (!app) {
+          if (screenType) isApp = f.type === screenType;
+          else {
+            var j = 0;
+            for (var hh = f.memoizedState; hh; hh = hh.next, j++) {
+              if (typeof hh.memoizedState === 'string' && hh.queue && hh.queue.dispatch && FIRST_SCREEN.test(hh.memoizedState)) {
+                screenType = f.type;
+                screenIndex = j;
+                isApp = true;
+                break;
+              }
+            }
+          }
+          if (isApp) app = f;
+        }
+        if (app && !isApp) {
+          var i = 0;
+          for (var h = f.memoizedState; h; h = h.next, i++) {
+            var v = h.memoizedState;
+            var simple = typeof v === 'number' || typeof v === 'boolean' || typeof v === 'string' && v.length <= 40;
+            if (simple && h.queue && h.queue.dispatch) inner.push({ path: path + '#' + i, q: h.queue, v: v });
+          }
+        }
+      }
+      var n = 0;
+      for (var c = f.child; c; c = c.sibling, n++) {
+        var name = typeof c.type === 'function' ? c.type.name || 'f' : typeof c.type === 'string' ? c.type : 't' + c.tag;
+        queue.push([c, path + '>' + name + n]);
+      }
+    }
+    if (!app) return null;
+    var all = [];
+    for (var a = app.memoizedState; a; a = a.next) all.push(a);
+    var picked = (CFG.screenHooks || [screenIndex]).map(function (k) { return all[k]; });
+    if (picked.some(function (p) { return !p || !p.queue || !p.queue.dispatch; })) return null;
+    var values = picked.map(function (p) { return p.memoizedState; });
+    return { hooks: picked, values: values, key: JSON.stringify(values), inner: inner };
+  }
+
+  var GAME_SCREENS = CFG.gameScreens || ['game', 'playing', 'play'];
+  function isGameValues(values) {
+    return CFG.isGame ? CFG.isGame(values) : GAME_SCREENS.indexOf(values[0]) >= 0;
+  }
+
+  /* A "page" is the screen value plus the visible headings, so steps inside one screen count too.
+     During gameplay only the screen value counts (headings change every question). */
+  function headings() {
+    return Array.prototype.slice.call(document.querySelectorAll('#root h1, #root h2'))
+      .filter(function (e) { return e.getBoundingClientRect().width > 0 && getComputedStyle(e).visibility !== 'hidden'; })
+      .slice(0, 3).map(function (e) { return e.textContent.replace(/\s+/g, ' ').trim().slice(0, 40); }).join('/');
+  }
+
+  /* Remember where the player came from; returning to an earlier page trims the trail. */
+  function trackScreen(nav) {
+    if (!nav) return;
+    if (firstKey === null) firstKey = nav.key;
+    var playing = isGameValues(nav.values) || !!CFG.gameSel && !!document.querySelector('#root ' + CFG.gameSel);
+    var sig = nav.key + (playing ? '' : '|' + headings());
+    if (lastSig !== null && sig !== lastSig) {
+      if (rNow() > backUntil) {
+        var at = -1;
+        trail.forEach(function (s, i) { if (s.sig === sig) at = i; });
+        if (at >= 0) trail.length = at;
+        else trail.push({ sig: lastSig, values: lastNav.values, inner: lastHooks });
+      }
+      if (paused) resumeGame();
+    }
+    lastSig = sig;
+    lastNav = nav;
+    lastHooks = nav.inner.map(function (h) { return { path: h.path, v: h.v }; });
+  }
+
+  /* Put a page back: first the screen value, then (once React has drawn it) the inner steps. */
+  function restore(nav, values, inner) {
+    backUntil = rNow() + 900;
+    nav.hooks.forEach(function (h, i) { if (h.memoizedState !== values[i]) h.queue.dispatch(values[i]); });
+    if (!inner) return;
+    rRAF(function () {
+      rRAF(function () {
+        var now = scan();
+        if (!now) return;
+        var byPath = {};
+        now.inner.forEach(function (h) { byPath[h.path] = h; });
+        inner.forEach(function (h) {
+          var cur = byPath[h.path];
+          if (cur && cur.v !== h.v) cur.q.dispatch(h.v);
+        });
+        backUntil = rNow() + 600;
+      });
+    });
   }
 
   function findButtonByText(re) {
@@ -531,8 +759,19 @@ Error generating stack: `+e.message+`
     html += '<button type="button" class="nb-back" aria-label="Back"><span aria-hidden="true">←</span><span>BACK</span></button>';
     if (CFG.sound === 'generic') html += '<button type="button" class="nb-sound" data-nb-sound></button>';
     if (CFG.help && CFG.help.steps) html += '<button type="button" class="nb-help" data-nb-help><b aria-hidden="true">?</b><span>HOW TO PLAY</span></button>';
+    html += '<button type="button" class="nb-pause" aria-label="Pause"><b aria-hidden="true">❚❚</b><span>PAUSE</span></button>';
+    html += '<div class="nb-pause-overlay" role="dialog" aria-modal="true" aria-label="Game paused"><div class="nb-pause-card">' +
+      '<h2>PAUSED</h2><button type="button" class="nb-resume">▶ RESUME</button>' +
+      '<button type="button" class="nb-pause-back">← BACK</button></div></div>';
     controls.innerHTML = html;
     document.body.appendChild(controls);
+    /* Our buttons are not the game's: keep their clicks away from game-wide click handlers. */
+    controls.addEventListener('click', function (e) { e.stopPropagation(); });
+
+    controls.querySelector('.nb-pause').addEventListener('click', pauseGame);
+    controls.querySelector('.nb-resume').addEventListener('click', resumeGame);
+    controls.querySelector('.nb-pause-back').addEventListener('click', goBack);
+    paintPause();
 
     var logo = controls.querySelector('.nb-logo');
     if (logo) logo.addEventListener('click', goBack);
@@ -561,9 +800,30 @@ Error generating stack: `+e.message+`
     b.title = muted ? 'Sound Off' : 'Sound On';
   }
 
+  /* Back = the previous page inside the game (never back into a finished round);
+     from the game's first screen, the page the player came from. */
   function goBack() {
+    if (paused) resumeGame();
+    var nav = scan();
+    while (nav && trail.length) {
+      var prev = trail.pop();
+      if (prev.sig === lastSig) continue;
+      if (isGameValues(prev.values) && !isGameValues(nav.values)) continue;
+      restore(nav, prev.values, prev.inner);
+      return;
+    }
+    if (nav && firstKey !== null && nav.key !== firstKey) {
+      restore(nav, JSON.parse(firstKey), null);
+      return;
+    }
     if (window.history.length > 1) window.history.back();
     else window.location.href = '/our-games';
+  }
+
+  function paintPause() {
+    if (!controls) return;
+    var overlay = controls.querySelector('.nb-pause-overlay');
+    if (overlay) overlay.style.display = paused ? 'flex' : 'none';
   }
 
   function openHelp() {
@@ -659,62 +919,197 @@ Error generating stack: `+e.message+`
     }
   }
 
+  /* The game's own Back buttons (any screen) give way to the standard one. */
+  function isOwnBack(el) {
+    if (el.closest('#' + ID)) return false;
+    var text = (el.textContent || '').replace(/[←‹<⟵⬅❮«\s]/g, '').toLowerCase();
+    var label = (el.getAttribute('aria-label') || '') + ' ' + (typeof el.className === 'string' ? el.className : '');
+    return text === 'back' || text === 'goback' || text === '' && /(^|[\s-])back\b/i.test(label);
+  }
+
+  /* The game's own Pause button gives way to the standard one during gameplay. */
+  function isOwnPause(el) {
+    if (el.closest('#' + ID)) return false;
+    return (el.textContent || '').replace(/[^a-z]/gi, '').toLowerCase() === 'pause';
+  }
+
+  /* If a game button sits in our corner, lift our button just above it. */
+  function avoidOverlap(btn) {
+    if (!btn || getComputedStyle(btn).display === 'none') return;
+    var lift = +(btn.dataset.lift || 0);
+    var r = btn.getBoundingClientRect();
+    var top = r.top + lift;
+    var bottom = r.bottom + lift;
+    var need = 0;
+    document.querySelectorAll('button, a, [role="button"]').forEach(function (el) {
+      if (el.closest('#' + ID) || el.dataset.nbHidden) return;
+      var cs = getComputedStyle(el);
+      if (cs.visibility === 'hidden' || cs.display === 'none' || +cs.opacity === 0) return;
+      var e = el.getBoundingClientRect();
+      if (!e.width || !e.height) return;
+      if (e.right > r.left && e.left < r.right && e.bottom > top && e.top < bottom) {
+        need = Math.max(need, Math.round(bottom - e.top + 10));
+      }
+    });
+    if (need !== lift) {
+      btn.dataset.lift = need;
+      btn.style.transform = need ? 'translateY(-' + need + 'px)' : '';
+    }
+  }
+
+  /* Frosted-glass panels on menu screens (not popups) lose the glass. */
+  function stripGlass() {
+    var all = document.querySelectorAll('#root *');
+    for (var i = 0; i < all.length && i < 4000; i++) {
+      var el = all[i];
+      if (el.dataset.nbGlass) continue;
+      var cls = typeof el.className === 'string' ? el.className : '';
+      var cs = getComputedStyle(el);
+      if (cs.backdropFilter === 'none' && !/glass/i.test(cls)) continue;
+      if (cs.position === 'fixed' || !/\S/.test(el.textContent || '') && !el.querySelector('button, img, input')) continue;
+      var r = el.getBoundingClientRect();
+      if (r.width < 260 || r.height < 140) continue;
+      var inPopup = false;
+      for (var p = el.parentElement; p && p.id !== 'root'; p = p.parentElement) {
+        if (getComputedStyle(p).position === 'fixed') { inPopup = true; break; }
+      }
+      if (inPopup) continue;
+      el.dataset.nbGlass = '1';
+      el.style.setProperty('backdrop-filter', 'none', 'important');
+      el.style.setProperty('-webkit-backdrop-filter', 'none', 'important');
+      if (hasDarkText(el)) {
+        /* Dark text needs its panel: keep it, but solid instead of see-through. */
+        var bg = /rgba?\(([^)]+)\)/.exec(cs.backgroundColor);
+        var rgb = bg ? bg[1].split(',').slice(0, 3).join(',') : '255,255,255';
+        el.style.setProperty('background-color', 'rgb(' + rgb + ')', 'important');
+      } else {
+        ['background', 'background-color', 'background-image', 'box-shadow'].forEach(function (prop) { el.style.setProperty(prop, 'none', 'important'); });
+        el.style.setProperty('border-color', 'transparent', 'important');
+      }
+    }
+    /* Full-screen blurred backgrounds behind menus lose the blur. */
+    document.querySelectorAll('#root [class*="blur"]').forEach(function (layer) {
+      if (layer.dataset.nbUnblur || !/blur/.test(getComputedStyle(layer).filter)) return;
+      var lr = layer.getBoundingClientRect();
+      if (lr.width < window.innerWidth * 0.6 || lr.height < window.innerHeight * 0.6) return;
+      layer.dataset.nbUnblur = '1';
+      layer.style.setProperty('filter', 'none', 'important');
+    });
+  }
+
+  function hasDarkText(panel) {
+    var nodes = panel.querySelectorAll('h1, h2, h3, p, label, span');
+    for (var k = 0; k < nodes.length && k < 40; k++) {
+      if (!/\S/.test(nodes[k].textContent)) continue;
+      var m = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(getComputedStyle(nodes[k]).color);
+      if (m) return (0.299 * m[1] + 0.587 * m[2] + 0.114 * m[3]) < 140;
+    }
+    return false;
+  }
+
+  /* A game popup is open when a fixed layer with a dimmed or blurred backdrop covers most of the screen. */
+  function popupOpen() {
+    var vw = window.innerWidth;
+    var vh = window.innerHeight;
+    var all = document.querySelectorAll('#root *, body > *:not(#root):not(#' + ID + ')');
+    for (var i = 0; i < all.length && i < 4000; i++) {
+      var el = all[i];
+      var cs = getComputedStyle(el);
+      if (cs.position !== 'fixed' || cs.display === 'none' || cs.visibility === 'hidden' || +cs.opacity === 0) continue;
+      var r = el.getBoundingClientRect();
+      if (r.width < vw * 0.85 || r.height < vh * 0.85) continue;
+      var a = /rgba\([^)]*,\s*([\d.]+)\)/.exec(cs.backgroundColor);
+      if (cs.backdropFilter !== 'none' || a && +a[1] >= 0.2 && +a[1] < 0.97) return true;
+    }
+    return false;
+  }
+
+  var slowAt = 0;
+  var slowState = { popup: false };
   function update() {
     ensureControls();
-    if (!isStartScreen()) {
-      if (controls.style.display !== 'none') controls.style.display = 'none';
-      unhideAll();
-      return;
-    }
-    var startEl = document.querySelector('#root ' + CFG.start);
-    startEl = startEl.closest('button') || startEl;
-    applyPlay(startEl);
-    applyLayout();
+    var nav = scan();
+    if (nav && lastNav && nav.key !== lastNav.key) { unhideAll(); slowAt = 0; }
+    trackScreen(nav);
+    var start = !!CFG.start && isStartScreen();
+    var welcome = start || !!nav && nav.key === firstKey;
+    var playing = !!nav && isGameValues(nav.values) || !!CFG.gameSel && !!document.querySelector('#root ' + CFG.gameSel);
+    if (!playing && paused) resumeGame();
 
-    /* Step aside while one of the game's own popups covers the START button:
-       the element on top of it belongs to a branch that fills most of the screen. */
-    var r = startEl.getBoundingClientRect();
-    var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
-    var covered = false;
-    if (hit && !startEl.contains(hit) && !controls.contains(hit)) {
-      var branch = hit;
-      while (branch.parentElement && !branch.parentElement.contains(startEl)) branch = branch.parentElement;
-      var br = branch.getBoundingClientRect();
-      covered = br.width * br.height >= 0.5 * window.innerWidth * window.innerHeight;
+    /* Heavier page scans run at most a few times a second. */
+    var now = rNow();
+    if (now - slowAt > 300) {
+      slowAt = now;
+      slowState.popup = popupOpen();
+      if (!playing) stripGlass();
+      document.querySelectorAll('button, [role="button"], a').forEach(function (el) { if (isOwnBack(el) || playing && isOwnPause(el)) hide(el); });
+      avoidOverlap(controls.querySelector('.nb-back'));
+      avoidOverlap(controls.querySelector('.nb-pause'));
     }
+
+    var covered = slowState.popup && !paused;
+    if (start) {
+      var startEl = document.querySelector('#root ' + CFG.start);
+      startEl = startEl.closest('button') || startEl;
+      applyPlay(startEl);
+      applyLayout();
+      /* On the welcome screen, a popup is anything covering most of the screen on top of START. */
+      var r = startEl.getBoundingClientRect();
+      var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+      if (hit && !startEl.contains(hit) && !controls.contains(hit)) {
+        var branch = hit;
+        while (branch.parentElement && !branch.parentElement.contains(startEl)) branch = branch.parentElement;
+        var br = branch.getBoundingClientRect();
+        covered = covered || br.width * br.height >= 0.5 * window.innerWidth * window.innerHeight;
+      }
+      (CFG.hideLogos || []).forEach(function (sel) {
+        document.querySelectorAll('#root ' + sel).forEach(hide);
+      });
+      if (CFG.hideClosest) {
+        document.querySelectorAll('#root ' + CFG.hideClosest[0]).forEach(function (el) {
+          hide(el.closest(CFG.hideClosest[1]) || el);
+        });
+      }
+    }
+    syncProxy('sound', start && CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
+    syncProxy('help', start && CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
+
+    var cls = (welcome ? 'nb-welcome ' : '') + (playing ? 'nb-playing ' : '') + (paused ? 'nb-is-paused' : '');
+    if (controls.className !== cls.trim()) controls.className = cls.trim();
     var display = covered ? 'none' : 'block';
     if (controls.style.display !== display) controls.style.display = display;
-    (CFG.hideLogos || []).forEach(function (sel) {
-      document.querySelectorAll('#root ' + sel).forEach(hide);
-    });
-    if (CFG.hideClosest) {
-      document.querySelectorAll('#root ' + CFG.hideClosest[0]).forEach(function (el) {
-        hide(el.closest(CFG.hideClosest[1]) || el);
-      });
-    }
-    syncProxy('sound', CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
-    syncProxy('help', CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
-    if (CFG.extra) CFG.extra();
   }
 
   var css = document.createElement('style');
   var t = CFG.theme;
   css.textContent =
-    '#' + ID + '{position:fixed;inset:0;z-index:45;pointer-events:none}' +
+    '#' + ID + '{position:fixed;inset:0;z-index:2147483000;pointer-events:none}' +
     '#' + ID + '>*{pointer-events:auto}' +
     '#' + ID + ' .nb-logo{position:fixed;top:20px;left:26px;width:' + (CFG.logoWidth || 96) + 'px;height:auto;max-height:90px;object-fit:contain;cursor:pointer;filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}' +
     '#' + ID + ' .nb-proxy{position:fixed!important;margin:0!important;transform:none!important;inset:auto!important;width:auto!important;z-index:1!important}' +
     '#' + ID + ' .nb-proxy.nb-p-sound{top:20px!important;right:26px!important}' +
     '#' + ID + ' .nb-proxy.nb-p-help{bottom:24px!important;right:26px!important}' +
-    '#' + ID + ' .nb-back,#' + ID + ' .nb-help,#' + ID + ' .nb-sound{position:fixed;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:999px;' +
+    '#' + ID + ' .nb-back,#' + ID + ' .nb-help,#' + ID + ' .nb-sound,#' + ID + ' .nb-pause{position:fixed;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:999px;' +
       'background:' + t.bg + ';color:' + t.fg + ';border:1.5px solid ' + t.border + ';box-shadow:0 8px 24px rgba(0,0,0,.18);' +
       '-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:900 13px/1 Inter,Arial,sans-serif;letter-spacing:.14em;transition:transform .18s ease,background .18s ease}' +
-    '#' + ID + ' .nb-back:hover,#' + ID + ' .nb-help:hover,#' + ID + ' .nb-sound:hover{transform:translateY(-2px);background:' + t.hover + '}' +
+    '#' + ID + ' .nb-back:hover,#' + ID + ' .nb-help:hover,#' + ID + ' .nb-sound:hover,#' + ID + ' .nb-pause:hover{transform:translateY(-2px);background:' + t.hover + '}' +
     '#' + ID + ' .nb-back{left:26px;bottom:24px;height:46px;padding:0 20px}' +
     '#' + ID + ' .nb-back span:first-child{font-size:17px;letter-spacing:0}' +
     '#' + ID + ' .nb-help{right:26px;bottom:24px;height:46px;padding:0 20px}' +
     '#' + ID + ' .nb-help b{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;font-size:11px;letter-spacing:0}' +
     '#' + ID + ' .nb-sound{top:20px;right:26px;width:48px;height:48px;padding:0;font-size:21px;letter-spacing:0}' +
+    '#' + ID + ':not(.nb-welcome) .nb-logo,#' + ID + ':not(.nb-welcome) [data-nb-sound],#' + ID + ':not(.nb-welcome) [data-nb-help]{display:none!important}' +
+    '#' + ID + ' .nb-pause{display:none;right:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + '.nb-playing .nb-pause{display:flex}' +
+    '#' + ID + ' .nb-pause b{font-size:11px;letter-spacing:-1px}' +
+    '#' + ID + ' .nb-pause-overlay{position:fixed;inset:0;z-index:5;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(5,10,20,.66)}' +
+    '#' + ID + ' .nb-pause-card{width:min(340px,100%);display:flex;flex-direction:column;gap:12px;padding:30px 26px;border-radius:24px;background:#fff;box-shadow:0 24px 60px rgba(0,0,0,.4);text-align:center;font-family:Inter,Arial,sans-serif}' +
+    '#' + ID + ' .nb-pause-card h2{margin:0 0 8px;font-size:26px;font-weight:900;letter-spacing:.18em;color:' + t.accent + '}' +
+    '#' + ID + ' .nb-pause-card button{height:50px;border-radius:999px;font:900 15px Inter,Arial,sans-serif;letter-spacing:.14em;cursor:pointer}' +
+    '#' + ID + ' .nb-resume{border:0;background:' + t.accent + ';color:#fff}' +
+    '#' + ID + ' .nb-pause-back{border:2px solid ' + t.accent + ';background:#fff;color:' + t.accent + '}' +
+    '#' + ID + '.nb-is-paused .nb-back,#' + ID + '.nb-is-paused .nb-pause{display:none!important}' +
+    'html.nb-paused #root *,html.nb-paused #root *::before,html.nb-paused #root *::after{animation-play-state:paused!important}' +
     '#nb-help-modal{position:fixed;inset:0;z-index:10050;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}' +
     '#nb-help-modal .nb-help-card{width:min(440px,100%);border-radius:24px;padding:28px 26px 24px;background:#fff;color:#1f2937;box-shadow:0 24px 60px rgba(0,0,0,.35);font-family:Inter,Arial,sans-serif}' +
     '#nb-help-modal h2{margin:0 0 14px;font-size:20px;font-weight:900;letter-spacing:.12em;color:' + t.accent + '}' +
@@ -726,7 +1121,7 @@ Error generating stack: `+e.message+`
       '#' + ID + ' .nb-proxy.nb-p-sound,#' + ID + ' .nb-sound{top:14px!important;right:14px!important}' +
       '#' + ID + ' .nb-proxy.nb-p-help,#' + ID + ' .nb-help{bottom:16px!important;right:14px!important}' +
       '#' + ID + ' .nb-back{left:14px;bottom:16px;height:42px;padding:0 15px;font-size:12px}' +
-      '#' + ID + ' .nb-help{height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-help,#' + ID + ' .nb-pause{height:42px;padding:0 15px;font-size:12px;right:14px;bottom:16px}' +
       '#' + ID + ' .nb-sound{width:44px;height:44px;font-size:19px}' +
     '}' + playCss() + (CFG.css || '');
   document.head.appendChild(css);
@@ -757,8 +1152,10 @@ Error generating stack: `+e.message+`
   function schedule() {
     if (queued) return;
     queued = true;
-    requestAnimationFrame(function () { queued = false; update(); });
+    rRAF(function () { queued = false; update(); });
   }
   new MutationObserver(schedule).observe(document.documentElement, { childList: true, subtree: true, attributes: true, characterData: true });
+  /* Some games add their own controls a moment later without further page changes; re-check now and then. */
+  rSetInterval(schedule, 700);
   schedule();
 })({key:'speed-typing',start:'button.start',title:/TYPING/i,logo:'/logoblack.png',logoWidth:110,hideLogos:['img.brand'],sound:'.top-control.left',help:'.top-control.right',ownStyle:true,theme:{bg:'rgba(255,255,255,.9)',fg:'#1f2937',border:'rgba(249,115,22,.45)',hover:'#fff',accent:'#f97316'},play:{mode:'text',labelSize:'clamp(28px,2.7vw,40px)',ring:['rgba(249,115,22,.3)','#f97316','#fdba74']}});

@@ -32,6 +32,7 @@ Error generating stack: `+e.message+`
         }
       `}),(0,b.jsx)(`div`,{className:`relative w-full max-w-5xl flex items-center justify-center z-20 pt-1 pb-2`,children:(0,b.jsx)(`div`,{className:`flex items-center gap-2.5 px-4 py-1.5`,children:(0,b.jsx)(`img`,{src:C,alt:`Nebuloid`,className:`h-15 w-auto object-contain pointer-events-none`})})}),(0,b.jsxs)(`div`,{className:`relative w-full max-w-xl bg-white/85 backdrop-blur-xl sm:backdrop-blur-2xl rounded-3xl sm:rounded-[36px] border border-white/60 shadow-[0_20px_60px_rgba(0,0,0,0.35)] px-5 py-6 sm:px-10 sm:py-8 flex flex-col items-center text-center z-10 animate-fade-in my-auto`,children:[t?(0,b.jsxs)(`div`,{className:`inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-600 text-white text-xs sm:text-sm font-black tracking-widest uppercase mb-3 shadow-lg animate-bounce`,children:[(0,b.jsx)(`span`,{children:`🏆`}),(0,b.jsxs)(`span`,{children:[`STAGE 0`,n,` CLEARED!`]})]}):(0,b.jsxs)(`div`,{className:`inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-rose-600 text-white text-xs font-black tracking-widest uppercase mb-3 shadow-md`,children:[(0,b.jsx)(`span`,{children:`✕`}),(0,b.jsxs)(`span`,{children:[`STAGE 0`,n,` FAILED`]})]}),(0,b.jsxs)(`div`,{className:`text-xs font-extrabold tracking-wider uppercase text-neutral-500 mb-1`,children:[`Player: `,(0,b.jsx)(`span`,{className:`text-black font-black`,children:S})]}),(0,b.jsxs)(`h2`,{className:`text-5xl sm:text-6xl font-black text-black tracking-tight mb-1`,children:[a,(0,b.jsx)(`span`,{className:`text-base sm:text-lg text-neutral-500 font-extrabold ml-1.5`,children:`PTS`})]}),(0,b.jsx)(`p`,{className:`text-xs text-neutral-600 font-bold uppercase tracking-wider mb-5`,children:t?d?(0,b.jsxs)(`span`,{className:`text-emerald-700 font-black`,children:[`🎉 Next stage unlocked: Stage 0`,n+1,`!`]}):(0,b.jsxs)(`span`,{className:`text-blue-900 font-black`,children:[`👑 All stages cleared in `,r,` level!`]}):(0,b.jsxs)(`span`,{children:[`Target was `,i,` questions • Try again!`]})}),(0,b.jsx)(`div`,{className:`w-full bg-neutral-50/90 border-2 border-black/80 rounded-2xl p-4 sm:p-5 mb-5 shadow-sm`,children:(0,b.jsxs)(`div`,{className:`grid grid-cols-2 gap-3`,children:[(0,b.jsxs)(`div`,{className:`flex flex-col items-center p-2.5 bg-white rounded-xl border border-neutral-300 shadow-xs`,children:[(0,b.jsx)(`span`,{className:`text-[10px] text-neutral-500 font-black uppercase tracking-wider`,children:`Correct`}),(0,b.jsxs)(`span`,{className:`text-xl font-black text-emerald-600 mt-0.5`,children:[`✓ `,o]})]}),(0,b.jsxs)(`div`,{className:`flex flex-col items-center p-2.5 bg-white rounded-xl border border-neutral-300 shadow-xs`,children:[(0,b.jsx)(`span`,{className:`text-[10px] text-neutral-500 font-black uppercase tracking-wider`,children:`Mistakes`}),(0,b.jsxs)(`span`,{className:`text-xl font-black text-rose-600 mt-0.5`,children:[`✕ `,s]})]}),(0,b.jsxs)(`div`,{className:`flex flex-col items-center p-2.5 bg-white rounded-xl border border-neutral-300 shadow-xs`,children:[(0,b.jsx)(`span`,{className:`text-[10px] text-neutral-500 font-black uppercase tracking-wider`,children:`Best Streak`}),(0,b.jsxs)(`span`,{className:`text-xl font-black text-amber-600 mt-0.5`,children:[`🔥 `,c]})]}),(0,b.jsxs)(`div`,{className:`flex flex-col items-center p-2.5 bg-white rounded-xl border border-neutral-300 shadow-xs`,children:[(0,b.jsx)(`span`,{className:`text-[10px] text-neutral-500 font-black uppercase tracking-wider`,children:`Accuracy`}),(0,b.jsxs)(`span`,{className:`text-xl font-black text-black mt-0.5`,children:[g,`%`]})]})]})}),t&&(0,b.jsx)(`button`,{onClick:()=>{M.playClick(),y(!0)},className:`w-full relative flex items-center justify-center py-3.5 px-6 rounded-2xl bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-yellow-300 text-slate-950 font-black text-xs sm:text-sm tracking-[0.15em] uppercase transition-all duration-150 shadow-lg shadow-amber-500/30 hover:scale-[1.02] active:scale-[0.98] cursor-pointer border-2 border-amber-300 mb-3`,children:(0,b.jsx)(`span`,{children:`🏆 VIEW & CUSTOMIZE CERTIFICATE`})}),(0,b.jsxs)(`div`,{className:`w-full flex flex-col gap-2.5`,children:[t&&d&&(0,b.jsx)(`button`,{onClick:f,className:`w-full relative flex items-center justify-center py-3.5 px-6 rounded-xl bg-black hover:bg-neutral-800 text-white font-black text-xs sm:text-sm tracking-wider uppercase transition-all duration-150 shadow-md hover:scale-[1.01] active:scale-[0.98] cursor-pointer`,children:(0,b.jsxs)(`span`,{children:[`NEXT STAGE (S-`,n+1,`) ▶`]})}),(0,b.jsx)(`button`,{onClick:p,className:`w-full relative flex items-center justify-center py-3 px-6 rounded-xl font-black text-xs sm:text-sm tracking-wider uppercase transition-all duration-150 cursor-pointer ${!t||!d?`bg-black hover:bg-neutral-800 text-white shadow-md`:`bg-white hover:bg-neutral-100 text-black border-2 border-black/80`}`,children:(0,b.jsx)(`span`,{children:`🔄 REPLAY STAGE`})}),(0,b.jsx)(`button`,{onClick:m,className:`w-full relative flex items-center justify-center py-3 px-6 rounded-xl bg-white hover:bg-neutral-100 text-black font-black text-xs sm:text-sm tracking-wider uppercase transition-all duration-150 border-2 border-black/80 shadow-xs cursor-pointer`,children:(0,b.jsx)(`span`,{children:`☰ LEVEL SELECT`})}),(0,b.jsx)(`button`,{onClick:h,className:`w-full relative flex items-center justify-center py-2 px-6 rounded-xl text-neutral-600 hover:text-black font-bold text-xs tracking-wider uppercase transition-all cursor-pointer`,children:(0,b.jsx)(`span`,{children:`Main Menu`})})]})]}),v&&(0,b.jsx)(`div`,{className:`fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 md:p-6 animate-fade-in overflow-y-auto`,onClick:()=>y(!1),children:(0,b.jsxs)(`div`,{className:`relative w-full max-w-3xl bg-slate-900 text-white rounded-3xl shadow-[0_25px_80px_rgba(0,0,0,0.85)] p-4 sm:p-6 md:p-7 border border-white/20 overflow-hidden my-auto max-h-[95vh] flex flex-col`,onClick:e=>e.stopPropagation(),children:[(0,b.jsxs)(`div`,{className:`flex items-center justify-between pb-3 border-b border-white/10 mb-4 shrink-0 no-print`,children:[(0,b.jsxs)(`div`,{className:`flex items-center gap-2`,children:[(0,b.jsx)(`span`,{className:`text-2xl`,children:`🎓`}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`h3`,{className:`text-base sm:text-lg font-black tracking-wide text-white uppercase`,children:`WINNER CERTIFICATE GENERATOR`}),(0,b.jsx)(`span`,{className:`text-[10px] font-bold text-cyan-300 block`,children:`Certified • Verified • High-Resolution PNG & Print Ready`})]})]}),(0,b.jsx)(`button`,{onClick:()=>y(!1),className:`w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white font-black text-sm flex items-center justify-center cursor-pointer transition-colors`,title:`Close to view stage stats`,children:`✕`})]}),(0,b.jsx)(`div`,{className:`bg-white/5 border border-white/10 rounded-2xl p-3 sm:p-4 mb-4 shrink-0 no-print`,children:(0,b.jsxs)(`div`,{className:`grid grid-cols-1 md:grid-cols-3 gap-3`,children:[(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`label`,{className:`text-[10px] font-black uppercase tracking-wider text-slate-400 block mb-1`,children:`Player Name (Editable)`}),(0,b.jsx)(`input`,{type:`text`,value:S,maxLength:25,onChange:e=>w(e.target.value),placeholder:`Enter Certificate Name`,className:`w-full bg-black/50 border border-white/20 text-white text-xs sm:text-sm font-bold px-3 py-1.5 rounded-xl focus:outline-none focus:border-cyan-400`})]}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`label`,{className:`text-[10px] font-black uppercase tracking-wider text-slate-400 block mb-1`,children:`Honor Title Badge`}),(0,b.jsxs)(`select`,{value:E,onChange:e=>te(e.target.value),className:`w-full bg-black/50 border border-white/20 text-white text-xs sm:text-sm font-bold px-3 py-1.5 rounded-xl focus:outline-none focus:border-cyan-400 cursor-pointer`,children:[(0,b.jsx)(`option`,{value:`GRANDMASTER VIRTUOSO`,children:`★ Grandmaster Virtuoso`}),(0,b.jsx)(`option`,{value:`PERFECT STROOP MASTER`,children:`★ Perfect Stroop Master`}),(0,b.jsx)(`option`,{value:`MASTER OF FOCUS & SPEED`,children:`★ Master of Focus & Speed`}),(0,b.jsx)(`option`,{value:`AGILE COLOR STRATEGIST`,children:`★ Agile Color Strategist`}),(0,b.jsx)(`option`,{value:`HIGH-OCTANE CHAMPION`,children:`★ High-Octane Champion`}),(0,b.jsx)(`option`,{value:`COLOR CLASH CONQUEROR`,children:`★ Color Clash Conqueror`})]})]}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`label`,{className:`text-[10px] font-black uppercase tracking-wider text-slate-400 block mb-1`,children:`Certificate Theme`}),(0,b.jsx)(`div`,{className:`flex gap-1.5`,children:[{id:`royal`,label:`👑 Royal Gold`,bg:`bg-amber-500/20 text-amber-300 border-amber-500/40`},{id:`cyber`,label:`🌌 Cyber Neon`,bg:`bg-cyan-500/20 text-cyan-300 border-cyan-500/40`},{id:`emerald`,label:`🌿 Emerald`,bg:`bg-emerald-500/20 text-emerald-300 border-emerald-500/40`}].map(e=>(0,b.jsx)(`button`,{onClick:()=>{M.playClick(),ee(e.id)},className:`flex-1 py-1.5 px-2 rounded-xl text-[11px] font-bold border transition-all cursor-pointer ${T===e.id?`${e.bg} ring-2 ring-white/50 font-black`:`bg-black/30 border-white/10 text-slate-400 hover:text-white`}`,children:e.label},e.id))})]})]})}),(0,b.jsx)(`div`,{className:`overflow-y-auto flex-1 pr-1 pb-2`,children:(0,b.jsx)(`div`,{id:`printable-certificate`,ref:se,className:`relative w-full rounded-2xl p-4 sm:p-8 text-center transition-all ${j.outer}`,children:(0,b.jsxs)(`div`,{className:`rounded-xl p-4 sm:p-6 ${j.inner}`,children:[(0,b.jsxs)(`div`,{className:`flex items-center justify-center gap-2 mb-1.5`,children:[(0,b.jsx)(`span`,{className:`text-xl`,children:`🎖️`}),(0,b.jsx)(`span`,{className:`text-[10px] sm:text-[11px] font-black tracking-[0.3em] uppercase text-neutral-500`,children:`NEBULOID GAMES OFFICIAL MERIT RECOGNITION`}),(0,b.jsx)(`span`,{className:`text-xl`,children:`🎖️`})]}),(0,b.jsx)(`h3`,{className:`text-xl sm:text-3xl font-black tracking-wide uppercase mt-1 mb-1.5 ${j.title}`,children:`Certificate of Achievement`}),(0,b.jsx)(`div`,{className:`inline-block my-1.5`,children:(0,b.jsxs)(`span`,{className:`text-[10px] sm:text-[11px] font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-xs ${j.badge}`,children:[`★ `,E,` ★`]})}),(0,b.jsx)(`p`,{className:`text-[11px] font-bold uppercase tracking-widest text-neutral-500 mt-2 mb-1`,children:`This prestigious honor is proudly presented to`}),(0,b.jsx)(`h2`,{className:`text-2xl sm:text-4xl font-black tracking-wider uppercase my-2 drop-shadow-xs ${j.name}`,children:S||`CHAMPION`}),(0,b.jsx)(`div`,{className:`w-48 h-0.5 bg-neutral-300 mx-auto mb-3`}),(0,b.jsxs)(`p`,{className:`text-xs sm:text-sm text-neutral-700 font-medium max-w-lg mx-auto leading-relaxed my-2`,children:[`For demonstrating exceptional cognitive focus, reaction speed, and accuracy in conquering`,` `,(0,b.jsxs)(`b`,{className:`font-bold`,children:[`Color Clash — `,r,` Mode (Stage 0`,n,`)`]}),`.`]}),(0,b.jsxs)(`div`,{className:`grid grid-cols-4 gap-2 my-4 max-w-md mx-auto`,children:[(0,b.jsxs)(`div`,{className:`p-2 rounded-xl text-center ${j.statsBox}`,children:[(0,b.jsx)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-neutral-500 block`,children:`Score`}),(0,b.jsxs)(`span`,{className:`text-sm sm:text-base font-black text-black`,children:[a,` `,(0,b.jsx)(`span`,{className:`text-[9px]`,children:`PTS`})]})]}),(0,b.jsxs)(`div`,{className:`p-2 rounded-xl text-center ${j.statsBox}`,children:[(0,b.jsx)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-neutral-500 block`,children:`Accuracy`}),(0,b.jsxs)(`span`,{className:`text-sm sm:text-base font-black text-emerald-600`,children:[g,`%`]})]}),(0,b.jsxs)(`div`,{className:`p-2 rounded-xl text-center ${j.statsBox}`,children:[(0,b.jsx)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-neutral-500 block`,children:`Streak`}),(0,b.jsxs)(`span`,{className:`text-sm sm:text-base font-black text-amber-600`,children:[c,`x`]})]}),(0,b.jsxs)(`div`,{className:`p-2 rounded-xl text-center ${j.statsBox}`,children:[(0,b.jsx)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-neutral-500 block`,children:`Stars`}),(0,b.jsxs)(`span`,{className:`text-sm sm:text-base font-black text-amber-500`,children:[`★`.repeat(ue),`☆`.repeat(3-ue)]})]})]}),(0,b.jsxs)(`div`,{className:`flex items-center justify-between pt-3 border-t border-neutral-200 mt-4 text-left text-[11px]`,children:[(0,b.jsxs)(`div`,{children:[(0,b.jsxs)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-neutral-400 block`,children:[`Issue Date: `,(0,b.jsx)(`b`,{className:`text-neutral-700 font-bold`,children:ce})]}),(0,b.jsxs)(`span`,{className:`text-[9px] font-mono text-neutral-500 block mt-0.5`,children:[`ID: `,ie]})]}),(0,b.jsxs)(`div`,{className:`text-right`,children:[(0,b.jsx)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-amber-600 block`,children:`Official Verification Seal`}),(0,b.jsxs)(`span`,{className:`text-[11px] font-black text-blue-950 flex items-center justify-end gap-1`,children:[(0,b.jsx)(`span`,{children:`✓`}),` VERIFIED BY NEBULOID`]})]})]})]})})}),(0,b.jsxs)(`div`,{className:`pt-3 border-t border-white/10 mt-2 flex flex-col sm:flex-row items-center gap-2.5 shrink-0 no-print`,children:[(0,b.jsxs)(`button`,{onClick:de,className:`flex-1 w-full py-3 px-4 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 hover:from-blue-500 hover:to-indigo-500 text-white font-black text-xs sm:text-sm tracking-wider uppercase shadow-md transition-all cursor-pointer flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.98]`,children:[(0,b.jsx)(`span`,{children:`📥`}),(0,b.jsx)(`span`,{children:`DOWNLOAD PNG (1200x800)`})]}),(0,b.jsxs)(`button`,{onClick:k,className:`w-full sm:w-auto py-3 px-4 rounded-xl border border-white/20 hover:bg-white/10 text-white font-black text-xs sm:text-sm tracking-wider uppercase transition-all cursor-pointer flex items-center justify-center gap-1.5`,children:[(0,b.jsx)(`span`,{children:`🖨️`}),(0,b.jsx)(`span`,{children:`PRINT / PDF`})]}),(0,b.jsxs)(`button`,{onClick:fe,className:`w-full sm:w-auto py-3 px-4 rounded-xl border border-white/20 hover:bg-white/10 text-white font-black text-xs sm:text-sm tracking-wider uppercase transition-all cursor-pointer flex items-center justify-center gap-1.5`,children:[(0,b.jsx)(`span`,{children:`🔗`}),(0,b.jsx)(`span`,{children:`SHARE`})]}),d?(0,b.jsx)(`button`,{onClick:()=>{y(!1),f()},className:`w-full sm:w-auto py-3 px-5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm tracking-wider uppercase shadow-md transition-all cursor-pointer flex items-center justify-center gap-1.5`,children:(0,b.jsx)(`span`,{children:`NEXT ▶`})}):(0,b.jsx)(`button`,{onClick:()=>y(!1),className:`w-full sm:w-auto py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-black text-xs sm:text-sm tracking-wider uppercase transition-all cursor-pointer`,children:(0,b.jsx)(`span`,{children:`DONE`})})]}),ne&&(0,b.jsxs)(`div`,{className:`absolute top-5 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-xs font-black px-4 py-2 rounded-full shadow-lg animate-fade-in flex items-center gap-2 z-50`,children:[(0,b.jsx)(`span`,{children:`✓`}),(0,b.jsx)(`span`,{children:`Achievement summary copied to clipboard!`})]})]})}),(0,b.jsx)(`div`,{className:`relative z-10 pt-2 pb-1 text-center`,children:(0,b.jsx)(`span`,{className:`text-[11px] font-bold text-white/85 tracking-wider uppercase drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]`,children:`Nebuloid Tech • Color Clash Stroop Challenge`})})]})}function be(e){let t=[...e];for(let e=t.length-1;e>0;e--){let n=Math.floor(Math.random()*(e+1));[t[e],t[n]]=[t[n],t[e]]}return t}function xe(e=`EASY`,t=null){let n=(T[e]||T.EASY).optionsCount,r=w[Math.floor(Math.random()*w.length)],i;if(Math.random()<.1)i=r;else{let e=w.filter(e=>e.name!==r.name);i=e[Math.floor(Math.random()*e.length)]}if(t&&t.word===r.name&&t.correctAnswer===i.name){let e=w.filter(e=>e.name!==i.name&&e.name!==r.name);e.length>0&&(i=e[Math.floor(Math.random()*e.length)])}let a=i.name,o=new Set;o.add(i),r.name!==i.name&&o.size<n&&o.add(r);let s=be(w.filter(e=>!o.has(e)));for(let e of s){if(o.size>=n)break;o.add(e)}let c=be(Array.from(o));return{word:r.name,displayColor:i,correctAnswer:a,options:c,difficulty:e,timestamp:Date.now()}}function Se(){let[e,t]=(0,_.useState)(`start`),[n,r]=(0,_.useState)(()=>{try{return localStorage.getItem(`colorClash_playerName`)||``}catch{return``}}),[i,a]=(0,_.useState)(`EASY`),[o,s]=(0,_.useState)(1),[c,l]=(0,_.useState)(j()),[u,d]=(0,_.useState)(0),[f,p]=(0,_.useState)(1),[m,h]=(0,_.useState)(0),[g,v]=(0,_.useState)(0),[y,x]=(0,_.useState)(59),[S,C]=(0,_.useState)(null),[w,T]=(0,_.useState)(0),[ee,E]=(0,_.useState)(0),[oe,se]=(0,_.useState)(!1),[ce,D]=(0,_.useState)(!1),[O,le]=(0,_.useState)(0),[k,A]=(0,_.useState)(null),[he,ge]=(0,_.useState)(!1),[_e,be]=(0,_.useState)(!1),Se=(0,_.useRef)(e);Se.current=e;let Ce=(0,_.useRef)(S);Ce.current=S;let we=(0,_.useRef)(he);we.current=he;let Te=(0,_.useRef)(u);Te.current=u;let Ee=(0,_.useRef)(m);Ee.current=m;let De=(0,_.useRef)(g);De.current=g;let Oe=(0,_.useRef)(w);Oe.current=w;let ke=(0,_.useRef)(ee);ke.current=ee;let Ae=(0,_.useRef)(i);Ae.current=i;let je=(0,_.useRef)(o);je.current=o;let Me=(0,_.useRef)(null);(0,_.useEffect)(()=>{le(ne()),v(ie()),l(j())},[]);let Ne=fe[i]?.[o-1]||fe.EASY[0],Pe=(0,_.useCallback)((e=!1)=>{t(`gameover`),ge(!1),A(null),se(e);let n=Te.current,r=De.current,i=Ae.current,a=je.current,o=re(n);if(ae(r),o&&n>0?(D(!0),le(n)):D(!1),e){let e=ke.current,t=pe(i,a,n,e===0?3:e<=2?2:1);l(t),M.playCorrect()}else M.playGameOver()},[]),Fe=(0,_.useCallback)((e,n)=>{M.init(),M.playStart();let r=e||Ae.current,i=n||1,o=fe[r]?.[i-1]||fe.EASY[0],c=xe(r,null);a(r),s(i),d(0),p(1),h(0),v(0),x(o.timeLimit||59),C(c),T(0),E(0),se(!1),D(!1),A(null),ge(!1),t(`playing`)},[]),Ie=(0,_.useCallback)(()=>{M.playClick(),Me.current&&clearTimeout(Me.current),t(`setup`),A(null),ge(!1)},[]),Le=(0,_.useCallback)(()=>{M.playClick(),Me.current&&clearTimeout(Me.current),t(`levels`),A(null),ge(!1)},[]),Re=(0,_.useCallback)(()=>{M.playClick(),Me.current&&clearTimeout(Me.current),t(`start`),A(null),ge(!1)},[]),ze=(0,_.useCallback)(()=>{let e=M.toggleMute();be(e)},[]);(0,_.useEffect)(()=>{if(e!==`playing`)return;let t=setInterval(()=>{x(e=>{if(e<=1)return clearInterval(t),Pe(!1),0;let n=e-1;return n<=5&&n>0&&M.playTick(),n})},1e3);return()=>clearInterval(t)},[e,Pe]);let Be=(0,_.useCallback)(e=>{if(we.current||Se.current!==`playing`)return;let t=Ce.current;if(!t)return;ge(!0),Me.current&&clearTimeout(Me.current);let n=e===t.correctAnswer,r=fe[Ae.current]?.[je.current-1]||fe.EASY[0];if(n){let e=Ee.current+1,t=te(e),n=Math.round((10+t)*(r.scoreMultiplier||1)),i=Oe.current+1;if(h(e),v(t=>Math.max(t,e)),d(e=>e+n),T(i),t>0?(M.playStreakBonus(),A({type:`correct`,message:`✓ CORRECT!`,subtext:`+${n} PTS (+${t} STREAK BONUS 🔥)`})):(M.playCorrect(),A({type:`correct`,message:`✓ CORRECT!`,subtext:`+${n} PTS`})),i>=r.targetQuestions){Me.current=setTimeout(()=>{Pe(!0)},350);return}Me.current=setTimeout(()=>{p(e=>e+1),C(e=>xe(Ae.current,e)),A(null),ge(!1)},420)}else{let e=ke.current+1;h(0),d(e=>Math.max(0,e-5)),E(e),M.playWrong(),A({type:`wrong`,message:`✕ WRONG!`,subtext:`-5 PTS`}),Me.current=setTimeout(()=>{p(e=>e+1),C(e=>xe(Ae.current,e)),A(null),ge(!1)},450)}},[Pe]);return(0,_.useEffect)(()=>{let e=e=>{if(e.code===`Space`||e.key===`Enter`){if(Se.current===`start`){e.preventDefault(),Ie();return}if(Se.current===`gameover`){e.preventDefault(),Fe(Ae.current,je.current);return}}if(e.key===`Escape`){if(Se.current===`playing`||Se.current===`gameover`){e.preventDefault(),Le();return}if(Se.current===`levels`){e.preventDefault(),Ie();return}if(Se.current===`setup`){e.preventDefault(),Re();return}}if(Se.current===`playing`&&Ce.current){let t=parseInt(e.key,10),n=Ce.current.options||[];if(!isNaN(t)&&t>=1&&t<=n.length){e.preventDefault();let r=n[t-1];r&&Be(r.name)}}};return window.addEventListener(`keydown`,e),()=>window.removeEventListener(`keydown`,e)},[Ie,Le,Re,Fe,Be]),(0,b.jsx)(`div`,{className:`min-h-screen flex flex-col bg-[#f8f8f8] text-black relative overflow-hidden transition-colors duration-200`,children:(0,b.jsxs)(`main`,{className:`flex-1 flex flex-col items-center justify-center w-full p-0`,children:[e===`start`&&(0,b.jsx)(ue,{onStartGame:Ie,onOpenLevels:Ie,bestScore:O,bestStreak:g,selectedDifficulty:i,onChangeDifficulty:a,isMuted:_e,onToggleMute:ze}),e===`setup`&&(0,b.jsx)(de,{initialName:n,onContinue:e=>{r(e);try{localStorage.setItem(`colorClash_playerName`,e)}catch{}Le()},onBack:Re}),e===`levels`&&(0,b.jsx)(me,{progression:c,selectedDifficulty:i,onSelectDifficulty:a,onSelectStage:(e,t)=>Fe(e,t),onBackToMenu:Ie}),e===`playing`&&(0,b.jsx)(ve,{score:u,round:f,difficulty:i,stageNumber:o,targetQuestions:Ne.targetQuestions,correctAnswers:w,timeLeft:y,maxTime:Ne.timeLimit||59,streak:m,question:S,onSelectAnswer:Be,feedback:k,isLocked:he,onQuitToLevels:Le}),e===`gameover`&&(0,b.jsx)(ye,{playerName:n,isVictory:oe,stageNumber:o,difficulty:i,targetQuestions:Ne.targetQuestions,score:u,correctAnswers:w,wrongAnswers:ee,bestStreak:g,isNewBestScore:ce,bestScore:O,nextStageAvailable:o<5,onPlayNextStage:()=>Fe(i,o+1),onPlayAgain:()=>Fe(i,o),onBackToLevels:Le,onBackToHome:Re})]})})}(0,v.createRoot)(document.getElementById(`root`)).render((0,b.jsx)(_.StrictMode,{children:(0,b.jsx)(Se,{})}));
 /* === Nebuloid corner controls (welcome screen): logo top-left, sound top-right, back bottom-left, how-to-play bottom-right === */
+/* Every screen: Back to the previous screen (bottom-left); gameplay: Pause (bottom-right). */
 (function (CFG) {
   'use strict';
   if (window.__nbCornerControls) return;
@@ -74,6 +75,233 @@ Error generating stack: `+e.message+`
       gains.forEach(function (g) { g.gain.value = muted ? 0 : 1; });
       document.querySelectorAll('audio, video').forEach(function (el) { el.muted = muted; });
     };
+  }
+
+  /* ---------- Pause: freeze the game's clock, timers, frames, animations and sound ---------- */
+  var paused = false;
+  var pauseAt = 0;
+  var pausedTotal = 0;
+  var rNow = performance.now.bind(performance);
+  var rDateNow = Date.now;
+  var rRAF = window.requestAnimationFrame.bind(window);
+  var rCAF = window.cancelAnimationFrame.bind(window);
+  var rSetTimeout = window.setTimeout.bind(window);
+  var rSetInterval = window.setInterval.bind(window);
+  var heldFrames = [];
+  var heldTimeouts = [];
+  var cancelledFrames = {};
+  var contexts = [];
+  var suspended = [];
+  var stoppedMedia = [];
+  var liveMedia = [];
+
+  performance.now = function () { return (paused ? pauseAt : rNow()) - pausedTotal; };
+  Date.now = function () { return rDateNow() - pausedTotal - (paused ? rNow() - pauseAt : 0); };
+  window.requestAnimationFrame = function (cb) {
+    var id = rRAF(function (ts) {
+      if (cancelledFrames[id]) { delete cancelledFrames[id]; return; }
+      if (paused) { heldFrames.push(cb); return; }
+      cb(ts - pausedTotal);
+    });
+    return id;
+  };
+  window.cancelAnimationFrame = function (id) { cancelledFrames[id] = true; rCAF(id); };
+  window.setTimeout = function (cb) {
+    if (typeof cb !== 'function') return rSetTimeout.apply(window, arguments);
+    var args = Array.prototype.slice.call(arguments);
+    var extra = args.slice(2);
+    args[0] = function () {
+      if (paused) { heldTimeouts.push(function () { cb.apply(window, extra); }); return; }
+      cb.apply(window, extra);
+    };
+    return rSetTimeout.apply(window, args);
+  };
+  window.setInterval = function (cb) {
+    if (typeof cb !== 'function') return rSetInterval.apply(window, arguments);
+    var args = Array.prototype.slice.call(arguments);
+    var extra = args.slice(2);
+    args[0] = function () { if (!paused) cb.apply(window, extra); };
+    return rSetInterval.apply(window, args);
+  };
+
+  /* Keep track of every audio context and media element so pause can silence them. */
+  if (window.AudioNode && window.AudioDestinationNode) {
+    var trackConnect = AudioNode.prototype.connect;
+    AudioNode.prototype.connect = function (dest) {
+      if (dest && dest.context && contexts.indexOf(dest.context) < 0) contexts.push(dest.context);
+      return trackConnect.apply(this, arguments);
+    };
+  }
+  var trackPlay = HTMLMediaElement.prototype.play;
+  HTMLMediaElement.prototype.play = function () {
+    if (liveMedia.indexOf(this) < 0) liveMedia.push(this);
+    if (paused) return Promise.resolve();
+    return trackPlay.apply(this, arguments);
+  };
+
+  function pauseGame() {
+    if (paused) return;
+    paused = true;
+    pauseAt = rNow();
+    document.documentElement.classList.add('nb-paused');
+    suspended = contexts.filter(function (c) { return c.state === 'running'; });
+    suspended.forEach(function (c) { c.suspend(); });
+    stoppedMedia = liveMedia.concat(Array.prototype.slice.call(document.querySelectorAll('audio, video')))
+      .filter(function (m, i, all) { return all.indexOf(m) === i && !m.paused; });
+    stoppedMedia.forEach(function (m) { m.pause(); });
+    paintPause();
+  }
+
+  function resumeGame() {
+    if (!paused) return;
+    pausedTotal += rNow() - pauseAt;
+    paused = false;
+    document.documentElement.classList.remove('nb-paused');
+    suspended.forEach(function (c) { c.resume(); });
+    stoppedMedia.forEach(function (m) { trackPlay.call(m).catch(function () {}); });
+    suspended = [];
+    stoppedMedia = [];
+    var frames = heldFrames;
+    var timeouts = heldTimeouts;
+    heldFrames = [];
+    heldTimeouts = [];
+    frames.forEach(function (cb) { window.requestAnimationFrame(cb); });
+    timeouts.forEach(function (fn) { rSetTimeout(fn, 0); });
+    paintPause();
+  }
+
+  /* While paused, the game must not see key presses (Escape resumes). */
+  ['keydown', 'keyup', 'keypress'].forEach(function (type) {
+    window.addEventListener(type, function (e) {
+      if (!paused) return;
+      if (type === 'keydown' && e.key === 'Escape') resumeGame();
+      e.stopImmediatePropagation();
+      e.preventDefault();
+    }, true);
+  });
+
+  /* ---------- Screens: read the game's current screen from its React state ---------- */
+  var FIRST_SCREEN = /^(welcome|start|home|landing)$/;
+  var screenType = null;
+  var screenIndex = -1;
+  var firstKey = null;
+  var lastSig = null;
+  var lastNav = null;
+  var lastHooks = null;
+  var trail = [];
+  var backUntil = 0;
+
+  function rootFiber() {
+    var root = document.getElementById('root');
+    if (!root) return null;
+    var key = Object.keys(root).filter(function (k) { return k.indexOf('__reactContainer$') === 0; })[0];
+    return key && root[key] && root[key].stateNode && root[key].stateNode.current || null;
+  }
+
+  /* One pass over the top of the React tree: the component that owns the screen value, plus the
+     simple state (text, numbers, true/false) of the components under it, each with a stable path. */
+  function scan() {
+    var top = rootFiber();
+    if (!top) return null;
+    var queue = [[top, '']];
+    var app = null;
+    var inner = [];
+    for (var seen = 0; queue.length && seen < 450; seen++) {
+      var item = queue.shift();
+      var f = item[0];
+      var path = item[1];
+      if (typeof f.type === 'function' && f.memoizedState && typeof f.memoizedState === 'object' && 'next' in f.memoizedState) {
+        var isApp = false;
+        if (!app) {
+          if (screenType) isApp = f.type === screenType;
+          else {
+            var j = 0;
+            for (var hh = f.memoizedState; hh; hh = hh.next, j++) {
+              if (typeof hh.memoizedState === 'string' && hh.queue && hh.queue.dispatch && FIRST_SCREEN.test(hh.memoizedState)) {
+                screenType = f.type;
+                screenIndex = j;
+                isApp = true;
+                break;
+              }
+            }
+          }
+          if (isApp) app = f;
+        }
+        if (app && !isApp) {
+          var i = 0;
+          for (var h = f.memoizedState; h; h = h.next, i++) {
+            var v = h.memoizedState;
+            var simple = typeof v === 'number' || typeof v === 'boolean' || typeof v === 'string' && v.length <= 40;
+            if (simple && h.queue && h.queue.dispatch) inner.push({ path: path + '#' + i, q: h.queue, v: v });
+          }
+        }
+      }
+      var n = 0;
+      for (var c = f.child; c; c = c.sibling, n++) {
+        var name = typeof c.type === 'function' ? c.type.name || 'f' : typeof c.type === 'string' ? c.type : 't' + c.tag;
+        queue.push([c, path + '>' + name + n]);
+      }
+    }
+    if (!app) return null;
+    var all = [];
+    for (var a = app.memoizedState; a; a = a.next) all.push(a);
+    var picked = (CFG.screenHooks || [screenIndex]).map(function (k) { return all[k]; });
+    if (picked.some(function (p) { return !p || !p.queue || !p.queue.dispatch; })) return null;
+    var values = picked.map(function (p) { return p.memoizedState; });
+    return { hooks: picked, values: values, key: JSON.stringify(values), inner: inner };
+  }
+
+  var GAME_SCREENS = CFG.gameScreens || ['game', 'playing', 'play'];
+  function isGameValues(values) {
+    return CFG.isGame ? CFG.isGame(values) : GAME_SCREENS.indexOf(values[0]) >= 0;
+  }
+
+  /* A "page" is the screen value plus the visible headings, so steps inside one screen count too.
+     During gameplay only the screen value counts (headings change every question). */
+  function headings() {
+    return Array.prototype.slice.call(document.querySelectorAll('#root h1, #root h2'))
+      .filter(function (e) { return e.getBoundingClientRect().width > 0 && getComputedStyle(e).visibility !== 'hidden'; })
+      .slice(0, 3).map(function (e) { return e.textContent.replace(/\s+/g, ' ').trim().slice(0, 40); }).join('/');
+  }
+
+  /* Remember where the player came from; returning to an earlier page trims the trail. */
+  function trackScreen(nav) {
+    if (!nav) return;
+    if (firstKey === null) firstKey = nav.key;
+    var playing = isGameValues(nav.values) || !!CFG.gameSel && !!document.querySelector('#root ' + CFG.gameSel);
+    var sig = nav.key + (playing ? '' : '|' + headings());
+    if (lastSig !== null && sig !== lastSig) {
+      if (rNow() > backUntil) {
+        var at = -1;
+        trail.forEach(function (s, i) { if (s.sig === sig) at = i; });
+        if (at >= 0) trail.length = at;
+        else trail.push({ sig: lastSig, values: lastNav.values, inner: lastHooks });
+      }
+      if (paused) resumeGame();
+    }
+    lastSig = sig;
+    lastNav = nav;
+    lastHooks = nav.inner.map(function (h) { return { path: h.path, v: h.v }; });
+  }
+
+  /* Put a page back: first the screen value, then (once React has drawn it) the inner steps. */
+  function restore(nav, values, inner) {
+    backUntil = rNow() + 900;
+    nav.hooks.forEach(function (h, i) { if (h.memoizedState !== values[i]) h.queue.dispatch(values[i]); });
+    if (!inner) return;
+    rRAF(function () {
+      rRAF(function () {
+        var now = scan();
+        if (!now) return;
+        var byPath = {};
+        now.inner.forEach(function (h) { byPath[h.path] = h; });
+        inner.forEach(function (h) {
+          var cur = byPath[h.path];
+          if (cur && cur.v !== h.v) cur.q.dispatch(h.v);
+        });
+        backUntil = rNow() + 600;
+      });
+    });
   }
 
   function findButtonByText(re) {
@@ -149,8 +377,19 @@ Error generating stack: `+e.message+`
     html += '<button type="button" class="nb-back" aria-label="Back"><span aria-hidden="true">←</span><span>BACK</span></button>';
     if (CFG.sound === 'generic') html += '<button type="button" class="nb-sound" data-nb-sound></button>';
     if (CFG.help && CFG.help.steps) html += '<button type="button" class="nb-help" data-nb-help><b aria-hidden="true">?</b><span>HOW TO PLAY</span></button>';
+    html += '<button type="button" class="nb-pause" aria-label="Pause"><b aria-hidden="true">❚❚</b><span>PAUSE</span></button>';
+    html += '<div class="nb-pause-overlay" role="dialog" aria-modal="true" aria-label="Game paused"><div class="nb-pause-card">' +
+      '<h2>PAUSED</h2><button type="button" class="nb-resume">▶ RESUME</button>' +
+      '<button type="button" class="nb-pause-back">← BACK</button></div></div>';
     controls.innerHTML = html;
     document.body.appendChild(controls);
+    /* Our buttons are not the game's: keep their clicks away from game-wide click handlers. */
+    controls.addEventListener('click', function (e) { e.stopPropagation(); });
+
+    controls.querySelector('.nb-pause').addEventListener('click', pauseGame);
+    controls.querySelector('.nb-resume').addEventListener('click', resumeGame);
+    controls.querySelector('.nb-pause-back').addEventListener('click', goBack);
+    paintPause();
 
     var logo = controls.querySelector('.nb-logo');
     if (logo) logo.addEventListener('click', goBack);
@@ -179,9 +418,30 @@ Error generating stack: `+e.message+`
     b.title = muted ? 'Sound Off' : 'Sound On';
   }
 
+  /* Back = the previous page inside the game (never back into a finished round);
+     from the game's first screen, the page the player came from. */
   function goBack() {
+    if (paused) resumeGame();
+    var nav = scan();
+    while (nav && trail.length) {
+      var prev = trail.pop();
+      if (prev.sig === lastSig) continue;
+      if (isGameValues(prev.values) && !isGameValues(nav.values)) continue;
+      restore(nav, prev.values, prev.inner);
+      return;
+    }
+    if (nav && firstKey !== null && nav.key !== firstKey) {
+      restore(nav, JSON.parse(firstKey), null);
+      return;
+    }
     if (window.history.length > 1) window.history.back();
     else window.location.href = '/our-games';
+  }
+
+  function paintPause() {
+    if (!controls) return;
+    var overlay = controls.querySelector('.nb-pause-overlay');
+    if (overlay) overlay.style.display = paused ? 'flex' : 'none';
   }
 
   function openHelp() {
@@ -277,62 +537,197 @@ Error generating stack: `+e.message+`
     }
   }
 
+  /* The game's own Back buttons (any screen) give way to the standard one. */
+  function isOwnBack(el) {
+    if (el.closest('#' + ID)) return false;
+    var text = (el.textContent || '').replace(/[←‹<⟵⬅❮«\s]/g, '').toLowerCase();
+    var label = (el.getAttribute('aria-label') || '') + ' ' + (typeof el.className === 'string' ? el.className : '');
+    return text === 'back' || text === 'goback' || text === '' && /(^|[\s-])back\b/i.test(label);
+  }
+
+  /* The game's own Pause button gives way to the standard one during gameplay. */
+  function isOwnPause(el) {
+    if (el.closest('#' + ID)) return false;
+    return (el.textContent || '').replace(/[^a-z]/gi, '').toLowerCase() === 'pause';
+  }
+
+  /* If a game button sits in our corner, lift our button just above it. */
+  function avoidOverlap(btn) {
+    if (!btn || getComputedStyle(btn).display === 'none') return;
+    var lift = +(btn.dataset.lift || 0);
+    var r = btn.getBoundingClientRect();
+    var top = r.top + lift;
+    var bottom = r.bottom + lift;
+    var need = 0;
+    document.querySelectorAll('button, a, [role="button"]').forEach(function (el) {
+      if (el.closest('#' + ID) || el.dataset.nbHidden) return;
+      var cs = getComputedStyle(el);
+      if (cs.visibility === 'hidden' || cs.display === 'none' || +cs.opacity === 0) return;
+      var e = el.getBoundingClientRect();
+      if (!e.width || !e.height) return;
+      if (e.right > r.left && e.left < r.right && e.bottom > top && e.top < bottom) {
+        need = Math.max(need, Math.round(bottom - e.top + 10));
+      }
+    });
+    if (need !== lift) {
+      btn.dataset.lift = need;
+      btn.style.transform = need ? 'translateY(-' + need + 'px)' : '';
+    }
+  }
+
+  /* Frosted-glass panels on menu screens (not popups) lose the glass. */
+  function stripGlass() {
+    var all = document.querySelectorAll('#root *');
+    for (var i = 0; i < all.length && i < 4000; i++) {
+      var el = all[i];
+      if (el.dataset.nbGlass) continue;
+      var cls = typeof el.className === 'string' ? el.className : '';
+      var cs = getComputedStyle(el);
+      if (cs.backdropFilter === 'none' && !/glass/i.test(cls)) continue;
+      if (cs.position === 'fixed' || !/\S/.test(el.textContent || '') && !el.querySelector('button, img, input')) continue;
+      var r = el.getBoundingClientRect();
+      if (r.width < 260 || r.height < 140) continue;
+      var inPopup = false;
+      for (var p = el.parentElement; p && p.id !== 'root'; p = p.parentElement) {
+        if (getComputedStyle(p).position === 'fixed') { inPopup = true; break; }
+      }
+      if (inPopup) continue;
+      el.dataset.nbGlass = '1';
+      el.style.setProperty('backdrop-filter', 'none', 'important');
+      el.style.setProperty('-webkit-backdrop-filter', 'none', 'important');
+      if (hasDarkText(el)) {
+        /* Dark text needs its panel: keep it, but solid instead of see-through. */
+        var bg = /rgba?\(([^)]+)\)/.exec(cs.backgroundColor);
+        var rgb = bg ? bg[1].split(',').slice(0, 3).join(',') : '255,255,255';
+        el.style.setProperty('background-color', 'rgb(' + rgb + ')', 'important');
+      } else {
+        ['background', 'background-color', 'background-image', 'box-shadow'].forEach(function (prop) { el.style.setProperty(prop, 'none', 'important'); });
+        el.style.setProperty('border-color', 'transparent', 'important');
+      }
+    }
+    /* Full-screen blurred backgrounds behind menus lose the blur. */
+    document.querySelectorAll('#root [class*="blur"]').forEach(function (layer) {
+      if (layer.dataset.nbUnblur || !/blur/.test(getComputedStyle(layer).filter)) return;
+      var lr = layer.getBoundingClientRect();
+      if (lr.width < window.innerWidth * 0.6 || lr.height < window.innerHeight * 0.6) return;
+      layer.dataset.nbUnblur = '1';
+      layer.style.setProperty('filter', 'none', 'important');
+    });
+  }
+
+  function hasDarkText(panel) {
+    var nodes = panel.querySelectorAll('h1, h2, h3, p, label, span');
+    for (var k = 0; k < nodes.length && k < 40; k++) {
+      if (!/\S/.test(nodes[k].textContent)) continue;
+      var m = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(getComputedStyle(nodes[k]).color);
+      if (m) return (0.299 * m[1] + 0.587 * m[2] + 0.114 * m[3]) < 140;
+    }
+    return false;
+  }
+
+  /* A game popup is open when a fixed layer with a dimmed or blurred backdrop covers most of the screen. */
+  function popupOpen() {
+    var vw = window.innerWidth;
+    var vh = window.innerHeight;
+    var all = document.querySelectorAll('#root *, body > *:not(#root):not(#' + ID + ')');
+    for (var i = 0; i < all.length && i < 4000; i++) {
+      var el = all[i];
+      var cs = getComputedStyle(el);
+      if (cs.position !== 'fixed' || cs.display === 'none' || cs.visibility === 'hidden' || +cs.opacity === 0) continue;
+      var r = el.getBoundingClientRect();
+      if (r.width < vw * 0.85 || r.height < vh * 0.85) continue;
+      var a = /rgba\([^)]*,\s*([\d.]+)\)/.exec(cs.backgroundColor);
+      if (cs.backdropFilter !== 'none' || a && +a[1] >= 0.2 && +a[1] < 0.97) return true;
+    }
+    return false;
+  }
+
+  var slowAt = 0;
+  var slowState = { popup: false };
   function update() {
     ensureControls();
-    if (!isStartScreen()) {
-      if (controls.style.display !== 'none') controls.style.display = 'none';
-      unhideAll();
-      return;
-    }
-    var startEl = document.querySelector('#root ' + CFG.start);
-    startEl = startEl.closest('button') || startEl;
-    applyPlay(startEl);
-    applyLayout();
+    var nav = scan();
+    if (nav && lastNav && nav.key !== lastNav.key) { unhideAll(); slowAt = 0; }
+    trackScreen(nav);
+    var start = !!CFG.start && isStartScreen();
+    var welcome = start || !!nav && nav.key === firstKey;
+    var playing = !!nav && isGameValues(nav.values) || !!CFG.gameSel && !!document.querySelector('#root ' + CFG.gameSel);
+    if (!playing && paused) resumeGame();
 
-    /* Step aside while one of the game's own popups covers the START button:
-       the element on top of it belongs to a branch that fills most of the screen. */
-    var r = startEl.getBoundingClientRect();
-    var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
-    var covered = false;
-    if (hit && !startEl.contains(hit) && !controls.contains(hit)) {
-      var branch = hit;
-      while (branch.parentElement && !branch.parentElement.contains(startEl)) branch = branch.parentElement;
-      var br = branch.getBoundingClientRect();
-      covered = br.width * br.height >= 0.5 * window.innerWidth * window.innerHeight;
+    /* Heavier page scans run at most a few times a second. */
+    var now = rNow();
+    if (now - slowAt > 300) {
+      slowAt = now;
+      slowState.popup = popupOpen();
+      if (!playing) stripGlass();
+      document.querySelectorAll('button, [role="button"], a').forEach(function (el) { if (isOwnBack(el) || playing && isOwnPause(el)) hide(el); });
+      avoidOverlap(controls.querySelector('.nb-back'));
+      avoidOverlap(controls.querySelector('.nb-pause'));
     }
+
+    var covered = slowState.popup && !paused;
+    if (start) {
+      var startEl = document.querySelector('#root ' + CFG.start);
+      startEl = startEl.closest('button') || startEl;
+      applyPlay(startEl);
+      applyLayout();
+      /* On the welcome screen, a popup is anything covering most of the screen on top of START. */
+      var r = startEl.getBoundingClientRect();
+      var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+      if (hit && !startEl.contains(hit) && !controls.contains(hit)) {
+        var branch = hit;
+        while (branch.parentElement && !branch.parentElement.contains(startEl)) branch = branch.parentElement;
+        var br = branch.getBoundingClientRect();
+        covered = covered || br.width * br.height >= 0.5 * window.innerWidth * window.innerHeight;
+      }
+      (CFG.hideLogos || []).forEach(function (sel) {
+        document.querySelectorAll('#root ' + sel).forEach(hide);
+      });
+      if (CFG.hideClosest) {
+        document.querySelectorAll('#root ' + CFG.hideClosest[0]).forEach(function (el) {
+          hide(el.closest(CFG.hideClosest[1]) || el);
+        });
+      }
+    }
+    syncProxy('sound', start && CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
+    syncProxy('help', start && CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
+
+    var cls = (welcome ? 'nb-welcome ' : '') + (playing ? 'nb-playing ' : '') + (paused ? 'nb-is-paused' : '');
+    if (controls.className !== cls.trim()) controls.className = cls.trim();
     var display = covered ? 'none' : 'block';
     if (controls.style.display !== display) controls.style.display = display;
-    (CFG.hideLogos || []).forEach(function (sel) {
-      document.querySelectorAll('#root ' + sel).forEach(hide);
-    });
-    if (CFG.hideClosest) {
-      document.querySelectorAll('#root ' + CFG.hideClosest[0]).forEach(function (el) {
-        hide(el.closest(CFG.hideClosest[1]) || el);
-      });
-    }
-    syncProxy('sound', CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
-    syncProxy('help', CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
-    if (CFG.extra) CFG.extra();
   }
 
   var css = document.createElement('style');
   var t = CFG.theme;
   css.textContent =
-    '#' + ID + '{position:fixed;inset:0;z-index:45;pointer-events:none}' +
+    '#' + ID + '{position:fixed;inset:0;z-index:2147483000;pointer-events:none}' +
     '#' + ID + '>*{pointer-events:auto}' +
     '#' + ID + ' .nb-logo{position:fixed;top:20px;left:26px;width:' + (CFG.logoWidth || 96) + 'px;height:auto;max-height:90px;object-fit:contain;cursor:pointer;filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}' +
     '#' + ID + ' .nb-proxy{position:fixed!important;margin:0!important;transform:none!important;inset:auto!important;width:auto!important;z-index:1!important}' +
     '#' + ID + ' .nb-proxy.nb-p-sound{top:20px!important;right:26px!important}' +
     '#' + ID + ' .nb-proxy.nb-p-help{bottom:24px!important;right:26px!important}' +
-    '#' + ID + ' .nb-back,#' + ID + ' .nb-help,#' + ID + ' .nb-sound{position:fixed;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:999px;' +
+    '#' + ID + ' .nb-back,#' + ID + ' .nb-help,#' + ID + ' .nb-sound,#' + ID + ' .nb-pause{position:fixed;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:999px;' +
       'background:' + t.bg + ';color:' + t.fg + ';border:1.5px solid ' + t.border + ';box-shadow:0 8px 24px rgba(0,0,0,.18);' +
       '-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:900 13px/1 Inter,Arial,sans-serif;letter-spacing:.14em;transition:transform .18s ease,background .18s ease}' +
-    '#' + ID + ' .nb-back:hover,#' + ID + ' .nb-help:hover,#' + ID + ' .nb-sound:hover{transform:translateY(-2px);background:' + t.hover + '}' +
+    '#' + ID + ' .nb-back:hover,#' + ID + ' .nb-help:hover,#' + ID + ' .nb-sound:hover,#' + ID + ' .nb-pause:hover{transform:translateY(-2px);background:' + t.hover + '}' +
     '#' + ID + ' .nb-back{left:26px;bottom:24px;height:46px;padding:0 20px}' +
     '#' + ID + ' .nb-back span:first-child{font-size:17px;letter-spacing:0}' +
     '#' + ID + ' .nb-help{right:26px;bottom:24px;height:46px;padding:0 20px}' +
     '#' + ID + ' .nb-help b{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;font-size:11px;letter-spacing:0}' +
     '#' + ID + ' .nb-sound{top:20px;right:26px;width:48px;height:48px;padding:0;font-size:21px;letter-spacing:0}' +
+    '#' + ID + ':not(.nb-welcome) .nb-logo,#' + ID + ':not(.nb-welcome) [data-nb-sound],#' + ID + ':not(.nb-welcome) [data-nb-help]{display:none!important}' +
+    '#' + ID + ' .nb-pause{display:none;right:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + '.nb-playing .nb-pause{display:flex}' +
+    '#' + ID + ' .nb-pause b{font-size:11px;letter-spacing:-1px}' +
+    '#' + ID + ' .nb-pause-overlay{position:fixed;inset:0;z-index:5;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(5,10,20,.66)}' +
+    '#' + ID + ' .nb-pause-card{width:min(340px,100%);display:flex;flex-direction:column;gap:12px;padding:30px 26px;border-radius:24px;background:#fff;box-shadow:0 24px 60px rgba(0,0,0,.4);text-align:center;font-family:Inter,Arial,sans-serif}' +
+    '#' + ID + ' .nb-pause-card h2{margin:0 0 8px;font-size:26px;font-weight:900;letter-spacing:.18em;color:' + t.accent + '}' +
+    '#' + ID + ' .nb-pause-card button{height:50px;border-radius:999px;font:900 15px Inter,Arial,sans-serif;letter-spacing:.14em;cursor:pointer}' +
+    '#' + ID + ' .nb-resume{border:0;background:' + t.accent + ';color:#fff}' +
+    '#' + ID + ' .nb-pause-back{border:2px solid ' + t.accent + ';background:#fff;color:' + t.accent + '}' +
+    '#' + ID + '.nb-is-paused .nb-back,#' + ID + '.nb-is-paused .nb-pause{display:none!important}' +
+    'html.nb-paused #root *,html.nb-paused #root *::before,html.nb-paused #root *::after{animation-play-state:paused!important}' +
     '#nb-help-modal{position:fixed;inset:0;z-index:10050;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}' +
     '#nb-help-modal .nb-help-card{width:min(440px,100%);border-radius:24px;padding:28px 26px 24px;background:#fff;color:#1f2937;box-shadow:0 24px 60px rgba(0,0,0,.35);font-family:Inter,Arial,sans-serif}' +
     '#nb-help-modal h2{margin:0 0 14px;font-size:20px;font-weight:900;letter-spacing:.12em;color:' + t.accent + '}' +
@@ -344,7 +739,7 @@ Error generating stack: `+e.message+`
       '#' + ID + ' .nb-proxy.nb-p-sound,#' + ID + ' .nb-sound{top:14px!important;right:14px!important}' +
       '#' + ID + ' .nb-proxy.nb-p-help,#' + ID + ' .nb-help{bottom:16px!important;right:14px!important}' +
       '#' + ID + ' .nb-back{left:14px;bottom:16px;height:42px;padding:0 15px;font-size:12px}' +
-      '#' + ID + ' .nb-help{height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-help,#' + ID + ' .nb-pause{height:42px;padding:0 15px;font-size:12px;right:14px;bottom:16px}' +
       '#' + ID + ' .nb-sound{width:44px;height:44px;font-size:19px}' +
     '}' + playCss() + (CFG.css || '');
   document.head.appendChild(css);
@@ -375,8 +770,10 @@ Error generating stack: `+e.message+`
   function schedule() {
     if (queued) return;
     queued = true;
-    requestAnimationFrame(function () { queued = false; update(); });
+    rRAF(function () { queued = false; update(); });
   }
   new MutationObserver(schedule).observe(document.documentElement, { childList: true, subtree: true, attributes: true, characterData: true });
+  /* Some games add their own controls a moment later without further page changes; re-check now and then. */
+  rSetInterval(schedule, 700);
   schedule();
 })({key:'color-clash',start:'button[aria-label="Start Game"]',title:/COLOR CLASH/,help:/how to play/i,theme:{bg:'rgba(255,255,255,.9)',fg:'#0f172a',border:'rgba(255,255,255,.6)',hover:'#fff',accent:'#15347d'},glass:true,play:{mode:'image',c1:'#2f63e0',c2:'#0b2a7a',ring:['rgba(147,197,253,.38)','#60a5fa','#dbeafe']}});
