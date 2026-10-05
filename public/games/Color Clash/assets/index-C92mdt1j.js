@@ -31,3 +31,242 @@ Error generating stack: `+e.message+`
           }
         }
       `}),(0,b.jsx)(`div`,{className:`relative w-full max-w-5xl flex items-center justify-center z-20 pt-1 pb-2`,children:(0,b.jsx)(`div`,{className:`flex items-center gap-2.5 px-4 py-1.5`,children:(0,b.jsx)(`img`,{src:C,alt:`Nebuloid`,className:`h-15 w-auto object-contain pointer-events-none`})})}),(0,b.jsxs)(`div`,{className:`relative w-full max-w-xl bg-white/85 backdrop-blur-xl sm:backdrop-blur-2xl rounded-3xl sm:rounded-[36px] border border-white/60 shadow-[0_20px_60px_rgba(0,0,0,0.35)] px-5 py-6 sm:px-10 sm:py-8 flex flex-col items-center text-center z-10 animate-fade-in my-auto`,children:[t?(0,b.jsxs)(`div`,{className:`inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-600 text-white text-xs sm:text-sm font-black tracking-widest uppercase mb-3 shadow-lg animate-bounce`,children:[(0,b.jsx)(`span`,{children:`🏆`}),(0,b.jsxs)(`span`,{children:[`STAGE 0`,n,` CLEARED!`]})]}):(0,b.jsxs)(`div`,{className:`inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-rose-600 text-white text-xs font-black tracking-widest uppercase mb-3 shadow-md`,children:[(0,b.jsx)(`span`,{children:`✕`}),(0,b.jsxs)(`span`,{children:[`STAGE 0`,n,` FAILED`]})]}),(0,b.jsxs)(`div`,{className:`text-xs font-extrabold tracking-wider uppercase text-neutral-500 mb-1`,children:[`Player: `,(0,b.jsx)(`span`,{className:`text-black font-black`,children:S})]}),(0,b.jsxs)(`h2`,{className:`text-5xl sm:text-6xl font-black text-black tracking-tight mb-1`,children:[a,(0,b.jsx)(`span`,{className:`text-base sm:text-lg text-neutral-500 font-extrabold ml-1.5`,children:`PTS`})]}),(0,b.jsx)(`p`,{className:`text-xs text-neutral-600 font-bold uppercase tracking-wider mb-5`,children:t?d?(0,b.jsxs)(`span`,{className:`text-emerald-700 font-black`,children:[`🎉 Next stage unlocked: Stage 0`,n+1,`!`]}):(0,b.jsxs)(`span`,{className:`text-blue-900 font-black`,children:[`👑 All stages cleared in `,r,` level!`]}):(0,b.jsxs)(`span`,{children:[`Target was `,i,` questions • Try again!`]})}),(0,b.jsx)(`div`,{className:`w-full bg-neutral-50/90 border-2 border-black/80 rounded-2xl p-4 sm:p-5 mb-5 shadow-sm`,children:(0,b.jsxs)(`div`,{className:`grid grid-cols-2 gap-3`,children:[(0,b.jsxs)(`div`,{className:`flex flex-col items-center p-2.5 bg-white rounded-xl border border-neutral-300 shadow-xs`,children:[(0,b.jsx)(`span`,{className:`text-[10px] text-neutral-500 font-black uppercase tracking-wider`,children:`Correct`}),(0,b.jsxs)(`span`,{className:`text-xl font-black text-emerald-600 mt-0.5`,children:[`✓ `,o]})]}),(0,b.jsxs)(`div`,{className:`flex flex-col items-center p-2.5 bg-white rounded-xl border border-neutral-300 shadow-xs`,children:[(0,b.jsx)(`span`,{className:`text-[10px] text-neutral-500 font-black uppercase tracking-wider`,children:`Mistakes`}),(0,b.jsxs)(`span`,{className:`text-xl font-black text-rose-600 mt-0.5`,children:[`✕ `,s]})]}),(0,b.jsxs)(`div`,{className:`flex flex-col items-center p-2.5 bg-white rounded-xl border border-neutral-300 shadow-xs`,children:[(0,b.jsx)(`span`,{className:`text-[10px] text-neutral-500 font-black uppercase tracking-wider`,children:`Best Streak`}),(0,b.jsxs)(`span`,{className:`text-xl font-black text-amber-600 mt-0.5`,children:[`🔥 `,c]})]}),(0,b.jsxs)(`div`,{className:`flex flex-col items-center p-2.5 bg-white rounded-xl border border-neutral-300 shadow-xs`,children:[(0,b.jsx)(`span`,{className:`text-[10px] text-neutral-500 font-black uppercase tracking-wider`,children:`Accuracy`}),(0,b.jsxs)(`span`,{className:`text-xl font-black text-black mt-0.5`,children:[g,`%`]})]})]})}),t&&(0,b.jsx)(`button`,{onClick:()=>{M.playClick(),y(!0)},className:`w-full relative flex items-center justify-center py-3.5 px-6 rounded-2xl bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-400 hover:to-yellow-300 text-slate-950 font-black text-xs sm:text-sm tracking-[0.15em] uppercase transition-all duration-150 shadow-lg shadow-amber-500/30 hover:scale-[1.02] active:scale-[0.98] cursor-pointer border-2 border-amber-300 mb-3`,children:(0,b.jsx)(`span`,{children:`🏆 VIEW & CUSTOMIZE CERTIFICATE`})}),(0,b.jsxs)(`div`,{className:`w-full flex flex-col gap-2.5`,children:[t&&d&&(0,b.jsx)(`button`,{onClick:f,className:`w-full relative flex items-center justify-center py-3.5 px-6 rounded-xl bg-black hover:bg-neutral-800 text-white font-black text-xs sm:text-sm tracking-wider uppercase transition-all duration-150 shadow-md hover:scale-[1.01] active:scale-[0.98] cursor-pointer`,children:(0,b.jsxs)(`span`,{children:[`NEXT STAGE (S-`,n+1,`) ▶`]})}),(0,b.jsx)(`button`,{onClick:p,className:`w-full relative flex items-center justify-center py-3 px-6 rounded-xl font-black text-xs sm:text-sm tracking-wider uppercase transition-all duration-150 cursor-pointer ${!t||!d?`bg-black hover:bg-neutral-800 text-white shadow-md`:`bg-white hover:bg-neutral-100 text-black border-2 border-black/80`}`,children:(0,b.jsx)(`span`,{children:`🔄 REPLAY STAGE`})}),(0,b.jsx)(`button`,{onClick:m,className:`w-full relative flex items-center justify-center py-3 px-6 rounded-xl bg-white hover:bg-neutral-100 text-black font-black text-xs sm:text-sm tracking-wider uppercase transition-all duration-150 border-2 border-black/80 shadow-xs cursor-pointer`,children:(0,b.jsx)(`span`,{children:`☰ LEVEL SELECT`})}),(0,b.jsx)(`button`,{onClick:h,className:`w-full relative flex items-center justify-center py-2 px-6 rounded-xl text-neutral-600 hover:text-black font-bold text-xs tracking-wider uppercase transition-all cursor-pointer`,children:(0,b.jsx)(`span`,{children:`Main Menu`})})]})]}),v&&(0,b.jsx)(`div`,{className:`fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 md:p-6 animate-fade-in overflow-y-auto`,onClick:()=>y(!1),children:(0,b.jsxs)(`div`,{className:`relative w-full max-w-3xl bg-slate-900 text-white rounded-3xl shadow-[0_25px_80px_rgba(0,0,0,0.85)] p-4 sm:p-6 md:p-7 border border-white/20 overflow-hidden my-auto max-h-[95vh] flex flex-col`,onClick:e=>e.stopPropagation(),children:[(0,b.jsxs)(`div`,{className:`flex items-center justify-between pb-3 border-b border-white/10 mb-4 shrink-0 no-print`,children:[(0,b.jsxs)(`div`,{className:`flex items-center gap-2`,children:[(0,b.jsx)(`span`,{className:`text-2xl`,children:`🎓`}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`h3`,{className:`text-base sm:text-lg font-black tracking-wide text-white uppercase`,children:`WINNER CERTIFICATE GENERATOR`}),(0,b.jsx)(`span`,{className:`text-[10px] font-bold text-cyan-300 block`,children:`Certified • Verified • High-Resolution PNG & Print Ready`})]})]}),(0,b.jsx)(`button`,{onClick:()=>y(!1),className:`w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white font-black text-sm flex items-center justify-center cursor-pointer transition-colors`,title:`Close to view stage stats`,children:`✕`})]}),(0,b.jsx)(`div`,{className:`bg-white/5 border border-white/10 rounded-2xl p-3 sm:p-4 mb-4 shrink-0 no-print`,children:(0,b.jsxs)(`div`,{className:`grid grid-cols-1 md:grid-cols-3 gap-3`,children:[(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`label`,{className:`text-[10px] font-black uppercase tracking-wider text-slate-400 block mb-1`,children:`Player Name (Editable)`}),(0,b.jsx)(`input`,{type:`text`,value:S,maxLength:25,onChange:e=>w(e.target.value),placeholder:`Enter Certificate Name`,className:`w-full bg-black/50 border border-white/20 text-white text-xs sm:text-sm font-bold px-3 py-1.5 rounded-xl focus:outline-none focus:border-cyan-400`})]}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`label`,{className:`text-[10px] font-black uppercase tracking-wider text-slate-400 block mb-1`,children:`Honor Title Badge`}),(0,b.jsxs)(`select`,{value:E,onChange:e=>te(e.target.value),className:`w-full bg-black/50 border border-white/20 text-white text-xs sm:text-sm font-bold px-3 py-1.5 rounded-xl focus:outline-none focus:border-cyan-400 cursor-pointer`,children:[(0,b.jsx)(`option`,{value:`GRANDMASTER VIRTUOSO`,children:`★ Grandmaster Virtuoso`}),(0,b.jsx)(`option`,{value:`PERFECT STROOP MASTER`,children:`★ Perfect Stroop Master`}),(0,b.jsx)(`option`,{value:`MASTER OF FOCUS & SPEED`,children:`★ Master of Focus & Speed`}),(0,b.jsx)(`option`,{value:`AGILE COLOR STRATEGIST`,children:`★ Agile Color Strategist`}),(0,b.jsx)(`option`,{value:`HIGH-OCTANE CHAMPION`,children:`★ High-Octane Champion`}),(0,b.jsx)(`option`,{value:`COLOR CLASH CONQUEROR`,children:`★ Color Clash Conqueror`})]})]}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`label`,{className:`text-[10px] font-black uppercase tracking-wider text-slate-400 block mb-1`,children:`Certificate Theme`}),(0,b.jsx)(`div`,{className:`flex gap-1.5`,children:[{id:`royal`,label:`👑 Royal Gold`,bg:`bg-amber-500/20 text-amber-300 border-amber-500/40`},{id:`cyber`,label:`🌌 Cyber Neon`,bg:`bg-cyan-500/20 text-cyan-300 border-cyan-500/40`},{id:`emerald`,label:`🌿 Emerald`,bg:`bg-emerald-500/20 text-emerald-300 border-emerald-500/40`}].map(e=>(0,b.jsx)(`button`,{onClick:()=>{M.playClick(),ee(e.id)},className:`flex-1 py-1.5 px-2 rounded-xl text-[11px] font-bold border transition-all cursor-pointer ${T===e.id?`${e.bg} ring-2 ring-white/50 font-black`:`bg-black/30 border-white/10 text-slate-400 hover:text-white`}`,children:e.label},e.id))})]})]})}),(0,b.jsx)(`div`,{className:`overflow-y-auto flex-1 pr-1 pb-2`,children:(0,b.jsx)(`div`,{id:`printable-certificate`,ref:se,className:`relative w-full rounded-2xl p-4 sm:p-8 text-center transition-all ${j.outer}`,children:(0,b.jsxs)(`div`,{className:`rounded-xl p-4 sm:p-6 ${j.inner}`,children:[(0,b.jsxs)(`div`,{className:`flex items-center justify-center gap-2 mb-1.5`,children:[(0,b.jsx)(`span`,{className:`text-xl`,children:`🎖️`}),(0,b.jsx)(`span`,{className:`text-[10px] sm:text-[11px] font-black tracking-[0.3em] uppercase text-neutral-500`,children:`NEBULOID GAMES OFFICIAL MERIT RECOGNITION`}),(0,b.jsx)(`span`,{className:`text-xl`,children:`🎖️`})]}),(0,b.jsx)(`h3`,{className:`text-xl sm:text-3xl font-black tracking-wide uppercase mt-1 mb-1.5 ${j.title}`,children:`Certificate of Achievement`}),(0,b.jsx)(`div`,{className:`inline-block my-1.5`,children:(0,b.jsxs)(`span`,{className:`text-[10px] sm:text-[11px] font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-xs ${j.badge}`,children:[`★ `,E,` ★`]})}),(0,b.jsx)(`p`,{className:`text-[11px] font-bold uppercase tracking-widest text-neutral-500 mt-2 mb-1`,children:`This prestigious honor is proudly presented to`}),(0,b.jsx)(`h2`,{className:`text-2xl sm:text-4xl font-black tracking-wider uppercase my-2 drop-shadow-xs ${j.name}`,children:S||`CHAMPION`}),(0,b.jsx)(`div`,{className:`w-48 h-0.5 bg-neutral-300 mx-auto mb-3`}),(0,b.jsxs)(`p`,{className:`text-xs sm:text-sm text-neutral-700 font-medium max-w-lg mx-auto leading-relaxed my-2`,children:[`For demonstrating exceptional cognitive focus, reaction speed, and accuracy in conquering`,` `,(0,b.jsxs)(`b`,{className:`font-bold`,children:[`Color Clash — `,r,` Mode (Stage 0`,n,`)`]}),`.`]}),(0,b.jsxs)(`div`,{className:`grid grid-cols-4 gap-2 my-4 max-w-md mx-auto`,children:[(0,b.jsxs)(`div`,{className:`p-2 rounded-xl text-center ${j.statsBox}`,children:[(0,b.jsx)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-neutral-500 block`,children:`Score`}),(0,b.jsxs)(`span`,{className:`text-sm sm:text-base font-black text-black`,children:[a,` `,(0,b.jsx)(`span`,{className:`text-[9px]`,children:`PTS`})]})]}),(0,b.jsxs)(`div`,{className:`p-2 rounded-xl text-center ${j.statsBox}`,children:[(0,b.jsx)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-neutral-500 block`,children:`Accuracy`}),(0,b.jsxs)(`span`,{className:`text-sm sm:text-base font-black text-emerald-600`,children:[g,`%`]})]}),(0,b.jsxs)(`div`,{className:`p-2 rounded-xl text-center ${j.statsBox}`,children:[(0,b.jsx)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-neutral-500 block`,children:`Streak`}),(0,b.jsxs)(`span`,{className:`text-sm sm:text-base font-black text-amber-600`,children:[c,`x`]})]}),(0,b.jsxs)(`div`,{className:`p-2 rounded-xl text-center ${j.statsBox}`,children:[(0,b.jsx)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-neutral-500 block`,children:`Stars`}),(0,b.jsxs)(`span`,{className:`text-sm sm:text-base font-black text-amber-500`,children:[`★`.repeat(ue),`☆`.repeat(3-ue)]})]})]}),(0,b.jsxs)(`div`,{className:`flex items-center justify-between pt-3 border-t border-neutral-200 mt-4 text-left text-[11px]`,children:[(0,b.jsxs)(`div`,{children:[(0,b.jsxs)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-neutral-400 block`,children:[`Issue Date: `,(0,b.jsx)(`b`,{className:`text-neutral-700 font-bold`,children:ce})]}),(0,b.jsxs)(`span`,{className:`text-[9px] font-mono text-neutral-500 block mt-0.5`,children:[`ID: `,ie]})]}),(0,b.jsxs)(`div`,{className:`text-right`,children:[(0,b.jsx)(`span`,{className:`text-[9px] font-black uppercase tracking-wider text-amber-600 block`,children:`Official Verification Seal`}),(0,b.jsxs)(`span`,{className:`text-[11px] font-black text-blue-950 flex items-center justify-end gap-1`,children:[(0,b.jsx)(`span`,{children:`✓`}),` VERIFIED BY NEBULOID`]})]})]})]})})}),(0,b.jsxs)(`div`,{className:`pt-3 border-t border-white/10 mt-2 flex flex-col sm:flex-row items-center gap-2.5 shrink-0 no-print`,children:[(0,b.jsxs)(`button`,{onClick:de,className:`flex-1 w-full py-3 px-4 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 hover:from-blue-500 hover:to-indigo-500 text-white font-black text-xs sm:text-sm tracking-wider uppercase shadow-md transition-all cursor-pointer flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.98]`,children:[(0,b.jsx)(`span`,{children:`📥`}),(0,b.jsx)(`span`,{children:`DOWNLOAD PNG (1200x800)`})]}),(0,b.jsxs)(`button`,{onClick:k,className:`w-full sm:w-auto py-3 px-4 rounded-xl border border-white/20 hover:bg-white/10 text-white font-black text-xs sm:text-sm tracking-wider uppercase transition-all cursor-pointer flex items-center justify-center gap-1.5`,children:[(0,b.jsx)(`span`,{children:`🖨️`}),(0,b.jsx)(`span`,{children:`PRINT / PDF`})]}),(0,b.jsxs)(`button`,{onClick:fe,className:`w-full sm:w-auto py-3 px-4 rounded-xl border border-white/20 hover:bg-white/10 text-white font-black text-xs sm:text-sm tracking-wider uppercase transition-all cursor-pointer flex items-center justify-center gap-1.5`,children:[(0,b.jsx)(`span`,{children:`🔗`}),(0,b.jsx)(`span`,{children:`SHARE`})]}),d?(0,b.jsx)(`button`,{onClick:()=>{y(!1),f()},className:`w-full sm:w-auto py-3 px-5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs sm:text-sm tracking-wider uppercase shadow-md transition-all cursor-pointer flex items-center justify-center gap-1.5`,children:(0,b.jsx)(`span`,{children:`NEXT ▶`})}):(0,b.jsx)(`button`,{onClick:()=>y(!1),className:`w-full sm:w-auto py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-black text-xs sm:text-sm tracking-wider uppercase transition-all cursor-pointer`,children:(0,b.jsx)(`span`,{children:`DONE`})})]}),ne&&(0,b.jsxs)(`div`,{className:`absolute top-5 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-xs font-black px-4 py-2 rounded-full shadow-lg animate-fade-in flex items-center gap-2 z-50`,children:[(0,b.jsx)(`span`,{children:`✓`}),(0,b.jsx)(`span`,{children:`Achievement summary copied to clipboard!`})]})]})}),(0,b.jsx)(`div`,{className:`relative z-10 pt-2 pb-1 text-center`,children:(0,b.jsx)(`span`,{className:`text-[11px] font-bold text-white/85 tracking-wider uppercase drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]`,children:`Nebuloid Tech • Color Clash Stroop Challenge`})})]})}function be(e){let t=[...e];for(let e=t.length-1;e>0;e--){let n=Math.floor(Math.random()*(e+1));[t[e],t[n]]=[t[n],t[e]]}return t}function xe(e=`EASY`,t=null){let n=(T[e]||T.EASY).optionsCount,r=w[Math.floor(Math.random()*w.length)],i;if(Math.random()<.1)i=r;else{let e=w.filter(e=>e.name!==r.name);i=e[Math.floor(Math.random()*e.length)]}if(t&&t.word===r.name&&t.correctAnswer===i.name){let e=w.filter(e=>e.name!==i.name&&e.name!==r.name);e.length>0&&(i=e[Math.floor(Math.random()*e.length)])}let a=i.name,o=new Set;o.add(i),r.name!==i.name&&o.size<n&&o.add(r);let s=be(w.filter(e=>!o.has(e)));for(let e of s){if(o.size>=n)break;o.add(e)}let c=be(Array.from(o));return{word:r.name,displayColor:i,correctAnswer:a,options:c,difficulty:e,timestamp:Date.now()}}function Se(){let[e,t]=(0,_.useState)(`start`),[n,r]=(0,_.useState)(()=>{try{return localStorage.getItem(`colorClash_playerName`)||``}catch{return``}}),[i,a]=(0,_.useState)(`EASY`),[o,s]=(0,_.useState)(1),[c,l]=(0,_.useState)(j()),[u,d]=(0,_.useState)(0),[f,p]=(0,_.useState)(1),[m,h]=(0,_.useState)(0),[g,v]=(0,_.useState)(0),[y,x]=(0,_.useState)(59),[S,C]=(0,_.useState)(null),[w,T]=(0,_.useState)(0),[ee,E]=(0,_.useState)(0),[oe,se]=(0,_.useState)(!1),[ce,D]=(0,_.useState)(!1),[O,le]=(0,_.useState)(0),[k,A]=(0,_.useState)(null),[he,ge]=(0,_.useState)(!1),[_e,be]=(0,_.useState)(!1),Se=(0,_.useRef)(e);Se.current=e;let Ce=(0,_.useRef)(S);Ce.current=S;let we=(0,_.useRef)(he);we.current=he;let Te=(0,_.useRef)(u);Te.current=u;let Ee=(0,_.useRef)(m);Ee.current=m;let De=(0,_.useRef)(g);De.current=g;let Oe=(0,_.useRef)(w);Oe.current=w;let ke=(0,_.useRef)(ee);ke.current=ee;let Ae=(0,_.useRef)(i);Ae.current=i;let je=(0,_.useRef)(o);je.current=o;let Me=(0,_.useRef)(null);(0,_.useEffect)(()=>{le(ne()),v(ie()),l(j())},[]);let Ne=fe[i]?.[o-1]||fe.EASY[0],Pe=(0,_.useCallback)((e=!1)=>{t(`gameover`),ge(!1),A(null),se(e);let n=Te.current,r=De.current,i=Ae.current,a=je.current,o=re(n);if(ae(r),o&&n>0?(D(!0),le(n)):D(!1),e){let e=ke.current,t=pe(i,a,n,e===0?3:e<=2?2:1);l(t),M.playCorrect()}else M.playGameOver()},[]),Fe=(0,_.useCallback)((e,n)=>{M.init(),M.playStart();let r=e||Ae.current,i=n||1,o=fe[r]?.[i-1]||fe.EASY[0],c=xe(r,null);a(r),s(i),d(0),p(1),h(0),v(0),x(o.timeLimit||59),C(c),T(0),E(0),se(!1),D(!1),A(null),ge(!1),t(`playing`)},[]),Ie=(0,_.useCallback)(()=>{M.playClick(),Me.current&&clearTimeout(Me.current),t(`setup`),A(null),ge(!1)},[]),Le=(0,_.useCallback)(()=>{M.playClick(),Me.current&&clearTimeout(Me.current),t(`levels`),A(null),ge(!1)},[]),Re=(0,_.useCallback)(()=>{M.playClick(),Me.current&&clearTimeout(Me.current),t(`start`),A(null),ge(!1)},[]),ze=(0,_.useCallback)(()=>{let e=M.toggleMute();be(e)},[]);(0,_.useEffect)(()=>{if(e!==`playing`)return;let t=setInterval(()=>{x(e=>{if(e<=1)return clearInterval(t),Pe(!1),0;let n=e-1;return n<=5&&n>0&&M.playTick(),n})},1e3);return()=>clearInterval(t)},[e,Pe]);let Be=(0,_.useCallback)(e=>{if(we.current||Se.current!==`playing`)return;let t=Ce.current;if(!t)return;ge(!0),Me.current&&clearTimeout(Me.current);let n=e===t.correctAnswer,r=fe[Ae.current]?.[je.current-1]||fe.EASY[0];if(n){let e=Ee.current+1,t=te(e),n=Math.round((10+t)*(r.scoreMultiplier||1)),i=Oe.current+1;if(h(e),v(t=>Math.max(t,e)),d(e=>e+n),T(i),t>0?(M.playStreakBonus(),A({type:`correct`,message:`✓ CORRECT!`,subtext:`+${n} PTS (+${t} STREAK BONUS 🔥)`})):(M.playCorrect(),A({type:`correct`,message:`✓ CORRECT!`,subtext:`+${n} PTS`})),i>=r.targetQuestions){Me.current=setTimeout(()=>{Pe(!0)},350);return}Me.current=setTimeout(()=>{p(e=>e+1),C(e=>xe(Ae.current,e)),A(null),ge(!1)},420)}else{let e=ke.current+1;h(0),d(e=>Math.max(0,e-5)),E(e),M.playWrong(),A({type:`wrong`,message:`✕ WRONG!`,subtext:`-5 PTS`}),Me.current=setTimeout(()=>{p(e=>e+1),C(e=>xe(Ae.current,e)),A(null),ge(!1)},450)}},[Pe]);return(0,_.useEffect)(()=>{let e=e=>{if(e.code===`Space`||e.key===`Enter`){if(Se.current===`start`){e.preventDefault(),Ie();return}if(Se.current===`gameover`){e.preventDefault(),Fe(Ae.current,je.current);return}}if(e.key===`Escape`){if(Se.current===`playing`||Se.current===`gameover`){e.preventDefault(),Le();return}if(Se.current===`levels`){e.preventDefault(),Ie();return}if(Se.current===`setup`){e.preventDefault(),Re();return}}if(Se.current===`playing`&&Ce.current){let t=parseInt(e.key,10),n=Ce.current.options||[];if(!isNaN(t)&&t>=1&&t<=n.length){e.preventDefault();let r=n[t-1];r&&Be(r.name)}}};return window.addEventListener(`keydown`,e),()=>window.removeEventListener(`keydown`,e)},[Ie,Le,Re,Fe,Be]),(0,b.jsx)(`div`,{className:`min-h-screen flex flex-col bg-[#f8f8f8] text-black relative overflow-hidden transition-colors duration-200`,children:(0,b.jsxs)(`main`,{className:`flex-1 flex flex-col items-center justify-center w-full p-0`,children:[e===`start`&&(0,b.jsx)(ue,{onStartGame:Ie,onOpenLevels:Ie,bestScore:O,bestStreak:g,selectedDifficulty:i,onChangeDifficulty:a,isMuted:_e,onToggleMute:ze}),e===`setup`&&(0,b.jsx)(de,{initialName:n,onContinue:e=>{r(e);try{localStorage.setItem(`colorClash_playerName`,e)}catch{}Le()},onBack:Re}),e===`levels`&&(0,b.jsx)(me,{progression:c,selectedDifficulty:i,onSelectDifficulty:a,onSelectStage:(e,t)=>Fe(e,t),onBackToMenu:Ie}),e===`playing`&&(0,b.jsx)(ve,{score:u,round:f,difficulty:i,stageNumber:o,targetQuestions:Ne.targetQuestions,correctAnswers:w,timeLeft:y,maxTime:Ne.timeLimit||59,streak:m,question:S,onSelectAnswer:Be,feedback:k,isLocked:he,onQuitToLevels:Le}),e===`gameover`&&(0,b.jsx)(ye,{playerName:n,isVictory:oe,stageNumber:o,difficulty:i,targetQuestions:Ne.targetQuestions,score:u,correctAnswers:w,wrongAnswers:ee,bestStreak:g,isNewBestScore:ce,bestScore:O,nextStageAvailable:o<5,onPlayNextStage:()=>Fe(i,o+1),onPlayAgain:()=>Fe(i,o),onBackToLevels:Le,onBackToHome:Re})]})})}(0,v.createRoot)(document.getElementById(`root`)).render((0,b.jsx)(_.StrictMode,{children:(0,b.jsx)(Se,{})}));
+/* === Nebuloid corner controls (welcome screen): logo top-left, sound top-right, back bottom-left, how-to-play bottom-right === */
+(function (CFG) {
+  'use strict';
+  if (window.__nbCornerControls) return;
+  window.__nbCornerControls = true;
+
+  var ID = 'nb-corner-controls';
+  var SOUND_KEY = 'nb_sound_' + CFG.key;
+  var muted = false;
+  try { muted = localStorage.getItem(SOUND_KEY) === 'off'; } catch (e) {}
+
+  /* Master mute for games without their own start-screen sound button. */
+  if (CFG.sound === 'generic') {
+    var gains = [];
+    var masters = new WeakMap();
+    if (window.AudioNode && window.AudioDestinationNode) {
+      var connect = AudioNode.prototype.connect;
+      AudioNode.prototype.connect = function (dest) {
+        if (dest instanceof AudioDestinationNode) {
+          var g = masters.get(dest);
+          if (!g) {
+            g = dest.context.createGain();
+            g.gain.value = muted ? 0 : 1;
+            connect.call(g, dest);
+            masters.set(dest, g);
+            gains.push(g);
+          }
+          var args = Array.prototype.slice.call(arguments);
+          args[0] = g;
+          return connect.apply(this, args);
+        }
+        return connect.apply(this, arguments);
+      };
+    }
+    var play = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () {
+      if (muted) this.muted = true;
+      return play.apply(this, arguments);
+    };
+    var applyMute = function () {
+      gains.forEach(function (g) { g.gain.value = muted ? 0 : 1; });
+      document.querySelectorAll('audio, video').forEach(function (el) { el.muted = muted; });
+    };
+  }
+
+  function findButtonByText(re) {
+    return Array.prototype.find.call(document.querySelectorAll('#root button'), function (b) {
+      return re.test((b.textContent || '').replace(/\s+/g, ' ').trim()) && !b.closest('#' + ID);
+    }) || null;
+  }
+
+  function resolve(spec) {
+    if (!spec) return null;
+    if (spec instanceof RegExp) return findButtonByText(spec);
+    var el = document.querySelector('#root ' + spec);
+    return el && el.closest('button') || el;
+  }
+
+  var hidden = [];
+  function hide(el) {
+    if (!el || el.dataset.nbHidden) return;
+    el.dataset.nbHidden = '1';
+    el.style.setProperty('visibility', 'hidden', 'important');
+    el.style.setProperty('pointer-events', 'none', 'important');
+    hidden.push(el);
+  }
+  function unhideAll() {
+    hidden.forEach(function (el) {
+      delete el.dataset.nbHidden;
+      el.style.removeProperty('visibility');
+      el.style.removeProperty('pointer-events');
+    });
+    hidden = [];
+  }
+
+  /* A proxy is a live clone of the game's own button, pinned to a corner. */
+  function syncProxy(slot, orig) {
+    var proxy = controls.querySelector('[data-nb-slot="' + slot + '"]');
+    if (!orig) { if (proxy) proxy.remove(); return; }
+    var snap = orig.className + '|' + orig.innerHTML + '|' + (orig.getAttribute('aria-label') || '');
+    if (!proxy) {
+      proxy = document.createElement('button');
+      proxy.type = 'button';
+      proxy.dataset.nbSlot = slot;
+      proxy.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (proxy._orig) proxy._orig.click();
+      });
+      controls.appendChild(proxy);
+    }
+    proxy._orig = orig;
+    if (proxy.dataset.snap !== snap) {
+      proxy.dataset.snap = snap;
+      if (CFG.ownStyle) {
+        /* The game's own button only looks right in its original spot, so use the standard corner style. */
+        var off = /unmute|sound off/i.test((orig.getAttribute('aria-label') || '') + ' ' + orig.textContent);
+        proxy.className = slot === 'sound' ? 'nb-sound' : 'nb-help';
+        proxy.innerHTML = slot === 'sound' ? (off ? '🔇' : '🔊') : '<b aria-hidden="true">?</b><span>HOW TO PLAY</span>';
+      } else {
+        proxy.className = orig.className + ' nb-proxy nb-p-' + slot;
+        proxy.innerHTML = orig.innerHTML;
+      }
+      var label = orig.getAttribute('aria-label') || orig.getAttribute('title');
+      if (label) proxy.setAttribute('aria-label', label);
+    }
+    hide(orig);
+  }
+
+  var controls = null;
+  function ensureControls() {
+    if (controls && controls.isConnected) return;
+    controls = document.createElement('div');
+    controls.id = ID;
+    var html = '';
+    if (CFG.logo) html += '<img class="nb-logo" src="' + CFG.logo + '" alt="Nebuloid Tech" />';
+    html += '<button type="button" class="nb-back" aria-label="Back"><span aria-hidden="true">←</span><span>BACK</span></button>';
+    if (CFG.sound === 'generic') html += '<button type="button" class="nb-sound" data-nb-sound></button>';
+    if (CFG.help && CFG.help.steps) html += '<button type="button" class="nb-help" data-nb-help><b aria-hidden="true">?</b><span>HOW TO PLAY</span></button>';
+    controls.innerHTML = html;
+    document.body.appendChild(controls);
+
+    var logo = controls.querySelector('.nb-logo');
+    if (logo) logo.addEventListener('click', goBack);
+    controls.querySelector('.nb-back').addEventListener('click', goBack);
+
+    var snd = controls.querySelector('[data-nb-sound]');
+    if (snd) {
+      snd.addEventListener('click', function () {
+        muted = !muted;
+        try { localStorage.setItem(SOUND_KEY, muted ? 'off' : 'on'); } catch (e) {}
+        paintSound();
+        applyMute();
+      });
+      paintSound();
+    }
+
+    var help = controls.querySelector('[data-nb-help]');
+    if (help) help.addEventListener('click', openHelp);
+  }
+
+  function paintSound() {
+    var b = controls && controls.querySelector('[data-nb-sound]');
+    if (!b) return;
+    b.textContent = muted ? '🔇' : '🔊';
+    b.setAttribute('aria-label', muted ? 'Sound Off' : 'Sound On');
+    b.title = muted ? 'Sound Off' : 'Sound On';
+  }
+
+  function goBack() {
+    if (window.history.length > 1) window.history.back();
+    else window.location.href = '/our-games';
+  }
+
+  function openHelp() {
+    if (document.getElementById('nb-help-modal')) return;
+    var m = document.createElement('div');
+    m.id = 'nb-help-modal';
+    m.innerHTML =
+      '<div class="nb-help-card" role="dialog" aria-modal="true" aria-label="How to play">' +
+      '<h2>HOW TO PLAY</h2><ol>' +
+      CFG.help.steps.map(function (s) { return '<li>' + s + '</li>'; }).join('') +
+      '</ol><button type="button" class="nb-help-close">GOT IT</button></div>';
+    m.addEventListener('click', function (e) {
+      if (e.target === m || e.target.classList.contains('nb-help-close')) m.remove();
+    });
+    document.body.appendChild(m);
+  }
+
+  function isStartScreen() {
+    if (!document.querySelector('#root ' + CFG.start)) return false;
+    return !CFG.title || CFG.title.test((document.getElementById('root') || {}).textContent || '');
+  }
+
+  function update() {
+    ensureControls();
+    if (!isStartScreen()) {
+      if (controls.style.display !== 'none') controls.style.display = 'none';
+      unhideAll();
+      return;
+    }
+    /* Step aside while one of the game's own popups covers the START button. */
+    var startEl = document.querySelector('#root ' + CFG.start);
+    startEl = startEl.closest('button') || startEl;
+    var r = startEl.getBoundingClientRect();
+    var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+    var covered = !!hit && !startEl.contains(hit) && !controls.contains(hit);
+    var display = covered ? 'none' : 'block';
+    if (controls.style.display !== display) controls.style.display = display;
+    (CFG.hideLogos || []).forEach(function (sel) {
+      document.querySelectorAll('#root ' + sel).forEach(hide);
+    });
+    syncProxy('sound', CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
+    syncProxy('help', CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
+    if (CFG.extra) CFG.extra();
+  }
+
+  var css = document.createElement('style');
+  var t = CFG.theme;
+  css.textContent =
+    '#' + ID + '{position:fixed;inset:0;z-index:45;pointer-events:none}' +
+    '#' + ID + '>*{pointer-events:auto}' +
+    '#' + ID + ' .nb-logo{position:fixed;top:20px;left:26px;width:' + (CFG.logoWidth || 96) + 'px;height:auto;max-height:90px;object-fit:contain;cursor:pointer;filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}' +
+    '#' + ID + ' .nb-proxy{position:fixed!important;margin:0!important;transform:none!important;inset:auto!important;width:auto!important;z-index:1!important}' +
+    '#' + ID + ' .nb-proxy.nb-p-sound{top:20px!important;right:26px!important}' +
+    '#' + ID + ' .nb-proxy.nb-p-help{bottom:24px!important;right:26px!important}' +
+    '#' + ID + ' .nb-back,#' + ID + ' .nb-help,#' + ID + ' .nb-sound{position:fixed;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:999px;' +
+      'background:' + t.bg + ';color:' + t.fg + ';border:1.5px solid ' + t.border + ';box-shadow:0 8px 24px rgba(0,0,0,.18);' +
+      '-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:900 13px/1 Inter,Arial,sans-serif;letter-spacing:.14em;transition:transform .18s ease,background .18s ease}' +
+    '#' + ID + ' .nb-back:hover,#' + ID + ' .nb-help:hover,#' + ID + ' .nb-sound:hover{transform:translateY(-2px);background:' + t.hover + '}' +
+    '#' + ID + ' .nb-back{left:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + ' .nb-back span:first-child{font-size:17px;letter-spacing:0}' +
+    '#' + ID + ' .nb-help{right:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + ' .nb-help b{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;font-size:11px;letter-spacing:0}' +
+    '#' + ID + ' .nb-sound{top:20px;right:26px;width:48px;height:48px;padding:0;font-size:21px;letter-spacing:0}' +
+    '#nb-help-modal{position:fixed;inset:0;z-index:10050;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}' +
+    '#nb-help-modal .nb-help-card{width:min(440px,100%);border-radius:24px;padding:28px 26px 24px;background:#fff;color:#1f2937;box-shadow:0 24px 60px rgba(0,0,0,.35);font-family:Inter,Arial,sans-serif}' +
+    '#nb-help-modal h2{margin:0 0 14px;font-size:20px;font-weight:900;letter-spacing:.12em;color:' + t.accent + '}' +
+    '#nb-help-modal ol{margin:0 0 20px;padding-left:20px;font-size:15px;line-height:1.55;font-weight:600}' +
+    '#nb-help-modal li{margin:6px 0}' +
+    '#nb-help-modal .nb-help-close{width:100%;height:46px;border:0;border-radius:999px;background:' + t.accent + ';color:#fff;font:900 14px Inter,Arial,sans-serif;letter-spacing:.14em;cursor:pointer}' +
+    '@media (max-width:640px){' +
+      '#' + ID + ' .nb-logo{top:14px;left:14px;width:' + Math.round((CFG.logoWidth || 96) * 0.75) + 'px}' +
+      '#' + ID + ' .nb-proxy.nb-p-sound,#' + ID + ' .nb-sound{top:14px!important;right:14px!important}' +
+      '#' + ID + ' .nb-proxy.nb-p-help,#' + ID + ' .nb-help{bottom:16px!important;right:14px!important}' +
+      '#' + ID + ' .nb-back{left:14px;bottom:16px;height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-help{height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-sound{width:44px;height:44px;font-size:19px}' +
+    '}' + (CFG.css || '');
+  document.head.appendChild(css);
+
+  var queued = false;
+  function schedule() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function () { queued = false; update(); });
+  }
+  new MutationObserver(schedule).observe(document.documentElement, { childList: true, subtree: true, attributes: true, characterData: true });
+  schedule();
+})({key:'color-clash',start:'button[aria-label="Start Game"]',title:/COLOR CLASH/,help:/how to play/i,theme:{bg:'rgba(255,255,255,.9)',fg:'#0f172a',border:'rgba(255,255,255,.6)',hover:'#fff',accent:'#15347d'}});

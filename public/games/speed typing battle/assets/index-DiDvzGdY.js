@@ -413,3 +413,242 @@ Error generating stack: `+e.message+`
    .cert-metrics{border:1px solid #e6c8ab;background:#fffdf9;border-radius:16px;overflow:hidden;box-shadow:0 8px 20px rgba(76,43,25,.06)}
    @media(max-width:700px){.cert-frame-left,.cert-frame-right,.cert-cup,.cert-books,.cert-pen{display:none}.cert-paper{padding:20px 16px 18px}.cert-main{width:96vw}}
   `}),(0,A.jsx)(`div`,{className:`cert-scene`}),(0,A.jsx)(`div`,{className:`cert-wall-light`}),(0,A.jsx)(`div`,{className:`cert-frame-left`}),(0,A.jsx)(`div`,{className:`cert-frame-right`}),(0,A.jsx)(`div`,{className:`cert-cup`}),(0,A.jsxs)(`div`,{className:`cert-books`,children:[(0,A.jsx)(`div`,{className:`cert-book b1`,children:`TYPE`}),(0,A.jsx)(`div`,{className:`cert-book b2`,children:`LEARN`}),(0,A.jsx)(`div`,{className:`cert-book b3`,children:`IMPROVE`}),(0,A.jsx)(`div`,{className:`cert-book b4`,children:`REPEAT`})]}),(0,A.jsx)(`div`,{className:`cert-pen`}),(0,A.jsxs)(`div`,{className:`cert-main pop`,children:[(0,A.jsxs)(`div`,{className:`cert-paper`,children:[(0,A.jsx)(`img`,{src:`/logo.png`,alt:`Nebuloid Tech Studio`,className:`mx-auto h-[54px] w-auto max-w-[190px] object-contain`,onError:e=>{e.currentTarget.style.display=`none`}}),(0,A.jsx)(`div`,{className:`mt-1 text-[11px] font-black tracking-[.22em] text-[#252d35] sm:text-[13px]`,children:`NEBULOID TECH STUDIO LLP`}),(0,A.jsx)(`div`,{className:`mt-0.5 text-[8px] font-bold tracking-[.35em] text-[#766d65]`,children:`IDEAS. WIRED TO REALITY.`}),(0,A.jsxs)(`div`,{className:`mx-auto mt-4 flex max-w-[620px] items-center gap-4`,children:[(0,A.jsx)(`span`,{className:`cert-divider flex-1`}),(0,A.jsx)(`div`,{className:`cert-medal`,children:(0,A.jsx)(ue,{size:35,strokeWidth:1.8})}),(0,A.jsx)(`span`,{className:`cert-divider flex-1`})]}),(0,A.jsx)(`div`,{className:`mt-3 text-[11px] font-black tracking-[.38em] text-[#f06417]`,children:`CERTIFICATE OF MASTERY`}),(0,A.jsx)(`div`,{className:`mt-2 text-[11px] font-bold tracking-[.25em] text-[#756d66]`,children:`THIS CERTIFICATE IS PROUDLY PRESENTED TO`}),(0,A.jsx)(`div`,{className:`mt-1 text-[26px] font-black uppercase tracking-[.02em] text-[#252d35] sm:text-[34px]`,children:s}),(0,A.jsx)(`div`,{className:`mx-auto mt-3 h-px w-[min(420px,70%)] bg-gradient-to-r from-transparent via-[#f06417] to-transparent`}),(0,A.jsxs)(`div`,{className:`mt-3 flex items-baseline justify-center gap-3 text-[33px] font-black tracking-[-.04em] sm:text-[48px]`,children:[(0,A.jsxs)(`span`,{children:[`LEVEL `,e]}),(0,A.jsx)(`span`,{className:`text-[#f06417]`,children:`COMPLETE`})]}),(0,A.jsx)(`p`,{className:`mx-auto mt-2 max-w-[620px] text-[13px] leading-5 text-[#665f59] sm:text-[15px]`,children:`For successfully completing another level of the Nebuloid Speed Typing Battle with focus, accuracy and speed.`}),(0,A.jsx)(`div`,{className:`cert-metrics mx-auto mt-4 max-w-[650px]`,children:(0,A.jsxs)(`div`,{className:`grid grid-cols-3`,children:[(0,A.jsx)(we,{label:`SCORE`,value:t}),(0,A.jsx)(we,{label:`ACCURACY`,value:`${n}%`}),(0,A.jsx)(we,{label:`SPEED`,value:`${r} WPM`})]})}),(0,A.jsxs)(`div`,{className:`mt-4 flex items-end justify-between px-5 sm:px-12`,children:[(0,A.jsxs)(`div`,{className:`text-left`,children:[(0,A.jsx)(`div`,{className:`h-px w-32 bg-[#8f8175]`}),(0,A.jsx)(`div`,{className:`mt-1 text-[9px] font-bold tracking-[.18em] text-[#71675f]`,children:`PLAYER`})]}),(0,A.jsxs)(`div`,{className:`text-right`,children:[(0,A.jsx)(`div`,{className:`h-px w-32 bg-[#8f8175]`}),(0,A.jsx)(`div`,{className:`mt-1 text-[9px] font-bold tracking-[.18em] text-[#71675f]`,children:`NEBULOID TECH`})]})]})]}),(0,A.jsxs)(`div`,{className:`mt-3 flex flex-col items-center justify-center gap-3 sm:flex-row`,children:[(0,A.jsxs)(`button`,{onClick:i,className:`flex min-w-[230px] items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#ff5b23] to-[#ff3d12] px-7 py-3.5 text-[16px] font-bold text-white shadow-[0_9px_20px_rgba(236,75,18,.24)] transition hover:-translate-y-1`,children:[(0,A.jsx)(se,{size:19}),` Download Certificate`]}),(0,A.jsxs)(`button`,{onClick:o,className:`flex min-w-[210px] items-center justify-center gap-3 rounded-2xl bg-white/95 px-7 py-3.5 text-[16px] font-semibold text-[#222] shadow-[0_7px_18px_rgba(70,45,25,.12)] transition hover:-translate-y-1`,children:[(0,A.jsx)(le,{size:19,className:`text-[#f06417]`}),` Replay Level`]})]}),(0,A.jsxs)(`button`,{onClick:a,className:`mt-2 inline-flex h-[48px] min-w-[225px] items-center justify-center gap-2 rounded-2xl border border-[#f06417] bg-white px-7 text-[15px] font-extrabold text-[#252d35] shadow-[0_8px_20px_rgba(76,43,25,.12)] transition hover:-translate-y-0.5 hover:bg-[#fff7ef]`,children:[(0,A.jsx)(`span`,{children:e<10?`Continue to Level ${e+1}`:`View Final Results`}),(0,A.jsx)(T,{size:18,className:`text-[#f06417]`})]})]})]})}function we({label:e,value:t}){return(0,A.jsxs)(`div`,{className:`border-r border-[#f06417]/60 p-3 last:border-0 sm:p-4`,children:[(0,A.jsx)(`div`,{className:`text-[10px] font-bold tracking-[.28em] text-[#f06417]`,children:e}),(0,A.jsx)(`div`,{className:`mt-1 text-[29px] font-black text-[#252d35] sm:text-[34px]`,children:t})]})}function Te({best:e,onRestart:t}){return(0,A.jsxs)(`section`,{className:`pop mx-auto max-w-2xl py-10 text-center sm:py-20`,children:[(0,A.jsx)(`div`,{className:`mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-violet-500/10 text-violet-300 glow`,children:(0,A.jsx)(ae,{size:50})}),(0,A.jsx)(`p`,{className:`mt-8 text-xs font-bold tracking-[.35em] text-violet-300`,children:`BATTLE COMPLETE`}),(0,A.jsxs)(`h1`,{className:`mt-3 text-5xl font-black sm:text-7xl`,children:[`You mastered`,(0,A.jsx)(`br`,{}),(0,A.jsx)(`span`,{className:`text-violet-400`,children:`all 10 levels.`})]}),(0,A.jsxs)(`p`,{className:`mt-6 text-slate-400`,children:[`Every certificate is available to download after its level. Your best score this session was `,(0,A.jsx)(`b`,{className:`text-white`,children:e}),`.`]}),(0,A.jsx)(`button`,{onClick:t,className:`mt-9 rounded-2xl bg-violet-600 px-7 py-4 font-bold hover:bg-violet-500`,children:`Battle Again`})]})}(0,k.createRoot)(document.getElementById(`root`)).render((0,A.jsx)(ve,{}));
+/* === Nebuloid corner controls (welcome screen): logo top-left, sound top-right, back bottom-left, how-to-play bottom-right === */
+(function (CFG) {
+  'use strict';
+  if (window.__nbCornerControls) return;
+  window.__nbCornerControls = true;
+
+  var ID = 'nb-corner-controls';
+  var SOUND_KEY = 'nb_sound_' + CFG.key;
+  var muted = false;
+  try { muted = localStorage.getItem(SOUND_KEY) === 'off'; } catch (e) {}
+
+  /* Master mute for games without their own start-screen sound button. */
+  if (CFG.sound === 'generic') {
+    var gains = [];
+    var masters = new WeakMap();
+    if (window.AudioNode && window.AudioDestinationNode) {
+      var connect = AudioNode.prototype.connect;
+      AudioNode.prototype.connect = function (dest) {
+        if (dest instanceof AudioDestinationNode) {
+          var g = masters.get(dest);
+          if (!g) {
+            g = dest.context.createGain();
+            g.gain.value = muted ? 0 : 1;
+            connect.call(g, dest);
+            masters.set(dest, g);
+            gains.push(g);
+          }
+          var args = Array.prototype.slice.call(arguments);
+          args[0] = g;
+          return connect.apply(this, args);
+        }
+        return connect.apply(this, arguments);
+      };
+    }
+    var play = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () {
+      if (muted) this.muted = true;
+      return play.apply(this, arguments);
+    };
+    var applyMute = function () {
+      gains.forEach(function (g) { g.gain.value = muted ? 0 : 1; });
+      document.querySelectorAll('audio, video').forEach(function (el) { el.muted = muted; });
+    };
+  }
+
+  function findButtonByText(re) {
+    return Array.prototype.find.call(document.querySelectorAll('#root button'), function (b) {
+      return re.test((b.textContent || '').replace(/\s+/g, ' ').trim()) && !b.closest('#' + ID);
+    }) || null;
+  }
+
+  function resolve(spec) {
+    if (!spec) return null;
+    if (spec instanceof RegExp) return findButtonByText(spec);
+    var el = document.querySelector('#root ' + spec);
+    return el && el.closest('button') || el;
+  }
+
+  var hidden = [];
+  function hide(el) {
+    if (!el || el.dataset.nbHidden) return;
+    el.dataset.nbHidden = '1';
+    el.style.setProperty('visibility', 'hidden', 'important');
+    el.style.setProperty('pointer-events', 'none', 'important');
+    hidden.push(el);
+  }
+  function unhideAll() {
+    hidden.forEach(function (el) {
+      delete el.dataset.nbHidden;
+      el.style.removeProperty('visibility');
+      el.style.removeProperty('pointer-events');
+    });
+    hidden = [];
+  }
+
+  /* A proxy is a live clone of the game's own button, pinned to a corner. */
+  function syncProxy(slot, orig) {
+    var proxy = controls.querySelector('[data-nb-slot="' + slot + '"]');
+    if (!orig) { if (proxy) proxy.remove(); return; }
+    var snap = orig.className + '|' + orig.innerHTML + '|' + (orig.getAttribute('aria-label') || '');
+    if (!proxy) {
+      proxy = document.createElement('button');
+      proxy.type = 'button';
+      proxy.dataset.nbSlot = slot;
+      proxy.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (proxy._orig) proxy._orig.click();
+      });
+      controls.appendChild(proxy);
+    }
+    proxy._orig = orig;
+    if (proxy.dataset.snap !== snap) {
+      proxy.dataset.snap = snap;
+      if (CFG.ownStyle) {
+        /* The game's own button only looks right in its original spot, so use the standard corner style. */
+        var off = /unmute|sound off/i.test((orig.getAttribute('aria-label') || '') + ' ' + orig.textContent);
+        proxy.className = slot === 'sound' ? 'nb-sound' : 'nb-help';
+        proxy.innerHTML = slot === 'sound' ? (off ? '🔇' : '🔊') : '<b aria-hidden="true">?</b><span>HOW TO PLAY</span>';
+      } else {
+        proxy.className = orig.className + ' nb-proxy nb-p-' + slot;
+        proxy.innerHTML = orig.innerHTML;
+      }
+      var label = orig.getAttribute('aria-label') || orig.getAttribute('title');
+      if (label) proxy.setAttribute('aria-label', label);
+    }
+    hide(orig);
+  }
+
+  var controls = null;
+  function ensureControls() {
+    if (controls && controls.isConnected) return;
+    controls = document.createElement('div');
+    controls.id = ID;
+    var html = '';
+    if (CFG.logo) html += '<img class="nb-logo" src="' + CFG.logo + '" alt="Nebuloid Tech" />';
+    html += '<button type="button" class="nb-back" aria-label="Back"><span aria-hidden="true">←</span><span>BACK</span></button>';
+    if (CFG.sound === 'generic') html += '<button type="button" class="nb-sound" data-nb-sound></button>';
+    if (CFG.help && CFG.help.steps) html += '<button type="button" class="nb-help" data-nb-help><b aria-hidden="true">?</b><span>HOW TO PLAY</span></button>';
+    controls.innerHTML = html;
+    document.body.appendChild(controls);
+
+    var logo = controls.querySelector('.nb-logo');
+    if (logo) logo.addEventListener('click', goBack);
+    controls.querySelector('.nb-back').addEventListener('click', goBack);
+
+    var snd = controls.querySelector('[data-nb-sound]');
+    if (snd) {
+      snd.addEventListener('click', function () {
+        muted = !muted;
+        try { localStorage.setItem(SOUND_KEY, muted ? 'off' : 'on'); } catch (e) {}
+        paintSound();
+        applyMute();
+      });
+      paintSound();
+    }
+
+    var help = controls.querySelector('[data-nb-help]');
+    if (help) help.addEventListener('click', openHelp);
+  }
+
+  function paintSound() {
+    var b = controls && controls.querySelector('[data-nb-sound]');
+    if (!b) return;
+    b.textContent = muted ? '🔇' : '🔊';
+    b.setAttribute('aria-label', muted ? 'Sound Off' : 'Sound On');
+    b.title = muted ? 'Sound Off' : 'Sound On';
+  }
+
+  function goBack() {
+    if (window.history.length > 1) window.history.back();
+    else window.location.href = '/our-games';
+  }
+
+  function openHelp() {
+    if (document.getElementById('nb-help-modal')) return;
+    var m = document.createElement('div');
+    m.id = 'nb-help-modal';
+    m.innerHTML =
+      '<div class="nb-help-card" role="dialog" aria-modal="true" aria-label="How to play">' +
+      '<h2>HOW TO PLAY</h2><ol>' +
+      CFG.help.steps.map(function (s) { return '<li>' + s + '</li>'; }).join('') +
+      '</ol><button type="button" class="nb-help-close">GOT IT</button></div>';
+    m.addEventListener('click', function (e) {
+      if (e.target === m || e.target.classList.contains('nb-help-close')) m.remove();
+    });
+    document.body.appendChild(m);
+  }
+
+  function isStartScreen() {
+    if (!document.querySelector('#root ' + CFG.start)) return false;
+    return !CFG.title || CFG.title.test((document.getElementById('root') || {}).textContent || '');
+  }
+
+  function update() {
+    ensureControls();
+    if (!isStartScreen()) {
+      if (controls.style.display !== 'none') controls.style.display = 'none';
+      unhideAll();
+      return;
+    }
+    /* Step aside while one of the game's own popups covers the START button. */
+    var startEl = document.querySelector('#root ' + CFG.start);
+    startEl = startEl.closest('button') || startEl;
+    var r = startEl.getBoundingClientRect();
+    var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+    var covered = !!hit && !startEl.contains(hit) && !controls.contains(hit);
+    var display = covered ? 'none' : 'block';
+    if (controls.style.display !== display) controls.style.display = display;
+    (CFG.hideLogos || []).forEach(function (sel) {
+      document.querySelectorAll('#root ' + sel).forEach(hide);
+    });
+    syncProxy('sound', CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
+    syncProxy('help', CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
+    if (CFG.extra) CFG.extra();
+  }
+
+  var css = document.createElement('style');
+  var t = CFG.theme;
+  css.textContent =
+    '#' + ID + '{position:fixed;inset:0;z-index:45;pointer-events:none}' +
+    '#' + ID + '>*{pointer-events:auto}' +
+    '#' + ID + ' .nb-logo{position:fixed;top:20px;left:26px;width:' + (CFG.logoWidth || 96) + 'px;height:auto;max-height:90px;object-fit:contain;cursor:pointer;filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}' +
+    '#' + ID + ' .nb-proxy{position:fixed!important;margin:0!important;transform:none!important;inset:auto!important;width:auto!important;z-index:1!important}' +
+    '#' + ID + ' .nb-proxy.nb-p-sound{top:20px!important;right:26px!important}' +
+    '#' + ID + ' .nb-proxy.nb-p-help{bottom:24px!important;right:26px!important}' +
+    '#' + ID + ' .nb-back,#' + ID + ' .nb-help,#' + ID + ' .nb-sound{position:fixed;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:999px;' +
+      'background:' + t.bg + ';color:' + t.fg + ';border:1.5px solid ' + t.border + ';box-shadow:0 8px 24px rgba(0,0,0,.18);' +
+      '-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:900 13px/1 Inter,Arial,sans-serif;letter-spacing:.14em;transition:transform .18s ease,background .18s ease}' +
+    '#' + ID + ' .nb-back:hover,#' + ID + ' .nb-help:hover,#' + ID + ' .nb-sound:hover{transform:translateY(-2px);background:' + t.hover + '}' +
+    '#' + ID + ' .nb-back{left:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + ' .nb-back span:first-child{font-size:17px;letter-spacing:0}' +
+    '#' + ID + ' .nb-help{right:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + ' .nb-help b{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;font-size:11px;letter-spacing:0}' +
+    '#' + ID + ' .nb-sound{top:20px;right:26px;width:48px;height:48px;padding:0;font-size:21px;letter-spacing:0}' +
+    '#nb-help-modal{position:fixed;inset:0;z-index:10050;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}' +
+    '#nb-help-modal .nb-help-card{width:min(440px,100%);border-radius:24px;padding:28px 26px 24px;background:#fff;color:#1f2937;box-shadow:0 24px 60px rgba(0,0,0,.35);font-family:Inter,Arial,sans-serif}' +
+    '#nb-help-modal h2{margin:0 0 14px;font-size:20px;font-weight:900;letter-spacing:.12em;color:' + t.accent + '}' +
+    '#nb-help-modal ol{margin:0 0 20px;padding-left:20px;font-size:15px;line-height:1.55;font-weight:600}' +
+    '#nb-help-modal li{margin:6px 0}' +
+    '#nb-help-modal .nb-help-close{width:100%;height:46px;border:0;border-radius:999px;background:' + t.accent + ';color:#fff;font:900 14px Inter,Arial,sans-serif;letter-spacing:.14em;cursor:pointer}' +
+    '@media (max-width:640px){' +
+      '#' + ID + ' .nb-logo{top:14px;left:14px;width:' + Math.round((CFG.logoWidth || 96) * 0.75) + 'px}' +
+      '#' + ID + ' .nb-proxy.nb-p-sound,#' + ID + ' .nb-sound{top:14px!important;right:14px!important}' +
+      '#' + ID + ' .nb-proxy.nb-p-help,#' + ID + ' .nb-help{bottom:16px!important;right:14px!important}' +
+      '#' + ID + ' .nb-back{left:14px;bottom:16px;height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-help{height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-sound{width:44px;height:44px;font-size:19px}' +
+    '}' + (CFG.css || '');
+  document.head.appendChild(css);
+
+  var queued = false;
+  function schedule() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function () { queued = false; update(); });
+  }
+  new MutationObserver(schedule).observe(document.documentElement, { childList: true, subtree: true, attributes: true, characterData: true });
+  schedule();
+})({key:'speed-typing',start:'button.start',title:/TYPING/i,logo:'/logoblack.png',logoWidth:110,hideLogos:['img.brand'],sound:'.top-control.left',help:'.top-control.right',ownStyle:true,theme:{bg:'rgba(255,255,255,.9)',fg:'#1f2937',border:'rgba(249,115,22,.45)',hover:'#fff',accent:'#f97316'}});

@@ -82,3 +82,242 @@ Error generating stack: `+e.message+`
       .go-float-delay{animation:goFloat 7s ease-in-out infinite reverse}
       .go-glow{animation:goGlow 3s ease-in-out infinite}
     `}),(0,x.jsx)(`div`,{className:`absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,#ffffff_0%,#fbfaff_48%,#efedff_100%)]`}),(0,x.jsx)(`div`,{className:`pointer-events-none absolute -left-20 top-[24%] h-[420px] w-[260px] rounded-[110px] bg-violet-200/35 blur-[1px]`}),(0,x.jsx)(`div`,{className:`pointer-events-none absolute -right-20 top-[26%] h-[430px] w-[270px] rounded-[110px] bg-violet-200/35 blur-[1px]`}),(0,x.jsxs)(`div`,{className:`pointer-events-none absolute inset-x-0 bottom-0 h-[52%] opacity-35`,children:[(0,x.jsx)(`div`,{className:`absolute left-[14%] bottom-0 h-[230px] w-16 bg-violet-200/55 blur-[3px]`}),(0,x.jsx)(`div`,{className:`absolute left-[20%] bottom-0 h-[300px] w-20 bg-indigo-200/45 blur-[3px]`}),(0,x.jsx)(`div`,{className:`absolute left-[26%] bottom-0 h-[180px] w-14 bg-violet-300/45 blur-[3px]`}),(0,x.jsx)(`div`,{className:`absolute right-[14%] bottom-0 h-[260px] w-16 bg-violet-200/55 blur-[3px]`}),(0,x.jsx)(`div`,{className:`absolute right-[21%] bottom-0 h-[330px] w-20 bg-indigo-200/45 blur-[3px]`}),(0,x.jsx)(`div`,{className:`absolute right-[27%] bottom-0 h-[200px] w-14 bg-violet-300/45 blur-[3px]`})]}),(0,x.jsx)(`div`,{className:`go-float pointer-events-none absolute left-[18%] top-[15%] h-16 w-16 rotate-[18deg] rounded-2xl bg-gradient-to-br from-blue-300 to-blue-600 opacity-70 shadow-[0_18px_35px_rgba(37,99,235,.18)]`}),(0,x.jsx)(`div`,{className:`go-float-delay pointer-events-none absolute right-[20%] top-[12%] h-16 w-16 rotate-[-18deg] rounded-2xl bg-gradient-to-br from-purple-300 to-purple-600 opacity-60 shadow-[0_18px_35px_rgba(124,58,237,.18)]`}),(0,x.jsx)(`div`,{className:`go-float pointer-events-none absolute left-[20%] top-[42%] h-10 w-10 rotate-[12deg] rounded-xl bg-gradient-to-br from-purple-300 to-purple-600 opacity-45`}),(0,x.jsx)(`div`,{className:`go-float-delay pointer-events-none absolute right-[22%] top-[48%] h-12 w-12 rotate-[-12deg] rounded-xl bg-gradient-to-br from-blue-300 to-blue-600 opacity-45`}),(0,x.jsxs)(`button`,{type:`button`,onClick:()=>s(e=>!e),className:`absolute left-7 top-6 z-40 flex items-center gap-2 border-0 bg-transparent px-1 py-1 text-violet-700 drop-shadow-[0_3px_6px_rgba(76,29,149,.25)] transition hover:scale-105`,children:[(0,x.jsx)(`span`,{className:`text-[27px]`,children:o?`🔊`:`🔇`}),(0,x.jsx)(`span`,{className:`text-[13px] font-black tracking-[0.08em]`,children:o?`SOUND ON`:`MUTED`})]}),(0,x.jsxs)(`button`,{type:`button`,onClick:()=>a(!0),className:`absolute right-7 top-6 z-40 flex items-center gap-2 border-0 bg-transparent px-1 py-1 text-violet-700 drop-shadow-[0_3px_6px_rgba(76,29,149,.25)] transition hover:scale-105`,children:[(0,x.jsx)(`span`,{className:`flex h-8 w-8 items-center justify-center rounded-full border-2 border-violet-600 text-base font-black`,children:`?`}),(0,x.jsx)(`span`,{className:`text-[13px] font-black tracking-[0.06em]`,children:`HOW TO PLAY`})]}),(0,x.jsxs)(`div`,{className:`pointer-events-none absolute bottom-0 left-0 hidden h-[390px] w-[250px] lg:block`,children:[(0,x.jsx)(`div`,{className:`absolute bottom-0 left-0 h-[108px] w-[250px] rounded-tr-2xl bg-gradient-to-br from-violet-300 to-violet-600 shadow-[0_12px_30px_rgba(76,29,149,.16)]`}),(0,x.jsx)(`div`,{className:`absolute bottom-[102px] left-0 h-[105px] w-[178px] rounded-tr-2xl bg-gradient-to-br from-blue-300 to-blue-600 shadow-[0_12px_30px_rgba(37,99,235,.16)]`}),(0,x.jsx)(`div`,{className:`absolute bottom-[203px] left-0 h-[96px] w-[140px] rounded-tr-2xl bg-gradient-to-br from-purple-300 to-purple-600 shadow-[0_12px_30px_rgba(124,58,237,.16)]`}),(0,x.jsx)(`div`,{className:`absolute bottom-[290px] left-[72px] h-[80px] w-[84px] rotate-[7deg] rounded-xl bg-gradient-to-br from-blue-300 to-blue-600 shadow-xl`})]}),(0,x.jsxs)(`div`,{className:`pointer-events-none absolute bottom-0 right-0 hidden h-[390px] w-[250px] lg:block`,children:[(0,x.jsx)(`div`,{className:`absolute bottom-0 right-0 h-[108px] w-[250px] rounded-tl-2xl bg-gradient-to-br from-violet-300 to-violet-600 shadow-[0_12px_30px_rgba(76,29,149,.16)]`}),(0,x.jsx)(`div`,{className:`absolute bottom-[102px] right-0 h-[105px] w-[178px] rounded-tl-2xl bg-gradient-to-br from-blue-300 to-blue-600 shadow-[0_12px_30px_rgba(37,99,235,.16)]`}),(0,x.jsx)(`div`,{className:`absolute bottom-[203px] right-0 h-[96px] w-[140px] rounded-tl-2xl bg-gradient-to-br from-purple-300 to-purple-600 shadow-[0_12px_30px_rgba(124,58,237,.16)]`}),(0,x.jsx)(`div`,{className:`absolute bottom-[290px] right-[72px] h-[80px] w-[84px] -rotate-[7deg] rounded-xl bg-gradient-to-br from-blue-300 to-blue-600 shadow-xl`})]}),(0,x.jsxs)(`div`,{className:`pointer-events-none absolute left-[4.5%] top-[44%] z-20 hidden text-left lg:block`,children:[(0,x.jsx)(`div`,{className:`text-[14px] font-black tracking-[0.22em] text-[#6240d9]`,children:`BUILD`}),(0,x.jsx)(`div`,{className:`text-[28px] font-black tracking-[0.04em] text-[#2777ff]`,children:`HIGH`}),(0,x.jsx)(`div`,{className:`text-[14px] font-black tracking-[0.22em] text-[#6240d9]`,children:`STACKS`}),(0,x.jsx)(`div`,{className:`mt-3 h-[3px] w-12 bg-[#2777ff]`})]}),(0,x.jsxs)(`div`,{className:`pointer-events-none absolute right-[4.5%] top-[44%] z-20 hidden text-right lg:block`,children:[(0,x.jsx)(`div`,{className:`text-[14px] font-black tracking-[0.22em] text-[#8b45ed]`,children:`TIMING`}),(0,x.jsx)(`div`,{className:`text-[28px] font-black tracking-[0.04em] text-[#2777ff]`,children:`AIM`}),(0,x.jsx)(`div`,{className:`text-[14px] font-black tracking-[0.22em] text-[#8b45ed]`,children:`RETRY`}),(0,x.jsx)(`div`,{className:`ml-auto mt-3 h-[3px] w-12 bg-[#8b45ed]`})]}),(0,x.jsxs)(`main`,{className:`relative z-10 mx-auto flex h-[100dvh] w-full max-w-[1280px] flex-col items-center overflow-hidden px-5 pb-3 pt-2 text-center`,children:[(0,x.jsx)(`img`,{src:`/logo.png`,alt:`Nebuloid Tech Studio`,className:`h-[78px] w-auto max-w-[250px] object-contain sm:h-[88px]`}),(0,x.jsxs)(`div`,{className:`relative top-28 mt-8 h-[105px] w-full max-w-[560px]`,children:[(0,x.jsx)(`div`,{className:`absolute bottom-5 left-1/2 h-[10px] w-[78%] -translate-x-1/2 rounded-full bg-violet-300/40 blur-[2px]`}),(0,x.jsx)(`div`,{className:`absolute bottom-7 left-[23%] h-5 w-[54%] rounded-lg bg-gradient-to-r from-violet-300 via-indigo-300 to-violet-400 shadow-lg`}),(0,x.jsx)(`div`,{className:`absolute bottom-8 left-[34%] h-[55px] w-[130px] -rotate-[18deg] rounded-xl bg-gradient-to-br from-violet-300 to-indigo-500 shadow-[0_12px_24px_rgba(76,29,149,.20)]`}),(0,x.jsx)(`div`,{className:`absolute bottom-9 left-[47%] h-[48px] w-[122px] rotate-[13deg] rounded-xl bg-gradient-to-br from-indigo-300 to-violet-500 shadow-[0_12px_24px_rgba(76,29,149,.20)]`}),(0,x.jsx)(`div`,{className:`absolute bottom-10 right-[23%] h-[45px] w-[92px] rotate-[24deg] rounded-xl bg-gradient-to-br from-blue-300 to-blue-600 shadow-[0_12px_24px_rgba(37,99,235,.20)]`}),(0,x.jsx)(`div`,{className:`absolute bottom-7 left-[27%] h-[24px] w-[70px] rounded-lg bg-violet-200 shadow-md`}),(0,x.jsx)(`div`,{className:`absolute bottom-7 right-[29%] h-[30px] w-[34px] rotate-[4deg] rounded-lg bg-violet-300 shadow-md`}),(0,x.jsx)(`div`,{className:`absolute left-1/2 top-3 h-9 w-1 -translate-x-1/2 rotate-[8deg] rounded-full bg-violet-600`}),(0,x.jsx)(`div`,{className:`absolute left-[44%] top-7 h-6 w-1 -rotate-[31deg] rounded-full bg-violet-600`}),(0,x.jsx)(`div`,{className:`absolute left-[56%] top-7 h-6 w-1 rotate-[31deg] rounded-full bg-violet-600`})]}),(0,x.jsxs)(`h1`,{className:`relative top-28 mt-4 text-[42px] font-black leading-none tracking-[-.045em] text-[#0b1230] sm:text-[56px]`,children:[`TOWER `,(0,x.jsx)(`span`,{className:`bg-gradient-to-r from-[#174eff] via-[#4d32ff] to-[#8b2cff] bg-clip-text text-transparent`,children:`COLLAPSED`})]}),(0,x.jsx)(`p`,{className:`relative top-28 mt-3 text-[15px] font-semibold text-slate-500 sm:text-[18px]`,children:`You missed the previous block.`}),(0,x.jsxs)(`div`,{className:`relative top-28 mt-4 grid w-full max-w-[620px] grid-cols-2 gap-3 sm:gap-4`,children:[(0,x.jsxs)(`div`,{className:`rounded-2xl border border-violet-200 bg-white/95 px-5 py-4 shadow-[0_10px_30px_rgba(76,29,149,.08)]`,children:[(0,x.jsx)(`div`,{className:`mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-violet-100 text-[27px] text-violet-700`,children:`★`}),(0,x.jsx)(`div`,{className:`mt-2 text-[13px] font-black text-violet-700`,children:`SCORE`}),(0,x.jsx)(`div`,{className:`mt-1 text-[38px] font-black leading-none text-[#0b1230]`,children:h})]}),(0,x.jsxs)(`div`,{className:`rounded-2xl border border-violet-200 bg-white/95 px-5 py-4 shadow-[0_10px_30px_rgba(76,29,149,.08)]`,children:[(0,x.jsx)(`div`,{className:`mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-violet-100 text-[25px] font-black text-violet-700`,children:`▥`}),(0,x.jsx)(`div`,{className:`mt-2 text-[13px] font-black text-violet-700`,children:`HEIGHT`}),(0,x.jsx)(`div`,{className:`mt-1 text-[38px] font-black leading-none text-[#0b1230]`,children:y.length})]})]}),(0,x.jsxs)(`div`,{className:`relative top-28 mt-4 grid w-full max-w-[620px] grid-cols-2 gap-3 sm:gap-4`,children:[(0,x.jsxs)(`button`,{onClick:k,className:`flex h-[66px] items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-[#3514c9] to-[#6530f5] px-5 text-[17px] font-black text-white shadow-[0_12px_28px_rgba(76,29,149,.25)] transition hover:-translate-y-1 hover:brightness-110`,children:[(0,x.jsx)(`span`,{className:`text-[30px] leading-none`,children:`↻`}),` RETRY LEVEL`]}),(0,x.jsxs)(`button`,{onClick:fe,className:`flex h-[66px] items-center justify-center gap-3 rounded-xl border-2 border-violet-300 bg-white/95 px-5 text-[17px] font-black text-[#10183b] shadow-[0_8px_22px_rgba(76,29,149,.08)] transition hover:-translate-y-1 hover:border-violet-500`,children:[(0,x.jsx)(`span`,{className:`text-[27px] leading-none text-violet-700`,children:`⌂`}),` HOME`]})]}),(0,x.jsxs)(`div`,{className:`relative top-28 mt-5 flex items-center gap-5 text-[14px] font-black tracking-[.32em] text-violet-400`,children:[(0,x.jsx)(`span`,{className:`h-[2px] w-12 bg-violet-300 sm:w-16`}),(0,x.jsx)(`span`,{children:`SMALL STEPS`}),(0,x.jsx)(`span`,{className:`h-2 w-2 rounded-full bg-violet-500`}),(0,x.jsx)(`span`,{children:`BIG TOWERS`}),(0,x.jsx)(`span`,{className:`h-[2px] w-12 bg-violet-300 sm:w-16`})]}),(0,x.jsx)(`div`,{className:`go-glow pointer-events-none absolute bottom-0 left-1/2 h-20 w-[65%] -translate-x-1/2 rounded-[50%] bg-violet-300/20 blur-3xl`})]})]}):e===`complete`?(0,x.jsx)(`div`,{className:`min-h-screen w-full overflow-auto bg-gradient-to-br from-[#f4f1ff] via-white to-[#eeebff] px-4 py-7 text-slate-900 print:bg-white print:p-0`,children:(0,x.jsxs)(`div`,{className:`mx-auto flex min-h-[calc(100vh-3.5rem)] w-full max-w-[1450px] flex-col items-center justify-center print:min-h-0`,children:[(0,x.jsxs)(`div`,{id:`certificate-sheet`,className:`relative w-full max-w-[1240px] overflow-hidden rounded-[18px] border-[3px] border-violet-700 bg-white shadow-[0_20px_65px_rgba(50,35,110,0.20)] print:max-w-none print:rounded-none print:border-[3px] print:shadow-none`,children:[(0,x.jsx)(`div`,{className:`pointer-events-none absolute inset-[9px] rounded-[11px] border border-violet-300`}),(0,x.jsx)(`div`,{className:`pointer-events-none absolute inset-[15px] rounded-[7px] border border-violet-100`}),(0,x.jsx)(`div`,{className:`pointer-events-none absolute left-0 top-0 h-24 w-24 bg-gradient-to-br from-violet-700 to-violet-500 [clip-path:polygon(0 0,100% 0,0 100%)]`}),(0,x.jsx)(`div`,{className:`pointer-events-none absolute right-0 top-0 h-24 w-24 bg-gradient-to-bl from-violet-700 to-violet-500 [clip-path:polygon(100% 0,100% 100%,0 0)]`}),(0,x.jsx)(`div`,{className:`pointer-events-none absolute bottom-0 left-0 h-24 w-24 bg-gradient-to-tr from-violet-700 to-violet-500 [clip-path:polygon(0 100%,100% 100%,0 0)]`}),(0,x.jsx)(`div`,{className:`pointer-events-none absolute bottom-0 right-0 h-24 w-24 bg-gradient-to-tl from-violet-700 to-violet-500 [clip-path:polygon(100% 100%,100% 0,0 100%)]`}),(0,x.jsxs)(`div`,{className:`pointer-events-none absolute left-[7%] top-[23%] hidden opacity-60 lg:block`,children:[(0,x.jsx)(`div`,{className:`h-4 w-12 rounded bg-violet-200`}),(0,x.jsx)(`div`,{className:`mt-1 h-4 w-20 rounded bg-violet-100`}),(0,x.jsx)(`div`,{className:`mt-1 h-4 w-14 rounded bg-violet-200`}),(0,x.jsx)(`div`,{className:`ml-7 mt-1 h-4 w-16 rounded bg-violet-100`})]}),(0,x.jsxs)(`div`,{className:`pointer-events-none absolute right-[7%] top-[24%] hidden opacity-60 lg:block`,children:[(0,x.jsx)(`div`,{className:`h-4 w-20 rounded bg-violet-100`}),(0,x.jsx)(`div`,{className:`ml-6 mt-1 h-4 w-14 rounded bg-violet-200`}),(0,x.jsx)(`div`,{className:`mt-1 h-4 w-16 rounded bg-violet-100`})]}),(0,x.jsx)(`div`,{className:`pointer-events-none absolute left-[4%] top-[43%] hidden grid-cols-4 gap-2 lg:grid`,children:[...Array(16)].map((e,t)=>(0,x.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-violet-300/70`},t))}),(0,x.jsx)(`div`,{className:`pointer-events-none absolute right-[4%] top-[48%] hidden grid-cols-4 gap-2 lg:grid`,children:[...Array(16)].map((e,t)=>(0,x.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-violet-300/70`},t))}),(0,x.jsxs)(`div`,{className:`relative z-10 px-[8%] pb-7 pt-7 sm:px-[9%] md:pb-8 md:pt-8`,children:[(0,x.jsx)(`div`,{className:`flex justify-center`,children:(0,x.jsx)(`img`,{src:`/logo.png`,alt:`Nebuloid Tech Studio`,className:`h-[76px] w-auto max-w-[190px] object-contain sm:h-[104px] md:h-[94px]`})}),(0,x.jsxs)(`div`,{className:`mt-3 text-center`,children:[(0,x.jsx)(`h1`,{className:`text-[39px] font-black leading-none tracking-[0.01em] text-[#081225] sm:text-[48px] md:text-[58px]`,children:`CERTIFICATE`}),(0,x.jsxs)(`div`,{className:`mt-2 flex items-center justify-center gap-4 text-[12px] font-black tracking-[0.28em] text-violet-700 sm:text-[15px] md:text-[18px]`,children:[(0,x.jsx)(`span`,{className:`h-[2px] w-11 bg-violet-300 sm:w-14`}),(0,x.jsx)(`span`,{children:`OF ACHIEVEMENT`}),(0,x.jsx)(`span`,{className:`h-[2px] w-11 bg-violet-300 sm:w-14`})]})]}),(0,x.jsxs)(`div`,{className:`mt-5 text-center sm:mt-6`,children:[(0,x.jsx)(`p`,{className:`text-[13px] font-medium text-slate-600 sm:text-[16px] md:text-[18px]`,children:`This certificate is proudly presented to`}),(0,x.jsx)(`div`,{className:`mx-auto mt-2 w-fit min-w-[42%] max-w-[80%] border-b-2 border-violet-600 px-8 pb-2 text-[29px] font-black leading-tight text-[#11183d] sm:text-[36px] md:text-[45px]`,children:n}),(0,x.jsx)(`p`,{className:`mt-3 text-[13px] font-medium text-slate-600 sm:text-[16px] md:text-[18px]`,children:`for successfully completing`})]}),(0,x.jsxs)(`div`,{className:`mt-3 flex items-center justify-center gap-3`,children:[(0,x.jsxs)(`div`,{className:`flex flex-col gap-1`,children:[(0,x.jsx)(`span`,{className:`h-4 w-9 -skew-x-12 rounded-sm bg-violet-600 sm:h-5 sm:w-11`}),(0,x.jsx)(`span`,{className:`h-4 w-9 -skew-x-12 rounded-sm bg-indigo-600 sm:h-5 sm:w-11`}),(0,x.jsx)(`span`,{className:`h-4 w-9 -skew-x-12 rounded-sm bg-violet-700 sm:h-5 sm:w-11`})]}),(0,x.jsxs)(`div`,{children:[(0,x.jsxs)(`div`,{className:`text-left text-[24px] font-black leading-none sm:text-[31px] md:text-[38px]`,children:[(0,x.jsx)(`span`,{className:`text-[#081225]`,children:`STACK `}),(0,x.jsx)(`span`,{className:`bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent`,children:`MASTER`})]}),(0,x.jsx)(`div`,{className:`mt-1 text-left text-[8px] font-black tracking-[0.13em] text-slate-700 sm:text-[10px] md:text-[12px]`,children:`STACK HIGH, SCORE HIGHER!`})]})]}),(0,x.jsxs)(`div`,{className:`mt-4 flex items-center justify-center`,children:[(0,x.jsx)(`span`,{className:`mr-1 h-0 w-0 border-b-[10px] border-r-[9px] border-t-[10px] border-b-transparent border-r-violet-600 border-t-transparent`}),(0,x.jsxs)(`div`,{className:`min-w-[300px] bg-gradient-to-r from-violet-500 via-violet-700 to-violet-500 px-6 py-1.5 text-center text-[11px] font-black tracking-[0.14em] text-white sm:min-w-[370px] sm:text-[14px] md:min-w-[430px] md:text-[17px]`,children:[`LEVEL `,D.level,` ACHIEVEMENT`]}),(0,x.jsx)(`span`,{className:`ml-1 h-0 w-0 border-b-[10px] border-l-[9px] border-t-[10px] border-b-transparent border-l-violet-600 border-t-transparent`})]}),(0,x.jsx)(`div`,{className:`mx-auto mt-5 grid w-full max-w-[820px] grid-cols-3 gap-3 sm:gap-4 md:gap-5`,children:[[`LEVEL`,`${D.level} / 10`,`▰`],[`SCORE`,h,`★`],[`HEIGHT`,D.target,`▥`]].map(([e,t,n])=>(0,x.jsxs)(`div`,{className:`flex min-h-[67px] items-center justify-center gap-2 rounded-xl border border-violet-300 bg-violet-50/30 px-2 py-2 sm:min-h-[76px] sm:gap-3 md:min-h-[104px]`,children:[(0,x.jsx)(`div`,{className:`text-[22px] text-violet-700 sm:text-[27px] md:text-[31px]`,children:n}),(0,x.jsxs)(`div`,{className:`text-left`,children:[(0,x.jsx)(`div`,{className:`text-[8px] font-black tracking-wide text-violet-700 sm:text-[10px] md:text-[12px]`,children:e}),(0,x.jsx)(`div`,{className:`mt-0.5 text-[17px] font-black leading-none text-[#081225] sm:text-[21px] md:text-[25px]`,children:t})]})]},e))}),(0,x.jsxs)(`div`,{className:`mx-auto mt-6 grid w-full max-w-[900px] grid-cols-3 items-end gap-6`,children:[(0,x.jsx)(`div`,{className:`flex justify-center`,children:(0,x.jsxs)(`div`,{className:`w-[175px] rounded-lg border border-violet-200 bg-violet-50 px-4 py-2.5 text-center`,children:[(0,x.jsx)(`div`,{className:`mx-auto flex h-7 w-7 items-center justify-center rounded-full bg-violet-700 text-sm font-black text-white`,children:`✓`}),(0,x.jsx)(`div`,{className:`mt-1.5 text-[10px] font-black tracking-[0.12em] text-violet-800 sm:text-[11px]`,children:`STACK MASTER`}),(0,x.jsx)(`div`,{className:`mt-0.5 text-[7px] font-bold tracking-[0.12em] text-slate-500 sm:text-[8px]`,children:`VERIFIED ACHIEVEMENT`})]})}),(0,x.jsx)(`div`,{className:`flex justify-center`,children:(0,x.jsx)(`div`,{className:`flex h-[68px] w-[68px] items-center justify-center rounded-full border-[3px] border-dashed border-violet-600 bg-violet-50 sm:h-[104px] sm:w-[78px]`,children:(0,x.jsx)(`div`,{className:`flex h-[48px] w-[48px] items-center justify-center rounded-full border-2 border-violet-400 bg-white text-2xl text-violet-700`,children:`★`})})}),(0,x.jsx)(`div`,{className:`flex justify-center`,children:(0,x.jsxs)(`div`,{className:`w-[175px] text-center`,children:[(0,x.jsx)(`div`,{className:`border-b-2 border-violet-500 pb-1.5 text-[9px] font-bold text-slate-700 sm:text-[11px]`,children:new Date().toLocaleDateString(`en-GB`,{day:`2-digit`,month:`long`,year:`numeric`})}),(0,x.jsx)(`div`,{className:`mt-1.5 text-[8px] font-black tracking-[0.12em] text-violet-800 sm:text-[10px]`,children:`DATE OF ACHIEVEMENT`})]})})]})]})]}),(0,x.jsxs)(`div`,{className:`mt-6 flex flex-wrap justify-center gap-3 print:hidden`,children:[(0,x.jsx)(`button`,{onClick:()=>window.print(),className:`rounded-xl bg-violet-700 px-7 py-3 font-black text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl`,children:`↓ DOWNLOAD CERTIFICATE`}),(0,x.jsx)(`button`,{onClick:me,className:`rounded-xl bg-[#101a3d] px-7 py-3 font-black text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl`,children:p<9?`NEXT LEVEL →`:`FINISH GAME`}),(0,x.jsx)(`button`,{onClick:fe,className:`rounded-xl border border-slate-200 bg-white px-7 py-3 font-bold text-slate-700 shadow`,children:`HOME`})]})]})}):(0,x.jsx)(`div`,{className:`min-h-screen bg-white text-slate-900 flex items-center justify-center p-4`,children:(0,x.jsx)(`div`,{className:`w-full max-w-5xl min-h-[650px] rounded-[34px] border border-slate-200 bg-white shadow-[0_20px_70px_rgba(15,23,42,0.12)] flex items-center justify-center`,children:(0,x.jsxs)(`div`,{className:`text-center`,children:[(0,x.jsx)(`div`,{className:`text-5xl text-amber-500`,children:`★`}),(0,x.jsx)(`h1`,{className:`mt-5 text-6xl font-black`,children:`MASTER ACHIEVED`}),(0,x.jsxs)(`p`,{className:`mt-5 text-lg text-slate-500`,children:[n,`, you completed all 10 levels.`]}),(0,x.jsxs)(`div`,{className:`mt-8 inline-block rounded-2xl border border-slate-200 bg-slate-50 px-10 py-6`,children:[(0,x.jsx)(`div`,{className:`text-xs font-bold tracking-widest text-slate-400`,children:`FINAL SCORE`}),(0,x.jsx)(`div`,{className:`mt-2 text-5xl font-black text-cyan-600`,children:h})]}),(0,x.jsx)(`div`,{className:`mt-10`,children:(0,x.jsx)(`button`,{onClick:()=>{m(0),g(0),v(0),t(`intro`)},className:`rounded-xl bg-slate-900 px-10 py-4 font-black text-white`,children:`PLAY AGAIN`})})]})})})}y.createRoot(document.getElementById(`root`)).render((0,x.jsx)(b.StrictMode,{children:(0,x.jsx)(te,{})}));
+/* === Nebuloid corner controls (welcome screen): logo top-left, sound top-right, back bottom-left, how-to-play bottom-right === */
+(function (CFG) {
+  'use strict';
+  if (window.__nbCornerControls) return;
+  window.__nbCornerControls = true;
+
+  var ID = 'nb-corner-controls';
+  var SOUND_KEY = 'nb_sound_' + CFG.key;
+  var muted = false;
+  try { muted = localStorage.getItem(SOUND_KEY) === 'off'; } catch (e) {}
+
+  /* Master mute for games without their own start-screen sound button. */
+  if (CFG.sound === 'generic') {
+    var gains = [];
+    var masters = new WeakMap();
+    if (window.AudioNode && window.AudioDestinationNode) {
+      var connect = AudioNode.prototype.connect;
+      AudioNode.prototype.connect = function (dest) {
+        if (dest instanceof AudioDestinationNode) {
+          var g = masters.get(dest);
+          if (!g) {
+            g = dest.context.createGain();
+            g.gain.value = muted ? 0 : 1;
+            connect.call(g, dest);
+            masters.set(dest, g);
+            gains.push(g);
+          }
+          var args = Array.prototype.slice.call(arguments);
+          args[0] = g;
+          return connect.apply(this, args);
+        }
+        return connect.apply(this, arguments);
+      };
+    }
+    var play = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () {
+      if (muted) this.muted = true;
+      return play.apply(this, arguments);
+    };
+    var applyMute = function () {
+      gains.forEach(function (g) { g.gain.value = muted ? 0 : 1; });
+      document.querySelectorAll('audio, video').forEach(function (el) { el.muted = muted; });
+    };
+  }
+
+  function findButtonByText(re) {
+    return Array.prototype.find.call(document.querySelectorAll('#root button'), function (b) {
+      return re.test((b.textContent || '').replace(/\s+/g, ' ').trim()) && !b.closest('#' + ID);
+    }) || null;
+  }
+
+  function resolve(spec) {
+    if (!spec) return null;
+    if (spec instanceof RegExp) return findButtonByText(spec);
+    var el = document.querySelector('#root ' + spec);
+    return el && el.closest('button') || el;
+  }
+
+  var hidden = [];
+  function hide(el) {
+    if (!el || el.dataset.nbHidden) return;
+    el.dataset.nbHidden = '1';
+    el.style.setProperty('visibility', 'hidden', 'important');
+    el.style.setProperty('pointer-events', 'none', 'important');
+    hidden.push(el);
+  }
+  function unhideAll() {
+    hidden.forEach(function (el) {
+      delete el.dataset.nbHidden;
+      el.style.removeProperty('visibility');
+      el.style.removeProperty('pointer-events');
+    });
+    hidden = [];
+  }
+
+  /* A proxy is a live clone of the game's own button, pinned to a corner. */
+  function syncProxy(slot, orig) {
+    var proxy = controls.querySelector('[data-nb-slot="' + slot + '"]');
+    if (!orig) { if (proxy) proxy.remove(); return; }
+    var snap = orig.className + '|' + orig.innerHTML + '|' + (orig.getAttribute('aria-label') || '');
+    if (!proxy) {
+      proxy = document.createElement('button');
+      proxy.type = 'button';
+      proxy.dataset.nbSlot = slot;
+      proxy.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (proxy._orig) proxy._orig.click();
+      });
+      controls.appendChild(proxy);
+    }
+    proxy._orig = orig;
+    if (proxy.dataset.snap !== snap) {
+      proxy.dataset.snap = snap;
+      if (CFG.ownStyle) {
+        /* The game's own button only looks right in its original spot, so use the standard corner style. */
+        var off = /unmute|sound off/i.test((orig.getAttribute('aria-label') || '') + ' ' + orig.textContent);
+        proxy.className = slot === 'sound' ? 'nb-sound' : 'nb-help';
+        proxy.innerHTML = slot === 'sound' ? (off ? '🔇' : '🔊') : '<b aria-hidden="true">?</b><span>HOW TO PLAY</span>';
+      } else {
+        proxy.className = orig.className + ' nb-proxy nb-p-' + slot;
+        proxy.innerHTML = orig.innerHTML;
+      }
+      var label = orig.getAttribute('aria-label') || orig.getAttribute('title');
+      if (label) proxy.setAttribute('aria-label', label);
+    }
+    hide(orig);
+  }
+
+  var controls = null;
+  function ensureControls() {
+    if (controls && controls.isConnected) return;
+    controls = document.createElement('div');
+    controls.id = ID;
+    var html = '';
+    if (CFG.logo) html += '<img class="nb-logo" src="' + CFG.logo + '" alt="Nebuloid Tech" />';
+    html += '<button type="button" class="nb-back" aria-label="Back"><span aria-hidden="true">←</span><span>BACK</span></button>';
+    if (CFG.sound === 'generic') html += '<button type="button" class="nb-sound" data-nb-sound></button>';
+    if (CFG.help && CFG.help.steps) html += '<button type="button" class="nb-help" data-nb-help><b aria-hidden="true">?</b><span>HOW TO PLAY</span></button>';
+    controls.innerHTML = html;
+    document.body.appendChild(controls);
+
+    var logo = controls.querySelector('.nb-logo');
+    if (logo) logo.addEventListener('click', goBack);
+    controls.querySelector('.nb-back').addEventListener('click', goBack);
+
+    var snd = controls.querySelector('[data-nb-sound]');
+    if (snd) {
+      snd.addEventListener('click', function () {
+        muted = !muted;
+        try { localStorage.setItem(SOUND_KEY, muted ? 'off' : 'on'); } catch (e) {}
+        paintSound();
+        applyMute();
+      });
+      paintSound();
+    }
+
+    var help = controls.querySelector('[data-nb-help]');
+    if (help) help.addEventListener('click', openHelp);
+  }
+
+  function paintSound() {
+    var b = controls && controls.querySelector('[data-nb-sound]');
+    if (!b) return;
+    b.textContent = muted ? '🔇' : '🔊';
+    b.setAttribute('aria-label', muted ? 'Sound Off' : 'Sound On');
+    b.title = muted ? 'Sound Off' : 'Sound On';
+  }
+
+  function goBack() {
+    if (window.history.length > 1) window.history.back();
+    else window.location.href = '/our-games';
+  }
+
+  function openHelp() {
+    if (document.getElementById('nb-help-modal')) return;
+    var m = document.createElement('div');
+    m.id = 'nb-help-modal';
+    m.innerHTML =
+      '<div class="nb-help-card" role="dialog" aria-modal="true" aria-label="How to play">' +
+      '<h2>HOW TO PLAY</h2><ol>' +
+      CFG.help.steps.map(function (s) { return '<li>' + s + '</li>'; }).join('') +
+      '</ol><button type="button" class="nb-help-close">GOT IT</button></div>';
+    m.addEventListener('click', function (e) {
+      if (e.target === m || e.target.classList.contains('nb-help-close')) m.remove();
+    });
+    document.body.appendChild(m);
+  }
+
+  function isStartScreen() {
+    if (!document.querySelector('#root ' + CFG.start)) return false;
+    return !CFG.title || CFG.title.test((document.getElementById('root') || {}).textContent || '');
+  }
+
+  function update() {
+    ensureControls();
+    if (!isStartScreen()) {
+      if (controls.style.display !== 'none') controls.style.display = 'none';
+      unhideAll();
+      return;
+    }
+    /* Step aside while one of the game's own popups covers the START button. */
+    var startEl = document.querySelector('#root ' + CFG.start);
+    startEl = startEl.closest('button') || startEl;
+    var r = startEl.getBoundingClientRect();
+    var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+    var covered = !!hit && !startEl.contains(hit) && !controls.contains(hit);
+    var display = covered ? 'none' : 'block';
+    if (controls.style.display !== display) controls.style.display = display;
+    (CFG.hideLogos || []).forEach(function (sel) {
+      document.querySelectorAll('#root ' + sel).forEach(hide);
+    });
+    syncProxy('sound', CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
+    syncProxy('help', CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
+    if (CFG.extra) CFG.extra();
+  }
+
+  var css = document.createElement('style');
+  var t = CFG.theme;
+  css.textContent =
+    '#' + ID + '{position:fixed;inset:0;z-index:45;pointer-events:none}' +
+    '#' + ID + '>*{pointer-events:auto}' +
+    '#' + ID + ' .nb-logo{position:fixed;top:20px;left:26px;width:' + (CFG.logoWidth || 96) + 'px;height:auto;max-height:90px;object-fit:contain;cursor:pointer;filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}' +
+    '#' + ID + ' .nb-proxy{position:fixed!important;margin:0!important;transform:none!important;inset:auto!important;width:auto!important;z-index:1!important}' +
+    '#' + ID + ' .nb-proxy.nb-p-sound{top:20px!important;right:26px!important}' +
+    '#' + ID + ' .nb-proxy.nb-p-help{bottom:24px!important;right:26px!important}' +
+    '#' + ID + ' .nb-back,#' + ID + ' .nb-help,#' + ID + ' .nb-sound{position:fixed;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:999px;' +
+      'background:' + t.bg + ';color:' + t.fg + ';border:1.5px solid ' + t.border + ';box-shadow:0 8px 24px rgba(0,0,0,.18);' +
+      '-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:900 13px/1 Inter,Arial,sans-serif;letter-spacing:.14em;transition:transform .18s ease,background .18s ease}' +
+    '#' + ID + ' .nb-back:hover,#' + ID + ' .nb-help:hover,#' + ID + ' .nb-sound:hover{transform:translateY(-2px);background:' + t.hover + '}' +
+    '#' + ID + ' .nb-back{left:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + ' .nb-back span:first-child{font-size:17px;letter-spacing:0}' +
+    '#' + ID + ' .nb-help{right:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + ' .nb-help b{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;font-size:11px;letter-spacing:0}' +
+    '#' + ID + ' .nb-sound{top:20px;right:26px;width:48px;height:48px;padding:0;font-size:21px;letter-spacing:0}' +
+    '#nb-help-modal{position:fixed;inset:0;z-index:10050;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}' +
+    '#nb-help-modal .nb-help-card{width:min(440px,100%);border-radius:24px;padding:28px 26px 24px;background:#fff;color:#1f2937;box-shadow:0 24px 60px rgba(0,0,0,.35);font-family:Inter,Arial,sans-serif}' +
+    '#nb-help-modal h2{margin:0 0 14px;font-size:20px;font-weight:900;letter-spacing:.12em;color:' + t.accent + '}' +
+    '#nb-help-modal ol{margin:0 0 20px;padding-left:20px;font-size:15px;line-height:1.55;font-weight:600}' +
+    '#nb-help-modal li{margin:6px 0}' +
+    '#nb-help-modal .nb-help-close{width:100%;height:46px;border:0;border-radius:999px;background:' + t.accent + ';color:#fff;font:900 14px Inter,Arial,sans-serif;letter-spacing:.14em;cursor:pointer}' +
+    '@media (max-width:640px){' +
+      '#' + ID + ' .nb-logo{top:14px;left:14px;width:' + Math.round((CFG.logoWidth || 96) * 0.75) + 'px}' +
+      '#' + ID + ' .nb-proxy.nb-p-sound,#' + ID + ' .nb-sound{top:14px!important;right:14px!important}' +
+      '#' + ID + ' .nb-proxy.nb-p-help,#' + ID + ' .nb-help{bottom:16px!important;right:14px!important}' +
+      '#' + ID + ' .nb-back{left:14px;bottom:16px;height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-help{height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-sound{width:44px;height:44px;font-size:19px}' +
+    '}' + (CFG.css || '');
+  document.head.appendChild(css);
+
+  var queued = false;
+  function schedule() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function () { queued = false; update(); });
+  }
+  new MutationObserver(schedule).observe(document.documentElement, { childList: true, subtree: true, attributes: true, characterData: true });
+  schedule();
+})({key:'stack-master',start:'button[aria-label="Start Stack Master"]',title:/STACK/i,logo:'/logoblack.png',logoWidth:110,hideLogos:['img.stack-logo'],sound:'generic',help:/how to play/i,theme:{bg:'rgba(255,255,255,.9)',fg:'#0841a4',border:'#0841a4',hover:'#fff',accent:'#0841a4'}});

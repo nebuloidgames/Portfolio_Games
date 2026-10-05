@@ -123,3 +123,242 @@ Error generating stack: `+a.message+`
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */const Qu=tn("VolumeX",[["path",{d:"M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z",key:"uqj9uw"}],["line",{x1:"22",x2:"16",y1:"9",y2:"15",key:"1ewh16"}],["line",{x1:"16",x2:"22",y1:"9",y2:"15",key:"5ykzw1"}]]),Tn=["#ff6b6b","#4d96ff","#ffc857","#45c486","#9b72cf","#ff9f43","#38c9d9","#f36ba8"],Sr=[[[0,1,0,1],[1,0,1,0],[],[]],[[1,2,1,2],[2,1,2,1],[],[]],[[0,3,1,0],[1,0,3,1],[3,1,0,3],[],[]],[[2,1,3,2],[3,2,0,1],[1,0,2,3],[0,3,1,0],[],[]],[[0,4,1,2],[3,0,2,4],[1,3,4,0],[2,1,3,2],[4,2,0,3],[],[]],[[5,1,3,4],[2,5,7,1],[4,3,2,6],[6,7,1,5],[3,2,6,4],[7,6,5,3],[],[]],[[0,1,2,4],[3,5,6,7],[2,0,4,1],[7,3,5,6],[1,2,6,3],[5,7,0,4],[6,4,3,5],[],[]],[[1,5,7,3],[6,4,2,0],[3,1,0,5],[4,2,6,7],[5,3,7,1],[0,6,1,2],[2,7,5,4],[3,0,4,6],[],[]],[[0,3,1,2],[4,5,6,7],[1,0,2,3],[7,6,5,4],[2,1,7,0],[3,4,0,5],[6,2,3,1],[5,7,4,6],[1,3,5,2],[],[]],[[0,1,2,3],[4,5,6,7],[6,0,4,1],[3,2,7,5],[1,3,5,6],[2,7,0,4],[5,6,3,2],[7,4,1,0],[3,2,6,5],[4,7,5,1],[],[]]],Zn=h=>h.map(b=>[...b]),ff=(h,b)=>{if(!h.length||b.length===4)return 0;const d=h[h.length-1];if(b.length&&b[b.length-1]!==d)return 0;let s=0;for(let u=h.length-1;u>=0&&h[u]===d;u--)s++;return Math.min(s,4-b.length)},pf=(h,b,d)=>{wf();const s=Zn(h),u=ff(s[b],s[d]);return u?(s[d].push(...s[b].splice(s[b].length-u,u)),[s,u]):[h,0]},mf=h=>h.every(b=>!b.length||b.length===4&&b.every(d=>d===b[0]));function Fl({children:h,id:b}){return i.jsx("div",{className:"page",children:h},b)}function Hu(){return i.jsx("header",{className:"site-header",children:i.jsxs("button",{className:"brand",type:"button","aria-label":"Nebuloid Tech",children:[i.jsx("img",{src:"/logo.png",alt:"Nebuloid Tech",onError:h=>h.currentTarget.style.visibility="hidden"}),i.jsx("span",{children:"NEBULOID TECH"})]})})}function At({className:h="",colors:b=[1,0],tilt:d=0}){return i.jsxs("div",{className:`deco-bottle ${h}`,style:{"--tilt":`${d}deg`},children:[i.jsx("div",{className:"deco-neck"}),i.jsx("div",{className:"deco-mouth"}),i.jsxs("div",{className:"deco-body",children:[b.map((s,u)=>i.jsx("span",{style:{bottom:`${u*50}%`,background:`linear-gradient(100deg,${Tn[s]},${Tn[s]}dd 62%,${Tn[s]}aa)`}},u)),i.jsx("i",{})]})]})}function qu({name:h=!1}){return i.jsxs("div",{className:`decorative-scene ${h?"name-scene":""}`,"aria-hidden":"true",children:[i.jsx(At,{className:"deco-left-top",colors:[1,0],tilt:18}),i.jsx(At,{className:"deco-left-bottom",colors:[1,0,1],tilt:14}),i.jsx(At,{className:"deco-right-top",colors:[1,0],tilt:-18}),i.jsx(At,{className:"deco-right-bottom",colors:[2,1,0],tilt:-16}),i.jsx("span",{className:"scene-dot dot-blue-a"}),i.jsx("span",{className:"scene-dot dot-blue-b"}),i.jsx("span",{className:"scene-dot dot-pink"}),i.jsx("span",{className:"scene-dot dot-yellow"})]})}function hf({go:h}){const[b,d]=le.useState(window.__waterSortSoundEnabled!==!1),[s,u]=le.useState(!1),x=()=>{const $=!b;d($),window.__waterSortSoundEnabled=$};return i.jsx(Fl,{id:"start",children:i.jsxs("main",{className:"realistic-start",children:[i.jsxs("div",{className:"lake-sky","aria-hidden":"true",children:[i.jsx("div",{className:"sun-glow"}),i.jsx("div",{className:"sun-disc"}),i.jsx("div",{className:"cloud cloud-one"}),i.jsx("div",{className:"cloud cloud-two"}),i.jsx("div",{className:"mountain mountain-back left"}),i.jsx("div",{className:"mountain mountain-back right"}),i.jsx("div",{className:"mountain mountain-front left"}),i.jsx("div",{className:"mountain mountain-front right"}),i.jsx("div",{className:"forest forest-left"}),i.jsx("div",{className:"forest forest-right"}),i.jsx("div",{className:"lake-shimmer"}),i.jsx("div",{className:"lake-horizon"}),i.jsx("div",{className:"foreground-leaves leaves-left"}),i.jsx("div",{className:"foreground-leaves leaves-right"}),i.jsxs("div",{className:"dock",children:[i.jsx("div",{className:"dock-rail rail-left"}),i.jsx("div",{className:"dock-rail rail-right"}),i.jsx("div",{className:"dock-planks"})]})]}),i.jsxs("button",{className:"scene-corner scene-sound",type:"button",onClick:x,"aria-label":b?"Mute sound":"Turn sound on",children:[b?i.jsx(Wu,{size:31}):i.jsx(Qu,{size:31}),i.jsx("span",{children:b?"SOUND ON":"MUTED"})]}),i.jsxs("button",{className:"scene-home scene-how-to-play",type:"button",onClick:()=>u(!0),children:[i.jsx(Ml,{size:22}),i.jsx("span",{children:"HOW TO PLAY"})]}),i.jsxs("section",{className:"realistic-start-content",children:[i.jsxs("div",{className:"studio-brand",children:[i.jsx("img",{src:"/logo.png",alt:"Nebuloid Tech Studio"}),i.jsx("strong",{children:"NEBULOID TECH STUDIO LLP"}),i.jsx("span",{children:"IDEAS. WIRED TO REALITY."})]}),i.jsxs("div",{className:"welcome-line",children:[i.jsx("i",{})," WELCOME TO ",i.jsx("i",{})]}),i.jsxs("h1",{className:"water-logo","aria-label":"Water Color Sort",children:[i.jsx("b",{children:"WATER"}),i.jsxs("strong",{children:[i.jsx("em",{children:"C"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"L"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"R"})]}),i.jsx("span",{children:"SORT"})]}),i.jsxs("button",{onClick:h,className:"water-play","aria-label":"Start game",children:[i.jsx("span",{className:"play-ring ring-one"}),i.jsx("span",{className:"play-ring ring-two"}),i.jsx("span",{className:"play-core",children:i.jsx(sf,{size:54,fill:"currentColor"})})]}),i.jsxs("div",{className:"water-side-copy water-side-copy-left","aria-hidden":"true",children:[i.jsx("span",{children:"POUR"}),i.jsx("b",{children:"MATCH"}),i.jsx("span",{children:"SORT"}),i.jsxs("small",{children:["POUR THE RIGHT COLORS",i.jsx("br",{}),"MATCH EVERY TUBE",i.jsx("br",{}),"CLEAR THE PUZZLE"]})]}),i.jsxs("div",{className:"water-side-copy water-side-copy-right","aria-hidden":"true",children:[i.jsx("span",{children:"THINK"}),i.jsx("b",{children:"SOLVE"}),i.jsx("span",{children:"WIN"}),i.jsxs("small",{children:["PLAN EVERY MOVE",i.jsx("br",{}),"GROUP THE COLORS",i.jsx("br",{}),"BEAT ALL 10 LEVELS"]})]}),i.jsx("div",{className:"water-start-label",children:"START"})]}),s&&i.jsx("div",{className:"howto-overlay",role:"dialog","aria-modal":"true","aria-label":"How to play",children:i.jsxs("div",{className:"howto-panel",children:[i.jsx("button",{className:"howto-close",type:"button",onClick:()=>u(!1),"aria-label":"Close",children:"×"}),i.jsx("div",{className:"howto-icon",children:i.jsx(Al,{size:30})}),i.jsx("h2",{children:"HOW TO PLAY"}),i.jsx("p",{className:"howto-intro",children:"Sort every color into its own bottle."}),i.jsxs("div",{className:"howto-steps",children:[i.jsxs("div",{children:[i.jsx("b",{children:"1"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SELECT"})," a bottle with colored water."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"2"}),i.jsxs("span",{children:[i.jsx("strong",{children:"POUR"})," into an empty bottle or one with the same top color."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"3"}),i.jsxs("span",{children:[i.jsx("strong",{children:"MATCH"})," the same colors together."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"4"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SOLVE"})," the puzzle using as few moves as possible."]})]})]}),i.jsx("div",{className:"howto-rule",children:"Each bottle can hold up to 4 color units."}),i.jsx("button",{className:"howto-start",type:"button",onClick:()=>u(!1),children:"GOT IT — LET'S PLAY"})]})})]})})}function gf({value:h,onChange:b,onEnter:d,onClose:s}){const[u,x]=le.useState({x:null,y:null}),$=le.useRef(null),D=["1","2","3","4","5","6","7","8","9","0","Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Z","X","C","V","B","N","M"],R=L=>{L.preventDefault();const ie=L.currentTarget.dataset.key;ie==="BACKSPACE"?b(h.slice(0,-1)):ie==="SPACE"?b((h+" ").slice(0,24)):ie==="ENTER"?d():b((h+ie).slice(0,24))},B=L=>{var ie,ne;if(L.button!==void 0&&L.button!==0)return;const K=L.currentTarget.parentElement.getBoundingClientRect();$.current={ox:L.clientX-K.left,oy:L.clientY-K.top},(ne=(ie=L.currentTarget).setPointerCapture)==null||ne.call(ie,L.pointerId)},q=L=>{if(!$.current)return;const ie=window.innerWidth,ne=window.innerHeight,K=L.currentTarget.parentElement.getBoundingClientRect();x({x:Math.max(8,Math.min(ie-K.width-8,L.clientX-$.current.ox)),y:Math.max(8,Math.min(ne-K.height-8,L.clientY-$.current.oy))})},V=()=>{$.current=null},W=u.x===null?{}:{left:u.x,top:u.y,right:"auto",bottom:"auto"};return i.jsxs("div",{className:"floating-keyboard",style:W,children:[i.jsxs("div",{className:"keyboard-head",onPointerDown:B,onPointerMove:q,onPointerUp:V,onPointerCancel:V,children:[i.jsxs("span",{children:[i.jsx("span",{className:"keyboard-grip"})," Floating Keyboard"]}),i.jsx("button",{type:"button",onPointerDown:L=>L.stopPropagation(),onClick:s,"aria-label":"Close keyboard",children:"×"})]}),i.jsxs("div",{className:"keyboard-keys",children:[D.map(L=>i.jsx("button",{type:"button","data-key":L,onPointerDown:R,children:L},L)),i.jsx("button",{type:"button",className:"key-wide","data-key":"SPACE",onPointerDown:R,children:"SPACE"}),i.jsx("button",{type:"button",className:"key-action","data-key":"BACKSPACE",onPointerDown:R,children:"⌫"}),i.jsx("button",{type:"button",className:"key-enter","data-key":"ENTER",onPointerDown:R,children:"ENTER ↵"})]})]})}function vf({onGo:h}){const[b,d]=le.useState(""),[s,u]=le.useState(!1),[x,$]=le.useState(window.__waterSortSoundEnabled!==!1),[D,R]=le.useState(!1),B=()=>{b.trim()&&h(b.trim())},q=()=>{const V=!x;$(V),window.__waterSortSoundEnabled=V};return i.jsx(Fl,{id:"name",children:i.jsxs("main",{className:"landing-page name-page",children:[i.jsx(Hu,{}),i.jsx("div",{className:"corner-blob blob-tl"}),i.jsx("div",{className:"corner-blob blob-tr"}),i.jsx("div",{className:"corner-blob blob-bl"}),i.jsx("div",{className:"corner-blob blob-br"}),i.jsx(qu,{name:!0}),i.jsx("div",{className:"name-haze haze-left"}),i.jsx("div",{className:"name-haze haze-right"}),i.jsxs("button",{className:"name-corner-control name-sound-control",type:"button",onClick:q,"aria-label":x?"Mute sound":"Turn sound on",children:[x?i.jsx(Wu,{size:30}):i.jsx(Qu,{size:30}),i.jsx("span",{children:x?"SOUND ON":"MUTED"})]}),i.jsxs("button",{className:"name-corner-control name-how-control",type:"button",onClick:()=>R(!0),children:[i.jsx(Ml,{size:22}),i.jsx("span",{children:"HOW TO PLAY"})]}),i.jsxs("div",{className:"name-side-copy name-side-copy-left","aria-hidden":"true",children:[i.jsx("span",{children:"POUR"}),i.jsx("b",{children:"MATCH"}),i.jsx("span",{children:"SORT"}),i.jsxs("small",{children:["POUR THE RIGHT COLORS",i.jsx("br",{}),"MATCH EVERY TUBE",i.jsx("br",{}),"CLEAR THE PUZZLE"]})]}),i.jsxs("div",{className:"name-side-copy name-side-copy-right","aria-hidden":"true",children:[i.jsx("span",{children:"THINK"}),i.jsx("b",{children:"SOLVE"}),i.jsx("span",{children:"WIN"}),i.jsxs("small",{children:["PLAN EVERY MOVE",i.jsx("br",{}),"GROUP THE COLORS",i.jsx("br",{}),"BEAT ALL 10 LEVELS"]})]}),i.jsxs("section",{className:"name-content",children:[i.jsxs("div",{className:"challenge-label",children:[i.jsx("span",{})," PUZZLE CHALLENGE ",i.jsx("span",{})]}),i.jsxs("h1",{className:"logo-title name-logo",children:[i.jsx("b",{children:"WATER"}),i.jsxs("strong",{children:[i.jsx("em",{children:"C"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"L"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"R"})]}),i.jsx("b",{children:"SORT"})]}),i.jsx("p",{className:"name-subtitle",children:"Sort the colors. Clear the tubes. Challenge your mind."}),i.jsx("div",{className:"player-icon",children:i.jsx(Vu,{size:31})}),i.jsx("p",{className:"registration-label",children:"PLAYER REGISTRATION"}),i.jsx("h2",{children:"Enter your name"}),i.jsx("p",{className:"registration-copy",children:"This name will be printed on every certificate."}),i.jsxs("form",{onSubmit:V=>{V.preventDefault(),B()},children:[i.jsxs("div",{className:"name-input-wrap",onClick:()=>u(!0),children:[i.jsx(Vu,{size:25}),i.jsx("input",{value:b,onFocus:()=>u(!0),onChange:V=>d(V.target.value.slice(0,24)),placeholder:"Your name"})]}),i.jsxs("button",{type:"submit",disabled:!b.trim(),className:"primary-cta name-cta",children:["START ",i.jsx(Uu,{size:29})]})]}),s&&i.jsx(gf,{value:b,onChange:d,onEnter:B,onClose:()=>u(!1)}),i.jsxs("div",{className:"bottom-motto",children:[i.jsx("span",{})," PLAY  •  THINK  •  ACHIEVE ",i.jsx("span",{})]})]}),D&&i.jsx("div",{className:"name-howto-overlay",role:"dialog","aria-modal":"true","aria-label":"How to play",children:i.jsxs("div",{className:"name-howto-panel",children:[i.jsx("button",{className:"name-howto-close",type:"button",onClick:()=>R(!1),"aria-label":"Close",children:"×"}),i.jsx("div",{className:"name-howto-icon",children:i.jsx(Al,{size:30})}),i.jsx("h2",{children:"HOW TO PLAY"}),i.jsx("p",{className:"name-howto-intro",children:"Sort every color into its own bottle."}),i.jsxs("div",{className:"name-howto-steps",children:[i.jsxs("div",{children:[i.jsx("b",{children:"1"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SELECT"})," a bottle with colored water."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"2"}),i.jsxs("span",{children:[i.jsx("strong",{children:"POUR"})," into an empty bottle or one with the same top color."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"3"}),i.jsxs("span",{children:[i.jsx("strong",{children:"MATCH"})," the same colors together."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"4"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SOLVE"})," the puzzle using as few moves as possible."]})]})]}),i.jsx("div",{className:"name-howto-rule",children:"Each bottle can hold up to 4 color units."}),i.jsx("button",{className:"name-howto-start",type:"button",onClick:()=>R(!1),children:"GOT IT — LET'S PLAY"})]})})]})})}function yf({tube:h,i:b,selected:d,pouringFrom:s,receiving:u,invalid:x,incomingColor:$,incomingAmount:D,pourAngle:R,onClick:B,refFn:q}){const V=h.length===4&&h.every(W=>W===h[0]);return i.jsxs("button",{ref:q,onClick:B,className:`bottle ${s?"pouring":""} ${x?"invalid":""}`,style:{"--pour-direction":R||"-27deg","--pour-shift":R==="27deg"?"34px":"-34px"},children:[i.jsx("div",{className:"bottle-neck"}),i.jsx("div",{className:"bottle-mouth"}),i.jsxs("div",{className:"bottle-body",children:[h.map((W,L)=>i.jsx("div",{className:"liquid",style:{bottom:`${L*25}%`,background:`linear-gradient(100deg,${Tn[W]},${Tn[W]}dd 62%,${Tn[W]}aa)`}},L)),$!==void 0&&D>0&&i.jsx("div",{className:"incoming-liquid",style:{height:`${D*25}%`,background:`linear-gradient(100deg,${$},${$}dd 62%,${$}aa)`},children:i.jsx("span",{className:"incoming-wave"})}),!h.length&&!D&&i.jsx("span",{className:"absolute inset-0 flex items-center justify-center text-[9px] font-extrabold tracking-[.16em] text-slate-300",children:"EMPTY"}),V&&i.jsx("span",{className:"absolute bottom-3 left-1/2 z-10 -translate-x-1/2 rounded-full bg-white/20 px-2 py-1 text-[8px] font-extrabold uppercase tracking-wider text-white",children:"Sorted"})]}),i.jsx("span",{className:`absolute -bottom-7 left-1/2 -translate-x-1/2 text-[10px] font-extrabold ${d?"text-sky-500":"text-slate-400"}`,children:b+1})]})}function bf({level:h,tubes:b,setTubes:d,moves:s,setMoves:u,onComplete:x,home:$}){var D,R;const[B,q]=le.useState(null),[V,W]=le.useState([]),[L,ie]=le.useState(null),[ne,K]=le.useState(null),Ge=le.useRef([]),Te=le.useRef(null),[pe,Se]=le.useState(null);le.useEffect(()=>{if(!L||!Te.current)return;let X=0;const Q=()=>{var Oe;const De=Ge.current[L.from],rn=Ge.current[L.to],be=(Oe=Te.current)==null?void 0:Oe.getBoundingClientRect();if(!De||!rn||!be){X=requestAnimationFrame(Q);return}const ze=De.querySelector(".bottle-mouth"),Be=rn.querySelector(".bottle-mouth");if(!ze||!Be){X=requestAnimationFrame(Q);return}const Ue=ze.getBoundingClientRect(),Ne=Be.getBoundingClientRect(),oe=Ue.left+Ue.width*.52-be.left,E=Ue.bottom-be.top+1,M=Ne.left+Ne.width*.5-be.left,C=Ne.top-be.top+8,m=M-oe,w=C-E,U=Math.hypot(m,w),H=Math.max(75,Math.min(150,U*.32)),G=m>=0?1:-1,Z=oe+m*.16,ae=E-H,te=M-m*.22,se=C-H*.72,Ie=`M ${oe} ${E} C ${Z} ${ae}, ${te} ${se}, ${M} ${C}`;Se({d:Ie,x1:oe,y1:E,x2:M,y2:C,color:L.color,side:G,dy:w}),X=requestAnimationFrame(Q)};return X=requestAnimationFrame(Q),()=>{cancelAnimationFrame(X)}},[L]);const Ze=X=>{if(L)return;if(B===null){b[X].length&&(K(null),q(X));return}if(B===X){q(null);return}const Q=B,[Oe,De]=pf(b,Q,X);if(!De){K(X),setTimeout(()=>K(null),380);return}const rn=Tn[b[Q][b[Q].length-1]];q(null),ie({from:Q,to:X,color:rn,amount:De}),setTimeout(()=>{W(be=>[...be,Zn(b)]),d(Oe),u(be=>be+1),setTimeout(()=>ie(null),170),mf(Oe)&&setTimeout(()=>x(s+1),470)},680)},Pe=()=>{d(Zn(Sr[h-1])),u(0),W([]),q(null),ie(null),K(null)};return i.jsx(Fl,{id:"game"+h,children:i.jsxs("main",{className:"game-page",children:[i.jsx(Hu,{}),i.jsx("div",{className:"game-page-art",children:i.jsx(qu,{})}),i.jsxs("div",{className:"game-corner-controls",children:[i.jsxs("button",{className:"game-sound-control",type:"button",onClick:()=>{const X=window.__waterSortSoundEnabled===!1;window.__waterSortSoundEnabled=X,window.dispatchEvent(new Event("water-sort-sound"))},"aria-label":"Toggle sound",children:[i.jsx("span",{className:"game-sound-icon",children:window.__waterSortSoundEnabled===!1?"🔇":"🔊"}),i.jsx("span",{children:window.__waterSortSoundEnabled===!1?"MUTED":"SOUND ON"})]}),i.jsxs("button",{className:"game-how-control",type:"button",onClick:()=>window.dispatchEvent(new Event("water-sort-howto")),children:[i.jsx(Ml,{size:21}),i.jsx("span",{children:"HOW TO PLAY"})]})]}),i.jsxs("div",{className:"game-side-copy game-side-copy-left","aria-hidden":"true",children:[i.jsx("span",{children:"POUR"}),i.jsx("b",{children:"MATCH"}),i.jsx("span",{children:"SORT"}),i.jsxs("small",{children:["POUR THE RIGHT COLORS",i.jsx("br",{}),"MATCH EVERY TUBE",i.jsx("br",{}),"CLEAR THE PUZZLE"]})]}),i.jsxs("div",{className:"game-side-copy game-side-copy-right","aria-hidden":"true",children:[i.jsx("span",{children:"THINK"}),i.jsx("b",{children:"SOLVE"}),i.jsx("span",{children:"WIN"}),i.jsxs("small",{children:["PLAN EVERY MOVE",i.jsx("br",{}),"GROUP THE COLORS",i.jsx("br",{}),"BEAT ALL 10 LEVELS"]})]}),i.jsxs("div",{className:"game-wrap",children:[i.jsxs("div",{className:"game-heading",children:[i.jsxs("div",{className:"game-title-block",children:[i.jsxs("div",{className:"game-kicker",children:[i.jsx("span",{})," PUZZLE CHALLENGE ",i.jsx("span",{})]}),i.jsxs("h1",{className:"game-logo-title",children:[i.jsx("b",{children:"WATER"}),i.jsxs("strong",{children:[i.jsx("em",{children:"C"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"L"}),i.jsx("em",{children:"O"}),i.jsx("em",{children:"R"})]}),i.jsx("span",{children:"SORT"})]}),i.jsx("p",{className:"game-instruction",children:L?"Pouring water...":B===null?"Select a bottle to pour.":"Choose an empty bottle or matching color."})]}),i.jsxs("div",{className:"game-controls",children:[i.jsxs("button",{disabled:!!L,onClick:$,className:"control-btn home-btn",children:[i.jsx(lf,{size:17}),"Home"]}),i.jsxs("div",{className:"stat-pill",children:[i.jsx("span",{children:"LEVEL"}),i.jsxs("b",{children:[h," / 10"]})]}),i.jsxs("div",{className:"stat-pill",children:[i.jsx("span",{children:"MOVES"}),i.jsx("b",{children:s})]}),i.jsxs("button",{disabled:!V.length||!!L,onClick:()=>{const X=V.at(-1);d(Zn(X)),W(Q=>Q.slice(0,-1)),u(Q=>Math.max(0,Q-1)),q(null)},className:"control-btn",children:[i.jsx(df,{size:17}),"Undo"]}),i.jsxs("button",{disabled:!!L,onClick:Pe,className:"control-btn dark",children:[i.jsx(uf,{size:17}),"Restart"]})]})]}),i.jsxs("section",{ref:Te,className:"game-board",children:[i.jsx("div",{className:"board-aura aura-one"}),i.jsx("div",{className:"board-aura aura-two"}),i.jsxs("div",{className:"board-topline",children:[i.jsx("span",{children:"Sort every bottle"}),i.jsxs("small",{children:[i.jsx(Ml,{size:14})," Match top color"]})]}),L&&pe&&i.jsxs("svg",{className:"pour-svg pour-svg-real",viewBox:`0 0 ${((D=Te.current)==null?void 0:D.clientWidth)||1e3} ${((R=Te.current)==null?void 0:R.clientHeight)||600}`,preserveAspectRatio:"none","aria-hidden":"true",children:[i.jsx("path",{className:"pour-shadow",d:pe.d}),i.jsx("path",{className:"pour-path",d:pe.d,style:{stroke:pe.color}}),i.jsx("path",{className:"pour-highlight",d:pe.d}),i.jsx("circle",{className:"pour-drop",cx:pe.x2,cy:pe.y2,r:"5",style:{fill:pe.color}}),i.jsx("circle",{className:"pour-splash",cx:pe.x2,cy:pe.y2,r:"2.5",style:{stroke:pe.color}})]}),i.jsx("div",{className:"game-bottles",children:b.map((X,Q)=>i.jsx("div",{className:"game-bottle-slot bottle-enter",style:{animationDelay:`${Q*35}ms`},children:i.jsx(yf,{refFn:Oe=>Ge.current[Q]=Oe,tube:X,i:Q,selected:B===Q,pouringFrom:(L==null?void 0:L.from)===Q,receiving:(L==null?void 0:L.to)===Q,invalid:ne===Q,pourAngle:(L==null?void 0:L.from)===Q&&L.to>Q?"27deg":"-27deg",incomingColor:(L==null?void 0:L.to)===Q?L.color:void 0,incomingAmount:(L==null?void 0:L.to)===Q?L.amount:0,onClick:()=>Ze(Q)})},Q))}),i.jsxs("div",{className:"board-help",children:[i.jsx(Al,{size:15}),i.jsx("span",{children:"Pour only onto an empty bottle or a bottle with the same top color."})]})]})]}),i.jsx(xf,{})]})})}function xf(){const[h,b]=le.useState(!1);return le.useEffect(()=>{const d=()=>b(!0);return window.addEventListener("water-sort-howto",d),()=>window.removeEventListener("water-sort-howto",d)},[]),h?i.jsx("div",{className:"game-howto-overlay",role:"dialog","aria-modal":"true","aria-label":"How to play",children:i.jsxs("div",{className:"game-howto-panel",children:[i.jsx("button",{className:"game-howto-close",type:"button",onClick:()=>b(!1),"aria-label":"Close",children:"×"}),i.jsx("div",{className:"game-howto-icon",children:i.jsx(Al,{size:30})}),i.jsx("h2",{children:"HOW TO PLAY"}),i.jsx("p",{children:"Sort every color into its own bottle."}),i.jsxs("div",{className:"game-howto-steps",children:[i.jsxs("div",{children:[i.jsx("b",{children:"1"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SELECT"})," a bottle containing color."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"2"}),i.jsxs("span",{children:[i.jsx("strong",{children:"POUR"})," into an empty bottle or onto the same top color."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"3"}),i.jsxs("span",{children:[i.jsx("strong",{children:"MATCH"})," identical colors together."]})]}),i.jsxs("div",{children:[i.jsx("b",{children:"4"}),i.jsxs("span",{children:[i.jsx("strong",{children:"SOLVE"})," the level and move to the next challenge."]})]})]}),i.jsx("div",{className:"game-howto-rule",children:"A bottle can hold up to 4 color units."}),i.jsx("button",{className:"game-howto-start",type:"button",onClick:()=>b(!1),children:"GOT IT — LET'S PLAY"})]})}):null}function wf(){try{if(window.__waterSortSoundEnabled===!1)return;const h=window.AudioContext||window.webkitAudioContext;if(!h)return;const b=window.__waterSortAudioCtx||(window.__waterSortAudioCtx=new h);b.state==="suspended"&&b.resume();const d=b.currentTime,s=b.createGain(),u=b.createOscillator(),x=b.createBiquadFilter();x.type="lowpass",x.frequency.setValueAtTime(1250,d),x.frequency.exponentialRampToValueAtTime(520,d+.48),u.type="sine",u.frequency.setValueAtTime(520,d),u.frequency.exponentialRampToValueAtTime(190,d+.5),s.gain.setValueAtTime(1e-4,d),s.gain.exponentialRampToValueAtTime(.16,d+.035),s.gain.exponentialRampToValueAtTime(.055,d+.2),s.gain.exponentialRampToValueAtTime(1e-4,d+.56),u.connect(x),x.connect(s),s.connect(b.destination),u.start(d),u.stop(d+.58);const $=b.createBuffer(1,b.sampleRate*.42,b.sampleRate),D=$.getChannelData(0);for(let V=0;V<D.length;V++){const W=V/D.length;D[V]=(Math.random()*2-1)*Math.pow(1-W,2.2)}const R=b.createBufferSource(),B=b.createGain(),q=b.createBiquadFilter();q.type="bandpass",q.frequency.setValueAtTime(850,d),q.Q.value=.8,B.gain.setValueAtTime(1e-4,d),B.gain.exponentialRampToValueAtTime(.035,d+.04),B.gain.exponentialRampToValueAtTime(1e-4,d+.4),R.buffer=$,R.connect(q),q.connect(B),B.connect(b.destination),R.start(d)}catch{}}function kf({name:h,level:b,moves:d,final:s,next:u,replay:x}){const $=Array.from({length:24},(D,R)=>({left:(R*29+7)%100,top:8+R*17%28,delay:R%8*.07,rot:R*37%360,color:Tn[R%Tn.length]}));return i.jsx(Fl,{id:"cert"+b,children:i.jsxs("main",{className:"relative flex h-[100dvh] w-full items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_42%,#ffffff_0%,#eef9ff_48%,#d7efff_100%)] px-4 py-5 sm:px-8",children:[i.jsx("div",{className:"pointer-events-none absolute -left-24 -top-24 h-64 w-80 rounded-[45%] bg-[#9ed5ff]/45 blur-[1px] sm:h-80 sm:w-96"}),i.jsx("div",{className:"pointer-events-none absolute -right-28 -top-24 h-64 w-80 rounded-[45%] bg-[#b9e1ff]/50 blur-[1px] sm:h-80 sm:w-96"}),i.jsx("div",{className:"pointer-events-none absolute -bottom-28 -left-20 h-64 w-[430px] rotate-[13deg] rounded-[50%] bg-[#a8d9ff]/55"}),i.jsx("div",{className:"pointer-events-none absolute -bottom-28 -right-20 h-64 w-[430px] rotate-[-13deg] rounded-[50%] bg-[#a8d9ff]/55"}),$.map((D,R)=>i.jsx("span",{className:"pointer-events-none absolute h-3 w-6 rounded-[4px] shadow-sm animate-[confettiFloat_3.8s_ease-in-out_infinite]",style:{left:`${D.left}%`,top:`${D.top}%`,background:D.color,animationDelay:`${D.delay}s`,transform:`rotate(${D.rot}deg)`}},R)),i.jsx(At,{className:"deco-left-top !left-[2%] !top-[28%] !scale-[.9] sm:!scale-100",colors:[1,0,2],tilt:18}),i.jsx(At,{className:"deco-right-top !right-[2%] !left-auto !top-[30%] !scale-[.9] sm:!scale-100",colors:[4,3,5],tilt:-18}),i.jsx("div",{className:"absolute left-7 top-6 z-20 flex items-center sm:left-[10%] sm:top-7",children:i.jsx("img",{src:"/logo.png",alt:"Nebuloid Tech",className:"h-16 w-auto object-contain sm:h-20"})}),i.jsxs("nav",{className:"absolute right-7 top-8 z-20 hidden items-center gap-8 text-[15px] font-semibold text-[#122956] sm:flex sm:right-[9%]",children:[i.jsx("button",{type:"button",children:"How to Play"}),i.jsx("button",{type:"button",children:"About"}),i.jsx("button",{type:"button",children:"More Games"})]}),i.jsxs("section",{className:"relative z-10 flex h-full w-full max-w-[1000px] flex-col items-center justify-center text-center",children:[i.jsxs("div",{className:"relative mb-4 mt-10 sm:mb-3",children:[i.jsx("div",{className:"absolute -bottom-5 left-[18px] h-11 w-7 rotate-[15deg] bg-[#f0443e] shadow-sm"}),i.jsx("div",{className:"absolute -bottom-5 right-[18px] h-11 w-7 rotate-[-15deg] bg-[#e73531] shadow-sm"}),i.jsx("div",{className:"relative grid h-28 w-28 place-items-center rounded-full bg-[radial-gradient(circle_at_35%_30%,#fff2a3,#ffc928_55%,#ed9411)] shadow-[0_12px_30px_rgba(232,157,28,.28)] sm:h-32 sm:w-32",children:i.jsx("div",{className:"grid h-20 w-20 place-items-center rounded-full border-[5px] border-[#f2a91c] bg-[#ffc83d] sm:h-24 sm:w-24",children:i.jsx(af,{className:"h-12 w-12 text-white drop-shadow-[0_2px_2px_rgba(120,75,0,.2)] sm:h-14 sm:w-14"})})})]}),i.jsxs("div",{className:"flex items-center gap-5 text-[11px] font-black uppercase tracking-[.32em] text-[#2088e8] sm:text-[13px]",children:[i.jsx("span",{className:"h-[2px] w-12 bg-[#7c9abd] sm:w-14"}),i.jsx("span",{children:"Certificate of Achievement"}),i.jsx("span",{className:"h-[2px] w-12 bg-[#7c9abd] sm:w-14"})]}),i.jsxs("h1",{className:"mt-5 text-[48px] font-black leading-[.94] tracking-[-.045em] text-[#142b55] sm:text-[76px]",children:["Level ",i.jsx("span",{className:"text-[#167ee8]",children:b})]}),i.jsx("h2",{className:"mt-1 text-[45px] font-black leading-none tracking-[-.045em] text-[#157ee7] sm:text-[70px]",children:"Complete!"}),i.jsx("p",{className:"mt-5 text-[16px] font-medium text-[#647da1] sm:text-[20px]",children:"This achievement is proudly awarded to"}),i.jsx("div",{className:"mt-1 min-w-[280px] border-b-2 border-[#d8e5f2] px-5 pb-2 text-[29px] font-black text-[#152e59] sm:min-w-[430px] sm:text-[39px]",children:h||"Player"}),i.jsxs("p",{className:"mt-4 max-w-[520px] text-[12px] font-medium leading-5 text-[#667e9f] sm:text-[15px] sm:leading-6",children:["for successfully sorting every water color through",i.jsx("br",{className:"hidden sm:block"}),"logic, focus and precision."]}),i.jsxs("div",{className:"mt-5 grid w-full max-w-[545px] grid-cols-2 gap-3 sm:mt-6 sm:gap-5",children:[i.jsx("div",{className:"rounded-[20px] bg-[#e1f2ff]/90 px-6 py-3.5 shadow-[0_8px_20px_rgba(80,150,220,.08)] sm:py-4",children:i.jsxs("div",{className:"flex items-center justify-center gap-3",children:[i.jsx(of,{className:"h-8 w-8 text-[#1c9be9] sm:h-9 sm:w-9"}),i.jsxs("div",{className:"text-left",children:[i.jsx("div",{className:"text-[10px] font-bold uppercase tracking-wider text-[#6c83a4]",children:"Level"}),i.jsxs("div",{className:"text-[21px] font-black text-[#17325d]",children:[b," / 10"]})]})]})}),i.jsx("div",{className:"rounded-[20px] bg-[#ece9ff]/95 px-6 py-3.5 shadow-[0_8px_20px_rgba(120,100,220,.08)] sm:py-4",children:i.jsxs("div",{className:"flex items-center justify-center gap-3",children:[i.jsx(cf,{className:"h-8 w-8 text-[#7958e9] sm:h-9 sm:w-9"}),i.jsxs("div",{className:"text-left",children:[i.jsx("div",{className:"text-[10px] font-bold uppercase tracking-wider text-[#7d88a8]",children:"Moves"}),i.jsx("div",{className:"text-[21px] font-black text-[#17325d]",children:d})]})]})})]}),i.jsxs("button",{onClick:s?x:u,className:"group mt-5 flex min-w-[290px] items-center justify-center gap-5 rounded-full bg-gradient-to-r from-[#2698f3] to-[#087be6] px-9 py-3.5 text-[20px] font-black text-white shadow-[0_10px_22px_rgba(28,132,235,.25)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_14px_28px_rgba(28,132,235,.32)] sm:mt-6 sm:min-w-[355px] sm:py-4 sm:text-[24px]",children:[s?"Play Again":"Next Level",i.jsx(Uu,{className:"h-6 w-6 transition group-hover:translate-x-1 sm:h-7 sm:w-7"})]}),i.jsxs("div",{className:"mt-5 flex items-center gap-5 text-[10px] font-bold uppercase tracking-[.28em] text-[#7188a8] sm:mt-6 sm:text-[12px]",children:[i.jsx("span",{className:"h-[2px] w-12 bg-[#91b0d1]"}),i.jsx("span",{children:"Play • Think • Achieve"}),i.jsx("span",{className:"h-[2px] w-12 bg-[#91b0d1]"})]})]})]})})}function Sf(){const[h,b]=le.useState("start"),[d,s]=le.useState(""),[u,x]=le.useState(1),[$,D]=le.useState(Zn(Sr[0])),[R,B]=le.useState(0),[q,V]=le.useState(0),W=L=>{s(L),x(1),D(Zn(Sr[0])),B(0),b("game")};return h==="start"?i.jsx(hf,{go:()=>b("name")}):h==="name"?i.jsx(vf,{onGo:W}):h==="game"?i.jsx(bf,{level:u,tubes:$,setTubes:D,moves:R,setMoves:B,onComplete:L=>{V(L),b("certificate")},home:()=>b("start")}):i.jsx(kf,{name:d,level:u,moves:q,final:u===10,next:()=>{const L=u+1;x(L),D(Zn(Sr[L-1])),B(0),b("game")},replay:()=>{s(""),x(1),D(Zn(Sr[0])),B(0),b("start")}})}ef.createRoot(document.getElementById("root")).render(i.jsx(Sf,{}));
+/* === Nebuloid corner controls (welcome screen): logo top-left, sound top-right, back bottom-left, how-to-play bottom-right === */
+(function (CFG) {
+  'use strict';
+  if (window.__nbCornerControls) return;
+  window.__nbCornerControls = true;
+
+  var ID = 'nb-corner-controls';
+  var SOUND_KEY = 'nb_sound_' + CFG.key;
+  var muted = false;
+  try { muted = localStorage.getItem(SOUND_KEY) === 'off'; } catch (e) {}
+
+  /* Master mute for games without their own start-screen sound button. */
+  if (CFG.sound === 'generic') {
+    var gains = [];
+    var masters = new WeakMap();
+    if (window.AudioNode && window.AudioDestinationNode) {
+      var connect = AudioNode.prototype.connect;
+      AudioNode.prototype.connect = function (dest) {
+        if (dest instanceof AudioDestinationNode) {
+          var g = masters.get(dest);
+          if (!g) {
+            g = dest.context.createGain();
+            g.gain.value = muted ? 0 : 1;
+            connect.call(g, dest);
+            masters.set(dest, g);
+            gains.push(g);
+          }
+          var args = Array.prototype.slice.call(arguments);
+          args[0] = g;
+          return connect.apply(this, args);
+        }
+        return connect.apply(this, arguments);
+      };
+    }
+    var play = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () {
+      if (muted) this.muted = true;
+      return play.apply(this, arguments);
+    };
+    var applyMute = function () {
+      gains.forEach(function (g) { g.gain.value = muted ? 0 : 1; });
+      document.querySelectorAll('audio, video').forEach(function (el) { el.muted = muted; });
+    };
+  }
+
+  function findButtonByText(re) {
+    return Array.prototype.find.call(document.querySelectorAll('#root button'), function (b) {
+      return re.test((b.textContent || '').replace(/\s+/g, ' ').trim()) && !b.closest('#' + ID);
+    }) || null;
+  }
+
+  function resolve(spec) {
+    if (!spec) return null;
+    if (spec instanceof RegExp) return findButtonByText(spec);
+    var el = document.querySelector('#root ' + spec);
+    return el && el.closest('button') || el;
+  }
+
+  var hidden = [];
+  function hide(el) {
+    if (!el || el.dataset.nbHidden) return;
+    el.dataset.nbHidden = '1';
+    el.style.setProperty('visibility', 'hidden', 'important');
+    el.style.setProperty('pointer-events', 'none', 'important');
+    hidden.push(el);
+  }
+  function unhideAll() {
+    hidden.forEach(function (el) {
+      delete el.dataset.nbHidden;
+      el.style.removeProperty('visibility');
+      el.style.removeProperty('pointer-events');
+    });
+    hidden = [];
+  }
+
+  /* A proxy is a live clone of the game's own button, pinned to a corner. */
+  function syncProxy(slot, orig) {
+    var proxy = controls.querySelector('[data-nb-slot="' + slot + '"]');
+    if (!orig) { if (proxy) proxy.remove(); return; }
+    var snap = orig.className + '|' + orig.innerHTML + '|' + (orig.getAttribute('aria-label') || '');
+    if (!proxy) {
+      proxy = document.createElement('button');
+      proxy.type = 'button';
+      proxy.dataset.nbSlot = slot;
+      proxy.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (proxy._orig) proxy._orig.click();
+      });
+      controls.appendChild(proxy);
+    }
+    proxy._orig = orig;
+    if (proxy.dataset.snap !== snap) {
+      proxy.dataset.snap = snap;
+      if (CFG.ownStyle) {
+        /* The game's own button only looks right in its original spot, so use the standard corner style. */
+        var off = /unmute|sound off/i.test((orig.getAttribute('aria-label') || '') + ' ' + orig.textContent);
+        proxy.className = slot === 'sound' ? 'nb-sound' : 'nb-help';
+        proxy.innerHTML = slot === 'sound' ? (off ? '🔇' : '🔊') : '<b aria-hidden="true">?</b><span>HOW TO PLAY</span>';
+      } else {
+        proxy.className = orig.className + ' nb-proxy nb-p-' + slot;
+        proxy.innerHTML = orig.innerHTML;
+      }
+      var label = orig.getAttribute('aria-label') || orig.getAttribute('title');
+      if (label) proxy.setAttribute('aria-label', label);
+    }
+    hide(orig);
+  }
+
+  var controls = null;
+  function ensureControls() {
+    if (controls && controls.isConnected) return;
+    controls = document.createElement('div');
+    controls.id = ID;
+    var html = '';
+    if (CFG.logo) html += '<img class="nb-logo" src="' + CFG.logo + '" alt="Nebuloid Tech" />';
+    html += '<button type="button" class="nb-back" aria-label="Back"><span aria-hidden="true">←</span><span>BACK</span></button>';
+    if (CFG.sound === 'generic') html += '<button type="button" class="nb-sound" data-nb-sound></button>';
+    if (CFG.help && CFG.help.steps) html += '<button type="button" class="nb-help" data-nb-help><b aria-hidden="true">?</b><span>HOW TO PLAY</span></button>';
+    controls.innerHTML = html;
+    document.body.appendChild(controls);
+
+    var logo = controls.querySelector('.nb-logo');
+    if (logo) logo.addEventListener('click', goBack);
+    controls.querySelector('.nb-back').addEventListener('click', goBack);
+
+    var snd = controls.querySelector('[data-nb-sound]');
+    if (snd) {
+      snd.addEventListener('click', function () {
+        muted = !muted;
+        try { localStorage.setItem(SOUND_KEY, muted ? 'off' : 'on'); } catch (e) {}
+        paintSound();
+        applyMute();
+      });
+      paintSound();
+    }
+
+    var help = controls.querySelector('[data-nb-help]');
+    if (help) help.addEventListener('click', openHelp);
+  }
+
+  function paintSound() {
+    var b = controls && controls.querySelector('[data-nb-sound]');
+    if (!b) return;
+    b.textContent = muted ? '🔇' : '🔊';
+    b.setAttribute('aria-label', muted ? 'Sound Off' : 'Sound On');
+    b.title = muted ? 'Sound Off' : 'Sound On';
+  }
+
+  function goBack() {
+    if (window.history.length > 1) window.history.back();
+    else window.location.href = '/our-games';
+  }
+
+  function openHelp() {
+    if (document.getElementById('nb-help-modal')) return;
+    var m = document.createElement('div');
+    m.id = 'nb-help-modal';
+    m.innerHTML =
+      '<div class="nb-help-card" role="dialog" aria-modal="true" aria-label="How to play">' +
+      '<h2>HOW TO PLAY</h2><ol>' +
+      CFG.help.steps.map(function (s) { return '<li>' + s + '</li>'; }).join('') +
+      '</ol><button type="button" class="nb-help-close">GOT IT</button></div>';
+    m.addEventListener('click', function (e) {
+      if (e.target === m || e.target.classList.contains('nb-help-close')) m.remove();
+    });
+    document.body.appendChild(m);
+  }
+
+  function isStartScreen() {
+    if (!document.querySelector('#root ' + CFG.start)) return false;
+    return !CFG.title || CFG.title.test((document.getElementById('root') || {}).textContent || '');
+  }
+
+  function update() {
+    ensureControls();
+    if (!isStartScreen()) {
+      if (controls.style.display !== 'none') controls.style.display = 'none';
+      unhideAll();
+      return;
+    }
+    /* Step aside while one of the game's own popups covers the START button. */
+    var startEl = document.querySelector('#root ' + CFG.start);
+    startEl = startEl.closest('button') || startEl;
+    var r = startEl.getBoundingClientRect();
+    var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+    var covered = !!hit && !startEl.contains(hit) && !controls.contains(hit);
+    var display = covered ? 'none' : 'block';
+    if (controls.style.display !== display) controls.style.display = display;
+    (CFG.hideLogos || []).forEach(function (sel) {
+      document.querySelectorAll('#root ' + sel).forEach(hide);
+    });
+    syncProxy('sound', CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
+    syncProxy('help', CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
+    if (CFG.extra) CFG.extra();
+  }
+
+  var css = document.createElement('style');
+  var t = CFG.theme;
+  css.textContent =
+    '#' + ID + '{position:fixed;inset:0;z-index:45;pointer-events:none}' +
+    '#' + ID + '>*{pointer-events:auto}' +
+    '#' + ID + ' .nb-logo{position:fixed;top:20px;left:26px;width:' + (CFG.logoWidth || 96) + 'px;height:auto;max-height:90px;object-fit:contain;cursor:pointer;filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}' +
+    '#' + ID + ' .nb-proxy{position:fixed!important;margin:0!important;transform:none!important;inset:auto!important;width:auto!important;z-index:1!important}' +
+    '#' + ID + ' .nb-proxy.nb-p-sound{top:20px!important;right:26px!important}' +
+    '#' + ID + ' .nb-proxy.nb-p-help{bottom:24px!important;right:26px!important}' +
+    '#' + ID + ' .nb-back,#' + ID + ' .nb-help,#' + ID + ' .nb-sound{position:fixed;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:999px;' +
+      'background:' + t.bg + ';color:' + t.fg + ';border:1.5px solid ' + t.border + ';box-shadow:0 8px 24px rgba(0,0,0,.18);' +
+      '-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:900 13px/1 Inter,Arial,sans-serif;letter-spacing:.14em;transition:transform .18s ease,background .18s ease}' +
+    '#' + ID + ' .nb-back:hover,#' + ID + ' .nb-help:hover,#' + ID + ' .nb-sound:hover{transform:translateY(-2px);background:' + t.hover + '}' +
+    '#' + ID + ' .nb-back{left:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + ' .nb-back span:first-child{font-size:17px;letter-spacing:0}' +
+    '#' + ID + ' .nb-help{right:26px;bottom:24px;height:46px;padding:0 20px}' +
+    '#' + ID + ' .nb-help b{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;font-size:11px;letter-spacing:0}' +
+    '#' + ID + ' .nb-sound{top:20px;right:26px;width:48px;height:48px;padding:0;font-size:21px;letter-spacing:0}' +
+    '#nb-help-modal{position:fixed;inset:0;z-index:10050;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}' +
+    '#nb-help-modal .nb-help-card{width:min(440px,100%);border-radius:24px;padding:28px 26px 24px;background:#fff;color:#1f2937;box-shadow:0 24px 60px rgba(0,0,0,.35);font-family:Inter,Arial,sans-serif}' +
+    '#nb-help-modal h2{margin:0 0 14px;font-size:20px;font-weight:900;letter-spacing:.12em;color:' + t.accent + '}' +
+    '#nb-help-modal ol{margin:0 0 20px;padding-left:20px;font-size:15px;line-height:1.55;font-weight:600}' +
+    '#nb-help-modal li{margin:6px 0}' +
+    '#nb-help-modal .nb-help-close{width:100%;height:46px;border:0;border-radius:999px;background:' + t.accent + ';color:#fff;font:900 14px Inter,Arial,sans-serif;letter-spacing:.14em;cursor:pointer}' +
+    '@media (max-width:640px){' +
+      '#' + ID + ' .nb-logo{top:14px;left:14px;width:' + Math.round((CFG.logoWidth || 96) * 0.75) + 'px}' +
+      '#' + ID + ' .nb-proxy.nb-p-sound,#' + ID + ' .nb-sound{top:14px!important;right:14px!important}' +
+      '#' + ID + ' .nb-proxy.nb-p-help,#' + ID + ' .nb-help{bottom:16px!important;right:14px!important}' +
+      '#' + ID + ' .nb-back{left:14px;bottom:16px;height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-help{height:42px;padding:0 15px;font-size:12px}' +
+      '#' + ID + ' .nb-sound{width:44px;height:44px;font-size:19px}' +
+    '}' + (CFG.css || '');
+  document.head.appendChild(css);
+
+  var queued = false;
+  function schedule() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function () { queued = false; update(); });
+  }
+  new MutationObserver(schedule).observe(document.documentElement, { childList: true, subtree: true, attributes: true, characterData: true });
+  schedule();
+})({key:'water-color-sort',start:'button.water-play',title:/WATER/i,logo:'/logo.png',logoWidth:140,hideLogos:['img[alt="Nebuloid Tech Studio"]'],sound:'.scene-sound',help:'.scene-how-to-play',ownStyle:true,theme:{bg:'rgba(255,255,255,.9)',fg:'#0b4f99',border:'rgba(255,255,255,.95)',hover:'#fff',accent:'#0b6bcb'}});
