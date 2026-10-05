@@ -180,6 +180,79 @@ Error generating stack: `+e.message+`
     return !CFG.title || CFG.title.test((document.getElementById('root') || {}).textContent || '');
   }
 
+  /* START -> PLAY NOW with a spinning outer ring. Image buttons (START baked into a picture)
+     become a CSS circle; text buttons keep their look and only get the new label. */
+  function applyPlay(btn) {
+    var P = CFG.play;
+    if (!P) return;
+    if (P.mode === 'image') {
+      if (!btn.classList.contains('nb-play-img')) btn.classList.add('nb-play-img');
+      if (!btn.querySelector(':scope > .nb-play-label')) {
+        var s = document.createElement('span');
+        s.className = 'nb-play-label';
+        s.textContent = 'PLAY NOW';
+        btn.appendChild(s);
+      }
+    } else {
+      var scope = P.labelSel ? document.querySelector('#root ' + P.labelSel) : btn;
+      if (scope) {
+        var walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
+        var n;
+        while ((n = walker.nextNode())) {
+          if (/^\s*START\s*$/i.test(n.nodeValue)) {
+            n.nodeValue = 'PLAY NOW';
+            var el = n.parentElement;
+            el.style.setProperty('white-space', 'nowrap', 'important');
+            if (P.labelSize) el.style.setProperty('font-size', P.labelSize, 'important');
+            if (P.labelSpacing) el.style.setProperty('letter-spacing', P.labelSpacing, 'important');
+          }
+        }
+      }
+    }
+    if (P.ringSel) {
+      document.querySelectorAll('#root ' + P.ringSel).forEach(function (ring) {
+        if (!ring.classList.contains('nb-spin')) ring.classList.add('nb-spin');
+      });
+    } else if (!P.noRing && !btn.querySelector(':scope > .nb-ring')) {
+      if (getComputedStyle(btn).position === 'static') btn.style.position = 'relative';
+      var ring = document.createElement('span');
+      ring.className = 'nb-ring';
+      ring.setAttribute('aria-hidden', 'true');
+      btn.appendChild(ring);
+    }
+  }
+
+  /* Remove the frosted-glass card behind the title, and resize the title when asked. */
+  function applyLayout() {
+    var h1 = document.querySelector('#root h1');
+    if (!h1) return;
+    if (CFG.glass) {
+      for (var el = h1.parentElement; el && el.id !== 'root'; el = el.parentElement) {
+        if (el.dataset.nbGlass) break;
+        var cs = getComputedStyle(el);
+        var alpha = /rgba\([^)]*,\s*([\d.]+)\)/.exec(cs.backgroundColor);
+        var glassy = cs.backdropFilter !== 'none' && cs.backdropFilter ||
+          parseFloat(cs.borderTopLeftRadius) >= 16 && (parseFloat(cs.borderTopWidth) > 0 || cs.backgroundImage !== 'none' || alpha && +alpha[1] > 0 && +alpha[1] < 1);
+        if (glassy) {
+          el.dataset.nbGlass = '1';
+          ['background', 'background-color', 'background-image', 'box-shadow'].forEach(function (p) { el.style.setProperty(p, 'none', 'important'); });
+          el.style.setProperty('backdrop-filter', 'none', 'important');
+          el.style.setProperty('-webkit-backdrop-filter', 'none', 'important');
+          el.style.setProperty('border-color', 'transparent', 'important');
+          break;
+        }
+      }
+    }
+    if (CFG.titleSize && !h1.dataset.nbSized) {
+      h1.dataset.nbSized = '1';
+      h1.style.setProperty('font-size', CFG.titleSize, 'important');
+      h1.style.setProperty('line-height', '1.05', 'important');
+      if (window.innerWidth > 700) h1.style.setProperty('white-space', 'nowrap', 'important');
+      var welcome = h1.previousElementSibling;
+      if (welcome && CFG.welcomeSize) welcome.style.setProperty('font-size', CFG.welcomeSize, 'important');
+    }
+  }
+
   function update() {
     ensureControls();
     if (!isStartScreen()) {
@@ -187,17 +260,32 @@ Error generating stack: `+e.message+`
       unhideAll();
       return;
     }
-    /* Step aside while one of the game's own popups covers the START button. */
     var startEl = document.querySelector('#root ' + CFG.start);
     startEl = startEl.closest('button') || startEl;
+    applyPlay(startEl);
+    applyLayout();
+
+    /* Step aside while one of the game's own popups covers the START button:
+       the element on top of it belongs to a branch that fills most of the screen. */
     var r = startEl.getBoundingClientRect();
     var hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
-    var covered = !!hit && !startEl.contains(hit) && !controls.contains(hit);
+    var covered = false;
+    if (hit && !startEl.contains(hit) && !controls.contains(hit)) {
+      var branch = hit;
+      while (branch.parentElement && !branch.parentElement.contains(startEl)) branch = branch.parentElement;
+      var br = branch.getBoundingClientRect();
+      covered = br.width * br.height >= 0.5 * window.innerWidth * window.innerHeight;
+    }
     var display = covered ? 'none' : 'block';
     if (controls.style.display !== display) controls.style.display = display;
     (CFG.hideLogos || []).forEach(function (sel) {
       document.querySelectorAll('#root ' + sel).forEach(hide);
     });
+    if (CFG.hideClosest) {
+      document.querySelectorAll('#root ' + CFG.hideClosest[0]).forEach(function (el) {
+        hide(el.closest(CFG.hideClosest[1]) || el);
+      });
+    }
     syncProxy('sound', CFG.sound && CFG.sound !== 'generic' ? resolve(CFG.sound) : null);
     syncProxy('help', CFG.help && !CFG.help.steps ? resolve(CFG.help) : null);
     if (CFG.extra) CFG.extra();
@@ -234,8 +322,30 @@ Error generating stack: `+e.message+`
       '#' + ID + ' .nb-back{left:14px;bottom:16px;height:42px;padding:0 15px;font-size:12px}' +
       '#' + ID + ' .nb-help{height:42px;padding:0 15px;font-size:12px}' +
       '#' + ID + ' .nb-sound{width:44px;height:44px;font-size:19px}' +
-    '}' + (CFG.css || '');
+    '}' + playCss() + (CFG.css || '');
   document.head.appendChild(css);
+
+  function playCss() {
+    var P = CFG.play;
+    if (!P) return '';
+    var ring = P.ring || ['rgba(255,255,255,.35)', '#fff', 'rgba(255,255,255,.75)'];
+    var out =
+      '@keyframes nb-spin{to{transform:rotate(360deg)}}' +
+      '.nb-spin{animation:nb-spin 6s linear infinite!important;transform-origin:50% 50%!important}' +
+      '.nb-ring{position:absolute;inset:-' + (P.ringInset || 14) + 'px;border-radius:50%;border:7px solid ' + ring[0] + ';' +
+        'border-top-color:' + ring[1] + ';border-right-color:' + ring[2] + ';animation:nb-spin 1.6s linear infinite;pointer-events:none;z-index:0}';
+    if (P.mode === 'image') {
+      out +=
+        '.nb-play-img{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;' +
+          'width:clamp(176px,17vw,236px)!important;height:clamp(176px,17vw,236px)!important;padding:0!important;border-radius:50%!important;' +
+          'background:radial-gradient(circle at 50% 32%,' + P.c1 + ' 0%,' + P.c2 + ' 72%)!important;border:3px solid rgba(255,255,255,.6)!important;' +
+          'box-shadow:0 14px 34px rgba(0,0,0,.32),inset 0 6px 14px rgba(255,255,255,.28),inset 0 -12px 22px rgba(0,0,0,.22)!important;overflow:visible!important}' +
+        '.nb-play-img>*:not(.nb-play-label):not(.nb-ring){display:none!important}' +
+        '.nb-play-label{position:relative;z-index:1;white-space:nowrap;font:900 clamp(25px,2.3vw,33px)/1 Outfit,Inter,Arial,sans-serif;letter-spacing:.06em;' +
+          'color:' + (P.fg || '#fff') + ';text-shadow:0 2px 6px rgba(0,0,0,.28)}';
+    }
+    return out;
+  }
 
   var queued = false;
   function schedule() {
@@ -245,4 +355,4 @@ Error generating stack: `+e.message+`
   }
   new MutationObserver(schedule).observe(document.documentElement, { childList: true, subtree: true, attributes: true, characterData: true });
   schedule();
-})({key:'math-minesweeper',start:'button[aria-label="Start Game"]',title:/MINESWEEPER/i,logo:'/logo.png',logoWidth:140,hideLogos:['img[alt="Nebuloid Tech"]'],help:/how to play/i,theme:{bg:'rgba(0,0,0,.35)',fg:'#fff',border:'rgba(255,255,255,.3)',hover:'rgba(0,0,0,.55)',accent:'#16a34a'}});
+})({key:'math-minesweeper',start:'button[aria-label="Start Game"]',title:/MINESWEEPER/i,logo:'/logo.png',logoWidth:140,hideLogos:['img[alt="Nebuloid Tech"]'],help:/how to play/i,theme:{bg:'rgba(0,0,0,.35)',fg:'#fff',border:'rgba(255,255,255,.3)',hover:'rgba(0,0,0,.55)',accent:'#16a34a'},glass:true,play:{mode:'image',c1:'#6ee36e',c2:'#15803d',ring:['rgba(134,239,172,.4)','#22c55e','#dcfce7']}});
