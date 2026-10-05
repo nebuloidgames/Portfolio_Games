@@ -365,6 +365,7 @@ export default function App() {
           <StartScreen
             onStartGame={goToSetup}
             onOpenLevels={goToSetup}
+            onBack={() => window.history.back()}
             bestScore={bestScore}
             bestStreak={bestStreak}
             selectedDifficulty={selectedDifficulty}

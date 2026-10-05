@@ -8,6 +8,7 @@ import { getStoredCertificates, downloadCertificatePNG } from '../utils/gameUtil
 export default function StartScreen({
   onStartGame,
   onOpenLevels,
+  onBack,
   bestScore = 0,
   bestStreak = 0,
   selectedDifficulty = 'EASY',
@@ -18,6 +19,17 @@ export default function StartScreen({
   const [activeModal, setActiveModal] = useState(null); // 'certificates' | 'howToPlay' | 'exit' | null
   const [certTab, setCertTab] = useState('earned'); // 'earned' | 'milestones'
   const savedCertificates = getStoredCertificates();
+
+  const handleBack = () => {
+    if (onBack) {
+      onBack();
+      return;
+    }
+
+    if (typeof window !== 'undefined') {
+      window.history.back();
+    }
+  };
 
   const handleStart = () => {
     if (onOpenLevels) {
@@ -64,27 +76,20 @@ export default function StartScreen({
         </button>
       )}
 
-      {/* ================= MAIN GLASS CONTAINER ================= */}
-      <div className="relative w-full max-w-4xl bg-white/20 backdrop-blur-md sm:backdrop-blur-lg rounded-3xl sm:rounded-[36px] border border-white/40 shadow-[0_20px_60px_rgba(0,0,0,0.35)] px-4 py-8 sm:px-10 sm:py-10 md:py-12 flex flex-col items-center justify-between min-h-[520px] sm:min-h-[580px] md:min-h-[600px] z-10 animate-fade-in my-auto">
-        
-        {/* Top Header inside the glass card */}
-        <div className="flex flex-col items-center justify-center text-center mt-1 sm:mt-2">
-          <span className="text-white text-xs sm:text-sm md:text-base font-bold tracking-[0.35em] sm:tracking-[0.45em] md:tracking-[0.55em] uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] pl-[0.35em]">
-            W E L C O M E &nbsp; T O
-          </span>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-wide text-[#d4eeff] mt-1 sm:mt-2 uppercase drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
-            COLOR CLASH
-          </h1>
-        </div>
+      <div className="relative z-10 flex flex-col items-center justify-center text-center animate-fade-in">
+        <span className="text-white text-xs sm:text-sm md:text-base font-bold tracking-[0.35em] sm:tracking-[0.45em] md:tracking-[0.55em] uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] pl-[0.35em]">
+          W E L C O M E &nbsp; T O
+        </span>
+        <h1 className="mt-3 text-4xl sm:text-6xl md:text-7xl font-black tracking-wide text-[#d4eeff] uppercase drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
+          COLOR CLASH
+        </h1>
 
-        {/* Center Circular START Button using start.png */}
-        <div className="my-6 sm:my-8 flex items-center justify-center">
+        <div className="mt-8 sm:mt-10 flex items-center justify-center">
           <button
             onClick={handleStart}
             className="group relative cursor-pointer focus:outline-none transition-transform duration-200 hover:scale-105 active:scale-95"
             aria-label="Start Game"
           >
-            {/* Outer subtle glow on hover */}
             <div className="absolute inset-0 rounded-full bg-blue-500/0 group-hover:bg-blue-400/30 blur-2xl transition-all duration-300 pointer-events-none" />
             <img
               src={startBtnImg}
@@ -93,25 +98,27 @@ export default function StartScreen({
             />
           </button>
         </div>
-
-        {/* Bottom 3 Pill Action Buttons */}
-        <div className="w-full flex flex-wrap items-center justify-center gap-3 sm:gap-5 mt-2 sm:mt-4">
-          {/* Button 1: Certificates */}
-
-          {/* Button 2: How To Play */}
-          <button
-            onClick={() => setActiveModal('howToPlay')}
-            className="flex items-center gap-2.5 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-[#173a87] via-[#15347d] to-[#122e6b] hover:from-[#1e48a5] hover:to-[#17387e] border border-blue-400/40 text-white font-bold text-xs sm:text-sm tracking-wide shadow-lg shadow-blue-950/40 hover:shadow-blue-500/25 transition-all duration-150 hover:scale-105 active:scale-95 cursor-pointer"
-          >
-            {/* Question mark icon */}
-            <span className="w-4 h-4 sm:w-4.5 sm:h-4.5 rounded-full border-1.5 border-white flex items-center justify-center text-xs sm:text-sm font-black leading-none">
-              ?
-            </span>
-            <span>How To Play</span>
-          </button>
-
-        </div>
       </div>
+
+      <button
+        onClick={handleBack}
+        className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 flex items-center gap-2 rounded-full border border-white/60 bg-white/90 px-4 py-2.5 text-slate-900 shadow-lg backdrop-blur-md transition-all hover:bg-white active:scale-95 cursor-pointer font-black text-[10px] tracking-[0.24em] uppercase"
+        aria-label="Go back"
+      >
+        <span className="text-base leading-none">←</span>
+        <span>Back</span>
+      </button>
+
+      <button
+        onClick={() => setActiveModal('howToPlay')}
+        className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex items-center gap-2 rounded-full border border-blue-400/40 bg-gradient-to-r from-[#173a87] via-[#15347d] to-[#122e6b] px-5 py-2.5 text-white shadow-lg shadow-blue-950/40 transition-all hover:from-[#1e48a5] hover:to-[#17387e] active:scale-95 cursor-pointer font-black text-[10px] tracking-[0.2em] uppercase"
+        aria-label="How to play"
+      >
+        <span className="flex h-5 w-5 items-center justify-center rounded-full border border-white/80 text-[11px] font-black leading-none">
+          ?
+        </span>
+        <span>How To Play</span>
+      </button>
 
       {/* ================= MODAL: CERTIFICATES & TARGETS ================= */}
       {activeModal === 'certificates' && (

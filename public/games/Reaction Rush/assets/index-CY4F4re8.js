@@ -271,3 +271,232 @@ Error generating stack: `+e.message+`
           }
         }
       `}),(0,S.jsx)(C,{}),(0,S.jsxs)(`div`,{className:`w-full max-w-5xl flex items-center justify-between gap-2 sm:gap-4 mb-4 no-print z-20`,children:[(0,S.jsxs)(`button`,{type:`button`,onClick:t,className:`h-10 px-4 rounded-xl bg-white border border-neutral-300 shadow-sm hover:bg-neutral-50 flex items-center gap-2 cursor-pointer transition-all active:scale-95 font-branding font-black text-xs uppercase tracking-wider text-neutral-800`,children:[(0,S.jsx)(`svg`,{viewBox:`0 0 24 24`,className:`w-4 h-4`,fill:`none`,stroke:`currentColor`,strokeWidth:`2.5`,children:(0,S.jsx)(`polyline`,{points:`15 18 9 12 15 6`})}),(0,S.jsx)(`span`,{children:`BACK TO LEVELS`})]}),(0,S.jsxs)(`button`,{type:`button`,onClick:()=>{window.print()},className:`h-11 px-6 rounded-xl bg-gradient-to-r from-neutral-900 to-neutral-800 text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2.5 cursor-pointer font-branding font-black text-xs sm:text-sm uppercase tracking-widest border border-neutral-700 group`,children:[(0,S.jsxs)(`svg`,{viewBox:`0 0 24 24`,className:`w-4 h-4 text-[#e51b24] group-hover:scale-110 transition-transform`,fill:`none`,stroke:`currentColor`,strokeWidth:`2.5`,children:[(0,S.jsx)(`polyline`,{points:`6 9 6 2 18 2 18 9`}),(0,S.jsx)(`path`,{d:`M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2`}),(0,S.jsx)(`rect`,{x:`6`,y:`14`,width:`12`,height:`8`})]}),(0,S.jsx)(`span`,{children:`DOWNLOAD / PRINT CERTIFICATE`})]}),(0,S.jsxs)(`button`,{type:`button`,onClick:n,className:`h-10 px-4 rounded-xl bg-white border border-neutral-300 shadow-sm hover:bg-neutral-50 flex items-center gap-2 cursor-pointer transition-all active:scale-95 font-branding font-black text-xs uppercase tracking-wider text-neutral-800`,children:[(0,S.jsxs)(`svg`,{viewBox:`0 0 24 24`,className:`w-4 h-4`,fill:`none`,stroke:`currentColor`,strokeWidth:`2.5`,children:[(0,S.jsx)(`path`,{d:`M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z`}),(0,S.jsx)(`polyline`,{points:`9 22 9 12 15 12 15 22`})]}),(0,S.jsx)(`span`,{children:`MAIN MENU`})]})]}),(0,S.jsxs)(`div`,{id:`printable-certificate`,ref:r,className:`w-full max-w-5xl bg-[#ffffff] rounded-2xl border-[3px] border-neutral-900 shadow-2xl relative p-6 sm:p-10 my-auto overflow-hidden text-neutral-900`,children:[(0,S.jsx)(`div`,{className:`absolute inset-3 sm:inset-4 border border-neutral-300 pointer-events-none rounded-xl`}),(0,S.jsx)(`div`,{className:`absolute inset-4 sm:inset-5 border-[1.5px] border-[#e51b24] pointer-events-none rounded-lg opacity-85`}),(0,S.jsx)(`div`,{className:`absolute top-0 left-0 w-24 h-24 pointer-events-none`,children:(0,S.jsxs)(`svg`,{viewBox:`0 0 100 100`,fill:`none`,className:`w-full h-full`,children:[(0,S.jsx)(`polygon`,{points:`0,0 45,0 0,45`,fill:`#0b0c10`}),(0,S.jsx)(`line`,{x1:`0`,y1:`52`,x2:`52`,y2:`0`,stroke:`#e51b24`,strokeWidth:`3`}),(0,S.jsx)(`line`,{x1:`0`,y1:`62`,x2:`62`,y2:`0`,stroke:`#0b0c10`,strokeWidth:`2.5`})]})}),(0,S.jsx)(`div`,{className:`absolute top-0 right-0 w-24 h-24 pointer-events-none`,children:(0,S.jsxs)(`svg`,{viewBox:`0 0 100 100`,fill:`none`,className:`w-full h-full`,children:[(0,S.jsx)(`polygon`,{points:`100,0 55,0 100,45`,fill:`#0b0c10`}),(0,S.jsx)(`line`,{x1:`100`,y1:`52`,x2:`48`,y2:`0`,stroke:`#e51b24`,strokeWidth:`3`}),(0,S.jsx)(`line`,{x1:`100`,y1:`62`,x2:`38`,y2:`0`,stroke:`#0b0c10`,strokeWidth:`2.5`})]})}),(0,S.jsx)(`div`,{className:`absolute bottom-0 left-0 w-24 h-24 pointer-events-none`,children:(0,S.jsxs)(`svg`,{viewBox:`0 0 100 100`,fill:`none`,className:`w-full h-full`,children:[(0,S.jsx)(`polygon`,{points:`0,100 45,100 0,55`,fill:`#0b0c10`}),(0,S.jsx)(`line`,{x1:`0`,y1:`48`,x2:`52`,y2:`100`,stroke:`#e51b24`,strokeWidth:`3`}),(0,S.jsx)(`line`,{x1:`0`,y1:`38`,x2:`62`,y2:`100`,stroke:`#0b0c10`,strokeWidth:`2.5`})]})}),(0,S.jsx)(`div`,{className:`absolute bottom-0 right-0 w-24 h-24 pointer-events-none`,children:(0,S.jsxs)(`svg`,{viewBox:`0 0 100 100`,fill:`none`,className:`w-full h-full`,children:[(0,S.jsx)(`polygon`,{points:`100,100 55,100 100,55`,fill:`#0b0c10`}),(0,S.jsx)(`line`,{x1:`100`,y1:`48`,x2:`48`,y2:`100`,stroke:`#e51b24`,strokeWidth:`3`}),(0,S.jsx)(`line`,{x1:`100`,y1:`38`,x2:`38`,y2:`100`,stroke:`#0b0c10`,strokeWidth:`2.5`})]})}),(0,S.jsx)(`div`,{className:`absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04]`,children:(0,S.jsxs)(`svg`,{width:`480`,height:`480`,viewBox:`0 0 400 400`,fill:`none`,children:[(0,S.jsx)(`circle`,{cx:`200`,cy:`200`,r:`180`,stroke:`#000`,strokeWidth:`3`}),(0,S.jsx)(`circle`,{cx:`200`,cy:`200`,r:`120`,stroke:`#000`,strokeWidth:`2`}),(0,S.jsx)(`circle`,{cx:`200`,cy:`200`,r:`60`,stroke:`#000`,strokeWidth:`2`}),(0,S.jsx)(`line`,{x1:`200`,y1:`10`,x2:`200`,y2:`390`,stroke:`#000`,strokeWidth:`2`}),(0,S.jsx)(`line`,{x1:`10`,y1:`200`,x2:`390`,y2:`200`,stroke:`#000`,strokeWidth:`2`})]})}),(0,S.jsxs)(`div`,{className:`relative z-10 flex flex-col items-center text-center px-4 sm:px-12 py-2`,children:[(0,S.jsxs)(`div`,{className:`flex flex-col items-center mb-2`,children:[(0,S.jsx)(`img`,{src:le,alt:`Nebuloid Logo`,className:`h-14 sm:h-16 w-auto object-contain drop-shadow-xs`}),(0,S.jsx)(`span`,{className:`font-branding text-[10px] sm:text-[11px] font-black tracking-[0.35em] text-neutral-800 uppercase mt-1`,children:`NEBULOID REFLEX & HUMAN PERFORMANCE LABS`})]}),(0,S.jsxs)(`div`,{className:`my-2`,children:[(0,S.jsx)(`h1`,{className:`font-cert-title text-2xl sm:text-4xl md:text-[40px] font-black text-neutral-900 tracking-wider uppercase leading-none`,children:`CERTIFICATE OF ACHIEVEMENT`}),(0,S.jsxs)(`div`,{className:`flex items-center justify-center gap-3 my-2 opacity-80`,children:[(0,S.jsx)(`span`,{className:`w-10 sm:w-20 h-[1.5px] bg-[#e51b24]`}),(0,S.jsx)(`span`,{className:`font-branding text-[10px] sm:text-[11px] font-black tracking-[0.25em] text-[#e51b24] uppercase`,children:`SPEED & REACTION MASTERY`}),(0,S.jsx)(`span`,{className:`w-10 sm:w-20 h-[1.5px] bg-[#e51b24]`})]})]}),(0,S.jsx)(`p`,{className:`font-branding text-xs sm:text-sm text-neutral-500 font-medium tracking-wide mt-1`,children:`THIS ACCREDITATION IS PROUDLY CONFERRED UPON`}),(0,S.jsx)(`div`,{className:`my-2 sm:my-3 border-b-2 border-neutral-900 px-6 sm:px-12 pb-1 inline-block min-w-[280px] sm:min-w-[420px]`,children:(0,S.jsx)(`span`,{className:`font-cert-name text-4xl sm:text-5xl md:text-6xl text-[#0b0c10] font-bold capitalize`,children:i.playerName||`Champion Racer`})}),(0,S.jsxs)(`p`,{className:`max-w-2xl text-[11px] sm:text-[13px] text-neutral-600 font-branding leading-relaxed my-2`,children:[`For demonstrating exceptional hand-eye agility, instinctual reflexes, and sustained tactical focus during the`,` `,(0,S.jsxs)(`span`,{className:`font-black text-neutral-900 uppercase`,children:[i.level,` Mode (Stage L-`,i.stage,`)`]}),` `,`30-Second Championship Race.`]}),(0,S.jsxs)(`div`,{className:`grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 w-full max-w-2xl my-4`,children:[(0,S.jsxs)(`div`,{className:`bg-neutral-50 border border-neutral-200 rounded-xl p-2 sm:p-2.5 text-center`,children:[(0,S.jsx)(`span`,{className:`text-[9px] font-branding font-bold text-neutral-400 uppercase tracking-wider block`,children:`AVG REACTION`}),(0,S.jsxs)(`span`,{className:`font-racing text-base sm:text-lg font-black text-neutral-900`,children:[i.avgReactionTime,` ms`]})]}),(0,S.jsxs)(`div`,{className:`bg-neutral-50 border border-neutral-200 rounded-xl p-2 sm:p-2.5 text-center`,children:[(0,S.jsx)(`span`,{className:`text-[9px] font-branding font-bold text-neutral-400 uppercase tracking-wider block`,children:`ACCURACY`}),(0,S.jsxs)(`span`,{className:`font-racing text-base sm:text-lg font-black text-emerald-600`,children:[i.accuracy,`%`]})]}),(0,S.jsxs)(`div`,{className:`bg-neutral-50 border border-neutral-200 rounded-xl p-2 sm:p-2.5 text-center`,children:[(0,S.jsx)(`span`,{className:`text-[9px] font-branding font-bold text-neutral-400 uppercase tracking-wider block`,children:`TOTAL SCORE`}),(0,S.jsxs)(`span`,{className:`font-racing text-base sm:text-lg font-black text-[#e51b24]`,children:[Number(i.score).toLocaleString(),` PTS`]})]}),(0,S.jsxs)(`div`,{className:`bg-neutral-50 border border-neutral-200 rounded-xl p-2 sm:p-2.5 text-center`,children:[(0,S.jsx)(`span`,{className:`text-[9px] font-branding font-bold text-neutral-400 uppercase tracking-wider block`,children:`STARS EARNED`}),(0,S.jsx)(`span`,{className:`font-racing text-base sm:text-lg font-black text-amber-500`,children:`★`.repeat(Math.min(3,Math.max(1,i.stars||3)))})]})]}),(0,S.jsxs)(`div`,{className:`w-full flex items-end justify-between pt-4 sm:pt-6 border-t border-neutral-200 mt-2 px-2 sm:px-6`,children:[(0,S.jsxs)(`div`,{className:`flex flex-col text-left leading-tight`,children:[(0,S.jsx)(`span`,{className:`font-branding text-[9px] font-bold text-neutral-400 uppercase tracking-wider`,children:`DATE OF CONFERRAL`}),(0,S.jsx)(`span`,{className:`font-branding font-extrabold text-xs text-neutral-800`,children:i.date}),(0,S.jsxs)(`span`,{className:`font-mono text-[9px] text-neutral-400 mt-1`,children:[`REF ID: `,i.certId]})]}),(0,S.jsx)(`div`,{className:`relative flex flex-col items-center`,children:(0,S.jsxs)(`div`,{className:`w-16 h-16 sm:w-20 sm:h-20 rounded-full border-[3px] border-amber-500 bg-gradient-to-br from-amber-400 via-amber-200 to-amber-500 flex items-center justify-center shadow-lg relative`,children:[(0,S.jsxs)(`div`,{className:`w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-amber-600 flex flex-col items-center justify-center p-1 text-center bg-white/40 backdrop-blur-xs`,children:[(0,S.jsx)(`span`,{className:`font-branding text-[7px] font-black uppercase text-amber-950 tracking-tighter leading-none`,children:`NEBULOID`}),(0,S.jsx)(`span`,{className:`text-[#e51b24] text-xs sm:text-sm font-black my-0.5`,children:`★`}),(0,S.jsx)(`span`,{className:`font-branding text-[6px] font-black uppercase text-amber-950 tracking-tighter leading-none`,children:`VERIFIED`})]}),(0,S.jsxs)(`div`,{className:`absolute -bottom-4 flex gap-1 z-0 pointer-events-none`,children:[(0,S.jsx)(`div`,{className:`w-3.5 h-6 bg-[#e51b24] -rotate-12 transform origin-top shadow-xs`}),(0,S.jsx)(`div`,{className:`w-3.5 h-6 bg-[#e51b24] rotate-12 transform origin-top shadow-xs`})]})]})}),(0,S.jsxs)(`div`,{className:`flex flex-col text-right leading-tight`,children:[(0,S.jsx)(`div`,{className:`h-8 sm:h-9 flex items-center justify-end`,children:(0,S.jsx)(`span`,{className:`font-cert-name text-2xl sm:text-3xl text-neutral-800 -rotate-3`,children:`Nebuloid`})}),(0,S.jsx)(`div`,{className:`w-28 sm:w-36 h-[1.5px] bg-neutral-800 ml-auto my-0.5`}),(0,S.jsx)(`span`,{className:`font-branding text-[9px] font-black text-neutral-800 uppercase tracking-wider`,children:`CHIEF RACING DIRECTOR`}),(0,S.jsx)(`span`,{className:`font-branding text-[8px] text-neutral-400 font-bold uppercase`,children:`NEBULOID GAMING LABS`})]})]})]})]}),(0,S.jsx)(`div`,{className:`no-print mt-4 text-center`,children:(0,S.jsx)(`span`,{className:`font-branding text-[10px] font-black text-neutral-500 uppercase tracking-[0.2em]`,children:`OFFICIAL REACTION RUSH PERFORMANCE ACCREDITATION // NEBULOID TECH`})})]})};function T(){let[e,t]=(0,_.useState)(`start`),[n,r]=(0,_.useState)(()=>localStorage.getItem(`reaction_rush_player_name`)||``),[i,a]=(0,_.useState)({level:`easy`,stage:1}),[o,s]=(0,_.useState)(()=>{let e=localStorage.getItem(`reaction_rush_last_certificate`);if(e)try{return JSON.parse(e)}catch{}return null}),[c,l]=(0,_.useState)(()=>{let e=localStorage.getItem(`reaction_rush_levels`);if(e)try{return JSON.parse(e).map(e=>({...e,stages:e.stages.map(e=>({...e,locked:!1}))}))}catch{}return w.map(e=>({...e,stages:e.stages.map(e=>({...e,locked:!1}))}))});return(0,_.useEffect)(()=>{let e=c.map(e=>({...e,stages:e.stages.map(e=>({...e,locked:!1}))}));localStorage.setItem(`reaction_rush_levels`,JSON.stringify(e))},[c]),(0,S.jsxs)(S.Fragment,{children:[e===`start`&&(0,S.jsx)(te,{onStartRace:()=>t(`playerInput`),onCertificates:()=>t(`certificate`)}),e===`playerInput`&&(0,S.jsx)(re,{initialName:n,onBack:()=>t(`start`),onContinue:e=>{r(e),localStorage.setItem(`reaction_rush_player_name`,e),t(`level`)}}),e===`level`&&(0,S.jsx)(ie,{levelData:c,initialTab:i.level,onBack:()=>t(`start`),onSelectStage:e=>{a(e),t(`game`)},onResetProgress:e=>{l(e),localStorage.setItem(`reaction_rush_levels`,JSON.stringify(e))}}),e===`game`&&(0,S.jsx)(ce,{level:i.level,stage:i.stage,playerName:n,onBack:()=>t(`level`),onNextStage:e=>a(e),onStageComplete:({level:e,stage:t,avgReactionTime:n,starsEarned:r,isPassed:i})=>{i&&l(i=>{let a=i.map(i=>{if(i.id!==e)return i;let a=i.stages.map(e=>{if(e.id===t){let t=n>0?(n/1e3).toFixed(2)+`s`:`00.00s`;return{...e,stars:Math.max(e.stars||0,r),best:t}}return e.id===t+1?{...e,locked:!1}:e}),o=a.filter(e=>e.stars>0).length;return{...i,cleared:o,stages:a}});return localStorage.setItem(`reaction_rush_levels`,JSON.stringify(a)),a})},onGenerateCertificate:e=>{s(e),localStorage.setItem(`reaction_rush_last_certificate`,JSON.stringify(e)),t(`certificate`)}}),e===`certificate`&&(0,S.jsx)(ue,{certificateData:o?{...o,playerName:o.playerName||n||`Speed Racer`}:{playerName:n||`Speed Racer`,level:`EASY`,stage:1,score:12450,avgReactionTime:238,accuracy:94,stars:3,date:new Date().toLocaleDateString(`en-US`,{month:`long`,day:`numeric`,year:`numeric`}),certId:`RR-`+Math.floor(1e5+Math.random()*9e5)+`-NT`},onBack:()=>t(`level`),onHome:()=>t(`start`)})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,S.jsx)(_.StrictMode,{children:(0,S.jsx)(T,{})}));
+/* Reaction Rush UI-only patch. Original React/game bundle remains untouched. */
+(function () {
+  'use strict';
+
+  var SOUND_KEY = 'reaction_rush_sound_enabled';
+  var soundEnabled = localStorage.getItem(SOUND_KEY) !== '0';
+  /* Native AudioContext is intentionally left untouched. */
+  /* The previous wrapper replaced the browser AudioContext constructor. */
+  /* That can break the game's audio initialization and cause a blank screen. */
+  /* Sound state is handled only through the existing media elements below. */
+  /* No constructor monkey-patching is needed for the start screen UI. */
+  /* Keep this block inert so the original game bundle remains compatible. */
+  /* Audio creation stays under the game's own control. */
+  /* This is deliberately not an AudioContext replacement. */
+  /* Existing game logic is preserved exactly as supplied. */
+  /* UI patch continues below. */
+  /* End safe audio handling. */
+  /* Compatibility line. */
+  /* Compatibility line. */
+  /* Compatibility line. */
+  /* Compatibility line. */
+
+  function applySoundState() {
+    document.querySelectorAll('audio, video').forEach(function (el) {
+      el.muted = !soundEnabled;
+    });
+    document.querySelectorAll('[data-rr-sound]').forEach(function (btn) {
+      btn.textContent = soundEnabled ? '🔊' : '🔇';
+      btn.setAttribute('aria-label', soundEnabled ? 'Sound On' : 'Sound Off');
+      btn.title = soundEnabled ? 'Sound On' : 'Sound Off';
+    });
+  }
+ 
+  function makeControls() {
+    var root = document.getElementById('root');
+    if (!root) return;
+
+    var startButton = root.querySelector('button[aria-label="Start Reaction Rush"], button[aria-label="Play Now"]');
+    var startScreen = !!startButton;
+
+    var oldControls = document.getElementById('rr-ui-controls');
+    if (!startScreen) {
+      if (oldControls) oldControls.style.display = 'none';
+      return;
+    }
+
+    /* Remove the original top-center Nebuloid logo from this screen only. */
+    root.querySelectorAll('img[alt="Nebuloid Logo"]').forEach(function (img) {
+      var holder = img.closest('.relative.z-40');
+      if (holder) holder.style.display = 'none';
+      else img.style.display = 'none';
+    });
+
+    /* Enlarge WELCOME TO and the REACTION RUSH title on the start screen. */
+    root.querySelectorAll('span').forEach(function (span) {
+      if ((span.textContent || '').trim() === 'WELCOME TO') {
+        span.classList.add('rr-welcome-large');
+      }
+    });
+
+    root.querySelectorAll('h1').forEach(function (h1) {
+      if ((h1.textContent || '').replace(/\s+/g, ' ').trim() === 'REACTION RUSH') {
+        h1.classList.add('rr-title-large');
+      }
+    });
+
+    /* Remove the glass appearance without touching the layout/game logic. */
+    root.querySelectorAll('.glass-card').forEach(function (card) {
+      card.style.background = 'transparent';
+      card.style.backdropFilter = 'none';
+      card.style.webkitBackdropFilter = 'none';
+      card.style.border = '0';
+      card.style.boxShadow = 'none';
+    });
+
+    /* Turn the existing START image button into PLAY NOW. */
+    if (startButton && !startButton.dataset.rrStyled) {
+      startButton.dataset.rrStyled = '1';
+      startButton.setAttribute('aria-label', 'Play Now');
+      startButton.className += ' rr-play-now';
+      var startImg = startButton.querySelector('img');
+      if (startImg) startImg.style.display = 'none';
+      var label = document.createElement('span');
+      label.className = 'rr-play-label';
+      label.textContent = 'PLAY NOW';
+      startButton.appendChild(label);
+    }
+
+    /* Move the existing How To Play button to bottom-right. */
+    var howButton = Array.from(root.querySelectorAll('button')).find(function (btn) {
+      return (btn.textContent || '').replace(/\s+/g, ' ').trim().includes('How To Play');
+    });
+    if (howButton) {
+      howButton.classList.add('rr-how-to-play');
+    }
+
+    var controls = oldControls;
+    if (!controls) {
+      controls = document.createElement('div');
+      controls.id = 'rr-ui-controls';
+      controls.innerHTML =
+        '<img class="rr-main-logo" src="/logoblack.png" alt="Nebuloid Tech" />' +
+        '<button type="button" class="rr-sound" data-rr-sound aria-label="Sound On" title="Sound On">🔊</button>' +
+        '<button type="button" class="rr-back" aria-label="Back">←</button>';
+      document.body.appendChild(controls);
+
+      controls.querySelector('[data-rr-sound]').addEventListener('click', function () {
+        soundEnabled = !soundEnabled;
+        localStorage.setItem(SOUND_KEY, soundEnabled ? '1' : '0');
+        applySoundState();
+      });
+
+      controls.querySelector('.rr-back').addEventListener('click', function () {
+        if (window.history.length > 1) window.history.back();
+        else window.location.href = '/';
+      });
+    }
+    controls.style.display = 'block';
+    applySoundState();
+  }
+
+  var style = document.createElement('style');
+  style.textContent = `
+    @keyframes rr-spin { to { transform: rotate(360deg); } }
+    @keyframes rr-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+
+    .rr-play-now {
+      position: relative !important;
+      width: 230px !important;
+      height: 230px !important;
+      min-width: 230px !important;
+      min-height: 230px !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: #7ed957 !important;
+      color: #164b22 !important;
+      border: 3px solid #55b83a !important;
+      box-shadow: 0 10px 28px rgba(22,101,52,.30) !important;
+      animation: rr-pulse 2.5s ease-in-out infinite !important;
+      overflow: visible !important;
+    }
+    .rr-play-now::before {
+      content: '';
+      position: absolute;
+      inset: -13px;
+      border-radius: 50%;
+      border: 7px solid rgba(126,217,87,.34);
+      border-top-color: #3eaa2c;
+      border-right-color: #b2ec78;
+      animation: rr-spin 1.5s linear infinite;
+      pointer-events: none;
+    }
+    .rr-welcome-large {
+      font-size: 28px !important;
+      line-height: 1.1 !important;
+    }
+    .rr-play-label {
+      position: relative;
+      z-index: 2;
+      font-family: Outfit, Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      color: #164b22;
+      text-shadow: none;
+    }
+    .rr-title-large {
+      font-size: 88px !important;
+    }
+    .rr-how-to-play {
+      position: fixed !important;
+      right: 28px !important;
+      bottom: 24px !important;
+      z-index: 10001 !important;
+      margin: 0 !important;
+    }
+    #rr-ui-controls { display: block; }
+    .rr-main-logo {
+      position: fixed;
+      top: 18px;
+      left: 24px;
+      z-index: 10002;
+      width: 190px;
+      height: auto;
+      max-height: 70px;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+    }
+    .rr-sound, .rr-back {
+      position: fixed;
+      z-index: 10002;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.75);
+      background: rgba(255,255,255,.82);
+      color: #1f2937;
+      box-shadow: 0 5px 16px rgba(0,0,0,.20);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .rr-sound { top: 18px; right: 24px; }
+    .rr-back { left: 24px; bottom: 24px; font-size: 28px; }
+    .rr-sound:hover, .rr-back:hover { transform: scale(1.08); background: #fff; }
+
+    @media (max-width: 640px) {
+      .rr-main-logo { width: 145px; left: 14px; top: 12px; }
+      .rr-welcome-large { font-size: 22px !important; }
+      .rr-title-large { font-size: 58px !important; }
+      .rr-sound { right: 14px; top: 12px; }
+      .rr-back { left: 14px; bottom: 14px; }
+      .rr-how-to-play { right: 14px !important; bottom: 14px !important; }
+      .rr-play-now { width: 190px !important; height: 190px !important; min-width: 190px !important; min-height: 190px !important; }
+      .rr-play-label { font-size: 24px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  var observer = new MutationObserver(function () { observer.disconnect(); makeControls(); observer.observe(document.documentElement, { childList: true, subtree: true }); });
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+  makeControls();
+})();
